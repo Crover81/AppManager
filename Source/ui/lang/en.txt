@@ -1,0 +1,1333 @@
+1	  (automatic)
+2	 (the files are in the Recycle Bin)
+3	 (the game appears to be deleted)
+4	 (the program appears to be deleted)
+5	 (in the Recycle Bin, in the folder {0})
+6	 (in the Recycle Bin, in the folders {0}{1})
+7	 (no entry in Installed apps)
+8	 (showing the latest 5000)
+9	 (it is still in the backup)
+10	 Files and folders will be permanently deleted.
+11	 Files and folders go to the Recycle Bin; caches are deleted immediately.
+12	 Nothing was changed.
+13	 A backup is created first.
+14	 · {0} on disk
+15	. Warning: recently modified, an installation may be in progress
+16	. Warning: recently modified, check that {0} is not still installed elsewhere
+17	. Check that it does not contain your documents
+18	100 MB
+19	2 GB
+20	30 days
+21	500 MB
+22	7 days
+23	90 days
+24	: close open games and apps and try again
+25	: they will be deleted at the next PC restart
+26	ANALYSIS
+27	APPEARANCE AND LANGUAGE
+28	QUICK ACTIONS
+29	Full access
+30	Access denied (administrator required or file in use)
+31	Access denied (administrator required)
+32	Xbox Game Bar capture of this game
+33	Refresh (F5)
+34	Refresh now
+35	Refresh now (F5)
+36	Refreshes the list every 2 seconds while the page is open.
+37	Automatic refresh
+38	Updated at {0}
+39	Add
+40	Add folder
+41	Add the games folder in Settings, or use the Add button.
+42	Add the programs folder in Settings, or use the Add button.
+43	Add the game's save folder. It is usually in Documents\My Games, Saved Games or AppData.
+44	Add a game by choosing its folder
+45	Add a program by choosing its folder
+46	Add a save folder that AppManager did not find
+47	Added manually
+48	Added manually
+49	Added manually
+50	Some system apps cannot be uninstalled; removal can also be blocked by a policy or an update. Try from Settings > Apps > Installed apps.
+51	Some backups were not deleted
+52	Some items require administrator rights: restart AppManager as administrator to delete them.
+53	Some saves are synced with Steam Cloud. Switch profile with Steam closed or turn off Steam Cloud for this game: Steam could download the other profile's saves again.
+54	Other known PCs
+55	Other
+56	Analysis not available
+57	Analysis failed
+58	Analysis failed: {0}
+59	Analyze again
+60	No backups yet
+61	Cancel
+62	Windows app
+63	App installed outside the Store (MSIX package)
+64	Apps installed from the Store or as an MSIX package.
+65	Windows installed apps
+66	Windows installed apps{0}
+67	AppManager could not start:\n\n{0}
+68	AppManager is already open.
+69	Application
+70	Steam applications
+71	Opens SteamDB in the browser to find the game's name
+72	Open
+73	Open Services
+74	Open Windows Firewall
+75	Open folder
+76	Open the profile vault
+77	Open the program in its library
+78	Open the activity log
+79	Open in File Explorer
+80	Open this application's backup folder in File Explorer
+81	Open Task Scheduler
+82	Open the backup folder
+83	Open the game folder
+84	Open the program folder
+85	Open the folder in File Explorer
+86	Open the Backup section for this application
+87	Open environment variables
+88	Open in Registry Editor
+89	Open in the library
+90	Program Compatibility Assistant
+91	Invalid file associations and menus
+92	Wait for the operation to finish…
+93	Waiting for the list of installed games and programs…
+94	Warning: what you delete cannot be recovered.
+95	Time wait
+96	Turn on
+97	Turn starting with Windows on or off, as in Task Manager
+98	Scheduled task - {0}.xml
+99	Scheduled task that starts {0}
+100	Scheduled task that starts {0}, which no longer exists
+101	Scheduled task {0}
+102	Scheduled tasks
+103	Invalid scheduled tasks
+104	Automatic
+105	Automatic
+106	Automatic, before a restore
+107	Launch
+108	Launch the game
+109	Launch the program
+110	Start the analysis
+111	Startup
+112	Starts with Windows ({0})
+113	Startup entry of {0}, which no longer exists
+114	Startup, services and tasks
+115	Launching {0}…
+116	Launch failed
+117	Warnings and errors
+118	Warning
+119	BACKUP
+120	SAVE BACKUPS
+121	Backup
+122	Backups to keep per application
+123	Save backup
+124	Backing up current saves…
+125	Save backup created: you can also find it in the Backup section.
+126	Backups of «{0}» moved to the Recycle Bin.
+127	Save backup and restore, profiles for multiple players, new game
+128	Backup failed
+129	Backup failed ({0}): cleanup cancelled, no files deleted.
+130	Back up before deleting
+131	Backup moved to the Recycle Bin.
+132	Backup, profiles and new game for this game's saves
+133	Backup, profiles for multiple players and new game.
+134	Backup, profiles for multiple players or different settings, new game without losing the old one.
+135	Block
+136	Block Internet
+137	Block Internet access
+138	Blocks all Internet connections, incoming and outgoing, using Windows Firewall. Requires administrator rights.
+139	Block all connections to this address
+140	Block connections to {0}?
+141	Connections to {0} blocked
+142	Blocked
+143	Blocked · no connections
+144	Blocks created by AppManager in Windows Firewall. Remove a rule to allow connections again.
+145	Internet block for {0}
+146	FOLDER
+147	MANAGED FOLDERS
+148	WHAT TAKES THE MOST SPACE
+149	WHAT HAS CHANGED
+150	Shader cache created by Steam for this {0}
+151	Graphics driver shader cache
+152	Shader cache of an app that is not installed
+153	Cache, logs and crashes
+154	Change
+155	Profile switch failed: {0}{1}
+156	Switching profile…
+157	Folder
+158	Folder added: press «Refresh» on the games page.
+159	Folder added: press «Refresh» on the programs page.
+160	Folder containing your games (one subfolder per game)
+161	Folder containing your portable programs (one subfolder per program)
+162	Backup folder
+163	Portable games folder ({0})
+164	Folder for profiles not in use
+165	Portable programs folder ({0})
+166	Save folder of {0}
+167	Game folder
+168	Program folder
+169	{0} folder added to the PATH environment variable
+170	{0} folder indicated by its shortcuts, left on disk
+171	{0} folder left on disk. Warning: it also contains documents, photos or a project, check it before deleting
+172	Installation folder left on disk
+173	Screenshot/video folder named after the game
+174	Folder to save backups in
+175	Folder in the PATH variable that no longer exists
+176	Folder not available
+177	Folder cannot be used
+178	Invalid folder
+179	Folder with no programs left (only data, logs or settings)
+180	Folder used only by this {0} (detected by Windows Prefetch)
+181	Empty folder
+182	Folder «{0}\{1}» in {2}: named after a program that no longer exists
+183	Folder «{0}» in {1}: matches the {2}
+184	Folder «{0}» in {1}: named after a program that no longer exists{2}
+185	Portable games folders
+186	Portable programs folders
+187	Folders in the PATH variable that do not exist
+188	Folders, settings and system entries left by programs no longer present.
+189	Looks for leftover folders, startup entries, tasks, services, file types, shortcuts and «Installed apps» entries of deleted programs. Nothing is deleted without confirmation.
+190	Looks for Steam data, Unity and Unreal game folders, saves, invalid shortcuts and shader caches of deleted games. Nothing is deleted without confirmation.
+191	Search for games again
+192	Search for installed games again
+193	Search for programs again
+194	Search for installed programs again
+195	Search for leftovers
+196	Search the log…
+197	Search online for missing images
+198	Looks for Windows error reports, crash dumps, launcher and game logs, and logs in the temp folder. Windows event logs and files in use are not touched. Nothing is deleted without confirmation.
+199	Search for a game…
+200	Search for a program…
+201	Search for an application…
+202	Search…
+203	Searching for games: {0}…
+204	Searching for installed games…
+205	Searching for installed programs…
+206	Looking for leftovers…
+207	Searching for saves of {0}…
+208	Searching for programs: {0}…
+209	Searching for leftovers: {0}…
+210	Certain
+211	Which game is this?
+212	Light
+213	SteamGridDB API key (optional)
+214	Free key: adds high-resolution covers, images and logos for almost all games. It stays saved in the Dati folder.
+215	Invalid key
+216	Invalid key: {0}
+217	Key removed: SteamGridDB will no longer be used.
+218	Key saved ••••••••{0}
+219	Key saved, but SteamGridDB is not responding now: it will be used as soon as possible.
+220	Valid key: missing images will also be searched on SteamGridDB.
+221	Key «{0}\{1}» named after the {2}
+222	Key «{0}\{1}» named after a program that no longer exists
+223	Key «{0}» named after the {1}
+224	Key «{0}» named after a program that no longer exists
+225	Close
+226	Close (Esc)
+227	Close the game and the launcher if they are open, then try again.
+228	Close without deleting
+229	Shortcuts
+230	Shortcuts to deleted games
+231	Shortcuts to a game on the desktop and in the Start menu, including Steam and Epic ones.
+232	Shortcuts to a program on the desktop and in the Start menu, including portable ones.
+233	Invalid shortcuts
+234	Epic Games shortcut to a game that is not installed
+235	Steam shortcut to an app that is not installed
+236	Shortcut to {0}, which no longer exists
+237	Shortcut to the {0}
+238	Shortcut in the Startup folder (starts with Windows)
+239	Same as Windows
+240	As administrator, the analysis also uses Windows Prefetch and you can delete services and system entries.
+241	As administrator, the analysis also uses Windows Prefetch and finds more data of deleted games.
+242	How to get the key: sign in to steamgriddb.com with Steam, then Preferences › API › Generate key
+243	Completed with some errors
+244	Component
+245	COM component of the {0} ({1})
+246	COM component of {0}, which no longer exists
+247	With the «Add» button in the games library.
+248	With the «Add» button in the programs library.
+249	With its own uninstaller
+250	Confirm
+251	Confirm the uninstallation in the Steam window…
+252	Connecting…
+253	Connections of running programs, in real time. You can block a destination or a program's entire Internet access.
+254	Keep
+255	Workshop content (mods) of an app that is not installed
+256	Steam Workshop content (downloaded mods)
+257	Contents
+258	Contains the saves of profiles not in use. It stays on this PC and is never offered as a leftover.
+259	Continue and search for leftovers
+260	Check that they are not open in another program.
+261	Check startup programs
+262	Covers and images from Steam, SteamGridDB and Wikipedia. Only the game's name or Steam ID is sent.
+263	Memory copy of a program that closed because of an error
+264	Incomplete copy: {0}
+265	Copy of the {0} folder virtualized by Windows (VirtualStore)
+266	Create backup now
+267	Creating save backup…
+268	Creating backup…
+269	DISKS
+270	UNINSTALLATION
+271	To delete: {0} ({1}).
+272	To delete: {0}.
+273	To verify
+274	Date
+275	Data
+276	Unity game data (saves, settings, logs)
+277	Unreal Engine game data (saves, configuration, logs)
+278	App data (settings, cache and local files)
+279	Xbox app data (local saves and settings)
+280	Data of a Unity game (saves, settings, logs) that does not appear to be installed
+281	Data of an Unreal Engine game ({0}) that does not appear to be installed
+282	Data of {0} on this PC
+283	Unity diagnostic data
+284	Unity diagnostic data for this game
+285	Save profile vault
+286	Details
+287	Size
+288	Size (MB)
+289	Forget
+290	Forget {0}?
+291	Turning off deletes nothing: it only changes the state, as in Task Manager. You can turn the entry back on at any time.
+292	Uninstall
+293	Uninstall and clean
+294	Uninstallation
+295	Uninstallation completed
+296	Uninstallation completed.
+297	Uninstall with Windows Installer
+298	Uninstall with winget (Windows Package Manager)
+299	Uninstallation almost done: close the uninstaller window.
+300	Uninstall through Steam
+301	Uninstall through Windows
+302	Uninstall through Windows (Microsoft Store app)
+303	Uninstalling through Windows…
+304	Documents and saved data
+305	Public documents
+306	Incomplete Workshop downloads
+307	Incomplete Steam download
+308	Interrupted download or update
+309	Video driver
+310	Full memory dump after a blue screen (can take several GB)
+311	Crash dump
+312	Crash dumps…
+313	Steam crash dump
+314	PUBLISHER
+315	DELETION
+316	Publisher
+317	Unselected items that stay on the PC: {0}.
+318	Workshop list of an app that is not installed
+319	Workshop content list
+320	List exported: {0}
+321	Delete
+322	Also delete unselected items
+323	Delete selected leftovers
+324	Delete selected
+325	Delete the backup (goes to the Recycle Bin)
+326	Delete the profile (goes to the Recycle Bin)
+327	Deletes the folder and the leftovers. You will see the list first.
+328	Delete profile
+329	Delete selected
+330	Deletes unused images and leftover temporary files now
+331	Delete all
+332	Delete all backups of this application (they go to the Recycle Bin)
+333	Delete selected logs?
+334	Delete selected leftovers?
+335	Delete profile «{0}»?
+336	Delete this backup of «{0}»?
+337	Delete all backups of «{0}»?
+338	Permanently deleted because the Recycle Bin does not accept it{0}: {1}
+339	Deleting game files…
+340	Deleting profile…
+341	Epic Games Launcher has no uninstall command: the files are removed directly and the game is removed from the launcher's library.
+342	Epic Games Launcher is open: it will be closed to update its library.
+343	It was a link{0}: only the link was removed, the data it pointed to was not touched ({1}).
+344	Error
+345	Error while deleting: {0}
+346	Portable program executable
+347	Already in the Recycle Bin folder: {0}
+348	A profile named «{0}» already exists.
+349	A profile named «{0}» already exists: choose another name.
+350	Already exists: {0}
+351	Expand / collapse
+352	Export the activity log
+353	Export the list
+354	Export the list of games and programs
+355	Export failed
+356	Export…
+357	Extension of the {0}: {1}
+358	Extension of a program that no longer exists: {0}
+359	Optional
+360	Done
+361	CSV file
+362	Crash files (dumps) of the {0}
+363	Crash files (dumps) of {0}
+364	Text files (*.txt)|*.txt
+365	Files and system entries return to their original locations.
+366	Files already on the PC: {0}.
+367	File in use or not accessible
+368	File missing
+369	Registry files
+370	Temporary files of the Unity game
+371	Steam temporary files
+372	Temporary files and crashes of the Unity game
+373	GAMES
+374	HIDDEN GAMES AND PROGRAMS
+375	Manage saves
+376	Games
+377	Games with an installer (for example repacks), listed in Windows «Installed apps».
+378	Games and programs
+379	Game
+380	Game added: {0}
+381	Game with AppID {0}
+382	Deleted game
+383	Portable game: the folder is deleted
+387	You selected «To verify» items: check that they really belong to this application.
+388	Backups cannot be stored in a Windows folder or in the root of a disk. Choose another folder.
+389	Blocks use Windows Firewall and stay until you remove them in Settings › Network rules. AppManager does not change the traffic: it shows it and, if you want, blocks it.
+390	The game files are permanently deleted and the game is removed from the Epic Games library.
+391	Deleted files go to the Windows Recycle Bin, in a folder «AppManager - program name» with full paths. System entries become files in «Registry files». When off, files are permanently deleted. Cache and logs never go through the Recycle Bin.
+392	Deleted files go to the Recycle Bin. When off, they are permanently deleted. Change the initial value in Settings › Deletion.
+393	Files go to the Recycle Bin.
+394	Files are deleted immediately. The backup keeps only saves, settings and system entries, not program folders.
+395	Games are searched with these methods, in this order. A game can be found by several methods: it appears only once in the library.
+396	Recent logs can be useful if a game or program has just had problems
+397	Programs are searched with these methods, in this order (games are excluded). A program can be found by several methods: it appears only once in the library.
+398	Current saves move to profile «{0}» and the game folders stay empty: {1} starts from scratch with the new profile «{2}».\n\nYou can go back to the previous profile at any time.
+399	Current saves stay in the profile in use. The game starts from scratch with a new profile and you can go back to the previous one at any time.
+400	Current saves {0}are set aside in profile «{1}», then those of «{2}» return to the game folders.
+401	Its stored saves go to the Recycle Bin. The profile in use is not touched.
+402	Your games
+403	Your programs
+404	GAME IMAGES
+405	ABOUT
+406	INSTALLED ON
+407	Shortcut icon created by Steam
+408	The Recycle Bin rejected the folder «{0}» ({1}). The files are in {2}: recover them from there or delete the folder.
+409	Your PC at a glance: what takes up space and what has changed.
+410	The backup does not contain the manifest.
+411	The backup is damaged (contents list unreadable): nothing was restored.
+412	The file for this entry no longer exists. You can delete it from the Leftovers page.
+413	The file is not in the backup folder.
+414	The game
+415	The game is open ({0}): close it and try again.
+416	The game is open ({0}): close it before switching profile or restoring a backup.
+417	The package is removed as in Settings > Apps.
+418	The path is not valid.
+419	The profile in use cannot be deleted: switch to another profile first.
+420	The program
+421	The uninstaller has finished, but {0}
+422	Downloaded images
+423	Downloaded images deleted: they will be searched again.
+424	Cannot open {0}
+425	Cannot start the uninstallation: {0}
+426	Cannot delete the backup
+427	Cannot read network connections: {0}
+428	Cannot move to the Recycle Bin: {0}
+429	Cannot clear the log
+430	Settings
+431	Settings and data
+432	Settings, data and traces found on the system.
+433	Settings, log and images are in {0}
+434	Listening
+435	Closing
+436	Incoming
+437	Running as administrator: all features are available.
+438	Outgoing
+439	In use
+440	In use: its files are in the game folders
+441	In use: {0} · {1}
+442	Also include game settings (graphics, controls…): each profile will have its own
+443	Paste the key in the box first.
+444	Paste the API key here
+445	Info
+446	Steam information about this {0}
+447	Start a new game?
+448	Installed
+449	Installed since the last start ({0})
+450	Installed
+451	Installed on
+452	Internet blocked for {0}
+453	Internet unblocked for {0}
+454	The analysis also updates game leftovers.
+455	The analysis also updates program leftovers.
+456	The application is no longer on the PC. «Restore» puts its files and settings back where they were.
+457	The folder next to the program is not writable: for now the data is saved on the PC.
+458	The backup folder ({0}) is inside {1}, which is about to be deleted
+459	The backup folder ({0}) is a Windows folder
+460	The backup folder ({0}) is a Windows folder: choose another one in Settings.
+461	The backup folder is not valid
+462	The folder of profile «{0}» in the vault is not empty ({1}): check it before continuing.
+463	The new language applies from the next program start.
+464	Launcher
+465	Images will be searched again (useful if one is wrong)
+466	Older entries are removed when AppManager starts
+467	«All users» entries can be changed only as administrator.
+468	Reading backups…
+469	Reading startup programs…
+470	Reading connections…
+471	Free up space now
+472	Freed {0}
+473	Library
+474	Steam library
+475	Steam library (tool)
+476	Language
+477	Logs
+478	Unity game logs
+479	Unity game logs…
+480	Unreal Engine game logs
+481	Unreal Engine game logs…
+482	Launcher logs…
+483	EA app logs
+484	Battle.net logs
+485	Epic Games logs
+486	GOG Galaxy logs
+487	Steam logs
+488	Ubisoft Connect logs
+489	PC logs and diagnostics
+490	Logs and diagnostic files left on the PC by Windows, launchers and games, and the AppManager activity log.
+491	Log left in the temp folder by a program or an installation
+492	Temporary logs
+493	Temporary logs…
+494	MONITORING
+495	Stored
+496	Set aside current saves and start from scratch with a new profile
+497	Set aside current saves and use those of this profile
+498	Setting aside current saves…
+499	Setting aside: {0}
+500	Microsoft Store
+501	Minidump of a blue screen: only useful for diagnosing it
+502	Limited mode
+503	Also show Steam tools
+504	Show again
+505	Show where the backup's files and entries will return
+506	Show the backup
+507	Show the backup file
+508	Show the log.txt file in File Explorer
+509	Show the program's settings, data and traces without uninstalling it
+510	Show in File Explorer
+511	Show in the library
+512	Show or hide details
+513	Show or hide the program's connections
+514	Show the game's saves, settings and traces without uninstalling it
+515	Hides listening programs and those connected only to other programs on this PC.
+516	Hide
+517	Hide from the list
+518	Hide from the list (it is not a game, or you are not interested)
+519	Hide Windows components
+520	No save backups. Press «Create backup now» to create one.
+521	No data found
+522	No items selected
+523	No files were copied to the backup (files in use or unreadable).
+524	No game matches the search.
+525	No games found
+526	No time limit. Above 2 MB the oldest entries are removed
+527	No logs to delete
+529	No program matches the search.
+530	No programs start with Windows
+531	No program will be able to connect to {0} anymore.
+532	No programs found
+533	No leftovers found
+534	No results.
+535	No application matches the filter.
+536	No active connections
+537	No external destination
+538	No images downloaded.
+539	No traces of uninstalled games.
+540	No traces of uninstalled programs.
+541	No entries match the filter.
+542	None
+543	Nothing to free up: everything is already in order.
+544	Name
+545	New profile name (e.g. the player's name)
+546	Profile name
+547	Name already in use
+548	Do not close AppManager until it has finished.
+549	There are no logs or diagnostic files to remove with the chosen options.
+550	There are no saves to copy: the folders are empty or do not exist.
+551	Not available now: AppManager is not running as administrator.
+552	Not deleted because a copy could not be saved in «{0}»: {1}
+553	Do not manage
+554	Stop managing this folder (the files stay)
+555	Stop managing this folder?
+556	No data of this {0} found outside its folder.
+557	No executables to block found in the folder.
+558	Saves of this game not found
+559	No longer installed
+560	No longer present ({0})
+561	Not found (perhaps already deleted)
+562	Nothing was deleted.
+563	Could not delete:
+564	New game
+565	New game ready: profile «{0}» in use.
+567	New PC recognized: {0}. Its settings start from scratch.
+569	Each subfolder with a game is added to the library, even without installation or shortcut.
+570	Each subfolder with a program, and each executable, is added as a portable program.
+571	Above the limit, images of leftovers are deleted first, then those of games on other PCs. Images of games on this PC always stay. «Automatic» adapts to the free space.
+572	Operation failed
+573	Sort by
+576	Unnamed PC
+577	PROFILES
+578	PROGRAMS
+579	CONNECTED PROGRAMS
+580	Overview
+581	Switch to light theme
+582	Switch to dark theme
+583	To {0}, AppManager must run as administrator. Restart it now?
+584	Path too long
+585	Protected location, not restored: {0}
+586	Unity game preferences (PlayerPrefs)
+587	Preferences of a Unity game (PlayerPrefs) that is not installed
+588	Windows Prefetch
+589	Preparing…
+590	Before restore
+591	Before deletion, saves, settings and system entries are copied to a zip file, which can be restored from the Backup section. Program folders, screenshots, caches and shortcuts are not included.
+592	Before deletion, saves, settings and system entries are copied to a zip file, which can be restored from the Backup section. Change the initial value in Settings › Deletion.
+593	An automatic backup of current saves is created first, then they are replaced with the chosen ones.
+594	Likely
+595	Stored save profiles: {0}. They stay in {1} and you will find them again if you reinstall the game.
+596	Profile in use: {0}
+597	Profile not found.
+598	Profile «{0}» deleted.
+599	Profile «{0}» in use.
+600	Program
+601	Program added: {0}
+602	Deleted program
+603	Portable program, no uninstaller: its executable is offered for deletion along with the leftovers.
+604	Portable program: the executable is deleted
+605	Portable program: the folder is deleted
+606	Programs
+607	Programs with an installer, as in Settings › Installed apps.
+608	Installed programs
+609	Programs installed with Steam that are not games (for example Wallpaper Engine or Blender).
+611	Protected, not deleted: {0}
+612	Try from Settings > Apps > Installed apps.
+613	Clean PC logs
+614	Clean selected
+615	Cleanup cancelled during backup: no files deleted.
+616	Cleanup completed
+617	Cleanup completed with some errors
+618	Data cleanup
+619	Log cleanup
+620	Game leftovers cleanup
+621	Program leftovers cleanup
+622	Cleaning up…
+623	Cleanup interrupted
+624	Cleanup interrupted: {0}.
+625	Cleanup failed
+626	You can recover everything from the Recycle Bin until you empty it. No backup.
+627	You can go back in two ways: from the Recycle Bin (files and folders) and from the backup (saves, settings and system entries).
+628	You can force the removal: {0} directly, along with the leftovers.
+629	You can see connections, but blocking them requires administrator rights.
+630	THIS PC AND RESOURCES
+631	Any program → {0}
+632	When the uninstaller finishes, the search for leftovers starts automatically.
+633	When a new one is created, the oldest of the same type go to the Recycle Bin.
+634	When a program connects to the Internet it will appear here, with its destination.
+635	How many logs do Windows, launchers and games leave?
+636	This folder is a system folder or contains other games and programs. Choose the folder of a single {0}.
+637	This PC: {0}
+638	NETWORK RULES
+639	NETWORK
+640	GAME SEARCH
+641	PROGRAM SEARCH
+642	DETECTED THROUGH
+643	Collecting the information needed to find leftovers.
+644	Kernel report on a video driver or device hang
+645	System error report: only useful to Microsoft for diagnosis
+646	Error report already sent or queued: only useful to Microsoft for diagnosis
+647	Epic Games Launcher crash report
+648	Crash report of {0}
+649	"Open with" registration of {0}
+650	Launcher registration for this game
+651	Registration of the {0} for "Open with"
+652	Registration of the {0} among default apps
+653	Steam registration of a game that is not installed
+654	Steam recording or clip
+655	Default apps registration of «{0}», which no longer exists
+656	Registry
+657	Registry - {0} - {1}.reg
+658	Registry - {0}.reg
+659	Activity log cleared.
+660	Epic Games Launcher log
+661	EA app log
+662	Game session log of {0}: the game rewrites it at each start
+663	AppManager log
+664	Battle.net log
+665	GOG Galaxy log
+666	Steam log: Steam creates new ones by itself
+667	Ubisoft Connect log
+668	System registry
+669	Log of {0}: the game creates new ones at each start
+670	Log exported.
+671	Windows Firewall rules created for the {0}
+672	Windows Firewall rules removed for {0}\r\n(details not available: {1})\r\n
+673	Windows Firewall rules removed for {0}\r\n\r\n{1}\r\n
+674	Firewall rules for {0}
+675	Windows error report for the {0}
+676	Leftovers
+677	Game leftovers
+678	Leftovers of games already uninstalled
+679	Program leftovers
+680	Leftovers of programs already uninstalled
+681	Leftovers of uninstalled games
+682	Leftovers of games no longer installed: {0}
+683	Leftovers of uninstalled programs
+684	Leftovers of programs no longer installed: {0}
+685	Network
+686	Restart now
+687	Restart as administrator
+688	Restart AppManager?
+689	Search for games or programs failed: without that list, leftovers cannot be recognized. Press Refresh on the Games or Programs page and try again.
+690	Search failed
+691	Reference to file type «{0}», which no longer exists ({1})
+692	Reference to file type «{0}», which is being deleted ({1})
+693	Reference to file type «{0}»: {1}
+694	Detected through
+695	Put the backup's files and system entries back in place
+696	Putting back: {0}
+697	Direct file removal (Epic Games)
+698	Forced removal
+699	Remove
+700	Rename
+701	Rename failed
+702	Restore
+703	Restore the saves of {0}?
+704	Restore the backup of «{0}»?
+705	Restored {0} of «{1}».
+706	Restore completed
+707	Restore completed with errors
+708	Restoring saves…
+709	Restoring
+710	Restore failed
+711	Runtimes, drivers and Windows apps: other programs need them. Remove them only if you know what you are doing
+712	SAVES
+713	GAME SAVES
+714	BACKUP SPACE
+715	SPACE USED
+716	Skipped because the backup failed: {0}
+717	Save the games and programs found to a CSV file
+718	Save a copy of the log (for example to ask for help)
+719	Saves
+720	Unreal Engine game saves
+721	Unreal Engine 3 game saves
+722	Saves of {0}
+723	Steam Cloud local saves and settings (they stay in the Steam cloud anyway)
+724	Saves in {0} of a game that does not appear to be installed
+725	Saves linked to the game's AppID {0}
+726	Saves linked to AppID {0} of a game that is not installed
+727	Steam Cloud local saves of a game that is not installed (they stay in the Steam cloud)
+728	Saves restored.
+729	Saves, folders, registry entries and caches left by games no longer present.
+730	Saves, data, settings and system entries are saved in a restorable zip file
+731	Saves, settings and traces found on the system.
+732	Unblock
+733	Choose the {0} folder (portable too)
+734	Choose a specific folder (not an entire disk or a Windows folder).
+735	Choose a folder on a disk of this PC.
+737	Steam screenshots of a game that is not installed
+738	Screenshots and videos
+739	Screenshots taken with Steam
+740	Dark
+741	If you cancelled, press Cancel. If the uninstallation is still running, wait. To search for leftovers anyway, press Continue.
+742	If you do not see the Steam window, open it and uninstall {0} from the library: this will continue by itself.
+743	Windows error reports
+744	Windows error reports…
+745	Follow the uninstaller's instructions…
+746	Select all
+747	Always
+748	Without administrator rights, some system leftovers (services, system entries, firewall) cannot be deleted.
+749	Without administrator rights, some system leftovers may remain.
+750	Services
+751	Invalid services
+752	Service - {0}.reg
+753	Windows service that starts {0}, which no longer exists
+754	Windows service installed by the {0} ({1})
+755	Service «{0}» ({1})
+756	Service «{0}» restored: it will be active after the PC restarts.
+757	Administrator rights required
+758	The uninstaller of {0} will open: follow its instructions.
+759	It rebuilds itself: games may load more slowly at first start
+760	An unexpected error occurred:\n\n{0}\n\nDetails are in the activity log.
+761	System (Windows)
+762	System idle
+763	Only outgoing connections
+764	Errors only
+765	Only files older than 7 days
+766	Only files older than 7 days (recommended)
+767	Only older than 7 days
+768	These files are only useful for diagnosis: they are permanently deleted.
+769	Replace current saves with these (an automatic backup is made first)
+770	Overwrite existing files with those in the backup
+771	Maximum space for downloaded images
+772	Space used by the Dati folder. It is kept in order automatically.
+773	Space almost full: no new images are downloaded until some is freed.
+774	Space used by AppManager
+775	Moving to the Recycle Bin…
+776	You are deleting documents or data without a backup. If you may reinstall the program, turn on the backup.
+777	You are deleting saves without a backup. If you may reinstall the game, turn on the backup.
+778	Startup state of a program that no longer exists
+779	Startup state of «{0}», which no longer exists
+780	Startup state in Task Manager
+781	Steam (all libraries), Epic Games, GOG, Ubisoft Connect, EA app, Battle.net, Rockstar, Amazon Games, Xbox.
+782	Steam always asks for confirmation: you will find it in its window (sometimes behind this one).
+783	Steam will ask you to confirm and will remove {0}.
+784	SteamGridDB rejected the key: check that you copied all of it.
+785	SteamVR, Proton, dedicated servers: they appear among the programs.
+786	{0} free on the drive.
+787	Clear
+788	Clear the activity log?
+789	Theme
+790	Type
+791	File type «{0}»
+792	File type «{0}» registered by the {1}
+793	Remove block
+794	Removing current saves…
+795	Traces of deleted programs
+796	Traces of previous versions of Store apps
+797	Traces no longer valid
+798	Windows trace ({0}) of {1}, which no longer exists
+799	Windows trace: {0}
+800	Also found by an earlier method: they appear only once in the library
+801	Also found by: {0}
+802	All connections
+803	All AppManager log entries are deleted.
+804	All
+805	All backups
+806	All AppManager data lives in the Dati folder, next to the program. Folders and hidden items are remembered per PC; a new PC starts without them.
+807	All
+808	LATEST BACKUP
+809	Last 10
+810	Last 3
+811	Last 5
+813	A PC not seen for 6 months is forgotten automatically, along with the images only it used.
+814	A backup is created when you delete an application's data (with «Back up before deleting» on) or from «Manage saves». Here they are grouped by application.
+815	Use the Recycle Bin
+816	Use Windows Prefetch
+817	Use this
+818	Use this profile
+819	Use profile «{0}»?
+820	Used only by {0}, which no longer exists (detected by Windows Prefetch)
+821	VERSION
+822	Initial values of the «Use the Recycle Bin» and «Back up before deleting» boxes. You can change them for each cleanup.
+823	PATH variable {0}  →  {1}
+824	Environment variables
+825	Environment variables not accessible
+826	View backups
+827	Its settings and the images only it used are deleted. If you come back to it, it will be like a new PC.
+828	Checking the key…
+829	Check and save
+830	Version
+831	Uninstall entry pointing to the {0} folder
+832	Uninstall entry left in the registry
+833	Uninstall entry left in the registry (still listed in "Installed apps")
+834	Entry in "Installed apps" for «{0}», but its uninstaller no longer exists
+835	Entry «{0}» added to the File Explorer context menu
+836	Context menu entry «{0}»: starts {1}, which no longer exists
+837	Invalid startup entries
+838	Windows Firewall is not available on this system.
+839	Windows did not remove {0}
+840	Windows records the folders each program uses at startup: this helps find data of games and portable programs. Requires administrator rights.
+841	Windows will remove the game package, as in Settings > Apps.
+842	Windows will remove the app, as in Settings > Apps > Installed apps.
+845	\nBackups created: {0}, one per application. You will find them in the Backup section.
+846	\nBackup created: you can restore it from the Backup section.
+847	\n\nSome items require administrator rights and will be skipped.
+848	\n{0} on the PC, as you chose.
+849	\n…and {0} more notes in the activity log.
+850	added manually
+851	added manually
+852	Microsoft Store apps
+853	application|applications
+854	Steam applications
+855	file associations and File Explorer menus
+856	scheduled tasks
+857	active|active
+858	startup
+859	starts with Windows
+861	warning|warnings
+862	backup|backups
+863	block Internet access
+864	block or unblock connections
+865	shader cache
+866	change startup for all users
+867	portable folder
+868	user folder
+869	installation folder
+870	folders named after the {0}
+871	game folders
+872	portable program folders
+873	Unreal Engine and Unity data folders
+874	folders left in Program Files
+875	launcher shortcuts
+876	invalid shortcuts
+877	shortcut
+878	component
+879	COM component
+880	Windows component|Windows components
+881	connection|connections
+882	crashes and error reports
+883	to verify
+884	data of deleted programs
+885	game engine data
+886	Steam data
+887	user
+888	destination|destinations
+890	system
+891	and settings 
+892	item not deleted|items not deleted
+893	unselected item remains|unselected items remain
+894	item selected|items selected
+895	item remains|items remain
+896	item|items
+897	error|errors
+898	approved File Explorer extension
+899	log or diagnostic file|log and diagnostic files
+900	file in use skipped|files in use skipped
+901	file in use|files in use
+902	log file or folder|log files and folders
+903	temporary files
+904	empty file
+905	file/folder|files and folders
+906	file|files
+907	games added manually
+908	deleted games and programs (Prefetch)
+909	game
+910	game|games
+911	already found earlier: {0}
+912	the registry file in the backup also involves other keys, not importing it
+913	the game
+914	the game is still present.
+915	the game will be deleted
+916	the game.
+917	the program
+918	the uninstaller no longer exists ({0})
+919	the program is still present.
+920	the program will be deleted
+921	image|images
+922	Game Bar and Game Mode settings
+923	notification settings
+924	compatibility settings
+925	leftover settings, data, registry entries, startup entries, services, file types and shortcuts
+926	installation in progress
+927	the item is still present
+928	launcher
+929	modified on {0}
+930	modified on {0}
+931	in the Start menu
+932	no backups
+933	game name
+934	Xbox package name
+935	Store package name
+936	Unity product name
+937	Unreal Engine project name
+938	program name
+939	executable name
+940	Unity executable name
+941	installation folder name
+942	File Explorer cached name
+943	part of the title
+944	path too long for the Recycle Bin
+945	GPU preference (Graphics settings)
+946	product named in the executable
+947	profile|profiles
+948	program
+949	connected program|connected programs
+950	program|programs
+951	programs added manually
+952	running programs and startup entries
+953	installed programs
+954	this {0} has no uninstaller
+955	collection: {0}
+956	reg import failed
+957	registration as default program ({0})
+958	program registration for "Open with"
+959	registration among default apps
+960	system registry
+961	Windows Firewall rules
+962	requires administrator
+963	repeated {0} more times
+964	repeated once more
+965	saves by AppID
+966	leftover saves, settings, screenshots, registry entries and shortcuts
+967	screenshots and videos
+968	File Explorer icon overlay
+969	move to the Recycle Bin cancelled
+970	taskbar usage statistics
+971	statistics of launched programs (UserAssist)
+972	startup state (Task Manager)
+973	on the desktop
+974	file type (ProgID)
+975	game title
+976	remove a block rule
+977	Windows traces
+978	registry traces
+979	a deleted game
+980	a deleted program
+981	last used on {0}
+982	PATH variable
+983	"Open with" entry for {0} files
+984	system entry|system entries
+985	context menu entry
+986	File Explorer menu entry
+987	entry|entries
+988	invalid uninstall entries
+989	empty
+990	empty
+991	empty (new game)
+992	{0} (you can turn off the Recycle Bin in the cleanup options to delete it permanently)
+993	{0} (icon only)
+994	{0} ({1}) will be moved to the Recycle Bin. You will no longer be able to restore them from AppManager.
+995	{0} Wait for it to finish, then restart as administrator.
+996	{0} Closing now interrupts the operation halfway.\n\nClose anyway?
+997	{0} You can delete what you select.
+998	{0} You can remove the block in Settings › Network rules.
+999	{0} of {1} ({2}).\nThe backup file will be moved to the Recycle Bin.
+1000	{0} of a program that no longer exists ({1})
+1001	{0} of a program no longer installed{1}
+1002	{0} in total: {1} of images, {2} of activity log and settings.
+1003	{0} free of {1}
+1004	{0} in the vault ({1}{2}).
+1005	{0} will not appear in the list, but it is not uninstalled. You can show it again from Settings.
+1006	{0} will no longer start with Windows
+1007	{0} will start with Windows
+1008	{0} seems to be running ({1}): close it before continuing.
+1009	{0} · latest on {1}
+1010	{0} is still running ({1}): close it and try again.
+1011	{0} is portable, no uninstaller: the folder is offered for deletion along with the leftovers.
+1012	{0} was completely removed: there are no leftovers to delete.
+1013	{0}: choose another backup folder in Settings. No files deleted.
+1014	{0}\n\nWhen finished, AppManager searches for {1} and shows the list before deleting anything.
+1015	{0}\n\nAppManager will no longer include it in the backups and profiles of {1}. The files stay where they are.
+1016	«Automatic» uses the Windows language or, if not available, English. A restart is needed.
+1017	«Same as Windows» follows the Windows app theme.
+1018	«{0}» will no longer be able to connect to {1}.
+1019	«{0}» is a component used by other programs or by Windows ({1}): remove it only if you know it is no longer needed.
+1020	A restore is in progress.
+1021	A save operation is in progress ({0}).
+1022	An uninstallation is in progress: when finished, AppManager will search for leftovers.
+1023	A cleanup is in progress.
+1024	This is the game folder (or contains it): choose only the subfolder with the saves.
+1027	This is a link to another folder: choose the real folder.
+1028	This is an AppManager folder (save vault or backups).
+1029	This is a protected folder (of Windows, the user or another program): AppManager does not move it.
+1030	…and {0} more items
+1031	…and {0} more errors (see the activity log).
+1032	 · {0} recoverable
+1033	, {0} freed
+1034	Shortcut {0}
+1035	Uninstall {0}
+1036	Deleted: {0}{1}{2}.
+1037	Show {0}
+1038	Hide {0}?
+1039	Process {0}
+1040	Profile {0}
+1041	To {0}
+1042	{0} of {1}.
+1043	{0} of {1}
+1044	{0} in {1}
+1045	Calculating space used…
+1046	Reading disks…
+1047	 Warning: {0}
+1048	Analyzing: {0}…
+1049	Folder removed from the PATH environment variable\r\n\r\nVariable: {0} ({1})\r\nKey: {2}\r\nFolder: {3}\r\n\r\nTo put it back: System settings › Environment variables, add the folder to the variable shown.\r\n
+1050	Deleting: {0}
+1051	Restoring: {0}
+1052	system
+1053	user
+1054	B
+1055	GB
+1056	KB
+1057	MB
+1058	TB
+1059	Last start on {0}
+1060	Windows installed {0} ago ({1})
+1061	year|years
+1062	day|days
+1063	less than a day
+1064	month|months
+1065	On for {0}
+1066	less than a minute
+1067	minute|minutes
+1068	hour|hours
+1069	images: {0}
+1070	Folder in Documents: it looks like a game no longer installed. Check its contents before deleting it
+1071	Folder «{0}» in Saved Games: these are the game's initials
+1072	Search online for save folders
+1073	Checks PCGamingWiki to find saves that cannot be recognized by name. Only the game title is sent.
+1074	Game settings, according to PCGamingWiki
+1075	Every deletion is recorded in the activity log (Logs section). AppManager connects to the Internet only to search for game covers and save folders (can be turned off above).
+1076	Game saves, according to PCGamingWiki
+1077	folders in Documents
+1078	folders listed by PCGamingWiki
+1079	game initials in Saved Games
+1080	Added to Steam as a non-Steam game
+1081	Run on this PC (Windows traces)
+1082	Game folder left on the disk. Warning: it contains saves, check it before deleting it
+1083	Folder on disk ({0})
+1084	Folder «{0}»: it looks like a title in the collection. Check it before deleting it
+1085	Steam data for the game's AppID {0}
+1086	Saves of an emulator used by an unofficial copy, for a game that is not installed
+1087	Saves in the game folder
+1088	folders of the titles in a collection
+1089	portable copies on the disks
+1090	Documents
+1091	Saved Games
+1092	No profile: the current saves will become the «{0}» profile at the first switch.
+1093	Main
+1095	Cleanup
+1096	enabled
+1097	Recycle Bin
+1098	shortcuts
+1099	permanent
+1100	disabled
+1101	nothing
+1102	not found
+1103	saves
+1104	services
+1105	found
+1106	Updated
+1107	No entries yet
+1108	AppManager keeps running
+1109	AppManager starts with Windows and stays in the notification area, next to volume and network. After each uninstall it looks for leftovers and tells you if it finds any. Applies to this PC only.
+1110	AppManager starts with Windows and stays in the notification area. After each uninstall it looks for leftovers and tells you if it finds any.
+1111	AppManager: monitoring on
+1112	Open AppManager
+1113	Open the history
+1114	Waiting for the install or uninstall to finish…
+1115	Turn it on to know what stays on the PC after each uninstall, even when the AppManager window is closed.
+1116	Starts AppManager in the notification area to monitor installs and uninstalls.
+1117	Start with Windows not turned on
+1118	Notice ignored.
+1119	Looking for leftovers of {0}…
+1120	Close AppManager
+1121	What was left after the uninstall. Choose what to delete.
+1122	Windows component or runtime: no leftovers searched, its files are used by other programs.
+1123	Compare the installed programs with the last check right away
+1124	Check now
+1125	Covers installed programs and Steam and Epic games. Microsoft Store apps are not included.
+1126	Check started: any changes found will appear here.
+1127	Checking for changes…
+1128	Uninstall history
+1129	To review
+1130	From version {0} to {1}
+1131	Turn off
+1132	Turn off monitoring
+1133	Uninstalled
+1134	The leftovers of {0} are gone: they have already been deleted.
+1135	The leftovers have been deleted.
+1136	Ignore
+1137	Ignored
+1138	Starting…
+1139	In progress
+1140	Monitoring continues in the notification area, next to the clock. To close AppManager, use its icon's menu.
+1141	The history entries are removed. Leftovers on the PC stay where they are: you will find them on the Leftovers pages.
+1142	Reading installed games and programs…
+1143	Show what was left and choose what to delete
+1144	Hides the notice: the entry stays in the history, where you can review it any time
+1145	Nothing is left
+1146	Programs and games installed or uninstalled on this PC, with what was left behind.
+1147	Clean
+1148	Programs and games that are installed or uninstalled appear here, with the leftovers found after each uninstall. Uninstalls done with AppManager are included too.
+1149	Leftovers of {0}
+1150	Leftovers after {0}
+1151	Leftovers not read
+1152	Left behind: {0}{1}, including in the registry.
+1153	Left behind: {0}{1}.
+1154	Completely removed: no leftovers.
+1155	BACKGROUND MONITORING
+1156	Leftovers remain from {0}
+1157	Monitor installs and uninstalls
+1158	Monitoring
+1159	Monitoring on
+1160	Monitoring off
+1161	Clear history
+1162	Clear the history?
+1163	View and remove
+1164	View the history
+1165	Version {0}
+1166	Windows did not accept the request: {0}
+1167	scheduled task
+1168	Run key
+1169	with AppManager
+1170	uninstall|uninstalls
+1171	yesterday at {0}
+1172	today at {0}
+1173	schtasks returned code {0}
+1174	schtasks did not respond
+1175	last check at {0}
+1176	{0} at {1}
+1177	Epic Games {0}
+1178	Steam {0}
+1179	{0} and {1} more
+1180	{0} and {1}
+1181	{0}: {1} in total.
+1182	Startup folder (your user only)
+1183	Startup folder (all users)
+1184	Windows registry (your user only)
+1185	Windows registry (all users)
+5000	Analyzing folder {0}
+5001	Undoing the move 
+5002	Background task
+5003	Startup of {0}
+5004	Startup of {0}: {1}
+5006	Launching {0}
+5007	Starting uninstallation {0}
+5008	Backup created: {0}
+5009	Save backup of {0}
+5010	Backup of {0}
+5011	Backup of {0}: {1} unreadable items skipped
+5012	Backup deleted: {0}
+5013	Single-instance lock
+5014	Network block 
+5015	Network block of {0}
+5016	Block towards 
+5017	Cover cache: deleted {0} images of games no longer present
+5018	Cover cache: deleted {0} images to stay within the space limit
+5019	Profile switch of {0}
+5020	Log folder not checked {0}: {1}
+5021	Recycle Bin not available for {0} ({1}): permanent deletion
+5022	Recycle Bin not available for {0}: {1}
+5023	Recycle Bin for {0}
+5024	Closing Epic Games Launcher
+5025	AppManager closed
+5026	Closed during an operation in progress
+5027	Command
+5028	Completing 
+5029	Uninstall check
+5030	Cover of {0}
+5031	Recycle Bin copy of {0}
+5032	Data of the previous version moved to {0}
+5033	Forgot {0} PCs not seen for over {1} days
+5034	Uninstallation 
+5035	Uninstallation completed: {0}
+5036	Uninstalling {0} ({1}, {2})
+5037	Uninstalling {0}: the user continues manually
+5038	Download 
+5039	Backup list
+5040	Startup list
+5041	Network rules list
+5042	Deleted (cache, {0} files in use): {1}
+5043	Deleted ({0}): {1}
+5044	Deletion 
+5045	Startup error
+5046	Interface error
+5047	Unhandled error
+5048	Excluded for safety: {0}
+5049	List export
+5050	Xbox game {0}
+5051	Icon of {0}
+5052	Image not added to the backup of {0}: {1}
+5053	Image not converted: {0}
+5054	Images of "{0}": {1}
+5055	Images of {0}
+5056	Images: PCGamingWiki for "{0}" → {1}, Steam ID {2}
+5057	Images: Steam for "{0}" → {1} ({2:0.00})
+5058	Images: SteamGridDB for "{0}" → {1} ({2:0.00})
+5059	Images: Wikipedia for "{0}" → {1} ({2:0.00})
+5060	Images: Steam package for "{0}" → {1} ({2:0.00})
+5061	Reading appinfo.vdf
+5062	Reading scheduled tasks
+5063	Reading backup {0}
+5064	Reading network connections
+5065	Reading the save vault {0}
+5066	Reading the PC profile
+5067	Reading the log
+5068	Reading the PC identity
+5069	Reading the Windows installation date
+5070	Reading settings
+5071	Reading blocked programs
+5072	Reading firewall rules
+5073	Log not checked {0}: {1}
+5074	Epic manifest 
+5075	Backup manifest {0}
+5076	Automatic maintenance
+5077	In the Recycle Bin ({0}): {1}
+5078	In the Recycle Bin: {0}
+5079	Game name {0}
+5080	Note: {0}
+5081	New PC recognized: {0}
+5082	Package 
+5083	PowerShell
+5084	PowerShell: code {0}: {1}
+5085	Prefetch: read {0} files of {1}
+5086	Save profiles of {0} not read: {1}
+5087	Profile of another PC forgotten
+5088	Profile {0} not moved to the Recycle Bin ({1}): deleted
+5090	Cleanup "{0}": {1} items (bin={2}, backup={3})
+5091	Automatic cleanup: removed {0} temporary files left by interrupted operations
+5092	Cover cache cleanup
+5093	Empty folder cleanup
+5094	Old backup cleanup
+5095	Resource cleanup
+5096	Cleanup interrupted after {0} items
+5097	Recycle Bin collection failed for {0} ({1}): sending it to the Recycle Bin alone
+5098	Remove-AppxPackage finished but {0} is still installed
+5099	Orphan leftovers ({0})
+5100	Orphan leftovers excluded for safety: {0}. {1}{2}
+5101	Leftovers: AppID {0} ({1}) belongs to "{2}", installed: removed from the list
+5102	Program restart
+5103	Log search
+5104	Orphan leftover search
+5105	Detection 
+5106	Steam detection
+5107	Removed empty task folder: {0}
+5108	Removed empty folder: {0}
+5109	Removed empty key: {0}
+5110	Removed link {0} (target {1} intact)
+5111	Removed link {0} (the target stays intact)
+5112	Removing the profile of another PC
+5113	Network rule removal
+5114	Restore 
+5115	Restore of {0}: {1} items, {2} errors
+5116	Saves of {0} restored from {1}
+5117	Saves of {0}: backup before restore {1}
+5118	Saves of {0}: backup {1}
+5119	Saves of {0}: {1} files without a profile left in the vault ({2}): the folder stays
+5120	Saves of {0}: no stored profiles, its folder removed from the vault
+5121	Saves of {0}: profile «{1}» deleted
+5122	Saves of {0}: profile «{1}» set aside, now using «{2}»
+5123	Saving the PC profile
+5124	Saving settings
+5125	Saving cover index
+5126	Scan ({0}) of {1}
+5127	Leftover scan
+5128	Moving the data of the previous version
+5129	Moving the backup folder
+5130	Cover cache clearing
+5131	Launch through File Explorer failed: {0}
+5132	System event log not readable: {0}
+5134	AppManager {0} started
+5135	AppManager {0} started as administrator
+5136	Online save search for {0}: {1}
+5137	Saving the save-folder cache: {0}
+5138	Steam tools: {0}
+5139	Games added to Steam
+5140	Disk search
+5141	Disk search stopped after {0} folders: {1} not explored
+5142	Windows traces
+5143	Updating the history
+5144	Started with Windows in the notification area
+5145	Start with Windows turned on ({0})
+5146	Start with Windows turned off
+5147	Registry notification: {0}
+5148	Monitoring notice
+5149	Leftover check of {0}
+5150	Uninstall history
+5151	Monitoring history unreadable: {0}
+5152	Notification area icon: {0}
+5153	Monitoring snapshot unreadable: {0}
+5154	Reading leftovers from the history
+5155	Registering start with Windows
+5156	Open requests from another copy: {0}
+5157	Removing start with Windows
+5158	Saving the monitoring snapshot
+5159	Saving the monitoring history
+5160	Monitoring {0}: {1}
+5161	Background monitoring
+5162	Background monitoring started
+5163	Background monitoring stopped
+5164	Monitoring: uninstalled {0}
+5165	Monitoring: installed {0}
+5166	Monitoring: app detection
+5167	Monitoring: {0} leftovers of {1}
+5168	Icon of {0}: {1}

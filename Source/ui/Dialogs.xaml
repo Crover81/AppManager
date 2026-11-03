@@ -1,0 +1,233 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AppManager;assembly=AppManager">
+
+    <!-- ================================================================ PROCEDURA GUIDATA -->
+    <DataTemplate DataType="{x:Type local:CleanupDialogViewModel}">
+        <Border Style="{StaticResource Card}" Width="900" MaxHeight="760" Background="{StaticResource Surface}">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="40" ShadowDepth="8" Opacity="0.5" Color="Black"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- intestazione -->
+                <Grid Margin="24,20,16,16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Margin="0,0,16,0" VerticalAlignment="Center" Visibility="{Binding HasCover, Converter={StaticResource Vis}}">
+                        <!-- copertina verticale (giochi) o icona (programmi) -->
+                        <Border Width="40" Height="60" CornerRadius="7" Visibility="{Binding HasPortrait, Converter={StaticResource Vis}}">
+                            <Border.Background>
+                                <ImageBrush ImageSource="{Binding Cover}" Stretch="UniformToFill"/>
+                            </Border.Background>
+                        </Border>
+                        <Image Width="44" Height="44" Source="{Binding Cover}" RenderOptions.BitmapScalingMode="HighQuality"
+                               Visibility="{Binding HasSquareIcon, Converter={StaticResource Vis}}"/>
+                    </Grid>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Title}" Style="{StaticResource H2}"/>
+                        <TextBlock Text="{Binding Subtitle}" Style="{StaticResource Dim}" Margin="0,3,0,0"/>
+                    </StackPanel>
+                    <Button Grid.Column="2" Style="{StaticResource IconBtn}" Content="&#xE711;" VerticalAlignment="Top" Command="{Binding CancelCommand}"
+                            ToolTip="Chiudi" Visibility="{Binding IsBusy, Converter={StaticResource NotVis}}"/>
+                </Grid>
+
+                <!-- corpo -->
+                <Border Grid.Row="1" BorderBrush="{StaticResource Line}" BorderThickness="0,1,0,1" Background="{StaticResource Bg}">
+                    <Grid>
+                        <!-- conferma -->
+                        <StackPanel Margin="26,22" Visibility="{Binding IsConfirm, Converter={StaticResource Vis}}">
+                            <TextBlock Text="{Binding ConfirmText}" Style="{StaticResource Dim}" FontSize="14" LineHeight="21"/>
+                            <Border Margin="0,18,0,0" Padding="14,10" CornerRadius="10" Background="{StaticResource WarningSoft}"
+                                    Visibility="{Binding HasWarning, Converter={StaticResource Vis}}">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="&#xE7BA;" Style="{StaticResource Glyph}" Foreground="{StaticResource Warning}" Margin="0,0,10,0"/>
+                                    <TextBlock Text="{Binding Warning}" TextWrapping="Wrap" MaxWidth="760"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+
+                        <!-- disinstallazione in corso -->
+                        <StackPanel Margin="40,40" HorizontalAlignment="Center" MaxWidth="620" Visibility="{Binding IsUninstalling, Converter={StaticResource Vis}}">
+                            <local:Spinner Visibility="{Binding CanForce, Converter={StaticResource NotVis}}"/>
+                            <TextBlock Text="&#xE783;" Style="{StaticResource Glyph}" FontSize="34" Foreground="{StaticResource Danger}"
+                                       Visibility="{Binding CanForce, Converter={StaticResource Vis}}"/>
+                            <TextBlock Text="{Binding Status}" Style="{StaticResource H3}" TextWrapping="Wrap" TextTrimming="None" TextAlignment="Center" Margin="0,18,0,8"/>
+                            <TextBlock Text="{Binding Hint}" Style="{StaticResource Dim}" TextAlignment="Center"/>
+                        </StackPanel>
+
+                        <!-- ricerca residui -->
+                        <StackPanel Margin="40,48" HorizontalAlignment="Center" Visibility="{Binding IsScanning, Converter={StaticResource Vis}}">
+                            <local:Spinner/>
+                            <TextBlock Text="{Binding ProgressText}" Style="{StaticResource Dim}" Margin="0,16,0,0" HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+                        <!-- revisione -->
+                        <Grid Visibility="{Binding IsReview, Converter={StaticResource Vis}}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Margin="24,12,18,6">
+                                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                                    <Button Style="{StaticResource GhostBtn}" Content="Seleziona tutto" Command="{Binding SelectAllCommand}"/>
+                                    <Button Style="{StaticResource GhostBtn}" Content="Nessuno" Command="{Binding SelectNoneCommand}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding SelectionText}" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,12,0"/>
+                            </DockPanel>
+                            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="24,6,16,6">
+                                <ItemsControl ItemsSource="{Binding Groups}" ItemTemplate="{StaticResource GroupCard}"/>
+                            </ScrollViewer>
+                            <Border Grid.Row="2" Margin="24,4,24,12" Padding="14,9" CornerRadius="10" Background="{StaticResource WarningSoft}"
+                                    Visibility="{Binding HasReviewNote, Converter={StaticResource Vis}}">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="&#xE7BA;" Style="{StaticResource Glyph}" Foreground="{StaticResource Warning}" Margin="0,0,10,0"/>
+                                    <TextBlock Text="{Binding ReviewNote}" TextWrapping="Wrap" MaxWidth="780"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+
+                        <!-- pulizia in corso -->
+                        <StackPanel Margin="60,56" Visibility="{Binding IsCleaning, Converter={StaticResource Vis}}">
+                            <TextBlock Text="Pulizia in corso…" Style="{StaticResource H3}" HorizontalAlignment="Center" Margin="0,0,0,16"/>
+                            <ProgressBar Style="{StaticResource Bar}" Value="{Binding Progress, Mode=OneWay}"/>
+                            <TextBlock Text="{Binding ProgressText}" Style="{StaticResource Caption}" Margin="0,12,0,0" HorizontalAlignment="Center" MaxWidth="700"/>
+                        </StackPanel>
+
+                        <!-- riepilogo -->
+                        <Grid Visibility="{Binding IsDone, Converter={StaticResource Vis}}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Margin="40,34,40,10" HorizontalAlignment="Center">
+                                <Border Width="64" Height="64" CornerRadius="32" Background="{StaticResource SuccessSoft}" HorizontalAlignment="Center">
+                                    <TextBlock Text="&#xE73E;" Style="{StaticResource Glyph}" FontSize="26" Foreground="{StaticResource Success}"/>
+                                </Border>
+                                <TextBlock Text="{Binding ResultTitle}" Style="{StaticResource H2}" HorizontalAlignment="Center" Margin="0,16,0,8"/>
+                                <TextBlock Text="{Binding ResultText}" Style="{StaticResource Dim}" TextAlignment="Center" MaxWidth="640" LineHeight="20"/>
+                            </StackPanel>
+                            <Border Grid.Row="1" Style="{StaticResource Card}" Margin="30,8,30,20" Padding="14,10" Visibility="{Binding HasErrors, Converter={StaticResource Vis}}">
+                                <DockPanel>
+                                    <TextBlock DockPanel.Dock="Top" Text="Non è stato possibile eliminare:" FontWeight="SemiBold" Margin="0,0,0,6"/>
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="180">
+                                        <ItemsControl ItemsSource="{Binding Errors}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding}" Style="{StaticResource Caption}" TextWrapping="Wrap" TextTrimming="None" Margin="0,2"/>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </ScrollViewer>
+                                </DockPanel>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <!-- pulsanti -->
+                <Grid Grid.Row="2" Margin="24,14,24,16">
+                    <!-- conferma -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Visibility="{Binding IsConfirm, Converter={StaticResource Vis}}">
+                        <Button Style="{StaticResource GhostBtn}" Content="Annulla" Command="{Binding CancelCommand}" Margin="0,0,8,0"/>
+                        <Button Style="{StaticResource DangerBtn}" Command="{Binding StartCommand}" Padding="18,9">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="&#xE74D;" Style="{StaticResource Glyph}" FontSize="13" Foreground="White"/>
+                                <TextBlock Text="Disinstalla" Margin="8,0,0,0"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                    <!-- disinstallazione -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Visibility="{Binding IsUninstalling, Converter={StaticResource Vis}}">
+                        <Button Style="{StaticResource GhostBtn}" Content="Annulla" Command="{Binding CancelCommand}" Margin="0,0,8,0"/>
+                        <Button Style="{StaticResource DangerBtn}" Content="Rimozione forzata" Command="{Binding ForceCommand}" Margin="0,0,8,0"
+                                Visibility="{Binding CanForce, Converter={StaticResource Vis}}"
+                                ToolTip="{Binding ForceTip}"/>
+                        <Button Style="{StaticResource PrimaryBtn}" Content="Continua e cerca i residui" Command="{Binding ContinueCommand}"
+                                Visibility="{Binding CanContinue, Converter={StaticResource Vis}}"/>
+                    </StackPanel>
+                    <!-- revisione -->
+                    <DockPanel Visibility="{Binding IsReview, Converter={StaticResource Vis}}">
+                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                            <Button Style="{StaticResource GhostBtn}" Content="Chiudi senza eliminare" Command="{Binding CloseCommand}" Margin="0,0,8,0"/>
+                            <Button Style="{StaticResource DangerBtn}" Command="{Binding CleanCommand}" Padding="18,9">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="&#xE74D;" Style="{StaticResource Glyph}" FontSize="13" Foreground="White"/>
+                                    <TextBlock Text="{Binding CleanButtonText}" Margin="8,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,12,0">
+                            <CheckBox Content="Backup prima di eliminare" IsChecked="{Binding BackupEnabled}" Margin="0,0,20,0"
+                                      ToolTip="Salvataggi, dati, impostazioni e voci di sistema vengono salvati in un file zip ripristinabile"/>
+                            <CheckBox Content="Usa il Cestino" IsChecked="{Binding UseRecycleBin}"
+                                  ToolTip="I file eliminati vanno nel Cestino. Se è spento, vengono eliminati definitivamente. Il valore iniziale si cambia in Impostazioni › Eliminazione."/>
+                        </StackPanel>
+                    </DockPanel>
+                    <!-- riepilogo -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Visibility="{Binding IsDone, Converter={StaticResource Vis}}">
+                        <Button Style="{StaticResource Btn}" Content="Mostra il backup" Command="{Binding OpenBackupCommand}" Margin="0,0,8,0"
+                                Visibility="{Binding HasBackup, Converter={StaticResource Vis}}"/>
+                        <Button Style="{StaticResource PrimaryBtn}" Content="Chiudi" Command="{Binding CloseCommand}" Padding="22,9"/>
+                    </StackPanel>
+                    <!-- in corso: nessun pulsante, solo un'indicazione -->
+                    <TextBlock Text="Attendi il termine dell'operazione…" Style="{StaticResource Caption}" HorizontalAlignment="Right"
+                               Visibility="{Binding IsBusy, Converter={StaticResource Vis}}"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+    <!-- ================================================================ CONFERMA / MESSAGGIO -->
+    <DataTemplate DataType="{x:Type local:ConfirmDialogViewModel}">
+        <Border Style="{StaticResource Card}" Width="500" Padding="26,22">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="40" ShadowDepth="8" Opacity="0.5" Color="Black"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="{Binding Title}" Style="{StaticResource H2}" TextWrapping="Wrap" TextTrimming="None"/>
+                <TextBlock Text="{Binding Message}" Style="{StaticResource Dim}" Margin="0,10,0,0" LineHeight="20"/>
+                <CheckBox Content="{Binding OptionText}" IsChecked="{Binding OptionValue}" Margin="0,16,0,0"
+                          Visibility="{Binding OptionText, Converter={StaticResource Vis}}"/>
+                <ScrollViewer MaxHeight="200" VerticalScrollBarVisibility="Auto" Margin="0,12,0,0"
+                              Visibility="{Binding Details.Count, Converter={StaticResource Vis}}">
+                    <ItemsControl ItemsSource="{Binding Details}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" Style="{StaticResource Caption}" TextWrapping="Wrap" TextTrimming="None" Margin="0,2"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,24,0,0">
+                    <Button Style="{StaticResource GhostBtn}" Content="{Binding CancelText}" Command="{Binding CancelCommand}" Margin="0,0,8,0"
+                            Visibility="{Binding CancelText, Converter={StaticResource Vis}}"/>
+                    <Button Style="{StaticResource DangerBtn}" Content="{Binding ConfirmText}" Command="{Binding ConfirmCommand}" Padding="18,9"
+                            Visibility="{Binding IsDanger, Converter={StaticResource Vis}}"/>
+                    <Button Style="{StaticResource PrimaryBtn}" Content="{Binding ConfirmText}" Command="{Binding ConfirmCommand}" Padding="18,9"
+                            Visibility="{Binding IsDanger, Converter={StaticResource NotVis}}"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <!-- ================================================================ OPERAZIONE IN CORSO -->
+    <DataTemplate DataType="{x:Type local:BusyDialogViewModel}">
+        <Border Style="{StaticResource Card}" Width="480" Padding="28,24">
+            <StackPanel>
+                <TextBlock Text="{Binding Title}" Style="{StaticResource H3}" HorizontalAlignment="Center" Margin="0,0,0,16"/>
+                <ProgressBar Style="{StaticResource Bar}" Value="{Binding Progress, Mode=OneWay}"/>
+                <TextBlock Text="{Binding Text}" Style="{StaticResource Caption}" Margin="0,12,0,0" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+</ResourceDictionary>

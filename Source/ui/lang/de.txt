@@ -1,0 +1,1177 @@
+1	  (automatisch)
+2	 (die Dateien sind im Papierkorb)
+3	 (das Spiel scheint gelöscht zu sein)
+4	 (das Programm scheint gelöscht zu sein)
+5	 (im Papierkorb, im Ordner {0})
+6	 (im Papierkorb, in den Ordnern {0}{1})
+7	 (kein Eintrag unter Installierte Apps)
+8	 (die letzten 5000 werden angezeigt)
+9	 (ist weiterhin im Backup)
+10	 Dateien und Ordner werden endgültig gelöscht.
+11	 Dateien und Ordner kommen in den Papierkorb; Caches werden sofort gelöscht.
+12	 Es wurde nichts geändert.
+13	 Zuerst wird ein Backup erstellt.
+14	 · {0} belegt
+15	. Achtung: kürzlich geändert, möglicherweise läuft eine Installation
+16	. Achtung: kürzlich geändert, prüfe, ob {0} noch anderswo installiert ist
+17	. Prüfe, ob es deine Dokumente enthält
+18	100 MB
+19	2 GB
+20	30 Tage
+21	500 MB
+22	7 Tage
+23	90 Tage
+24	: schließe geöffnete Spiele und Apps und versuche es erneut
+25	: werden beim nächsten Neustart des PCs gelöscht
+26	ANALYSE
+27	DARSTELLUNG UND SPRACHE
+28	SCHNELLAKTIONEN
+29	Vollzugriff
+30	Zugriff verweigert (Administrator nötig oder Datei in Verwendung)
+31	Zugriff verweigert (Administrator nötig)
+32	Xbox Game Bar-Aufnahme dieses Spiels
+33	Aktualisieren (F5)
+34	Jetzt aktualisieren
+35	Jetzt aktualisieren (F5)
+36	Aktualisiert die Liste alle 2 Sekunden, solange die Seite geöffnet ist.
+37	Automatisch aktualisieren
+38	Aktualisiert um {0}
+39	Hinzufügen
+40	Ordner hinzufügen
+41	Füge den Spieleordner in den Einstellungen hinzu oder nutze die Schaltfläche Hinzufügen.
+42	Füge den Programmordner in den Einstellungen hinzu oder nutze die Schaltfläche Hinzufügen.
+43	Füge den Spielstandordner des Spiels hinzu. Meist liegt er in Dokumente\My Games, Gespeicherte Spiele oder AppData.
+44	Spiel hinzufügen, indem du seinen Ordner wählst
+45	Programm hinzufügen, indem du seinen Ordner wählst
+46	Spielstandordner hinzufügen, den AppManager nicht gefunden hat
+47	Manuell hinzugefügt
+48	Manuell hinzugefügt
+49	Manuell hinzugefügt
+50	Manche System-Apps lassen sich nicht deinstallieren; auch eine Richtlinie oder ein Update kann das Entfernen blockieren. Versuche es unter Einstellungen > Apps > Installierte Apps.
+51	Einige Backups wurden nicht gelöscht
+52	Einige Elemente erfordern Administratorrechte: Starte AppManager als Administrator neu, um sie zu löschen.
+53	Einige Spielstände werden mit Steam Cloud synchronisiert. Wechsle das Profil bei geschlossenem Steam oder schalte Steam Cloud für dieses Spiel aus: Steam könnte sonst die Spielstände des anderen Profils erneut laden.
+54	Weitere bekannte PCs
+55	Sonstige
+56	Analyse nicht verfügbar
+57	Analyse fehlgeschlagen
+58	Analyse fehlgeschlagen: {0}
+59	Erneut analysieren
+60	Noch keine Backups
+61	Abbrechen
+62	Windows-App
+63	Außerhalb des Stores installierte App (MSIX-Paket)
+64	Aus dem Store oder als MSIX-Paket installierte Apps.
+65	Installierte Windows-Apps
+66	Installierte Windows-Apps{0}
+67	AppManager konnte nicht gestartet werden:\n\n{0}
+68	AppManager ist bereits geöffnet.
+69	Anwendung
+70	Steam-Anwendungen
+71	Öffnet SteamDB im Browser, um den Namen des Spiels zu finden
+72	Öffnen
+73	Dienste öffnen
+74	Windows-Firewall öffnen
+75	Ordner öffnen
+76	Profil-Depot öffnen
+77	Programm in seiner Bibliothek öffnen
+78	Aktivitätsprotokoll öffnen
+79	Im Explorer öffnen
+80	Backup-Ordner dieser Anwendung im Explorer öffnen
+81	Aufgabenplanung öffnen
+82	Backup-Ordner öffnen
+83	Spielordner öffnen
+84	Programmordner öffnen
+85	Ordner im Explorer öffnen
+86	Bereich Backups für diese Anwendung öffnen
+87	Umgebungsvariablen öffnen
+88	Im Registrierungs-Editor öffnen
+89	In der Bibliothek öffnen
+90	Programmkompatibilitäts-Assistent
+91	Ungültige Dateizuordnungen und Menüs
+92	Warte, bis der Vorgang beendet ist…
+93	Warte auf die Liste der installierten Spiele und Programme…
+94	Achtung: Was du löschst, lässt sich nicht wiederherstellen.
+95	Wartend
+96	Einschalten
+97	Start mit Windows ein- oder ausschalten, wie im Task-Manager
+98	Geplante Aufgabe - {0}.xml
+99	Geplante Aufgabe, die {0} startet
+100	Geplante Aufgabe, die {0} startet (existiert nicht mehr)
+101	Geplante Aufgabe {0}
+102	Geplante Aufgaben
+103	Ungültige geplante Aufgaben
+104	Automatisch
+105	Automatisch
+106	Automatisch, vor einer Wiederherstellung
+107	Starten
+108	Spiel starten
+109	Programm starten
+110	Analyse starten
+111	Autostart
+112	Startet mit Windows ({0})
+113	Autostart von {0} (existiert nicht mehr)
+114	Autostart, Dienste und Aufgaben
+115	{0} wird gestartet…
+116	Start fehlgeschlagen
+117	Warnungen und Fehler
+118	Warnung
+119	BACKUPS
+120	SPIELSTAND-BACKUPS
+121	Backups
+122	Backups pro Anwendung behalten
+123	Spielstand-Backup
+124	Aktuelle Spielstände werden gesichert…
+125	Spielstand-Backup erstellt: Du findest es auch im Bereich Backups.
+126	Backups von «{0}» in den Papierkorb verschoben.
+127	Backup und Wiederherstellung von Spielständen, Profile für mehrere Spieler, neues Spiel
+128	Backup fehlgeschlagen
+129	Backup fehlgeschlagen ({0}): Bereinigung abgebrochen, keine Datei gelöscht.
+130	Backup vor dem Löschen
+131	Backup in den Papierkorb verschoben.
+132	Backup, Profile und neues Spiel für die Spielstände
+133	Backup, Profile für mehrere Spieler und neues Spiel.
+134	Backup, Profile für mehrere Spieler oder andere Einstellungen, neues Spiel ohne Verlust des alten.
+135	Blockieren
+136	Internet blockieren
+137	Internetzugriff blockieren
+138	Blockiert jede Internetverbindung, ein- und ausgehend, über die Windows-Firewall. Erfordert Administratorrechte.
+139	Jede Verbindung zu dieser Adresse blockieren
+140	Verbindungen zu {0} blockieren?
+141	Verbindungen zu {0} blockiert
+142	Blockiert
+143	Blockiert · keine Verbindung
+144	Von AppManager erstellte Sperren in der Windows-Firewall. Entferne eine Regel, um Verbindungen wieder zuzulassen.
+145	Internetsperre für {0}
+146	ORDNER
+147	VERWALTETE ORDNER
+148	WAS AM MEISTEN PLATZ BELEGT
+149	WAS SICH GEÄNDERT HAT
+150	Von Steam erstellter Shader-Cache für dieses {0}
+151	Shader-Cache der Grafiktreiber
+152	Shader-Cache einer nicht installierten App
+153	Cache, Protokolle und Abstürze
+154	Ändern
+155	Profilwechsel fehlgeschlagen: {0}{1}
+156	Profil wird gewechselt…
+157	Ordner
+158	Ordner hinzugefügt: Drücke «Aktualisieren» auf der Spieleseite.
+159	Ordner hinzugefügt: Drücke «Aktualisieren» auf der Programmseite.
+160	Ordner mit deinen Spielen (ein Unterordner pro Spiel)
+161	Ordner mit deinen portablen Programmen (ein Unterordner pro Programm)
+162	Backup-Ordner
+163	Ordner für portable Spiele ({0})
+164	Ordner der nicht verwendeten Profile
+165	Ordner für portable Programme ({0})
+166	Spielstandordner von {0}
+167	Spielordner
+168	Programmordner
+169	Ordner ({0}) zur Umgebungsvariable PATH hinzugefügt
+170	Ordner ({0}), von seinen Verknüpfungen genannt, auf dem Datenträger verblieben
+171	Ordner ({0}) auf dem Datenträger verblieben. Achtung: Er enthält auch Dokumente, Fotos oder ein Projekt, prüfe ihn vor dem Löschen
+172	Installationsordner auf dem Datenträger verblieben
+173	Screenshot-/Videoordner mit dem Namen des Spiels
+174	Ordner zum Speichern der Backups
+175	Ordner in der Variable PATH, der nicht mehr existiert
+176	Ordner nicht verfügbar
+177	Ordner nicht verwendbar
+178	Ungültiger Ordner
+179	Ordner ohne Programme (nur Daten, Protokolle oder Einstellungen)
+180	Ordner, der nur von diesem {0} verwendet wird (vom Windows-Prefetch erkannt)
+181	Leerer Ordner
+182	Ordner «{0}\{1}» in {2}: trägt den Namen eines nicht mehr vorhandenen Programms
+183	Ordner «{0}» in {1}: passt zu: {2}
+184	Ordner «{0}» in {1}: trägt den Namen eines nicht mehr vorhandenen Programms{2}
+185	Ordner für portable Spiele
+186	Ordner für portable Programme
+187	Nicht vorhandene Ordner in der Variable PATH
+188	Ordner, Einstellungen und Systemeinträge von nicht mehr vorhandenen Programmen.
+189	Sucht verbliebene Ordner, Autostart-Einträge, Aufgaben, Dienste, Dateitypen, Verknüpfungen und Einträge unter «Installierte Apps» gelöschter Programme. Ohne Bestätigung wird nichts gelöscht.
+190	Sucht Steam-Daten, Ordner von Unity- und Unreal-Spielen, Spielstände, ungültige Verknüpfungen und Shader-Caches gelöschter Spiele. Ohne Bestätigung wird nichts gelöscht.
+191	Spiele erneut suchen
+192	Installierte Spiele erneut suchen
+193	Programme erneut suchen
+194	Installierte Programme erneut suchen
+195	Reste suchen
+196	Im Protokoll suchen…
+197	Fehlende Bilder online suchen
+198	Sucht Windows-Fehlerberichte, Absturzabbilder, Protokolle von Launchern und Spielen sowie Protokolle im Temp-Ordner. Windows-Ereignisprotokolle und verwendete Dateien bleiben unberührt. Ohne Bestätigung wird nichts gelöscht.
+199	Spiel suchen…
+200	Programm suchen…
+201	Anwendung suchen…
+202	Suchen…
+203	Suche Spiele: {0}…
+204	Suche installierte Spiele…
+205	Suche installierte Programme…
+206	Suche nach Resten…
+207	Suche Spielstände von {0}…
+208	Suche Programme: {0}…
+209	Suche Reste: {0}…
+210	Sicher
+211	Welches Spiel ist das?
+212	Hell
+213	SteamGridDB-API-Schlüssel (optional)
+214	Kostenloser Schlüssel: bringt hochauflösende Cover, Bilder und Logos für fast alle Spiele. Er bleibt im Ordner Dati gespeichert.
+215	Ungültiger Schlüssel
+216	Ungültiger Schlüssel: {0}
+217	Schlüssel entfernt: SteamGridDB wird nicht mehr verwendet.
+218	Schlüssel gespeichert ••••••••{0}
+219	Schlüssel gespeichert, aber SteamGridDB antwortet gerade nicht: Er wird verwendet, sobald es möglich ist.
+220	Gültiger Schlüssel: Fehlende Bilder werden auch auf SteamGridDB gesucht.
+221	Schlüssel «{0}\{1}» mit dem Namen: {2}
+222	Schlüssel «{0}\{1}» mit dem Namen eines nicht mehr vorhandenen Programms
+223	Schlüssel «{0}» mit dem Namen: {1}
+224	Schlüssel «{0}» mit dem Namen eines nicht mehr vorhandenen Programms
+225	Schließen
+226	Schließen (Esc)
+227	Schließe das Spiel und den Launcher, falls geöffnet, und versuche es erneut.
+228	Schließen, ohne zu löschen
+229	Verknüpfungen
+230	Verknüpfungen zu gelöschten Spielen
+231	Verknüpfungen zu einem Spiel auf dem Desktop und im Startmenü, auch von Steam und Epic.
+232	Verknüpfungen zu einem Programm auf dem Desktop und im Startmenü, auch portabel.
+233	Ungültige Verknüpfungen
+234	Epic-Games-Verknüpfung zu einem nicht installierten Spiel
+235	Steam-Verknüpfung zu einer nicht installierten App
+236	Verknüpfung zu {0} (existiert nicht mehr)
+237	Verknüpfung ({0})
+238	Verknüpfung im Autostart-Ordner (startet mit Windows)
+239	Wie Windows
+240	Als Administrator nutzt die Analyse auch den Windows-Prefetch, und du kannst Dienste und Systemeinträge löschen.
+241	Als Administrator nutzt die Analyse auch den Windows-Prefetch und findet mehr Daten gelöschter Spiele.
+242	So erhältst du den Schlüssel: Melde dich auf steamgriddb.com mit Steam an, dann Preferences › API › Generate key
+243	Mit einigen Fehlern abgeschlossen
+244	Komponente
+245	COM-Komponente ({0}, {1})
+246	COM-Komponente von {0} (existiert nicht mehr)
+247	Mit der Schaltfläche «Hinzufügen» in der Spielebibliothek.
+248	Mit der Schaltfläche «Hinzufügen» in der Programmbibliothek.
+249	Mit dem eigenen Deinstallationsprogramm
+250	Bestätigen
+251	Bestätige die Deinstallation im Steam-Fenster…
+252	Verbindung…
+253	Verbindungen laufender Programme in Echtzeit. Du kannst ein Ziel oder den gesamten Internetzugriff eines Programms blockieren.
+254	Behalten
+255	Workshop-Inhalte (Mods) einer nicht installierten App
+256	Steam-Workshop-Inhalte (heruntergeladene Mods)
+257	Inhalt
+258	Enthält die Spielstände nicht verwendeter Profile. Er bleibt auf diesem PC und wird nie als Rest vorgeschlagen.
+259	Fortfahren und Reste suchen
+260	Prüfe, ob sie in einem anderen Programm geöffnet sind.
+261	Autostart prüfen
+262	Cover und Bilder von Steam, SteamGridDB und Wikipedia. Gesendet wird nur der Name des Spiels oder seine Steam-ID.
+263	Speicherkopie eines wegen eines Fehlers beendeten Programms
+264	Unvollständige Kopie: {0}
+265	Von Windows virtualisierte Kopie (VirtualStore) des Ordners ({0})
+266	Backup jetzt erstellen
+267	Spielstand-Backup wird erstellt…
+268	Backup wird erstellt…
+269	DATENTRÄGER
+270	DEINSTALLATION
+271	Zu löschen: {0} ({1}).
+272	Zu löschen: {0}.
+273	Zu prüfen
+274	Datum
+275	Daten
+276	Daten des Unity-Spiels (Spielstände, Einstellungen, Protokolle)
+277	Daten des Unreal-Engine-Spiels (Spielstände, Konfiguration, Protokolle)
+278	App-Daten (Einstellungen, Cache und lokale Dateien)
+279	Daten der Xbox-App (lokale Spielstände und Einstellungen)
+280	Daten eines Unity-Spiels (Spielstände, Einstellungen, Protokolle), das nicht installiert zu sein scheint
+281	Daten eines Unreal-Engine-Spiels ({0}), das nicht installiert zu sein scheint
+282	Daten von {0} auf diesem PC
+283	Unity-Diagnosedaten
+284	Unity-Diagnosedaten für dieses Spiel
+285	Depot der Spielstandprofile
+286	Details
+287	Größe
+288	Größe (MB)
+289	Vergessen
+290	{0} vergessen?
+291	Deaktivieren löscht nichts: Nur der Status ändert sich, wie im Task-Manager. Du kannst den Eintrag jederzeit wieder aktivieren.
+292	Deinstallieren
+293	Deinstallieren und bereinigen
+294	Deinstallation
+295	Deinstallation abgeschlossen
+296	Deinstallation abgeschlossen.
+297	Deinstallation mit Windows Installer
+298	Deinstallation mit winget (Windows-Paketverwaltung)
+299	Deinstallation fast fertig: Schließe das Fenster des Deinstallationsprogramms.
+300	Deinstallation über Steam
+301	Deinstallation über Windows
+302	Deinstallation über Windows (Microsoft-Store-App)
+303	Deinstallation über Windows läuft…
+304	Dokumente und gespeicherte Daten
+305	Öffentliche Dokumente
+306	Unvollständige Workshop-Downloads
+307	Unvollständiger Steam-Download
+308	Unterbrochener Download oder Update
+309	Grafiktreiber
+310	Vollständiges Speicherabbild nach einem Bluescreen (kann mehrere GB belegen)
+311	Absturzabbild
+312	Absturzabbilder…
+313	Absturzabbild von Steam
+314	HERAUSGEBER
+315	LÖSCHEN
+316	Herausgeber
+317	Nicht ausgewählte Elemente, die auf dem PC bleiben: {0}.
+318	Workshop-Liste einer nicht installierten App
+319	Liste der Workshop-Inhalte
+320	Liste exportiert: {0}
+321	Löschen
+322	Auch nicht ausgewählte Elemente löschen
+323	Ausgewählte Reste löschen
+324	Auswahl löschen
+325	Backup löschen (kommt in den Papierkorb)
+326	Profil löschen (kommt in den Papierkorb)
+327	Löscht den Ordner und die Reste. Zuerst siehst du die Liste.
+328	Profil löschen
+329	Auswahl löschen
+330	Löscht sofort ungenutzte Bilder und verbliebene temporäre Dateien
+331	Alle löschen
+332	Alle Backups dieser Anwendung löschen (kommen in den Papierkorb)
+333	Ausgewählte Protokolle löschen?
+334	Ausgewählte Reste löschen?
+335	Profil «{0}» löschen?
+336	Dieses Backup von «{0}» löschen?
+337	Alle Backups von «{0}» löschen?
+338	Endgültig gelöscht, weil der Papierkorb es nicht annimmt{0}: {1}
+339	Spieldateien werden gelöscht…
+340	Profil wird gelöscht…
+341	Epic Games Launcher hat keinen Deinstallationsbefehl: Die Dateien werden direkt entfernt und das Spiel aus der Launcher-Bibliothek genommen.
+342	Epic Games Launcher ist geöffnet: Er wird geschlossen, um seine Bibliothek zu aktualisieren.
+343	Das war eine Verknüpfung{0}: Nur die Verknüpfung wurde entfernt, die Daten am Ziel blieben unberührt ({1}).
+344	Fehler
+345	Fehler beim Löschen: {0}
+346	Ausführbare Datei des portablen Programms
+347	Bereits im Papierkorb-Ordner vorhanden: {0}
+348	Ein Profil namens «{0}» existiert bereits.
+349	Ein Profil namens «{0}» existiert bereits: Wähle einen anderen Namen.
+350	Existiert bereits: {0}
+351	Auf-/zuklappen
+352	Aktivitätsprotokoll exportieren
+353	Liste exportieren
+354	Liste der Spiele und Programme exportieren
+355	Export fehlgeschlagen
+356	Exportieren…
+357	Erweiterung ({0}): {1}
+358	Erweiterung eines nicht mehr vorhandenen Programms: {0}
+359	Optional
+360	Fertig
+361	CSV-Datei
+362	Absturzdateien (Dumps) ({0})
+363	Absturzdateien (Dumps) von {0}
+364	Textdateien (*.txt)|*.txt
+365	Dateien und Systemeinträge kehren an ihren ursprünglichen Ort zurück.
+366	Bereits auf dem PC vorhandene Dateien: {0}.
+367	Datei in Verwendung oder nicht zugänglich
+368	Datei fehlt
+369	Registrierungsdateien
+370	Temporäre Dateien des Unity-Spiels
+371	Temporäre Steam-Dateien
+372	Temporäre Dateien und Abstürze des Unity-Spiels
+373	SPIELE
+374	AUSGEBLENDETE SPIELE UND PROGRAMME
+375	Spielstände verwalten
+376	Spiele
+377	Spiele mit Installationsprogramm (zum Beispiel Repacks), aufgeführt unter «Installierte Apps» von Windows.
+378	Spiele & Programme
+379	Spiel
+380	Spiel hinzugefügt: {0}
+381	Spiel mit AppID {0}
+382	Gelöschtes Spiel
+383	Portables Spiel: Der Ordner wird gelöscht
+387	Du hast Elemente «Zu prüfen» ausgewählt: Prüfe, ob sie wirklich zu dieser Anwendung gehören.
+388	Backups dürfen nicht in einem Windows-Ordner oder im Stammverzeichnis eines Datenträgers liegen. Wähle einen anderen Ordner.
+389	Sperren nutzen die Windows-Firewall und bleiben, bis du sie unter Einstellungen › Netzwerkregeln entfernst. AppManager ändert den Datenverkehr nicht: Er zeigt ihn an und blockiert ihn, wenn du möchtest.
+390	Die Spieldateien werden endgültig gelöscht und das Spiel wird aus der Epic-Games-Bibliothek entfernt.
+391	Gelöschte Dateien kommen in den Windows-Papierkorb, in einen Ordner «AppManager - Programmname» mit vollständigen Pfaden. Systemeinträge werden zu Dateien in «Registrierungsdateien». Wenn ausgeschaltet, werden Dateien endgültig gelöscht. Cache und Protokolle gehen nie über den Papierkorb.
+392	Gelöschte Dateien kommen in den Papierkorb. Wenn ausgeschaltet, werden sie endgültig gelöscht. Den Startwert änderst du unter Einstellungen › Löschen.
+393	Die Dateien kommen in den Papierkorb.
+394	Dateien werden sofort gelöscht. Im Backup bleiben nur Spielstände, Einstellungen und Systemeinträge, nicht die Programmordner.
+395	Spiele werden mit diesen Methoden in dieser Reihenfolge gesucht. Ein Spiel kann von mehreren Methoden gefunden werden: In der Bibliothek erscheint es nur einmal.
+396	Aktuelle Protokolle können nützlich sein, wenn ein Spiel oder Programm gerade Probleme hatte
+397	Programme werden mit diesen Methoden in dieser Reihenfolge gesucht (ohne Spiele). Ein Programm kann von mehreren Methoden gefunden werden: In der Bibliothek erscheint es nur einmal.
+398	Die aktuellen Spielstände wandern in das Profil «{0}» und die Spielordner bleiben leer: {1} beginnt von vorn mit dem neuen Profil «{2}».\n\nDu kannst jederzeit zum vorherigen Profil zurückkehren.
+399	Die aktuellen Spielstände bleiben im verwendeten Profil. Das Spiel beginnt von vorn mit einem neuen Profil, und du kannst jederzeit zum vorherigen zurückkehren.
+400	Die aktuellen Spielstände {0}werden im Profil «{1}» beiseitegelegt, dann kehren die von «{2}» in die Spielordner zurück.
+401	Seine beiseitegelegten Spielstände kommen in den Papierkorb. Das verwendete Profil bleibt unberührt.
+402	Deine Spiele
+403	Deine Programme
+404	SPIELBILDER
+405	INFORMATIONEN
+406	INSTALLIERT AM
+407	Von Steam erstelltes Verknüpfungssymbol
+408	Der Papierkorb hat den Ordner «{0}» abgelehnt ({1}). Die Dateien liegen in {2}: Hole sie dort ab oder lösche den Ordner.
+409	Dein PC auf einen Blick: was Platz belegt und was sich geändert hat.
+410	Das Backup enthält kein Manifest.
+411	Das Backup ist beschädigt (Inhaltsliste unlesbar): Nichts wurde wiederhergestellt.
+412	Die Datei dieses Eintrags existiert nicht mehr. Du kannst ihn auf der Seite Reste löschen.
+413	Die Datei liegt nicht im Backup-Ordner.
+414	Das Spiel
+415	Das Spiel ist geöffnet ({0}): Schließe es und versuche es erneut.
+416	Das Spiel ist geöffnet ({0}): Schließe es, bevor du das Profil wechselst oder ein Backup wiederherstellst.
+417	Das Paket wird wie unter Einstellungen > Apps entfernt.
+418	Der Pfad ist ungültig.
+419	Das verwendete Profil kann nicht gelöscht werden: Wechsle zuerst zu einem anderen Profil.
+420	Das Programm
+421	Das Deinstallationsprogramm ist beendet, aber {0}
+422	Heruntergeladene Bilder
+423	Heruntergeladene Bilder gelöscht: Sie werden erneut gesucht.
+424	{0} kann nicht geöffnet werden
+425	Deinstallation kann nicht gestartet werden: {0}
+426	Backup kann nicht gelöscht werden
+427	Netzwerkverbindungen können nicht gelesen werden: {0}
+428	Kann nicht in den Papierkorb verschoben werden: {0}
+429	Protokoll kann nicht geleert werden
+430	Einstellungen
+431	Einstellungen und Daten
+432	Im System gefundene Einstellungen, Daten und Spuren.
+433	Einstellungen, Protokoll und Bilder liegen in {0}
+434	Hört zu
+435	Wird geschlossen
+436	Eingehend
+437	Läuft als Administrator: Alle Funktionen sind verfügbar.
+438	Ausgehend
+439	In Verwendung
+440	In Verwendung: Seine Dateien liegen in den Spielordnern
+441	In Verwendung: {0} · {1}
+442	Auch die Spieleinstellungen einbeziehen (Grafik, Steuerung…): Jedes Profil hat seine eigenen
+443	Füge zuerst den Schlüssel in das Feld ein.
+444	API-Schlüssel hier einfügen
+445	Info
+446	Steam-Informationen zu diesem {0}
+447	Neues Spiel beginnen?
+448	Installiert
+449	Seit dem letzten Start installiert ({0})
+450	Installiert
+451	Installiert am
+452	Internet für {0} blockiert
+453	Internet für {0} freigegeben
+454	Die Analyse aktualisiert auch die Reste der Spiele.
+455	Die Analyse aktualisiert auch die Reste der Programme.
+456	Die Anwendung ist nicht mehr auf dem PC. «Wiederherstellen» bringt ihre Dateien und Einstellungen an ihren Platz zurück.
+457	Der Ordner neben dem Programm ist nicht beschreibbar: Die Daten werden vorerst auf dem PC gespeichert.
+458	Der Backup-Ordner ({0}) liegt in {1}, der gleich gelöscht wird
+459	Der Backup-Ordner ({0}) ist ein Windows-Ordner
+460	Der Backup-Ordner ({0}) ist ein Windows-Ordner: Wähle in den Einstellungen einen anderen.
+461	Der Backup-Ordner ist ungültig
+462	Der Ordner des Profils «{0}» im Depot ist nicht leer ({1}): Prüfe ihn, bevor du fortfährst.
+463	Die neue Sprache gilt ab dem nächsten Programmstart.
+464	Launcher
+465	Die Bilder werden erneut gesucht (nützlich, wenn eines falsch ist)
+466	Ältere Einträge werden beim Start von AppManager entfernt
+467	Einträge «alle Benutzer» lassen sich nur als Administrator ändern.
+468	Backups werden gelesen…
+469	Autostart wird gelesen…
+470	Verbindungen werden gelesen…
+471	Jetzt Speicher freigeben
+472	{0} freigegeben
+473	Bibliothek
+474	Steam-Bibliothek
+475	Steam-Bibliothek (Tool)
+476	Sprache
+477	Protokolle
+478	Protokolle von Unity-Spielen
+479	Protokolle von Unity-Spielen…
+480	Protokolle von Unreal-Engine-Spielen
+481	Protokolle von Unreal-Engine-Spielen…
+482	Protokolle der Launcher…
+483	Protokolle der EA app
+484	Protokolle von Battle.net
+485	Protokolle von Epic Games
+486	Protokolle von GOG Galaxy
+487	Protokolle von Steam
+488	Protokolle von Ubisoft Connect
+489	Protokolle und Diagnose des PCs
+490	Protokolle und Diagnosedateien von Windows, Launchern und Spielen auf dem PC sowie das Aktivitätsprotokoll von AppManager.
+491	Protokoll, das ein Programm oder eine Installation im Temp-Ordner hinterlassen hat
+492	Temporäre Protokolle
+493	Temporäre Protokolle…
+494	ÜBERWACHUNG
+495	Beiseitegelegt
+496	Aktuelle Spielstände beiseitelegen und mit neuem Profil von vorn beginnen
+497	Aktuelle Spielstände beiseitelegen und die dieses Profils verwenden
+498	Aktuelle Spielstände werden beiseitegelegt…
+499	Wird beiseitegelegt: {0}
+500	Microsoft Store
+501	Minidump eines Bluescreens: nur für die Diagnose nützlich
+502	Eingeschränkter Modus
+503	Auch Steam-Tools anzeigen
+504	Wieder anzeigen
+505	Zeigen, wohin Dateien und Einträge des Backups zurückkehren
+506	Backup anzeigen
+507	Backup-Datei anzeigen
+508	Datei log.txt im Explorer anzeigen
+509	Einstellungen, Daten und Spuren des Programms anzeigen, ohne es zu deinstallieren
+510	Im Explorer anzeigen
+511	In der Bibliothek anzeigen
+512	Details ein- oder ausblenden
+513	Verbindungen des Programms ein- oder ausblenden
+514	Spielstände, Einstellungen und Spuren des Spiels anzeigen, ohne es zu deinstallieren
+515	Blendet lauschende Programme aus und solche, die nur mit anderen Programmen dieses PCs verbunden sind.
+516	Ausblenden
+517	Aus der Liste ausblenden
+518	Aus der Liste ausblenden (kein Spiel oder uninteressant)
+519	Windows-Komponenten ausblenden
+520	Keine Spielstand-Backups. Drücke «Backup jetzt erstellen», um eines zu erstellen.
+521	Keine Daten gefunden
+522	Kein Element ausgewählt
+523	Keine Datei ins Backup kopiert (Dateien in Verwendung oder unlesbar).
+524	Kein Spiel passt zur Suche.
+525	Keine Spiele gefunden
+526	Keine Zeitgrenze. Über 2 MB werden die ältesten Einträge entfernt
+527	Keine Protokolle zu löschen
+529	Kein Programm passt zur Suche.
+530	Kein Programm startet mit Windows
+531	Kein Programm kann sich mehr mit {0} verbinden.
+532	Keine Programme gefunden
+533	Keine Reste gefunden
+534	Keine Ergebnisse.
+535	Keine Anwendung passt zum Filter.
+536	Keine aktiven Verbindungen
+537	Kein externes Ziel
+538	Keine Bilder heruntergeladen.
+539	Keine Spuren deinstallierter Spiele.
+540	Keine Spuren deinstallierter Programme.
+541	Kein Eintrag passt zum Filter.
+542	Keine
+543	Nichts freizugeben: Alles ist bereits in Ordnung.
+544	Name
+545	Name des neuen Profils (z. B. der Name des Spielers)
+546	Profilname
+547	Name bereits vergeben
+548	Schließe AppManager nicht, bevor der Vorgang beendet ist.
+549	Mit den gewählten Optionen gibt es keine Protokolle oder Diagnosedateien zu entfernen.
+550	Keine Spielstände zu kopieren: Die Ordner sind leer oder existieren nicht.
+551	Derzeit nicht verfügbar: AppManager läuft nicht als Administrator.
+552	Nicht gelöscht, weil keine Kopie in «{0}» gespeichert werden konnte: {1}
+553	Nicht verwalten
+554	Diesen Ordner nicht mehr verwalten (die Dateien bleiben)
+555	Diesen Ordner nicht mehr verwalten?
+556	Keine Daten dieses {0} außerhalb seines Ordners gefunden.
+557	Im Ordner wurden keine ausführbaren Dateien zum Blockieren gefunden.
+558	Spielstände dieses Spiels nicht gefunden
+559	Nicht mehr installiert
+560	Nicht mehr vorhanden ({0})
+561	Nicht gefunden (vielleicht schon gelöscht)
+562	Es wurde nichts gelöscht.
+563	Konnte nicht gelöscht werden:
+564	Neues Spiel
+565	Neues Spiel bereit: Profil «{0}» in Verwendung.
+567	Neuer PC erkannt: {0}. Seine Einstellungen beginnen bei null.
+569	Jeder Unterordner mit einem Spiel wird zur Bibliothek hinzugefügt, auch ohne Installation oder Verknüpfung.
+570	Jeder Unterordner mit einem Programm und jede ausführbare Datei wird als portables Programm hinzugefügt.
+571	Über dem Limit werden zuerst Bilder von Resten gelöscht, dann die von Spielen anderer PCs. Bilder der Spiele dieses PCs bleiben immer. «Automatisch» passt sich dem freien Speicher an.
+572	Vorgang fehlgeschlagen
+573	Sortieren nach
+576	PC ohne Namen
+577	PROFILE
+578	PROGRAMME
+579	VERBUNDENE PROGRAMME
+580	Übersicht
+581	Zum hellen Design wechseln
+582	Zum dunklen Design wechseln
+583	Für diese Aktion ({0}) muss AppManager als Administrator laufen. Jetzt neu starten?
+584	Pfad zu lang
+585	Geschützter Ort, nicht wiederhergestellt: {0}
+586	Einstellungen des Unity-Spiels (PlayerPrefs)
+587	Einstellungen eines nicht installierten Unity-Spiels (PlayerPrefs)
+588	Windows-Prefetch
+589	Vorbereitung…
+590	Vor der Wiederherstellung
+591	Vor dem Löschen werden Spielstände, Einstellungen und Systemeinträge in eine ZIP-Datei kopiert, die im Bereich Backups wiederhergestellt werden kann. Programmordner, Screenshots, Caches und Verknüpfungen sind nicht enthalten.
+592	Vor dem Löschen werden Spielstände, Einstellungen und Systemeinträge in eine ZIP-Datei kopiert, die im Bereich Backups wiederhergestellt werden kann. Den Startwert änderst du unter Einstellungen › Löschen.
+593	Zuerst wird ein automatisches Backup der aktuellen Spielstände erstellt, dann werden sie durch die gewählten ersetzt.
+594	Wahrscheinlich
+595	Beiseitegelegte Spielstandprofile: {0}. Sie bleiben in {1} und du findest sie wieder, wenn du das Spiel neu installierst.
+596	Profil in Verwendung: {0}
+597	Profil nicht gefunden.
+598	Profil «{0}» gelöscht.
+599	Profil «{0}» in Verwendung.
+600	Programm
+601	Programm hinzugefügt: {0}
+602	Gelöschtes Programm
+603	Portables Programm ohne Deinstallation: Seine ausführbare Datei wird zusammen mit den Resten zum Löschen vorgeschlagen.
+604	Portables Programm: Die ausführbare Datei wird gelöscht
+605	Portables Programm: Der Ordner wird gelöscht
+606	Programme
+607	Programme mit Installationsprogramm, wie unter Einstellungen › Installierte Apps.
+608	Installierte Programme
+609	Mit Steam installierte Programme, die keine Spiele sind (zum Beispiel Wallpaper Engine oder Blender).
+611	Geschützt, nicht gelöscht: {0}
+612	Versuche es unter Einstellungen > Apps > Installierte Apps.
+613	PC-Protokolle bereinigen
+614	Auswahl bereinigen
+615	Bereinigung während des Backups abgebrochen: keine Datei gelöscht.
+616	Bereinigung abgeschlossen
+617	Bereinigung mit einigen Fehlern abgeschlossen
+618	Datenbereinigung
+619	Protokollbereinigung
+620	Bereinigung der Spielreste
+621	Bereinigung der Programmreste
+622	Bereinigung läuft…
+623	Bereinigung unterbrochen
+624	Bereinigung unterbrochen: {0}.
+625	Bereinigung fehlgeschlagen
+626	Du kannst alles aus dem Papierkorb wiederherstellen, bis du ihn leerst. Kein Backup.
+627	Du kannst auf zwei Wegen zurück: über den Papierkorb (Dateien und Ordner) und über das Backup (Spielstände, Einstellungen und Systemeinträge).
+628	Du kannst das Entfernen erzwingen: {0} direkt, zusammen mit den Resten.
+629	Du kannst die Verbindungen sehen, zum Blockieren sind aber Administratorrechte nötig.
+630	DIESER PC UND RESSOURCEN
+631	Beliebiges Programm → {0}
+632	Wenn das Deinstallationsprogramm endet, beginnt die Suche nach Resten automatisch.
+633	Wird ein neues erstellt, kommen die ältesten desselben Typs in den Papierkorb.
+634	Wenn ein Programm eine Internetverbindung herstellt, erscheint es hier mit seinem Ziel.
+635	Wie viele Protokolle hinterlassen Windows, Launcher und Spiele?
+636	Dieser Ordner ist ein Systemordner oder enthält andere Spiele und Programme. Wähle den Ordner für genau ein {0}.
+637	Dieser PC: {0}
+638	NETZWERKREGELN
+639	NETZWERK
+640	SPIELESUCHE
+641	PROGRAMMSUCHE
+642	ERKANNT ÜBER
+643	Sammle die Informationen, die zum Finden der Reste nötig sind.
+644	Kernel-Bericht über das Hängen eines Grafiktreibers oder Geräts
+645	Systemfehlerbericht: nur für die Diagnose durch Microsoft nützlich
+646	Fehlerbericht bereits gesendet oder in der Warteschlange: nur für die Diagnose durch Microsoft nützlich
+647	Absturzbericht des Epic Games Launchers
+648	Absturzbericht von {0}
+649	Registrierung für "Öffnen mit" von {0}
+650	Launcher-Registrierung für dieses Spiel
+651	Registrierung ({0}) für "Öffnen mit"
+652	Registrierung ({0}) unter den Standard-Apps
+653	Steam-Registrierung eines nicht installierten Spiels
+654	Steam-Aufnahme oder -Clip
+655	Registrierung unter den Standard-Apps von «{0}» (existiert nicht mehr)
+656	Registrierung
+657	Registrierung - {0} - {1}.reg
+658	Registrierung - {0}.reg
+659	Aktivitätsprotokoll geleert.
+660	Protokoll des Epic Games Launchers
+661	Protokoll der EA app
+662	Sitzungsprotokoll von {0}: Das Spiel schreibt es bei jedem Start neu
+663	AppManager-Protokoll
+664	Protokoll von Battle.net
+665	Protokoll von GOG Galaxy
+666	Steam-Protokoll: Steam erstellt selbst neue
+667	Protokoll von Ubisoft Connect
+668	Systemregistrierung
+669	Protokoll von {0}: Das Spiel erstellt bei jedem Start neue
+670	Protokoll exportiert.
+671	Für das {0} erstellte Regeln der Windows-Firewall
+672	Windows-Firewall-Regeln für {0} entfernt\r\n(Details nicht verfügbar: {1})\r\n
+673	Windows-Firewall-Regeln für {0} entfernt\r\n\r\n{1}\r\n
+674	Firewall-Regeln für {0}
+675	Windows-Fehlerbericht zum {0}
+676	Reste
+677	Spielreste
+678	Reste bereits deinstallierter Spiele
+679	Programmreste
+680	Reste bereits deinstallierter Programme
+681	Reste deinstallierter Spiele
+682	Reste nicht mehr installierter Spiele: {0}
+683	Reste deinstallierter Programme
+684	Reste nicht mehr installierter Programme: {0}
+685	Netzwerk
+686	Jetzt neu starten
+687	Als Administrator neu starten
+688	AppManager neu starten?
+689	Suche nach Spielen oder Programmen fehlgeschlagen: Ohne diese Liste lassen sich Reste nicht erkennen. Drücke Aktualisieren auf der Seite Spiele oder Programme und versuche es erneut.
+690	Suche fehlgeschlagen
+691	Verweis auf Dateityp «{0}» (existiert nicht mehr, {1})
+692	Verweis auf Dateityp «{0}», der gelöscht wird ({1})
+693	Verweis auf Dateityp «{0}»: {1}
+694	Erkannt über
+695	Dateien und Systemeinträge des Backups an ihren Platz zurücklegen
+696	Wird zurückgelegt: {0}
+697	Direktes Entfernen der Dateien (Epic Games)
+698	Erzwungenes Entfernen
+699	Entfernen
+700	Umbenennen
+701	Umbenennen fehlgeschlagen
+702	Wiederherstellen
+703	Spielstände vom {0} wiederherstellen?
+704	Backup von «{0}» wiederherstellen?
+705	{0} von «{1}» wiederhergestellt.
+706	Wiederherstellung abgeschlossen
+707	Wiederherstellung mit Fehlern abgeschlossen
+708	Spielstände werden wiederhergestellt…
+709	Wiederherstellung läuft
+710	Wiederherstellung fehlgeschlagen
+711	Runtimes, Treiber und Windows-Apps: Andere Programme brauchen sie. Entferne sie nur, wenn du weißt, was du tust
+712	SPIELSTÄNDE
+713	SPIELSTÄNDE DER SPIELE
+714	BACKUP-SPEICHER
+715	BELEGTER SPEICHER
+716	Übersprungen, weil das Backup fehlgeschlagen ist: {0}
+717	Gefundene Spiele und Programme in einer CSV-Datei speichern
+718	Kopie des Protokolls speichern (zum Beispiel, um Hilfe zu erhalten)
+719	Spielstände
+720	Spielstände des Unreal-Engine-Spiels
+721	Spielstände des Unreal-Engine-3-Spiels
+722	Spielstände von {0}
+723	Lokale Spielstände und Einstellungen von Steam Cloud (bleiben ohnehin in der Steam-Cloud)
+724	Spielstände in {0} eines Spiels, das nicht installiert zu sein scheint
+725	Mit der AppID {0} des Spiels verknüpfte Spielstände
+726	Mit der AppID {0} verknüpfte Spielstände eines nicht installierten Spiels
+727	Lokale Steam-Cloud-Spielstände eines nicht installierten Spiels (bleiben in der Steam-Cloud)
+728	Spielstände wiederhergestellt.
+729	Spielstände, Ordner, Registrierungseinträge und Caches von nicht mehr vorhandenen Spielen.
+730	Spielstände, Daten, Einstellungen und Systemeinträge werden in einer wiederherstellbaren ZIP-Datei gespeichert
+731	Im System gefundene Spielstände, Einstellungen und Spuren.
+732	Freigeben
+733	Ordner wählen: {0} (auch portabel)
+734	Wähle einen bestimmten Ordner (keinen ganzen Datenträger und keinen Windows-Ordner).
+735	Wähle einen Ordner auf einem Datenträger des PCs.
+737	Steam-Screenshots eines nicht installierten Spiels
+738	Screenshots und Videos
+739	Mit Steam aufgenommene Screenshots
+740	Dunkel
+741	Wenn du abgebrochen hast, drücke Abbrechen. Läuft die Deinstallation noch, warte. Um trotzdem Reste zu suchen, drücke Fortfahren.
+742	Wenn du das Steam-Fenster nicht siehst, öffne Steam und deinstalliere {0} aus der Bibliothek: Hier geht es automatisch weiter.
+743	Windows-Fehlerberichte
+744	Windows-Fehlerberichte…
+745	Folge den Anweisungen des Deinstallationsprogramms…
+746	Alle auswählen
+747	Immer
+748	Ohne Administratorrechte lassen sich einige Systemreste (Dienste, Systemeinträge, Firewall) nicht löschen.
+749	Ohne Administratorrechte können einige Systemreste bleiben.
+750	Dienste
+751	Ungültige Dienste
+752	Dienst - {0}.reg
+753	Windows-Dienst, der {0} startet (existiert nicht mehr)
+754	Windows-Dienst, installiert von: {0} ({1})
+755	Dienst «{0}» ({1})
+756	Dienst «{0}» wiederhergestellt: Er ist nach dem Neustart des PCs aktiv.
+757	Administratorrechte erforderlich
+758	Das Deinstallationsprogramm von {0} wird geöffnet: Folge seinen Anweisungen.
+759	Baut sich selbst neu auf: Spiele können beim ersten Start langsamer laden
+760	Ein unerwarteter Fehler ist aufgetreten:\n\n{0}\n\nDetails stehen im Aktivitätsprotokoll.
+761	System (Windows)
+762	System im Leerlauf
+763	Nur Verbindungen nach außen
+764	Nur Fehler
+765	Nur Dateien älter als 7 Tage
+766	Nur Dateien älter als 7 Tage (empfohlen)
+767	Nur älter als 7 Tage
+768	Diese Dateien dienen nur der Diagnose: Sie werden endgültig gelöscht.
+769	Aktuelle Spielstände durch diese ersetzen (zuerst wird ein automatisches Backup erstellt)
+770	Vorhandene Dateien mit denen aus dem Backup überschreiben
+771	Maximaler Speicher für heruntergeladene Bilder
+772	Vom Ordner Dati belegter Speicher. Er wird automatisch in Ordnung gehalten.
+773	Speicher fast voll: Es werden keine neuen Bilder geladen, bis Platz frei wird.
+774	Von AppManager belegter Speicher
+775	Wird in den Papierkorb verschoben…
+776	Du löschst Dokumente oder Daten ohne Backup. Wenn du das Programm vielleicht neu installierst, aktiviere das Backup.
+777	Du löschst Spielstände ohne Backup. Wenn du das Spiel vielleicht neu installierst, aktiviere das Backup.
+778	Autostart-Status eines nicht mehr vorhandenen Programms
+779	Autostart-Status von «{0}» (existiert nicht mehr)
+780	Autostart-Status im Task-Manager
+781	Steam (alle Bibliotheken), Epic Games, GOG, Ubisoft Connect, EA app, Battle.net, Rockstar, Amazon Games, Xbox.
+782	Steam fragt immer nach einer Bestätigung: Du findest sie in seinem Fenster (manchmal hinter diesem).
+783	Steam bittet dich um Bestätigung und entfernt dann: {0}.
+784	SteamGridDB hat den Schlüssel abgelehnt: Prüfe, ob du ihn vollständig kopiert hast.
+785	SteamVR, Proton, dedizierte Server: Sie erscheinen unter den Programmen.
+786	{0} frei auf dem Laufwerk.
+787	Leeren
+788	Aktivitätsprotokoll leeren?
+789	Design
+790	Typ
+791	Dateityp «{0}»
+792	Dateityp «{0}», registriert von: {1}
+793	Sperre entfernen
+794	Aktuelle Spielstände werden entfernt…
+795	Spuren gelöschter Programme
+796	Spuren früherer Versionen von Store-Apps
+797	Nicht mehr gültige Spuren
+798	Windows-Spur ({0}) von {1} (existiert nicht mehr)
+799	Windows-Spur: {0}
+800	Auch von einer früheren Methode gefunden: In der Bibliothek erscheinen sie nur einmal
+801	Auch gefunden von: {0}
+802	Alle Verbindungen
+803	Alle Einträge des AppManager-Protokolls werden gelöscht.
+804	Alle
+805	Alle Backups
+806	Alle Daten von AppManager liegen im Ordner Dati neben dem Programm. Ordner und ausgeblendete Elemente werden pro PC gespeichert; ein neuer PC beginnt ohne sie.
+807	Alles
+808	LETZTES BACKUP
+809	Letzte 10
+810	Letzte 3
+811	Letzte 5
+813	Ein PC, der 6 Monate nicht gesehen wurde, wird automatisch vergessen, zusammen mit den nur von ihm genutzten Bildern.
+814	Ein Backup entsteht, wenn du Daten einer Anwendung löschst (mit aktivem «Backup vor dem Löschen») oder über «Spielstände verwalten». Hier sind sie nach Anwendung gruppiert.
+815	Papierkorb verwenden
+816	Windows-Prefetch verwenden
+817	Verwenden
+818	Dieses Profil verwenden
+819	Profil «{0}» verwenden?
+820	Nur von {0} verwendet, das nicht mehr existiert (vom Windows-Prefetch erkannt)
+821	VERSION
+822	Startwerte der Felder «Papierkorb verwenden» und «Backup vor dem Löschen». Du kannst sie für jede Bereinigung ändern.
+823	Variable PATH {0}  →  {1}
+824	Umgebungsvariablen
+825	Umgebungsvariablen nicht zugänglich
+826	Backups ansehen
+827	Seine Einstellungen und die nur von ihm genutzten Bilder werden gelöscht. Kehrst du zurück, ist es wie ein neuer PC.
+828	Schlüssel wird geprüft…
+829	Prüfen und speichern
+830	Version
+831	Deinstallationseintrag, der auf den Ordner ({0}) zeigt
+832	In der Registrierung verbliebener Deinstallationseintrag
+833	In der Registrierung verbliebener Deinstallationseintrag (noch unter "Installierte Apps" aufgeführt)
+834	Eintrag unter "Installierte Apps" für «{0}», aber sein Deinstallationsprogramm existiert nicht mehr
+835	Eintrag «{0}» zum Kontextmenü des Explorers hinzugefügt
+836	Kontextmenü-Eintrag «{0}»: startet {1} (existiert nicht mehr)
+837	Ungültige Autostart-Einträge
+838	Die Windows-Firewall ist auf diesem System nicht verfügbar.
+839	Windows hat {0} nicht entfernt
+840	Windows notiert die Ordner, die jedes Programm beim Start nutzt: Das hilft, Daten von Spielen und portablen Programmen zu finden. Erfordert Administratorrechte.
+841	Windows entfernt das Paket des Spiels, wie unter Einstellungen > Apps.
+842	Windows entfernt die App, wie unter Einstellungen > Apps > Installierte Apps.
+845	\nBackups erstellt: {0}, eines pro Anwendung. Du findest sie im Bereich Backups.
+846	\nBackup erstellt: Du kannst es im Bereich Backups wiederherstellen.
+847	\n\nEinige Elemente erfordern Administratorrechte und werden übersprungen.
+848	\n{0} auf dem PC, wie von dir gewählt.
+849	\n…und {0} weitere Hinweise im Aktivitätsprotokoll.
+850	manuell hinzugefügt
+851	manuell hinzugefügt
+852	Microsoft-Store-Apps
+853	Anwendung|Anwendungen
+854	Steam-Anwendungen
+855	Dateizuordnungen und Explorer-Menüs
+856	geplante Aufgaben
+857	aktiv|aktiv
+858	Autostart
+859	startet mit Windows
+861	Warnung|Warnungen
+862	Backup|Backups
+863	den Internetzugriff blockieren
+864	Verbindungen blockieren oder freigeben
+865	Shader-Cache
+866	Autostart für alle Benutzer ändern
+867	Portable-Ordner
+868	Benutzerordner
+869	Installationsordner
+870	Ordner mit dem Namen ({0})
+871	Spieleordner
+872	Ordner portabler Programme
+873	Datenordner von Unreal Engine und Unity
+874	in Program Files verbliebene Ordner
+875	Verknüpfungen der Launcher
+876	ungültige Verknüpfungen
+877	Verknüpfung
+878	Komponente
+879	COM-Komponente
+880	Windows-Komponente|Windows-Komponenten
+881	Verbindung|Verbindungen
+882	Abstürze und Fehlerberichte
+883	zu prüfen
+884	Daten gelöschter Programme
+885	Daten der Spiel-Engine
+886	Steam-Daten
+887	des Benutzers
+888	Ziel|Ziele
+890	des Systems
+891	und Einstellungen 
+892	Element nicht gelöscht|Elemente nicht gelöscht
+893	nicht ausgewähltes Element bleibt|nicht ausgewählte Elemente bleiben
+894	Element ausgewählt|Elemente ausgewählt
+895	Element bleibt|Elemente bleiben
+896	Element|Elemente
+897	Fehler|Fehler
+898	genehmigte Explorer-Erweiterung
+899	Protokoll- oder Diagnosedatei|Protokoll- und Diagnosedateien
+900	verwendete Datei übersprungen|verwendete Dateien übersprungen
+901	Datei in Verwendung|Dateien in Verwendung
+902	Protokolldatei oder -ordner|Protokolldateien und -ordner
+903	temporäre Dateien
+904	leere Datei
+905	Datei/Ordner|Dateien und Ordner
+906	Datei|Dateien
+907	manuell hinzugefügte Spiele
+908	gelöschte Spiele und Programme (Prefetch)
+909	Spiel
+910	Spiel|Spiele
+911	bereits zuvor gefunden: {0}
+912	die Registrierungsdatei im Backup betrifft auch andere Schlüssel, sie wird nicht importiert
+913	das Spiel
+914	das Spiel ist noch vorhanden.
+915	das Spiel wird gelöscht
+916	das Spiel.
+917	das Programm
+918	das Deinstallationsprogramm existiert nicht mehr ({0})
+919	das Programm ist noch vorhanden.
+920	das Programm wird gelöscht
+921	Bild|Bilder
+922	Einstellungen für Game Bar und Spielmodus
+923	Benachrichtigungseinstellungen
+924	Kompatibilitätseinstellungen
+925	verbliebene Einstellungen, Daten, Registrierungseinträge, Autostarts, Dienste, Dateitypen und Verknüpfungen
+926	Installation läuft
+927	das Element ist noch vorhanden
+928	Launcher
+929	geändert am {0}
+930	geändert am {0}
+931	im Startmenü
+932	keine Backups
+933	Name des Spiels
+934	Name des Xbox-Pakets
+935	Name des Store-Pakets
+936	Name des Unity-Produkts
+937	Name des Unreal-Engine-Projekts
+938	Name des Programms
+939	Name der ausführbaren Datei
+940	Name der Unity-Datei
+941	Name des Installationsordners
+942	zwischengespeicherter Name im Explorer
+943	Teil des Titels
+944	Pfad für den Papierkorb zu lang
+945	GPU-Einstellung (Grafikeinstellungen)
+946	in der ausführbaren Datei genanntes Produkt
+947	Profil|Profile
+948	Programm
+949	verbundenes Programm|verbundene Programme
+950	Programm|Programme
+951	manuell hinzugefügte Programme
+952	laufende Programme und Autostarts
+953	installierte Programme
+954	dieses {0} hat kein Deinstallationsprogramm
+955	Sammlung: {0}
+956	reg import fehlgeschlagen
+957	Registrierung als Standardprogramm ({0})
+958	Registrierung des Programms für "Öffnen mit"
+959	Registrierung unter den Standard-Apps
+960	Systemregistrierung
+961	Regeln der Windows-Firewall
+962	Administrator erforderlich
+963	{0} weitere Male wiederholt
+964	noch einmal wiederholt
+965	Spielstände nach AppID
+966	verbliebene Spielstände, Einstellungen, Screenshots, Registrierungseinträge und Verknüpfungen
+967	Screenshots und Videos
+968	Überlagerung auf Explorer-Symbolen
+969	Verschieben in den Papierkorb abgebrochen
+970	Nutzungsstatistik der Taskleiste
+971	Statistik gestarteter Programme (UserAssist)
+972	Autostart-Status (Task-Manager)
+973	auf dem Desktop
+974	Dateityp (ProgID)
+975	Titel des Spiels
+976	eine Sperrregel entfernen
+977	Windows-Spuren
+978	Spuren in der Registrierung
+979	ein gelöschtes Spiel
+980	ein gelöschtes Programm
+981	zuletzt verwendet am {0}
+982	Variable PATH
+983	Eintrag "Öffnen mit" für {0}-Dateien
+984	Systemeintrag|Systemeinträge
+985	Kontextmenü-Eintrag
+986	Explorer-Menüeintrag
+987	Eintrag|Einträge
+988	ungültige Deinstallationseinträge
+989	leer
+990	leer
+991	leer (neues Spiel)
+992	{0} (du kannst den Papierkorb in den Bereinigungsoptionen ausschalten, um es endgültig zu löschen)
+993	{0} (nur Symbol)
+994	{0} ({1}) werden in den Papierkorb verschoben. Du kannst sie dann nicht mehr über AppManager wiederherstellen.
+995	{0} Warte, bis es fertig ist, und starte dann als Administrator neu.
+996	{0} Beim Schließen wird der Vorgang mittendrin unterbrochen.\n\nTrotzdem schließen?
+997	{0} Du kannst löschen, was du auswählst.
+998	{0} Du kannst die Sperre unter Einstellungen › Netzwerkregeln entfernen.
+999	{0} vom {1} ({2}).\nDie Backup-Datei wird in den Papierkorb verschoben.
+1000	{0} eines nicht mehr vorhandenen Programms ({1})
+1001	{0} eines nicht mehr installierten Programms{1}
+1002	{0} insgesamt: {1} Bilder, {2} Aktivitätsprotokoll und Einstellungen.
+1003	{0} frei von {1}
+1004	{0} im Depot ({1}{2}).
+1005	{0} erscheint nicht mehr in der Liste, wird aber nicht deinstalliert. Du kannst es in den Einstellungen wieder anzeigen.
+1006	{0} startet nicht mehr mit Windows
+1007	{0} startet mit Windows
+1008	{0} scheint zu laufen ({1}): Schließe es, bevor du fortfährst.
+1009	{0} · zuletzt am {1}
+1010	{0} läuft noch ({1}): Schließe es und versuche es erneut.
+1011	{0} ist portabel, ohne Deinstallation: Der Ordner wird zusammen mit den Resten zum Löschen vorgeschlagen.
+1012	{0} wurde vollständig entfernt: Es gibt keine Reste zu löschen.
+1013	{0}: Wähle in den Einstellungen einen anderen Backup-Ordner. Keine Datei gelöscht.
+1014	{0}\n\nDanach sucht AppManager: {1}, und zeigt die Liste, bevor etwas gelöscht wird.
+1015	{0}\n\nAppManager nimmt ihn nicht mehr in Backups und Profile von {1} auf. Die Dateien bleiben, wo sie sind.
+1016	«Automatisch» nutzt die Windows-Sprache oder, falls nicht verfügbar, Englisch. Neustart erforderlich.
+1017	«Wie Windows» folgt dem App-Design von Windows.
+1018	«{0}» kann sich nicht mehr mit {1} verbinden.
+1019	«{0}» ist eine Komponente, die andere Programme oder Windows nutzen ({1}): Entferne sie nur, wenn du sicher bist, dass sie nicht mehr gebraucht wird.
+1020	Eine Wiederherstellung läuft.
+1021	Ein Vorgang an den Spielständen läuft ({0}).
+1022	Eine Deinstallation läuft: Danach sucht AppManager nach Resten.
+1023	Eine Bereinigung läuft.
+1024	Das ist der Spielordner (oder enthält ihn): Wähle nur den Unterordner mit den Spielständen.
+1027	Das ist eine Verknüpfung zu einem anderen Ordner: Wähle den echten Ordner.
+1028	Das ist ein Ordner von AppManager (Spielstand-Depot oder Backups).
+1029	Das ist ein geschützter Ordner (von Windows, dem Benutzer oder einem anderen Programm): AppManager verschiebt ihn nicht.
+1030	…und {0} weitere Elemente
+1031	…und {0} weitere Fehler (siehe Aktivitätsprotokoll).
+1032	 · {0} freizugeben
+1033	, {0} freigegeben
+1034	Verknüpfung {0}
+1035	{0} deinstallieren
+1036	Gelöscht: {0}{1}{2}.
+1037	{0} anzeigen
+1038	{0} ausblenden?
+1039	Prozess {0}
+1040	Profil {0}
+1041	Zu {0}
+1042	{0} vom {1}.
+1043	{0} von {1}
+1044	{0} in {1}
+1045	Belegter Speicher wird berechnet…
+1046	Datenträger werden gelesen…
+1047	 Achtung: {0}
+1048	Analyse: {0}…
+1049	Ordner aus der Umgebungsvariable PATH entfernt\r\n\r\nVariable: {0} ({1})\r\nSchlüssel: {2}\r\nOrdner: {3}\r\n\r\nWiederherstellen: Systemeinstellungen › Umgebungsvariablen, den Ordner zur genannten Variable hinzufügen.\r\n
+1050	Wird gelöscht: {0}
+1051	Wird wiederhergestellt: {0}
+1052	System
+1053	Benutzer
+1054	B
+1055	GB
+1056	KB
+1057	MB
+1058	TB
+1059	Letzter Start am {0}
+1060	Windows installiert am {1} (Alter: {0})
+1061	Jahr|Jahre
+1062	Tag|Tage
+1063	unter einem Tag
+1064	Monat|Monate
+1065	Betriebszeit: {0}
+1066	unter einer Minute
+1067	Minute|Minuten
+1068	Stunde|Stunden
+1069	Bilder: {0}
+1070	Ordner in Dokumente: scheint von einem nicht mehr installierten Spiel zu stammen. Prüfe den Inhalt vor dem Löschen
+1071	Ordner «{0}» in Gespeicherte Spiele: das Kürzel des Spiels
+1072	Spielstandordner online suchen
+1073	Fragt PCGamingWiki nach Spielständen, die am Namen nicht erkennbar sind. Gesendet wird nur der Spieltitel.
+1074	Spieleinstellungen laut PCGamingWiki
+1075	Jedes Löschen wird im Aktivitätsprotokoll festgehalten (Bereich Protokolle). AppManager geht nur ins Internet, um Spiel-Cover und Spielstandordner zu suchen (oben abschaltbar).
+1076	Spielstände laut PCGamingWiki
+1077	Ordner in Dokumente
+1078	von PCGamingWiki genannte Ordner
+1079	Spielkürzel in Gespeicherte Spiele
+1080	Als externes Spiel zu Steam hinzugefügt
+1081	Auf diesem PC gestartet (Windows-Spuren)
+1082	Spielordner auf dem Laufwerk geblieben. Achtung: Er enthält Spielstände, vor dem Löschen prüfen
+1083	Ordner auf dem Laufwerk ({0})
+1084	Ordner «{0}»: scheint zu einem Titel der Sammlung zu gehören. Vor dem Löschen prüfen
+1085	Steam-Daten für die AppID {0} des Spiels
+1086	Spielstände eines von einer inoffiziellen Kopie genutzten Emulators, zu einem nicht installierten Spiel
+1087	Spielstände im Spielordner
+1088	Ordner der Titel einer Sammlung
+1089	portable Kopien auf den Laufwerken
+1090	Dokumente
+1091	Gespeicherte Spiele
+1092	Kein Profil: Die aktuellen Spielstände werden beim ersten Wechsel zum Profil «{0}».
+1093	Haupt
+1095	Bereinigung
+1096	aktiviert
+1097	Papierkorb
+1098	Verknüpfungen
+1099	endgültig
+1100	deaktiviert
+1101	nichts
+1102	nicht gefunden
+1103	Spielstände
+1104	Dienste
+1105	gefunden
+1106	Aktualisiert
+1107	Noch keine Einträge
+1108	AppManager bleibt aktiv
+1109	AppManager startet mit Windows und bleibt im Infobereich, neben Lautstärke und Netzwerk. Nach jeder Deinstallation sucht es nach Resten und meldet sich, wenn es welche findet. Gilt nur für diesen PC.
+1110	AppManager startet mit Windows und bleibt im Infobereich. Nach jeder Deinstallation sucht es nach Resten und meldet sich, wenn es welche findet.
+1111	AppManager: Überwachung aktiv
+1112	AppManager öffnen
+1113	Verlauf öffnen
+1114	Warte auf das Ende der Installation oder Deinstallation…
+1115	Schalte sie ein, um zu erfahren, was nach jeder Deinstallation auf dem PC bleibt, auch wenn das AppManager-Fenster geschlossen ist.
+1116	Startet AppManager im Infobereich, um Installationen und Deinstallationen zu überwachen.
+1117	Start mit Windows nicht aktiviert
+1118	Hinweis ignoriert.
+1119	Suche Reste von {0}…
+1120	AppManager schließen
+1121	Was nach der Deinstallation übrig ist. Wähle, was gelöscht wird.
+1122	Windows-Komponente oder Laufzeit: keine Reste gesucht, ihre Dateien werden von anderen Programmen genutzt.
+1123	Vergleicht die installierten Programme sofort mit der letzten Prüfung
+1124	Jetzt prüfen
+1125	Erfasst installierte Programme sowie Spiele von Steam und Epic. Apps aus dem Microsoft Store sind nicht dabei.
+1126	Prüfung gestartet: Gefundene Änderungen erscheinen hier.
+1127	Prüfe Änderungen…
+1128	Verlauf der Deinstallationen
+1129	Zu prüfen
+1130	Von Version {0} auf {1}
+1131	Ausschalten
+1132	Überwachung ausschalten
+1133	Deinstalliert
+1134	Die Reste von {0} sind weg: Sie wurden bereits gelöscht.
+1135	Die Reste wurden gelöscht.
+1136	Ignorieren
+1137	Ignoriert
+1138	Wird gestartet…
+1139	Läuft
+1140	Die Überwachung läuft im Infobereich neben der Uhr weiter. Zum Schließen von AppManager das Menü seines Symbols verwenden.
+1141	Die Einträge des Verlaufs werden entfernt. Die Reste auf dem PC bleiben, wo sie sind: Du findest sie auf den Seiten Reste.
+1142	Lese installierte Spiele und Programme…
+1143	Zeigt, was übrig ist, und du wählst, was gelöscht wird
+1144	Blendet den Hinweis aus: Der Eintrag bleibt im Verlauf, dort kannst du ihn jederzeit ansehen
+1145	Nichts ist übrig
+1146	Auf diesem PC installierte oder deinstallierte Programme und Spiele, mit dem, was übrig blieb.
+1147	Sauber
+1148	Hier erscheinen installierte oder deinstallierte Programme und Spiele, mit den Resten, die nach jeder Deinstallation gefunden wurden. Auch Deinstallationen mit AppManager sind dabei.
+1149	Reste von {0}
+1150	Reste nach {0}
+1151	Reste nicht gelesen
+1152	Übrig: {0}{1}, auch in der Registrierung.
+1153	Übrig: {0}{1}.
+1154	Vollständig entfernt: keine Reste.
+1155	ÜBERWACHUNG IM HINTERGRUND
+1156	Von {0} sind Reste übrig
+1157	Installationen und Deinstallationen überwachen
+1158	Überwachung
+1159	Überwachung aktiv
+1160	Überwachung aus
+1161	Verlauf leeren
+1162	Verlauf leeren?
+1163	Ansehen und entfernen
+1164	Verlauf ansehen
+1165	Version {0}
+1166	Windows hat die Anfrage nicht angenommen: {0}
+1167	geplante Aufgabe
+1168	Run-Schlüssel
+1169	mit AppManager
+1170	Deinstallation|Deinstallationen
+1171	gestern um {0}
+1172	heute um {0}
+1173	schtasks antwortete mit Code {0}
+1174	schtasks hat nicht geantwortet
+1175	letzte Prüfung um {0}
+1176	{0} um {1}
+1177	{0} von Epic Games
+1178	{0} von Steam
+1179	{0} und {1} weitere
+1180	{0} und {1}
+1181	{0}: insgesamt {1}.
+1182	Autostart-Ordner (nur dein Benutzer)
+1183	Autostart-Ordner (alle Benutzer)
+1184	Windows-Registrierung (nur dein Benutzer)
+1185	Windows-Registrierung (alle Benutzer)
+5134	AppManager {0} gestartet
+5135	AppManager {0} als Administrator gestartet
+5136	Online-Suche der Spielstände von {0}: {1}
+5137	Speichern des Spielstand-Caches: {0}
+5138	Steam-Tools: {0}
+5139	Zu Steam hinzugefügte Spiele
+5140	Laufwerkssuche
+5141	Laufwerkssuche nach {0} Ordnern beendet: {1} nicht durchsucht
+5142	Windows-Spuren
+5149	Prüfung der Reste von {0}

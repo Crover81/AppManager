@@ -1,0 +1,115 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AppManager;assembly=AppManager">
+
+    <!-- ================================================================ SORVEGLIANZA: stato e cronologia -->
+    <DataTemplate DataType="{x:Type local:MonitorPageViewModel}">
+        <Grid Margin="30,26,30,22">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- intestazione -->
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Style="{StaticResource Btn}" Command="{Binding CheckNowCommand}" Visibility="{Binding IsEnabled, Converter={StaticResource Vis}}"
+                            ToolTip="Confronta subito i programmi installati con l'ultimo controllo">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE72C;" Style="{StaticResource Glyph}" FontSize="12"/>
+                            <TextBlock Text="Controlla adesso" Margin="8,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource GhostBtn}" Command="{Binding ClearCommand}" Margin="8,0,0,0" Padding="10,7"
+                            Content="Svuota cronologia" Visibility="{Binding HasEvents, Converter={StaticResource Vis}}"/>
+                </StackPanel>
+                <StackPanel Margin="0,0,16,0">
+                    <TextBlock Text="Sorveglianza" Style="{StaticResource H1}"/>
+                    <TextBlock Text="Programmi e giochi installati o disinstallati su questo PC, con ciò che è rimasto." Style="{StaticResource Dim}" Margin="0,4,0,0"/>
+                </StackPanel>
+            </DockPanel>
+
+            <!-- stato della sorveglianza -->
+            <Border Grid.Row="1" Style="{StaticResource Card}" Padding="18,14" Margin="0,20,0,16">
+                <DockPanel>
+                    <Grid DockPanel.Dock="Right" VerticalAlignment="Center" Margin="16,0,0,0">
+                        <Button Style="{StaticResource PrimaryBtn}" Command="{Binding ToggleCommand}" Content="{Binding ToggleText}" Padding="16,7"
+                                Visibility="{Binding IsEnabled, Converter={StaticResource NotVis}}"/>
+                        <Button Style="{StaticResource Btn}" Command="{Binding ToggleCommand}" Content="{Binding ToggleText}" Padding="16,7"
+                                Visibility="{Binding IsEnabled, Converter={StaticResource Vis}}"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Width="10" Height="10" VerticalAlignment="Top" Margin="0,6,12,0">
+                            <Ellipse Fill="{StaticResource Success}" Visibility="{Binding IsEnabled, Converter={StaticResource Vis}}"/>
+                            <Ellipse Fill="{StaticResource TextFaint}" Visibility="{Binding IsEnabled, Converter={StaticResource NotVis}}"/>
+                        </Grid>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="{Binding StateTitle}" Style="{StaticResource H3}"/>
+                            <TextBlock Text="{Binding StateText}" Style="{StaticResource Dim}" Margin="0,3,0,0"/>
+                            <TextBlock Text="{Binding Scope}" Style="{StaticResource Caption}" TextWrapping="Wrap" TextTrimming="None" Margin="0,6,0,0"/>
+                            <TextBlock Text="{Binding StatusLine}" Style="{StaticResource Caption}" Foreground="{StaticResource Accent}" TextWrapping="Wrap" TextTrimming="None"
+                                       Margin="0,6,0,0" Visibility="{Binding HasStatusLine, Converter={StaticResource Vis}}"/>
+                        </StackPanel>
+                    </Grid>
+                </DockPanel>
+            </Border>
+
+            <!-- cronologia -->
+            <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" Visibility="{Binding HasEvents, Converter={StaticResource Vis}}">
+                <ItemsControl ItemsSource="{Binding Events}" Margin="0,0,6,0">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource Card}" Padding="14,12" Margin="0,0,0,8">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Width="38" Height="38" CornerRadius="10" VerticalAlignment="Top"
+                                            Background="{Binding Color, Converter={StaticResource Brush}, ConverterParameter=0.16}">
+                                        <TextBlock Text="{Binding Glyph}" Style="{StaticResource Glyph}" FontSize="15" Foreground="{Binding Color, Converter={StaticResource Brush}}"/>
+                                    </Border>
+                                    <StackPanel Grid.Column="1" Margin="14,0,16,0" VerticalAlignment="Center">
+                                        <TextBlock Text="{Binding Name}" Style="{StaticResource H3}" FontSize="14" TextWrapping="Wrap" TextTrimming="None"/>
+                                        <TextBlock Text="{Binding Subtitle}" Style="{StaticResource Caption}" TextWrapping="Wrap" TextTrimming="None" Margin="0,2,0,0"/>
+                                        <TextBlock Text="{Binding Detail}" Style="{StaticResource Dim}" FontSize="12.5" Margin="0,4,0,0"
+                                                   Visibility="{Binding HasDetail, Converter={StaticResource Vis}}"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                        <Border Style="{StaticResource Badge}" HorizontalAlignment="Right"
+                                                Background="{Binding Color, Converter={StaticResource Brush}, ConverterParameter=0.16}"
+                                                Visibility="{Binding HasBadge, Converter={StaticResource Vis}}">
+                                            <TextBlock Text="{Binding Badge}" FontSize="11.5" Foreground="{Binding Color, Converter={StaticResource Brush}}"/>
+                                        </Border>
+                                        <Button Style="{StaticResource Btn}" Command="{Binding ReviewCommand}" Padding="12,6" Margin="0,8,0,0"
+                                                Visibility="{Binding CanReview, Converter={StaticResource Vis}}" ToolTip="Mostra cosa è rimasto e scegli cosa eliminare">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="&#xE721;" Style="{StaticResource Glyph}" FontSize="12"/>
+                                                <TextBlock Text="Vedi e rimuovi" Margin="8,0,0,0"/>
+                                            </StackPanel>
+                                        </Button>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+            <!-- cronologia vuota -->
+            <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="480"
+                        Visibility="{Binding HasEvents, Converter={StaticResource NotVis}}">
+                <TextBlock Text="&#xE890;" Style="{StaticResource Glyph}" FontSize="40" Foreground="{StaticResource TextFaint}"/>
+                <TextBlock Text="Ancora nessuna voce" Style="{StaticResource H3}" HorizontalAlignment="Center" Margin="0,14,0,0"/>
+                <TextBlock Style="{StaticResource Dim}" TextAlignment="Center" Margin="0,6,0,0"
+                           Text="Qui compaiono i programmi e i giochi installati o disinstallati, con i residui trovati dopo ogni disinstallazione. Ci sono anche le disinstallazioni fatte con AppManager."/>
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

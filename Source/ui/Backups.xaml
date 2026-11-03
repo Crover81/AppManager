@@ -1,0 +1,346 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AppManager;assembly=AppManager">
+
+    <!-- ================================================================ BACKUP: un'applicazione per volta, come nelle librerie -->
+    <DataTemplate DataType="{x:Type local:BackupsPageViewModel}">
+        <Grid Margin="30,26,30,22">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- intestazione -->
+            <Grid>
+                <StackPanel Margin="0,0,460,0">
+                    <TextBlock Text="Backup" Style="{StaticResource H1}"/>
+                    <TextBlock Text="{Binding Summary}" Style="{StaticResource Dim}" Margin="0,4,0,0"
+                               Visibility="{Binding IsLoading, Converter={StaticResource NotVisKeep}}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <TextBox Style="{StaticResource SearchBox}" Width="240" Tag="Cerca un'applicazione…"
+                             Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Style="{StaticResource Btn}" Margin="10,0,0,0" Command="{Binding OpenFolderCommand}" ToolTip="{Binding Folder}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE838;" Style="{StaticResource Glyph}" FontSize="13"/>
+                            <TextBlock Text="Apri cartella" Margin="8,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource IconBtn}" Content="&#xE72C;" Width="36" Height="36" Margin="6,0,0,0" Command="{Binding RefreshCommand}" ToolTip="Aggiorna (F5)"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- filtri -->
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,20,0,14" Visibility="{Binding ShowFilters, Converter={StaticResource VisKeep}}">
+                <RadioButton Style="{StaticResource Chip}" GroupName="bfilter" IsChecked="{Binding Filter, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=all}">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Width="8" Height="8" Fill="{StaticResource Accent}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Tutti"/>
+                        <TextBlock Text="{Binding AllCount}" Foreground="{StaticResource TextFaint}" Margin="7,0,0,0"/>
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton Style="{StaticResource Chip}" GroupName="bfilter" IsChecked="{Binding Filter, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=games}">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Width="8" Height="8" Fill="{StaticResource GameKind}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Giochi"/>
+                        <TextBlock Text="{Binding GamesCount}" Foreground="{StaticResource TextFaint}" Margin="7,0,0,0"/>
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton Style="{StaticResource Chip}" GroupName="bfilter" IsChecked="{Binding Filter, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=programs}">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Width="8" Height="8" Fill="{StaticResource Accent}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="Programmi"/>
+                        <TextBlock Text="{Binding ProgramsCount}" Foreground="{StaticResource TextFaint}" Margin="7,0,0,0"/>
+                    </StackPanel>
+                </RadioButton>
+            </StackPanel>
+
+            <!-- contenuto -->
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*" MinWidth="360" MaxWidth="460"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- elenco delle applicazioni -->
+                <ListBox Style="{StaticResource GameList}" ItemsSource="{Binding Apps}" SelectedItem="{Binding Selected, Mode=TwoWay}"
+                         Visibility="{Binding HasApps, Converter={StaticResource Vis}}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <!-- copertina (giochi), icona (programmi) o iniziali -->
+                                <Grid Width="40" Height="56">
+                                    <Border Width="40" Height="40" CornerRadius="10" Background="{Binding KindColor, Converter={StaticResource Brush}, ConverterParameter=0.18}"
+                                            Visibility="{Binding HasImage, Converter={StaticResource NotVis}}">
+                                        <TextBlock Text="{Binding Initials}" FontWeight="SemiBold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                   Foreground="{Binding KindColor, Converter={StaticResource Brush}}"/>
+                                    </Border>
+                                    <Border CornerRadius="6" ClipToBounds="True">
+                                        <Border.Visibility>
+                                            <Binding Path="ShowPortrait" Converter="{StaticResource Vis}"/>
+                                        </Border.Visibility>
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="{Binding Image}" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <Image Source="{Binding Image}" Width="34" Height="34" RenderOptions.BitmapScalingMode="HighQuality">
+                                        <Image.Visibility>
+                                            <Binding Path="ShowSquare" Converter="{StaticResource Vis}"/>
+                                        </Image.Visibility>
+                                    </Image>
+                                </Grid>
+                                <StackPanel Grid.Column="1" Margin="14,0,12,0" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Name}" Style="{StaticResource H3}"/>
+                                    <DockPanel Margin="0,5,0,0">
+                                        <Border DockPanel.Dock="Left" Style="{StaticResource Badge}" Background="{Binding KindColor, Converter={StaticResource Brush}, ConverterParameter=0.16}">
+                                            <TextBlock Text="{Binding KindLabel}" FontSize="11.5" Foreground="{Binding KindColor, Converter={StaticResource Brush}}"/>
+                                        </Border>
+                                        <TextBlock Text="{Binding SummaryText}" Style="{StaticResource Caption}" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                                    </DockPanel>
+                                </StackPanel>
+                                <TextBlock Grid.Column="2" Text="{Binding TotalSizeText}" Foreground="{StaticResource TextDim}" VerticalAlignment="Center"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding IsLoading, Converter={StaticResource Vis}}">
+                    <local:Spinner/>
+                    <TextBlock Text="Leggo i backup…" Style="{StaticResource Dim}" Margin="0,16,0,0" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <TextBlock Grid.ColumnSpan="2" Text="Nessuna applicazione corrisponde al filtro." Style="{StaticResource Dim}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Visibility="{Binding HasNoMatch, Converter={StaticResource Vis}}"/>
+
+                <!-- pannello dell'applicazione scelta -->
+                <Border Grid.Column="1" Style="{StaticResource Card}" Margin="20,0,0,0" ClipToBounds="True"
+                        Visibility="{Binding ShowDetails, Converter={StaticResource Vis}}">
+                    <Grid DataContext="{Binding Selected}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Border x:Name="PanelMask" CornerRadius="11,11,0,0" Background="{StaticResource Surface}"/>
+                        <ScrollViewer Style="{StaticResource OverlayScroll}" VerticalScrollBarVisibility="Auto">
+                            <ScrollViewer.OpacityMask>
+                                <VisualBrush Visual="{Binding ElementName=PanelMask}"/>
+                            </ScrollViewer.OpacityMask>
+                            <StackPanel>
+                                <!-- immagine dell'applicazione su uno sfondo sfocato -->
+                                <Grid Height="150" ClipToBounds="True">
+                                    <Border Background="{StaticResource Surface2}"/>
+                                    <Border Opacity="0.5" RenderTransformOrigin="0.5,0.5" Visibility="{Binding HasImage, Converter={StaticResource Vis}}">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="{Binding Image}" Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                        <Border.RenderTransform>
+                                            <ScaleTransform ScaleX="1.35" ScaleY="1.35"/>
+                                        </Border.RenderTransform>
+                                        <Border.Effect>
+                                            <BlurEffect Radius="30" KernelType="Gaussian"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Grid Width="76" Height="112">
+                                        <Grid.Visibility>
+                                            <Binding Path="ShowPortrait" Converter="{StaticResource Vis}"/>
+                                        </Grid.Visibility>
+                                        <Border CornerRadius="8" Background="{StaticResource CoverShade}" Margin="-2"/>
+                                        <Border CornerRadius="8">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="{Binding Image}" Stretch="UniformToFill"/>
+                                            </Border.Background>
+                                        </Border>
+                                    </Grid>
+                                    <Border Width="96" Height="96" CornerRadius="22" Background="{StaticResource IconPlate}">
+                                        <Border.Visibility>
+                                            <Binding Path="ShowSquare" Converter="{StaticResource Vis}"/>
+                                        </Border.Visibility>
+                                        <Image Source="{Binding Image}" Width="64" Height="64" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                    </Border>
+                                    <Border Width="84" Height="84" CornerRadius="22" Background="{Binding KindColor, Converter={StaticResource Brush}, ConverterParameter=0.2}"
+                                            Visibility="{Binding HasImage, Converter={StaticResource NotVis}}">
+                                        <TextBlock Text="{Binding Initials}" FontSize="30" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                   Foreground="{Binding KindColor, Converter={StaticResource Brush}}"/>
+                                    </Border>
+                                    <Border VerticalAlignment="Bottom" Height="50">
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <GradientStop Color="{StaticResource HeroFade0Color}" Offset="0"/>
+                                                <GradientStop Color="{StaticResource HeroFade1Color}" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+                                </Grid>
+
+                                <StackPanel Margin="22,4,22,16">
+                                    <TextBlock Text="{Binding Name}" Style="{StaticResource H2}" TextWrapping="Wrap" TextTrimming="None"/>
+                                    <StackPanel Orientation="Horizontal" Margin="0,8,0,18">
+                                        <Border Style="{StaticResource Badge}" Background="{Binding KindColor, Converter={StaticResource Brush}, ConverterParameter=0.16}">
+                                            <TextBlock Text="{Binding KindLabel}" FontSize="11.5" Foreground="{Binding KindColor, Converter={StaticResource Brush}}"/>
+                                        </Border>
+                                        <Border Style="{StaticResource Badge}" Margin="6,0,0,0" Background="{Binding StatusColor, Converter={StaticResource Brush}, ConverterParameter=0.14}">
+                                            <TextBlock Text="{Binding StatusLabel}" FontSize="11.5" Foreground="{Binding StatusColor, Converter={StaticResource Brush}}"/>
+                                        </Border>
+                                    </StackPanel>
+
+                                    <Grid Margin="0,0,0,14">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel>
+                                            <TextBlock Text="SPAZIO DEI BACKUP" Style="{StaticResource SectionLabel}" Margin="0,0,0,4"/>
+                                            <TextBlock Text="{Binding TotalSizeText}" FontSize="15" FontWeight="SemiBold"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="ULTIMO BACKUP" Style="{StaticResource SectionLabel}" Margin="0,0,0,4"/>
+                                            <TextBlock Text="{Binding LatestText}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Grid>
+
+                                    <!-- dati dell'applicazione, se è ancora installata -->
+                                    <StackPanel Visibility="{Binding IsInstalled, Converter={StaticResource Vis}}">
+                                        <StackPanel Visibility="{Binding InstallDir, Converter={StaticResource Vis}}">
+                                            <TextBlock Text="CARTELLA" Style="{StaticResource SectionLabel}" Margin="0,0,0,4"/>
+                                            <Button Style="{StaticResource LinkBtn}" Content="{Binding InstallDir}" Command="{Binding OpenInstallDirCommand}"
+                                                    ToolTip="Apri in Esplora risorse" Margin="0,0,0,14"/>
+                                        </StackPanel>
+                                        <Grid Margin="0,0,0,14">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Visibility="{Binding Publisher, Converter={StaticResource Vis}}" Margin="0,0,10,0">
+                                                <TextBlock Text="EDITORE" Style="{StaticResource SectionLabel}" Margin="0,0,0,4"/>
+                                                <TextBlock Text="{Binding Publisher}" TextTrimming="CharacterEllipsis" ToolTip="{Binding Publisher}"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" Visibility="{Binding Version, Converter={StaticResource Vis}}">
+                                                <TextBlock Text="VERSIONE" Style="{StaticResource SectionLabel}" Margin="0,0,0,4"/>
+                                                <TextBlock Text="{Binding Version}" TextTrimming="CharacterEllipsis"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </StackPanel>
+                                    <TextBlock Style="{StaticResource Caption}" TextWrapping="Wrap" TextTrimming="None" Margin="0,0,0,14"
+                                               Visibility="{Binding IsInstalled, Converter={StaticResource NotVis}}"
+                                               Text="L'applicazione non è più sul PC. «Ripristina» rimette i suoi file e le sue impostazioni dov'erano."/>
+
+                                    <!-- i backup, dal più recente -->
+                                    <DockPanel Margin="0,0,0,8">
+                                        <TextBlock DockPanel.Dock="Right" Text="{Binding CountText}" Style="{StaticResource Caption}" VerticalAlignment="Center"/>
+                                        <TextBlock Text="BACKUP" Style="{StaticResource SectionLabel}" Margin="0,0,12,0"/>
+                                    </DockPanel>
+                                    <ItemsControl ItemsSource="{Binding Backups}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Border Style="{StaticResource Card}" Background="{StaticResource Surface2}" Padding="14,10" Margin="0,0,0,8">
+                                                    <StackPanel>
+                                                        <DockPanel>
+                                                            <TextBlock DockPanel.Dock="Right" Text="{Binding SizeText}" Foreground="{StaticResource TextDim}" VerticalAlignment="Center"/>
+                                                            <!-- con poco spazio la data va a capo invece di essere tagliata -->
+                                                            <WrapPanel Margin="0,0,12,0">
+                                                                <Border Style="{StaticResource Badge}" Margin="0,0,10,2" Background="{Binding ReasonColor, Converter={StaticResource Brush}, ConverterParameter=0.14}">
+                                                                    <TextBlock Text="{Binding ReasonLabel}" FontSize="11.5" Foreground="{Binding ReasonColor, Converter={StaticResource Brush}}"/>
+                                                                </Border>
+                                                                <TextBlock Text="{Binding ShortDateText}" VerticalAlignment="Center" ToolTip="{Binding DateText}"/>
+                                                            </WrapPanel>
+                                                        </DockPanel>
+                                                        <TextBlock Text="{Binding CountText}" Style="{StaticResource Caption}" Margin="0,6,0,0"/>
+                                                        <DockPanel Margin="0,10,0,0">
+                                                            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                                                                <Button Style="{StaticResource IconBtn}" Content="&#xE838;" Command="{Binding RevealCommand}" ToolTip="Mostra il file del backup"/>
+                                                                <Button Style="{StaticResource IconBtn}" Content="&#xE74D;" Command="{Binding DeleteCommand}" ToolTip="Elimina il backup (va nel Cestino)"/>
+                                                            </StackPanel>
+                                                            <StackPanel Orientation="Horizontal" Margin="0,0,12,0">
+                                                                <Button Style="{StaticResource PrimaryBtn}" Content="Ripristina" Padding="14,6" Command="{Binding RestoreCommand}"
+                                                                        ToolTip="Rimetti i file e le voci di sistema del backup al loro posto"/>
+                                                                <Button Style="{StaticResource GhostBtn}" Padding="10,6" Margin="6,0,0,0" Command="{Binding ToggleContentsCommand}"
+                                                                        ToolTip="Mostra dove torneranno i file e le voci del backup">
+                                                                    <StackPanel Orientation="Horizontal">
+                                                                        <TextBlock Text="Contenuto"/>
+                                                                        <TextBlock x:Name="Chevron" Text="&#xE70D;" Style="{StaticResource Glyph}" FontSize="10" Margin="6,0,0,0"/>
+                                                                    </StackPanel>
+                                                                </Button>
+                                                            </StackPanel>
+                                                        </DockPanel>
+                                                        <Border Margin="0,10,0,0" Padding="10,8" CornerRadius="8" Background="{StaticResource Bg}"
+                                                                Visibility="{Binding ShowContents, Converter={StaticResource Vis}}">
+                                                            <ItemsControl ItemsSource="{Binding Contents}">
+                                                                <ItemsControl.ItemTemplate>
+                                                                    <DataTemplate>
+                                                                        <TextBlock Text="{Binding}" Style="{StaticResource Caption}" Foreground="{StaticResource TextDim}" Margin="0,1" ToolTip="{Binding}"/>
+                                                                    </DataTemplate>
+                                                                </ItemsControl.ItemTemplate>
+                                                            </ItemsControl>
+                                                        </Border>
+                                                    </StackPanel>
+                                                </Border>
+                                                <DataTemplate.Triggers>
+                                                    <DataTrigger Binding="{Binding ShowContents}" Value="True">
+                                                        <Setter TargetName="Chevron" Property="Text" Value="&#xE70E;"/>
+                                                    </DataTrigger>
+                                                </DataTemplate.Triggers>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+
+                        <!-- azioni sull'applicazione -->
+                        <Border Grid.Row="1" BorderBrush="{StaticResource Line}" BorderThickness="0,1,0,0" Padding="22,14,22,20">
+                            <StackPanel>
+                                <Button Style="{StaticResource Btn}" Command="{Binding OpenFolderCommand}" Padding="14,10"
+                                        ToolTip="Apri in Esplora risorse la cartella con i backup di questa applicazione">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="&#xE838;" Style="{StaticResource Glyph}" FontSize="13"/>
+                                        <TextBlock Text="Apri la cartella dei backup" Margin="10,0,0,0"/>
+                                    </StackPanel>
+                                </Button>
+                                <Grid Margin="0,8,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="8"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Style="{StaticResource Btn}" Padding="10,8" Command="{Binding SavesCommand}"
+                                            Visibility="{Binding CanManageSaves, Converter={StaticResource Vis}}"
+                                            ToolTip="Backup, profili e nuova partita per i salvataggi del gioco">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE74E;" Style="{StaticResource Glyph}" FontSize="13"/>
+                                            <TextBlock Text="Gestisci i salvataggi" Margin="8,0,0,0"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Style="{StaticResource Btn}" Padding="10,8" Command="{Binding ShowInLibraryCommand}"
+                                            Visibility="{Binding CanShowInLibraryOnly, Converter={StaticResource Vis}}"
+                                            ToolTip="Apri il programma nella sua libreria">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="&#xE8A7;" Style="{StaticResource Glyph}" FontSize="13"/>
+                                            <TextBlock Text="Mostra nella libreria" Margin="8,0,0,0"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Grid.Column="2" Style="{StaticResource Btn}" Content="&#xE74D;" FontFamily="{StaticResource IconFont}" Width="42" Padding="0,8"
+                                            Foreground="{StaticResource Danger}" Command="{Binding DeleteAllCommand}"
+                                            ToolTip="Elimina tutti i backup di questa applicazione (vanno nel Cestino)"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <!-- ancora nessun backup -->
+                <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="460" Visibility="{Binding IsEmpty, Converter={StaticResource Vis}}">
+                    <TextBlock Text="&#xE81C;" Style="{StaticResource Glyph}" FontSize="40" Foreground="{StaticResource TextFaint}"/>
+                    <TextBlock Text="Ancora nessun backup" Style="{StaticResource H2}" HorizontalAlignment="Center" Margin="0,14,0,6"/>
+                    <TextBlock Style="{StaticResource Dim}" TextAlignment="Center"
+                               Text="Un backup viene creato quando elimini dati di un'applicazione (con «Backup prima di eliminare» attivo) oppure da «Gestisci i salvataggi». Qui li trovi divisi per applicazione."/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

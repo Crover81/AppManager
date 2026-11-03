@@ -1,0 +1,1177 @@
+1	  (automatique)
+2	 (les fichiers sont dans la Corbeille)
+3	 (le jeu semble supprimé)
+4	 (le programme semble supprimé)
+5	 (dans la Corbeille, dans le dossier {0})
+6	 (dans la Corbeille, dans les dossiers {0}{1})
+7	 (aucune entrée dans Applications installées)
+8	 (affichage des 5000 plus récentes)
+9	 (il reste dans la sauvegarde)
+10	 Les fichiers et dossiers seront supprimés définitivement.
+11	 Les fichiers et dossiers vont dans la Corbeille ; les caches sont supprimés immédiatement.
+12	 Rien n'a été modifié.
+13	 Une sauvegarde est créée d'abord.
+14	 · {0} sur le disque
+15	. Attention : modifié récemment, une installation est peut-être en cours
+16	. Attention : modifié récemment, vérifiez que {0} n'est pas encore installé ailleurs
+17	. Vérifiez qu'il ne contient pas vos documents
+18	100 Mo
+19	2 Go
+20	30 jours
+21	500 Mo
+22	7 jours
+23	90 jours
+24	: fermez les jeux et applications ouverts et réessayez
+25	: ils seront supprimés au prochain redémarrage du PC
+26	ANALYSE
+27	APPARENCE ET LANGUE
+28	ACTIONS RAPIDES
+29	Accès complet
+30	Accès refusé (administrateur requis ou fichier utilisé)
+31	Accès refusé (administrateur requis)
+32	Capture Xbox Game Bar de ce jeu
+33	Actualiser (F5)
+34	Actualiser
+35	Actualiser (F5)
+36	Actualise la liste toutes les 2 secondes tant que la page est ouverte.
+37	Actualisation automatique
+38	Mis à jour à {0}
+39	Ajouter
+40	Ajouter un dossier
+41	Ajoutez le dossier des jeux dans Paramètres, ou utilisez le bouton Ajouter.
+42	Ajoutez le dossier des programmes dans Paramètres, ou utilisez le bouton Ajouter.
+43	Ajoutez le dossier de sauvegarde du jeu. Il se trouve souvent dans Documents\My Games, Parties enregistrées ou AppData.
+44	Ajouter un jeu en choisissant son dossier
+45	Ajouter un programme en choisissant son dossier
+46	Ajouter un dossier de parties qu'AppManager n'a pas trouvé
+47	Ajouté manuellement
+48	Ajoutés manuellement
+49	Ajouté manuellement
+50	Certaines applications système ne peuvent pas être désinstallées ; la suppression peut aussi être bloquée par une stratégie ou une mise à jour. Essayez depuis Paramètres > Applications > Applications installées.
+51	Certaines sauvegardes n'ont pas été supprimées
+52	Certains éléments exigent les droits d'administrateur : redémarrez AppManager en administrateur pour les supprimer.
+53	Certaines parties sont synchronisées avec Steam Cloud. Changez de profil avec Steam fermé ou désactivez Steam Cloud pour ce jeu : Steam pourrait retélécharger les parties de l'autre profil.
+54	Autres PC connus
+55	Autre
+56	Analyse indisponible
+57	Échec de l'analyse
+58	Échec de l'analyse : {0}
+59	Analyser à nouveau
+60	Aucune sauvegarde pour l'instant
+61	Annuler
+62	Application Windows
+63	Application installée hors du Store (paquet MSIX)
+64	Applications installées depuis le Store ou en paquet MSIX.
+65	Applications installées de Windows
+66	Applications installées de Windows{0}
+67	AppManager n'a pas pu démarrer :\n\n{0}
+68	AppManager est déjà ouvert.
+69	Application
+70	Applications Steam
+71	Ouvre SteamDB dans le navigateur pour trouver le nom du jeu
+72	Ouvrir
+73	Ouvrir Services
+74	Ouvrir le Pare-feu Windows
+75	Ouvrir le dossier
+76	Ouvrir le dépôt des profils
+77	Ouvrir le programme dans sa bibliothèque
+78	Ouvrir le journal d'activité
+79	Ouvrir dans l'Explorateur de fichiers
+80	Ouvrir le dossier des sauvegardes de cette application dans l'Explorateur de fichiers
+81	Ouvrir le Planificateur de tâches
+82	Ouvrir le dossier des sauvegardes
+83	Ouvrir le dossier du jeu
+84	Ouvrir le dossier du programme
+85	Ouvrir le dossier dans l'Explorateur de fichiers
+86	Ouvrir la section Sauvegardes pour cette application
+87	Ouvrir les variables d'environnement
+88	Ouvrir dans l'Éditeur du Registre
+89	Ouvrir dans la bibliothèque
+90	Assistant Compatibilité des programmes
+91	Associations de fichiers et menus non valides
+92	Attendez la fin de l'opération…
+93	En attente de la liste des jeux et programmes installés…
+94	Attention : ce que vous supprimez ne peut pas être récupéré.
+95	Attente
+96	Activer
+97	Activer ou désactiver le démarrage avec Windows, comme dans le Gestionnaire des tâches
+98	Tâche planifiée - {0}.xml
+99	Tâche planifiée qui lance {0}
+100	Tâche planifiée qui lance {0}, qui n'existe plus
+101	Tâche planifiée {0}
+102	Tâches planifiées
+103	Tâches planifiées non valides
+104	Automatique
+105	Automatique
+106	Automatique, avant une restauration
+107	Lancer
+108	Lancer le jeu
+109	Lancer le programme
+110	Lancer l'analyse
+111	Démarrage
+112	Démarre avec Windows ({0})
+113	Démarrage automatique de {0}, qui n'existe plus
+114	Démarrage, services et tâches
+115	Lancement de {0}…
+116	Échec du lancement
+117	Avertissements et erreurs
+118	Avertissement
+119	SAUVEGARDES
+120	SAUVEGARDES DES PARTIES
+121	Sauvegardes
+122	Sauvegardes à conserver par application
+123	Sauvegarde des parties
+124	Sauvegarde des parties actuelles…
+125	Sauvegarde des parties créée : elle est aussi dans la section Sauvegardes.
+126	Sauvegardes de «{0}» déplacées dans la Corbeille.
+127	Sauvegarde et restauration des parties, profils pour plusieurs joueurs, nouvelle partie
+128	Échec de la sauvegarde
+129	Échec de la sauvegarde ({0}) : nettoyage annulé, aucun fichier supprimé.
+130	Sauvegarder avant de supprimer
+131	Sauvegarde déplacée dans la Corbeille.
+132	Sauvegarde, profils et nouvelle partie pour les parties du jeu
+133	Sauvegarde, profils pour plusieurs joueurs et nouvelle partie.
+134	Sauvegarde, profils pour plusieurs joueurs ou réglages différents, nouvelle partie sans perdre l'ancienne.
+135	Bloquer
+136	Bloquer Internet
+137	Bloquer l'accès à Internet
+138	Bloque toute connexion Internet, entrante et sortante, avec le Pare-feu Windows. Droits d'administrateur requis.
+139	Bloquer toute connexion vers cette adresse
+140	Bloquer les connexions vers {0} ?
+141	Connexions vers {0} bloquées
+142	Bloqué
+143	Bloqué · aucune connexion
+144	Blocages créés par AppManager dans le Pare-feu Windows. Retirez une règle pour rétablir les connexions.
+145	Blocage Internet pour {0}
+146	DOSSIER
+147	DOSSIERS GÉRÉS
+148	CE QUI PREND LE PLUS DE PLACE
+149	CE QUI A CHANGÉ
+150	Cache de shaders créé par Steam pour ce {0}
+151	Cache de shaders des pilotes graphiques
+152	Cache de shaders d'une application non installée
+153	Cache, journaux et plantages
+154	Changer
+155	Échec du changement de profil : {0}{1}
+156	Changement de profil…
+157	Dossier
+158	Dossier ajouté : appuyez sur «Actualiser» dans la page des jeux.
+159	Dossier ajouté : appuyez sur «Actualiser» dans la page des programmes.
+160	Dossier contenant vos jeux (un sous-dossier par jeu)
+161	Dossier contenant vos programmes portables (un sous-dossier par programme)
+162	Dossier des sauvegardes
+163	Dossier des jeux portables ({0})
+164	Dossier des profils non utilisés
+165	Dossier des programmes portables ({0})
+166	Dossier des parties de {0}
+167	Dossier du jeu
+168	Dossier du programme
+169	Dossier du {0} ajouté à la variable d'environnement PATH
+170	Dossier du {0} indiqué par ses raccourcis, resté sur le disque
+171	Dossier du {0} resté sur le disque. Attention : il contient aussi des documents, photos ou un projet, vérifiez avant de supprimer
+172	Dossier d'installation resté sur le disque
+173	Dossier de captures/vidéos au nom du jeu
+174	Dossier où enregistrer les sauvegardes
+175	Dossier de la variable PATH qui n'existe plus
+176	Dossier indisponible
+177	Dossier inutilisable
+178	Dossier non valide
+179	Dossier sans programme (seulement données, journaux ou réglages)
+180	Dossier utilisé seulement par ce {0} (détecté par le Prefetch de Windows)
+181	Dossier vide
+182	Dossier «{0}\{1}» dans {2} : porte le nom d'un programme qui n'existe plus
+183	Dossier «{0}» dans {1} : correspond au {2}
+184	Dossier «{0}» dans {1} : porte le nom d'un programme qui n'existe plus{2}
+185	Dossiers des jeux portables
+186	Dossiers des programmes portables
+187	Dossiers inexistants dans la variable PATH
+188	Dossiers, réglages et entrées système laissés par des programmes absents.
+189	Recherche les dossiers restants, démarrages, tâches, services, types de fichiers, raccourcis et entrées d'«Applications installées» de programmes supprimés. Rien n'est supprimé sans confirmation.
+190	Recherche les données Steam, dossiers de jeux Unity et Unreal, parties, raccourcis non valides et caches de shaders de jeux supprimés. Rien n'est supprimé sans confirmation.
+191	Rechercher à nouveau les jeux
+192	Rechercher à nouveau les jeux installés
+193	Rechercher à nouveau les programmes
+194	Rechercher à nouveau les programmes installés
+195	Rechercher les résidus
+196	Rechercher dans le journal…
+197	Rechercher en ligne les images manquantes
+198	Recherche les rapports d'erreur Windows, vidages sur incident, journaux des launchers et des jeux, et journaux du dossier temporaire. Les journaux d'événements Windows et les fichiers utilisés ne sont pas touchés. Rien n'est supprimé sans confirmation.
+199	Rechercher un jeu…
+200	Rechercher un programme…
+201	Rechercher une application…
+202	Rechercher…
+203	Recherche de jeux : {0}…
+204	Recherche des jeux installés…
+205	Recherche des programmes installés…
+206	Recherche des résidus…
+207	Recherche des parties de {0}…
+208	Recherche de programmes : {0}…
+209	Recherche de résidus : {0}…
+210	Certain
+211	Quel est ce jeu ?
+212	Clair
+213	Clé API SteamGridDB (facultative)
+214	Clé gratuite : ajoute des jaquettes haute résolution, images et logos pour presque tous les jeux. Elle reste enregistrée dans le dossier Dati.
+215	Clé non valide
+216	Clé non valide : {0}
+217	Clé retirée : SteamGridDB ne sera plus utilisé.
+218	Clé enregistrée ••••••••{0}
+219	Clé enregistrée, mais SteamGridDB ne répond pas : elle sera utilisée dès que possible.
+220	Clé valide : les images manquantes seront aussi cherchées sur SteamGridDB.
+221	Clé «{0}\{1}» au nom du {2}
+222	Clé «{0}\{1}» au nom d'un programme qui n'existe plus
+223	Clé «{0}» au nom du {1}
+224	Clé «{0}» au nom d'un programme qui n'existe plus
+225	Fermer
+226	Fermer (Échap)
+227	Fermez le jeu et le launcher s'ils sont ouverts, puis réessayez.
+228	Fermer sans supprimer
+229	Raccourcis
+230	Raccourcis vers des jeux supprimés
+231	Raccourcis vers un jeu sur le bureau et dans le menu Démarrer, y compris Steam et Epic.
+232	Raccourcis vers un programme sur le bureau et dans le menu Démarrer, y compris portables.
+233	Raccourcis non valides
+234	Raccourci Epic Games vers un jeu non installé
+235	Raccourci Steam vers une application non installée
+236	Raccourci vers {0}, qui n'existe plus
+237	Raccourci vers le {0}
+238	Raccourci dans le dossier Démarrage (démarre avec Windows)
+239	Comme Windows
+240	En administrateur, l'analyse utilise aussi le Prefetch de Windows et vous pouvez supprimer services et entrées système.
+241	En administrateur, l'analyse utilise aussi le Prefetch de Windows et trouve plus de données de jeux supprimés.
+242	Obtenir la clé : connectez-vous à steamgriddb.com avec Steam, puis Preferences › API › Generate key
+243	Terminé avec quelques erreurs
+244	Composant
+245	Composant COM du {0} ({1})
+246	Composant COM de {0}, qui n'existe plus
+247	Avec le bouton «Ajouter» de la bibliothèque des jeux.
+248	Avec le bouton «Ajouter» de la bibliothèque des programmes.
+249	Avec son propre programme de désinstallation
+250	Confirmer
+251	Confirmez la désinstallation dans la fenêtre de Steam…
+252	Connexion…
+253	Connexions des programmes en cours d'exécution, en temps réel. Vous pouvez bloquer une destination ou tout l'accès Internet d'un programme.
+254	Conserver
+255	Contenu du Workshop (mods) d'une application non installée
+256	Contenu du Workshop Steam (mods téléchargés)
+257	Contenu
+258	Contient les parties des profils non utilisés. Il reste sur ce PC et n'est jamais proposé comme résidu.
+259	Continuer et chercher les résidus
+260	Vérifiez qu'elles ne sont pas ouvertes dans un autre programme.
+261	Vérifier le démarrage
+262	Jaquettes et images de Steam, SteamGridDB et Wikipédia. Seul le nom du jeu ou son ID Steam est envoyé.
+263	Copie mémoire d'un programme fermé à cause d'une erreur
+264	Copie incomplète : {0}
+265	Copie virtualisée par Windows (VirtualStore) du dossier du {0}
+266	Sauvegarder maintenant
+267	Création de la sauvegarde des parties…
+268	Création de la sauvegarde…
+269	DISQUES
+270	DÉSINSTALLATION
+271	À supprimer : {0} ({1}).
+272	À supprimer : {0}.
+273	À vérifier
+274	Date
+275	Données
+276	Données du jeu Unity (parties, réglages, journaux)
+277	Données du jeu Unreal Engine (parties, configuration, journaux)
+278	Données de l'application (réglages, cache et fichiers locaux)
+279	Données de l'application Xbox (parties locales et réglages)
+280	Données d'un jeu Unity (parties, réglages, journaux) qui ne semble pas installé
+281	Données d'un jeu Unreal Engine ({0}) qui ne semble pas installé
+282	Données de {0} sur ce PC
+283	Données de diagnostic Unity
+284	Données de diagnostic Unity pour ce jeu
+285	Dépôt des profils de parties
+286	Détails
+287	Taille
+288	Taille (Mo)
+289	Oublier
+290	Oublier {0} ?
+291	Désactiver ne supprime rien : seul l'état change, comme dans le Gestionnaire des tâches. Vous pouvez réactiver l'entrée à tout moment.
+292	Désinstaller
+293	Désinstaller et nettoyer
+294	Désinstallation
+295	Désinstallation terminée
+296	Désinstallation terminée.
+297	Désinstallation avec Windows Installer
+298	Désinstallation avec winget (Gestionnaire de paquets Windows)
+299	Désinstallation presque terminée : fermez la fenêtre du programme de désinstallation.
+300	Désinstallation via Steam
+301	Désinstallation via Windows
+302	Désinstallation via Windows (application Microsoft Store)
+303	Désinstallation via Windows en cours…
+304	Documents et données enregistrées
+305	Documents publics
+306	Téléchargements Workshop incomplets
+307	Téléchargement Steam incomplet
+308	Téléchargement ou mise à jour interrompu
+309	Pilote vidéo
+310	Vidage mémoire complet après un écran bleu (peut prendre plusieurs Go)
+311	Vidage sur incident
+312	Vidages sur incident…
+313	Vidage sur incident de Steam
+314	ÉDITEUR
+315	SUPPRESSION
+316	Éditeur
+317	Éléments non sélectionnés qui restent sur le PC : {0}.
+318	Liste Workshop d'une application non installée
+319	Liste du contenu Workshop
+320	Liste exportée : {0}
+321	Supprimer
+322	Supprimer aussi les éléments non sélectionnés
+323	Supprimer les résidus sélectionnés
+324	Supprimer la sélection
+325	Supprimer la sauvegarde (va dans la Corbeille)
+326	Supprimer le profil (va dans la Corbeille)
+327	Supprime le dossier et les résidus. Vous verrez d'abord la liste.
+328	Supprimer le profil
+329	Supprimer la sélection
+330	Supprime maintenant les images inutilisées et les fichiers temporaires restants
+331	Tout supprimer
+332	Supprimer toutes les sauvegardes de cette application (elles vont dans la Corbeille)
+333	Supprimer les journaux sélectionnés ?
+334	Supprimer les résidus sélectionnés ?
+335	Supprimer le profil «{0}» ?
+336	Supprimer cette sauvegarde de «{0}» ?
+337	Supprimer toutes les sauvegardes de «{0}» ?
+338	Supprimé définitivement car la Corbeille ne l'accepte pas{0} : {1}
+339	Suppression des fichiers du jeu…
+340	Suppression du profil…
+341	Epic Games Launcher n'a pas de commande de désinstallation : les fichiers sont supprimés directement et le jeu est retiré de la bibliothèque du launcher.
+342	Epic Games Launcher est ouvert : il sera fermé pour mettre à jour sa bibliothèque.
+343	C'était un lien{0} : seul le lien a été retiré, les données visées n'ont pas été touchées ({1}).
+344	Erreur
+345	Erreur pendant la suppression : {0}
+346	Exécutable du programme portable
+347	Existe déjà dans le dossier de la Corbeille : {0}
+348	Un profil nommé «{0}» existe déjà.
+349	Un profil nommé «{0}» existe déjà : choisissez un autre nom.
+350	Existe déjà : {0}
+351	Développer / réduire
+352	Exporter le journal d'activité
+353	Exporter la liste
+354	Exporter la liste des jeux et programmes
+355	Échec de l'exportation
+356	Exporter…
+357	Extension du {0} : {1}
+358	Extension d'un programme qui n'existe plus : {0}
+359	Facultatif
+360	Terminé
+361	Fichier CSV
+362	Fichiers de plantage (dump) du {0}
+363	Fichiers de plantage (dump) de {0}
+364	Fichiers texte (*.txt)|*.txt
+365	Les fichiers et entrées système reviennent à leur emplacement d'origine.
+366	Fichiers déjà présents sur le PC : {0}.
+367	Fichier utilisé ou inaccessible
+368	Fichier manquant
+369	Fichiers registre
+370	Fichiers temporaires du jeu Unity
+371	Fichiers temporaires de Steam
+372	Fichiers temporaires et plantages du jeu Unity
+373	JEUX
+374	JEUX ET PROGRAMMES MASQUÉS
+375	Gérer les parties
+376	Jeux
+377	Jeux avec un programme d'installation (par exemple les repacks), listés dans «Applications installées» de Windows.
+378	Jeux et programmes
+379	Jeu
+380	Jeu ajouté : {0}
+381	Jeu avec AppID {0}
+382	Jeu supprimé
+383	Jeu portable : le dossier est supprimé
+387	Vous avez sélectionné des éléments «À vérifier» : vérifiez qu'ils appartiennent bien à cette application.
+388	Les sauvegardes ne peuvent pas être dans un dossier Windows ni à la racine d'un disque. Choisissez un autre dossier.
+389	Les blocages utilisent le Pare-feu Windows et restent jusqu'à leur retrait dans Paramètres › Règles réseau. AppManager ne modifie pas le trafic : il l'affiche et, si vous voulez, le bloque.
+390	Les fichiers du jeu sont supprimés définitivement et le jeu est retiré de la bibliothèque Epic Games.
+391	Les fichiers supprimés vont dans la Corbeille de Windows, dans un dossier «AppManager - nom du programme» avec les chemins complets. Les entrées système deviennent des fichiers dans «Fichiers registre». Si désactivé, les fichiers sont supprimés définitivement. Cache et journaux ne passent jamais par la Corbeille.
+392	Les fichiers supprimés vont dans la Corbeille. Si désactivé, ils sont supprimés définitivement. La valeur initiale se change dans Paramètres › Suppression.
+393	Les fichiers vont dans la Corbeille.
+394	Les fichiers sont supprimés immédiatement. La sauvegarde ne garde que parties, réglages et entrées système, pas les dossiers des programmes.
+395	Les jeux sont recherchés avec ces méthodes, dans cet ordre. Un jeu peut être trouvé par plusieurs méthodes : il n'apparaît qu'une fois dans la bibliothèque.
+396	Les journaux récents peuvent servir si un jeu ou un programme vient d'avoir des problèmes
+397	Les programmes sont recherchés avec ces méthodes, dans cet ordre (jeux exclus). Un programme peut être trouvé par plusieurs méthodes : il n'apparaît qu'une fois dans la bibliothèque.
+398	Les parties actuelles passent dans le profil «{0}» et les dossiers du jeu restent vides : {1} repart de zéro avec le nouveau profil «{2}».\n\nVous pouvez revenir au profil précédent à tout moment.
+399	Les parties actuelles restent dans le profil utilisé. Le jeu repart de zéro avec un nouveau profil et vous pouvez revenir au précédent à tout moment.
+400	Les parties {0}actuelles sont mises de côté dans le profil «{1}», puis celles de «{2}» reviennent dans les dossiers du jeu.
+401	Ses parties mises de côté vont dans la Corbeille. Le profil utilisé n'est pas touché.
+402	Vos jeux
+403	Vos programmes
+404	IMAGES DES JEUX
+405	INFORMATIONS
+406	INSTALLÉ LE
+407	Icône du raccourci créée par Steam
+408	La Corbeille a refusé le dossier «{0}» ({1}). Les fichiers sont dans {2} : récupérez-les là ou supprimez le dossier.
+409	Votre PC en un coup d'œil : ce qui prend de la place et ce qui a changé.
+410	La sauvegarde ne contient pas le manifeste.
+411	La sauvegarde est endommagée (liste du contenu illisible) : rien n'a été restauré.
+412	Le fichier de cette entrée n'existe plus. Vous pouvez la supprimer depuis la page Résidus.
+413	Le fichier n'est pas dans le dossier des sauvegardes.
+414	Le jeu
+415	Le jeu est ouvert ({0}) : fermez-le et réessayez.
+416	Le jeu est ouvert ({0}) : fermez-le avant de changer de profil ou de restaurer une sauvegarde.
+417	Le paquet est retiré comme dans Paramètres > Applications.
+418	Le chemin n'est pas valide.
+419	Le profil utilisé ne peut pas être supprimé : passez d'abord à un autre profil.
+420	Le programme
+421	Le programme de désinstallation est terminé, mais {0}
+422	Images téléchargées
+423	Images téléchargées supprimées : elles seront recherchées à nouveau.
+424	Impossible d'ouvrir {0}
+425	Impossible de lancer la désinstallation : {0}
+426	Impossible de supprimer la sauvegarde
+427	Impossible de lire les connexions réseau : {0}
+428	Impossible de déplacer dans la Corbeille : {0}
+429	Impossible de vider le journal
+430	Paramètres
+431	Réglages et données
+432	Réglages, données et traces trouvés sur le système.
+433	Réglages, journal et images sont dans {0}
+434	À l'écoute
+435	Fermeture
+436	Entrant
+437	Exécuté en administrateur : toutes les fonctions sont disponibles.
+438	Sortant
+439	Utilisé
+440	Utilisé : ses fichiers sont dans les dossiers du jeu
+441	Utilisé : {0} · {1}
+442	Inclure aussi les réglages du jeu (graphismes, commandes…) : chaque profil aura les siens
+443	Collez d'abord la clé dans la case.
+444	Collez ici la clé API
+445	Info
+446	Informations Steam sur ce {0}
+447	Commencer une nouvelle partie ?
+448	Installés
+449	Installés depuis le dernier démarrage ({0})
+450	Installé
+451	Installé le
+452	Internet bloqué pour {0}
+453	Internet débloqué pour {0}
+454	L'analyse met aussi à jour les résidus des jeux.
+455	L'analyse met aussi à jour les résidus des programmes.
+456	L'application n'est plus sur le PC. «Restaurer» remet ses fichiers et réglages à leur place.
+457	Le dossier à côté du programme n'est pas accessible en écriture : pour l'instant les données sont enregistrées sur le PC.
+458	Le dossier des sauvegardes ({0}) est dans {1}, qui va être supprimé
+459	Le dossier des sauvegardes ({0}) est un dossier Windows
+460	Le dossier des sauvegardes ({0}) est un dossier Windows : choisissez-en un autre dans Paramètres.
+461	Le dossier des sauvegardes n'est pas valide
+462	Le dossier du profil «{0}» dans le dépôt n'est pas vide ({1}) : vérifiez-le avant de continuer.
+463	La nouvelle langue s'applique au prochain démarrage du programme.
+464	Launcher
+465	Les images seront recherchées à nouveau (utile si l'une est incorrecte)
+466	Les entrées les plus anciennes sont retirées au démarrage d'AppManager
+467	Les entrées «tous les utilisateurs» ne se changent qu'en administrateur.
+468	Lecture des sauvegardes…
+469	Lecture du démarrage…
+470	Lecture des connexions…
+471	Libérer de l'espace
+472	{0} libérés
+473	Bibliothèque
+474	Bibliothèque Steam
+475	Bibliothèque Steam (outil)
+476	Langue
+477	Journaux
+478	Journaux des jeux Unity
+479	Journaux des jeux Unity…
+480	Journaux des jeux Unreal Engine
+481	Journaux des jeux Unreal Engine…
+482	Journaux des launchers…
+483	Journaux de l'EA app
+484	Journaux de Battle.net
+485	Journaux d'Epic Games
+486	Journaux de GOG Galaxy
+487	Journaux de Steam
+488	Journaux d'Ubisoft Connect
+489	Journaux et diagnostic du PC
+490	Journaux et fichiers de diagnostic laissés sur le PC par Windows, les launchers et les jeux, et le journal d'activité d'AppManager.
+491	Journal laissé dans le dossier temporaire par un programme ou une installation
+492	Journaux temporaires
+493	Journaux temporaires…
+494	SURVEILLANCE
+495	Mis de côté
+496	Mettre de côté les parties actuelles et repartir de zéro avec un nouveau profil
+497	Mettre de côté les parties actuelles et utiliser celles de ce profil
+498	Mise de côté des parties actuelles…
+499	Mise de côté : {0}
+500	Microsoft Store
+501	Minidump d'un écran bleu : utile seulement pour le diagnostic
+502	Mode limité
+503	Afficher aussi les outils Steam
+504	Afficher à nouveau
+505	Afficher où reviendront les fichiers et entrées de la sauvegarde
+506	Afficher la sauvegarde
+507	Afficher le fichier de la sauvegarde
+508	Afficher le fichier log.txt dans l'Explorateur de fichiers
+509	Afficher les réglages, données et traces du programme sans le désinstaller
+510	Afficher dans l'Explorateur de fichiers
+511	Afficher dans la bibliothèque
+512	Afficher ou masquer les détails
+513	Afficher ou masquer les connexions du programme
+514	Afficher les parties, réglages et traces du jeu sans le désinstaller
+515	Masque les programmes à l'écoute et ceux connectés seulement à d'autres programmes de ce PC.
+516	Masquer
+517	Masquer de la liste
+518	Masquer de la liste (ce n'est pas un jeu, ou il ne vous intéresse pas)
+519	Masquer les composants Windows
+520	Aucune sauvegarde des parties. Appuyez sur «Sauvegarder maintenant» pour en créer une.
+521	Aucune donnée trouvée
+522	Aucun élément sélectionné
+523	Aucun fichier copié dans la sauvegarde (fichiers utilisés ou illisibles).
+524	Aucun jeu ne correspond à la recherche.
+525	Aucun jeu trouvé
+526	Pas de limite de temps. Au-delà de 2 Mo, les entrées les plus anciennes sont retirées
+527	Aucun journal à supprimer
+529	Aucun programme ne correspond à la recherche.
+530	Aucun programme ne démarre avec Windows
+531	Aucun programme ne pourra plus se connecter à {0}.
+532	Aucun programme trouvé
+533	Aucun résidu trouvé
+534	Aucun résultat.
+535	Aucune application ne correspond au filtre.
+536	Aucune connexion active
+537	Aucune destination externe
+538	Aucune image téléchargée.
+539	Aucune trace de jeux désinstallés.
+540	Aucune trace de programmes désinstallés.
+541	Aucune entrée ne correspond au filtre.
+542	Aucun
+543	Rien à libérer : tout est déjà en ordre.
+544	Nom
+545	Nom du nouveau profil (par ex. le nom du joueur)
+546	Nom du profil
+547	Nom déjà utilisé
+548	Ne fermez pas AppManager avant la fin.
+549	Aucun journal ni fichier de diagnostic à retirer avec les options choisies.
+550	Aucune partie à copier : les dossiers sont vides ou n'existent pas.
+551	Indisponible : AppManager n'est pas exécuté en administrateur.
+552	Non supprimé car une copie n'a pas pu être enregistrée dans «{0}» : {1}
+553	Ne pas gérer
+554	Ne plus gérer ce dossier (les fichiers restent)
+555	Ne plus gérer ce dossier ?
+556	Aucune donnée de ce {0} trouvée hors de son dossier.
+557	Aucun exécutable à bloquer trouvé dans le dossier.
+558	Parties de ce jeu introuvables
+559	Plus installé
+560	Plus présents ({0})
+561	Introuvable (peut-être déjà supprimé)
+562	Rien n'a été supprimé.
+563	Suppression impossible :
+564	Nouvelle partie
+565	Nouvelle partie prête : profil «{0}» utilisé.
+567	Nouveau PC reconnu : {0}. Ses réglages partent de zéro.
+569	Chaque sous-dossier avec un jeu est ajouté à la bibliothèque, même sans installation ni raccourci.
+570	Chaque sous-dossier avec un programme, et chaque exécutable, est ajouté comme programme portable.
+571	Au-delà de la limite, les images des résidus sont supprimées d'abord, puis celles des jeux d'autres PC. Celles des jeux de ce PC restent toujours. «Automatique» s'adapte à l'espace libre.
+572	Échec de l'opération
+573	Trier par
+576	PC sans nom
+577	PROFILS
+578	PROGRAMMES
+579	PROGRAMMES CONNECTÉS
+580	Aperçu
+581	Passer au thème clair
+582	Passer au thème sombre
+583	Pour {0}, AppManager doit être exécuté en administrateur. Le redémarrer maintenant ?
+584	Chemin trop long
+585	Emplacement protégé, non restauré : {0}
+586	Préférences du jeu Unity (PlayerPrefs)
+587	Préférences d'un jeu Unity (PlayerPrefs) non installé
+588	Prefetch de Windows
+589	Préparation…
+590	Avant restauration
+591	Avant la suppression, parties, réglages et entrées système sont copiés dans un fichier zip, restaurable depuis la section Sauvegardes. Dossiers des programmes, captures, caches et raccourcis ne sont pas inclus.
+592	Avant la suppression, parties, réglages et entrées système sont copiés dans un fichier zip, restaurable depuis la section Sauvegardes. La valeur initiale se change dans Paramètres › Suppression.
+593	Une sauvegarde automatique des parties actuelles est créée d'abord, puis elles sont remplacées par celles choisies.
+594	Probable
+595	Profils de parties mis de côté : {0}. Ils restent dans {1} et vous les retrouverez si vous réinstallez le jeu.
+596	Profil utilisé : {0}
+597	Profil introuvable.
+598	Profil «{0}» supprimé.
+599	Profil «{0}» utilisé.
+600	Programme
+601	Programme ajouté : {0}
+602	Programme supprimé
+603	Programme portable, sans désinstallation : son exécutable est proposé à la suppression avec les résidus.
+604	Programme portable : l'exécutable est supprimé
+605	Programme portable : le dossier est supprimé
+606	Programmes
+607	Programmes avec un programme d'installation, comme dans Paramètres › Applications installées.
+608	Programmes installés
+609	Programmes installés avec Steam qui ne sont pas des jeux (par exemple Wallpaper Engine ou Blender).
+611	Protégé, non supprimé : {0}
+612	Essayez depuis Paramètres > Applications > Applications installées.
+613	Nettoyer les journaux du PC
+614	Nettoyer la sélection
+615	Nettoyage annulé pendant la sauvegarde : aucun fichier supprimé.
+616	Nettoyage terminé
+617	Nettoyage terminé avec quelques erreurs
+618	Nettoyage des données
+619	Nettoyage des journaux
+620	Nettoyage des résidus des jeux
+621	Nettoyage des résidus des programmes
+622	Nettoyage en cours…
+623	Nettoyage interrompu
+624	Nettoyage interrompu : {0}.
+625	Échec du nettoyage
+626	Vous pouvez tout récupérer depuis la Corbeille tant qu'elle n'est pas vidée. Pas de sauvegarde.
+627	Vous pouvez revenir en arrière de deux façons : depuis la Corbeille (fichiers et dossiers) et depuis la sauvegarde (parties, réglages et entrées système).
+628	Vous pouvez forcer la suppression : {0} directement, avec les résidus.
+629	Vous pouvez voir les connexions, mais les bloquer exige les droits d'administrateur.
+630	CE PC ET RESSOURCES
+631	N'importe quel programme → {0}
+632	Quand le programme de désinstallation se termine, la recherche des résidus démarre automatiquement.
+633	Quand une nouvelle est créée, les plus anciennes du même type vont dans la Corbeille.
+634	Quand un programme se connecte à Internet, il apparaît ici avec sa destination.
+635	Combien de journaux laissent Windows, les launchers et les jeux ?
+636	Ce dossier est un dossier système ou contient d'autres jeux et programmes. Choisissez le dossier d'un seul {0}.
+637	Ce PC : {0}
+638	RÈGLES RÉSEAU
+639	RÉSEAU
+640	RECHERCHE DES JEUX
+641	RECHERCHE DES PROGRAMMES
+642	DÉTECTÉ PAR
+643	Collecte des informations nécessaires pour trouver les résidus.
+644	Rapport du noyau sur un blocage du pilote vidéo ou d'un périphérique
+645	Rapport d'erreur système : utile seulement à Microsoft pour le diagnostic
+646	Rapport d'erreur déjà envoyé ou en attente : utile seulement à Microsoft pour le diagnostic
+647	Rapport de plantage d'Epic Games Launcher
+648	Rapport de plantage de {0}
+649	Enregistrement "Ouvrir avec" de {0}
+650	Enregistrement du launcher pour ce jeu
+651	Enregistrement du {0} pour "Ouvrir avec"
+652	Enregistrement du {0} parmi les applications par défaut
+653	Enregistrement Steam d'un jeu non installé
+654	Enregistrement ou clip Steam
+655	Enregistrement parmi les applications par défaut de «{0}», qui n'existe plus
+656	Registre
+657	Registre - {0} - {1}.reg
+658	Registre - {0}.reg
+659	Journal d'activité vidé.
+660	Journal d'Epic Games Launcher
+661	Journal de l'EA app
+662	Journal de session de {0} : le jeu le réécrit à chaque démarrage
+663	Journal d'AppManager
+664	Journal de Battle.net
+665	Journal de GOG Galaxy
+666	Journal de Steam : Steam en crée de nouveaux lui-même
+667	Journal d'Ubisoft Connect
+668	Registre système
+669	Journal de {0} : le jeu en crée de nouveaux à chaque démarrage
+670	Journal exporté.
+671	Règles du Pare-feu Windows créées pour le {0}
+672	Règles du Pare-feu Windows retirées pour {0}\r\n(détails indisponibles : {1})\r\n
+673	Règles du Pare-feu Windows retirées pour {0}\r\n\r\n{1}\r\n
+674	Règles de pare-feu pour {0}
+675	Rapport d'erreur Windows concernant le {0}
+676	Résidus
+677	Résidus des jeux
+678	Résidus des jeux déjà désinstallés
+679	Résidus des programmes
+680	Résidus des programmes déjà désinstallés
+681	Résidus de jeux désinstallés
+682	Résidus de jeux plus installés : {0}
+683	Résidus de programmes désinstallés
+684	Résidus de programmes plus installés : {0}
+685	Réseau
+686	Redémarrer maintenant
+687	Redémarrer en administrateur
+688	Redémarrer AppManager ?
+689	Échec de la recherche des jeux ou programmes : sans cette liste, les résidus ne peuvent pas être reconnus. Appuyez sur Actualiser dans la page Jeux ou Programmes et réessayez.
+690	Échec de la recherche
+691	Référence au type de fichier «{0}», qui n'existe plus ({1})
+692	Référence au type de fichier «{0}», en cours de suppression ({1})
+693	Référence au type de fichier «{0}» : {1}
+694	Détecté par
+695	Remettre en place les fichiers et entrées système de la sauvegarde
+696	Remise en place : {0}
+697	Suppression directe des fichiers (Epic Games)
+698	Suppression forcée
+699	Retirer
+700	Renommer
+701	Échec du renommage
+702	Restaurer
+703	Restaurer les parties du {0} ?
+704	Restaurer la sauvegarde de «{0}» ?
+705	{0} restaurés de «{1}».
+706	Restauration terminée
+707	Restauration terminée avec des erreurs
+708	Restauration des parties…
+709	Restauration en cours
+710	Échec de la restauration
+711	Runtimes, pilotes et applications Windows : d'autres programmes en ont besoin. Ne les retirez que si vous savez ce que vous faites
+712	PARTIES
+713	PARTIES DES JEUX
+714	ESPACE DES SAUVEGARDES
+715	ESPACE UTILISÉ
+716	Ignoré car la sauvegarde a échoué : {0}
+717	Enregistrer dans un fichier CSV les jeux et programmes trouvés
+718	Enregistrer une copie du journal (par exemple pour demander de l'aide)
+719	Parties
+720	Parties du jeu Unreal Engine
+721	Parties du jeu Unreal Engine 3
+722	Parties de {0}
+723	Parties et réglages locaux de Steam Cloud (ils restent dans le cloud Steam)
+724	Parties dans {0} d'un jeu qui ne semble pas installé
+725	Parties liées à l'AppID {0} du jeu
+726	Parties liées à l'AppID {0} d'un jeu non installé
+727	Parties locales Steam Cloud d'un jeu non installé (elles restent dans le cloud Steam)
+728	Parties restaurées.
+729	Parties, dossiers, entrées de registre et caches laissés par des jeux absents.
+730	Parties, données, réglages et entrées système sont enregistrés dans un fichier zip restaurable
+731	Parties, réglages et traces trouvés sur le système.
+732	Débloquer
+733	Choisissez le dossier du {0} (portable aussi)
+734	Choisissez un dossier précis (pas un disque entier ni un dossier Windows).
+735	Choisissez un dossier sur un disque du PC.
+737	Captures Steam d'un jeu non installé
+738	Captures et vidéos
+739	Captures faites avec Steam
+740	Sombre
+741	Si vous avez annulé, appuyez sur Annuler. Si la désinstallation est en cours, patientez. Pour chercher quand même les résidus, appuyez sur Continuer.
+742	Si vous ne voyez pas la fenêtre de Steam, ouvrez-le et désinstallez {0} depuis la bibliothèque : la suite est automatique.
+743	Rapports d'erreur Windows
+744	Rapports d'erreur Windows…
+745	Suivez les instructions du programme de désinstallation…
+746	Tout sélectionner
+747	Toujours
+748	Sans droits d'administrateur, certains résidus système (services, entrées système, pare-feu) ne peuvent pas être supprimés.
+749	Sans droits d'administrateur, certains résidus système peuvent rester.
+750	Services
+751	Services non valides
+752	Service - {0}.reg
+753	Service Windows qui lance {0}, qui n'existe plus
+754	Service Windows installé par le {0} ({1})
+755	Service «{0}» ({1})
+756	Service «{0}» restauré : il sera actif après le redémarrage du PC.
+757	Droits d'administrateur requis
+758	Le programme de désinstallation de {0} va s'ouvrir : suivez ses instructions.
+759	Se régénère seul : les jeux peuvent charger plus lentement au premier lancement
+760	Une erreur inattendue s'est produite :\n\n{0}\n\nLes détails sont dans le journal d'activité.
+761	Système (Windows)
+762	Système inactif
+763	Seulement les connexions vers l'extérieur
+764	Erreurs seulement
+765	Seulement les fichiers de plus de 7 jours
+766	Seulement les fichiers de plus de 7 jours (recommandé)
+767	Seulement plus de 7 jours
+768	Ces fichiers ne servent qu'au diagnostic : ils sont supprimés définitivement.
+769	Remplacer les parties actuelles par celles-ci (une sauvegarde automatique est faite d'abord)
+770	Écraser les fichiers existants avec ceux de la sauvegarde
+771	Espace maximal pour les images téléchargées
+772	Espace utilisé par le dossier Dati. Il est tenu en ordre automatiquement.
+773	Espace presque plein : aucune nouvelle image n'est téléchargée tant que de la place n'est pas libérée.
+774	Espace utilisé par AppManager
+775	Déplacement dans la Corbeille…
+776	Vous supprimez des documents ou données sans sauvegarde. Si vous pensez réinstaller le programme, activez la sauvegarde.
+777	Vous supprimez des parties sans sauvegarde. Si vous pensez réinstaller le jeu, activez la sauvegarde.
+778	État de démarrage d'un programme qui n'existe plus
+779	État de démarrage de «{0}», qui n'existe plus
+780	État de démarrage dans le Gestionnaire des tâches
+781	Steam (toutes les bibliothèques), Epic Games, GOG, Ubisoft Connect, EA app, Battle.net, Rockstar, Amazon Games, Xbox.
+782	Steam demande toujours une confirmation : elle est dans sa fenêtre (parfois derrière celle-ci).
+783	Steam vous demandera de confirmer et retirera {0}.
+784	SteamGridDB a refusé la clé : vérifiez que vous l'avez copiée en entier.
+785	SteamVR, Proton, serveurs dédiés : ils apparaissent parmi les programmes.
+786	{0} libres sur le lecteur.
+787	Vider
+788	Vider le journal d'activité ?
+789	Thème
+790	Type
+791	Type de fichier «{0}»
+792	Type de fichier «{0}» enregistré par le {1}
+793	Retirer le blocage
+794	Retrait des parties actuelles…
+795	Traces de programmes supprimés
+796	Traces d'anciennes versions d'applications du Store
+797	Traces qui ne sont plus valides
+798	Trace Windows ({0}) de {1}, qui n'existe plus
+799	Trace Windows : {0}
+800	Trouvés aussi par une méthode précédente : ils n'apparaissent qu'une fois dans la bibliothèque
+801	Trouvé aussi par : {0}
+802	Toutes les connexions
+803	Toutes les entrées du journal d'AppManager sont supprimées.
+804	Tous
+805	Toutes les sauvegardes
+806	Toutes les données d'AppManager sont dans le dossier Dati, à côté du programme. Dossiers et éléments masqués sont mémorisés par PC ; un nouveau PC démarre sans eux.
+807	Tout
+808	DERNIÈRE SAUVEGARDE
+809	10 dernières
+810	3 dernières
+811	5 dernières
+813	Un PC non vu depuis 6 mois est oublié automatiquement, avec les images qu'il était seul à utiliser.
+814	Une sauvegarde est créée quand vous supprimez des données d'une application (avec «Sauvegarder avant de supprimer» activé) ou depuis «Gérer les parties». Ici elles sont regroupées par application.
+815	Utiliser la Corbeille
+816	Utiliser le Prefetch de Windows
+817	Utiliser
+818	Utiliser ce profil
+819	Utiliser le profil «{0}» ?
+820	Utilisé seulement par {0}, qui n'existe plus (détecté par le Prefetch de Windows)
+821	VERSION
+822	Valeurs initiales des cases «Utiliser la Corbeille» et «Sauvegarder avant de supprimer». Vous pouvez les changer pour chaque nettoyage.
+823	Variable PATH {0}  →  {1}
+824	Variables d'environnement
+825	Variables d'environnement inaccessibles
+826	Voir les sauvegardes
+827	Ses réglages et les images qu'il était seul à utiliser sont supprimés. Si vous y revenez, ce sera comme un nouveau PC.
+828	Vérification de la clé…
+829	Vérifier et enregistrer
+830	Version
+831	Entrée de désinstallation pointant vers le dossier du {0}
+832	Entrée de désinstallation restée dans le registre
+833	Entrée de désinstallation restée dans le registre (encore listée dans "Applications installées")
+834	Entrée dans "Applications installées" pour «{0}», mais son programme de désinstallation n'existe plus
+835	Entrée «{0}» ajoutée au menu contextuel de l'Explorateur de fichiers
+836	Entrée de menu contextuel «{0}» : lance {1}, qui n'existe plus
+837	Entrées de démarrage non valides
+838	Le Pare-feu Windows n'est pas disponible sur ce système.
+839	Windows n'a pas retiré {0}
+840	Windows note les dossiers utilisés par chaque programme au démarrage : cela aide à trouver les données des jeux et programmes portables. Droits d'administrateur requis.
+841	Windows retirera le paquet du jeu, comme dans Paramètres > Applications.
+842	Windows retirera l'application, comme dans Paramètres > Applications > Applications installées.
+845	\nSauvegardes créées : {0}, une par application. Elles sont dans la section Sauvegardes.
+846	\nSauvegarde créée : vous pouvez la restaurer depuis la section Sauvegardes.
+847	\n\nCertains éléments exigent les droits d'administrateur et seront ignorés.
+848	\n{0} sur le PC, comme vous l'avez choisi.
+849	\n…et {0} autres notes dans le journal d'activité.
+850	ajouté manuellement
+851	ajouté manuellement
+852	applications Microsoft Store
+853	application|applications
+854	applications Steam
+855	associations de fichiers et menus de l'Explorateur de fichiers
+856	tâches planifiées
+857	actif|actifs
+858	démarrage
+859	démarre avec Windows
+861	avertissement|avertissements
+862	sauvegarde|sauvegardes
+863	bloquer l'accès à Internet
+864	bloquer ou débloquer les connexions
+865	cache de shaders
+866	changer le démarrage pour tous les utilisateurs
+867	dossier portable
+868	dossier utilisateur
+869	dossier d'installation
+870	dossiers au nom du {0}
+871	dossiers des jeux
+872	dossiers des programmes portables
+873	dossiers de données Unreal Engine et Unity
+874	dossiers restés dans Program Files
+875	raccourcis des launchers
+876	raccourcis non valides
+877	raccourci
+878	composant
+879	composant COM
+880	composant Windows|composants Windows
+881	connexion|connexions
+882	plantages et rapports d'erreur
+883	à vérifier
+884	données de programmes supprimés
+885	données du moteur de jeu
+886	données Steam
+887	de l'utilisateur
+888	destination|destinations
+890	du système
+891	et les réglages 
+892	élément non supprimé|éléments non supprimés
+893	élément non sélectionné reste|éléments non sélectionnés restent
+894	élément sélectionné|éléments sélectionnés
+895	élément reste|éléments restent
+896	élément|éléments
+897	erreur|erreurs
+898	extension approuvée de l'Explorateur de fichiers
+899	fichier de journal ou de diagnostic|fichiers de journal et de diagnostic
+900	fichier utilisé ignoré|fichiers utilisés ignorés
+901	fichier utilisé|fichiers utilisés
+902	fichier ou dossier de journal|fichiers et dossiers de journal
+903	fichiers temporaires
+904	fichier vide
+905	fichier/dossier|fichiers et dossiers
+906	fichier|fichiers
+907	jeux ajoutés manuellement
+908	jeux et programmes supprimés (Prefetch)
+909	jeu
+910	jeu|jeux
+911	déjà trouvés avant : {0}
+912	le fichier de registre de la sauvegarde concerne aussi d'autres clés, non importé
+913	le jeu
+914	le jeu est encore présent.
+915	le jeu sera supprimé
+916	le jeu.
+917	le programme
+918	le programme de désinstallation n'existe plus ({0})
+919	le programme est encore présent.
+920	le programme sera supprimé
+921	image|images
+922	réglages Game Bar et Mode Jeu
+923	réglages des notifications
+924	réglages de compatibilité
+925	réglages, données, entrées de registre, démarrages, services, types de fichiers et raccourcis restants
+926	installation en cours
+927	l'élément est encore présent
+928	launcher
+929	modifiés le {0}
+930	modifié le {0}
+931	dans le menu Démarrer
+932	aucune sauvegarde
+933	nom du jeu
+934	nom du paquet Xbox
+935	nom du paquet du Store
+936	nom du produit Unity
+937	nom du projet Unreal Engine
+938	nom du programme
+939	nom de l'exécutable
+940	nom de l'exécutable Unity
+941	nom du dossier d'installation
+942	nom en cache de l'Explorateur de fichiers
+943	partie du titre
+944	chemin trop long pour la Corbeille
+945	préférence GPU (paramètres graphiques)
+946	produit indiqué dans l'exécutable
+947	profil|profils
+948	programme
+949	programme connecté|programmes connectés
+950	programme|programmes
+951	programmes ajoutés manuellement
+952	programmes en cours d'exécution et démarrages
+953	programmes installés
+954	ce {0} n'a pas de programme de désinstallation
+955	collection : {0}
+956	échec de reg import
+957	enregistrement comme programme par défaut ({0})
+958	enregistrement du programme pour "Ouvrir avec"
+959	enregistrement parmi les applications par défaut
+960	registre système
+961	règles du Pare-feu Windows
+962	droits d'administrateur requis
+963	répété {0} fois de plus
+964	répété une fois de plus
+965	parties par AppID
+966	parties, réglages, captures, entrées de registre et raccourcis restants
+967	captures et vidéos
+968	superposition sur les icônes de l'Explorateur de fichiers
+969	déplacement dans la Corbeille annulé
+970	statistiques d'utilisation de la barre des tâches
+971	statistiques des programmes lancés (UserAssist)
+972	état de démarrage (Gestionnaire des tâches)
+973	sur le bureau
+974	type de fichier (ProgID)
+975	titre du jeu
+976	retirer une règle de blocage
+977	traces Windows
+978	traces dans le registre
+979	un jeu supprimé
+980	un programme supprimé
+981	utilisé pour la dernière fois le {0}
+982	variable PATH
+983	entrée "Ouvrir avec" pour les fichiers {0}
+984	entrée système|entrées système
+985	entrée de menu contextuel
+986	entrée de menu de l'Explorateur de fichiers
+987	entrée|entrées
+988	entrées de désinstallation non valides
+989	vide
+990	vide
+991	vide (nouvelle partie)
+992	{0} (vous pouvez désactiver la Corbeille dans les options du nettoyage pour le supprimer définitivement)
+993	{0} (icône seulement)
+994	{0} ({1}) seront déplacées dans la Corbeille. Vous ne pourrez plus les restaurer depuis AppManager.
+995	{0} Attendez la fin, puis redémarrez en administrateur.
+996	{0} Fermer maintenant interrompt l'opération en cours.\n\nFermer quand même ?
+997	{0} Vous pouvez supprimer ce que vous sélectionnez.
+998	{0} Vous pouvez retirer le blocage dans Paramètres › Règles réseau.
+999	{0} du {1} ({2}).\nLe fichier de sauvegarde sera déplacé dans la Corbeille.
+1000	{0} d'un programme qui n'existe plus ({1})
+1001	{0} d'un programme plus installé{1}
+1002	{0} au total : {1} d'images, {2} de journal d'activité et réglages.
+1003	{0} libres sur {1}
+1004	{0} dans le dépôt ({1}{2}).
+1005	{0} n'apparaîtra plus dans la liste, mais n'est pas désinstallé. Vous pouvez l'afficher à nouveau depuis Paramètres.
+1006	{0} ne démarrera plus avec Windows
+1007	{0} démarrera avec Windows
+1008	{0} semble en cours d'exécution ({1}) : fermez-le avant de continuer.
+1009	{0} · dernière le {1}
+1010	{0} est encore en cours d'exécution ({1}) : fermez-le et réessayez.
+1011	{0} est portable, sans désinstallation : le dossier est proposé à la suppression avec les résidus.
+1012	{0} a été entièrement retiré : aucun résidu à supprimer.
+1013	{0} : choisissez un autre dossier de sauvegarde dans Paramètres. Aucun fichier supprimé.
+1014	{0}\n\nÀ la fin, AppManager recherche {1} et affiche la liste avant de supprimer quoi que ce soit.
+1015	{0}\n\nAppManager ne l'inclura plus dans les sauvegardes et profils de {1}. Les fichiers restent où ils sont.
+1016	«Automatique» utilise la langue de Windows ou, si elle n'est pas disponible, l'anglais. Redémarrage nécessaire.
+1017	«Comme Windows» suit le thème des applications de Windows.
+1018	«{0}» ne pourra plus se connecter à {1}.
+1019	«{0}» est un composant utilisé par d'autres programmes ou par Windows ({1}) : ne le retirez que si vous savez qu'il ne sert plus.
+1020	Une restauration est en cours.
+1021	Une opération sur les parties est en cours ({0}).
+1022	Une désinstallation est en cours : à la fin, AppManager cherchera les résidus.
+1023	Un nettoyage est en cours.
+1024	C'est le dossier du jeu (ou il le contient) : choisissez seulement le sous-dossier des parties.
+1027	C'est un lien vers un autre dossier : choisissez le vrai dossier.
+1028	C'est un dossier d'AppManager (dépôt des parties ou sauvegardes).
+1029	C'est un dossier protégé (de Windows, de l'utilisateur ou d'un autre programme) : AppManager ne le déplace pas.
+1030	…et {0} autres éléments
+1031	…et {0} autres erreurs (voir le journal d'activité).
+1032	 · {0} récupérables
+1033	, {0} libérés
+1034	Raccourci {0}
+1035	Désinstaller {0}
+1036	Supprimés : {0}{1}{2}.
+1037	Afficher {0}
+1038	Masquer {0} ?
+1039	Processus {0}
+1040	Profil {0}
+1041	Vers {0}
+1042	{0} du {1}.
+1043	{0} sur {1}
+1044	{0} dans {1}
+1045	Calcul de l'espace utilisé…
+1046	Lecture des disques…
+1047	 Attention : {0}
+1048	Analyse : {0}…
+1049	Dossier retiré de la variable d'environnement PATH\r\n\r\nVariable : {0} ({1})\r\nClé : {2}\r\nDossier : {3}\r\n\r\nPour le remettre : Paramètres système › Variables d'environnement, ajoutez le dossier à la variable indiquée.\r\n
+1050	Suppression : {0}
+1051	Restauration : {0}
+1052	système
+1053	utilisateur
+1054	o
+1055	Go
+1056	Ko
+1057	Mo
+1058	To
+1059	Dernier démarrage le {0}
+1060	Windows installé il y a {0} ({1})
+1061	an|ans
+1062	jour|jours
+1063	moins d'un jour
+1064	mois|mois
+1065	Allumé depuis {0}
+1066	moins d'une minute
+1067	minute|minutes
+1068	heure|heures
+1069	images : {0}
+1070	Dossier dans Documents : il semble provenir d'un jeu désinstallé. Vérifiez son contenu avant de le supprimer
+1071	Dossier «{0}» dans Parties enregistrées : c'est le sigle du jeu
+1072	Rechercher en ligne les dossiers de parties
+1073	Consulte PCGamingWiki pour trouver les parties impossibles à reconnaître par leur nom. Seul le titre du jeu est envoyé.
+1074	Réglages du jeu, selon PCGamingWiki
+1075	Chaque suppression est notée dans le journal d'activité (section Journaux). AppManager se connecte à Internet seulement pour chercher les jaquettes et les dossiers de parties des jeux (désactivable ci-dessus).
+1076	Parties du jeu, selon PCGamingWiki
+1077	dossiers dans Documents
+1078	dossiers indiqués par PCGamingWiki
+1079	sigle du jeu dans Parties enregistrées
+1080	Ajouté à Steam comme jeu externe
+1081	Lancé sur ce PC (traces de Windows)
+1082	Dossier du jeu resté sur le disque. Attention : il contient des parties, vérifiez-le avant de le supprimer
+1083	Dossier sur le disque ({0})
+1084	Dossier «{0}» : semble provenir d'un titre de la compilation. Vérifiez avant de le supprimer
+1085	Données Steam pour l'AppID {0} du jeu
+1086	Parties d'un émulateur utilisé par une copie non officielle, d'un jeu non installé
+1087	Parties dans le dossier du jeu
+1088	dossiers des titres d'une compilation
+1089	copies portables sur les disques
+1090	Documents
+1091	Parties enregistrées
+1092	Aucun profil : les parties actuelles deviendront le profil «{0}» au premier changement.
+1093	Principal
+1095	Nettoyage
+1096	activé
+1097	Corbeille
+1098	raccourcis
+1099	définitif
+1100	désactivé
+1101	rien
+1102	introuvables
+1103	parties
+1104	services
+1105	trouvées
+1106	Mis à jour
+1107	Aucune entrée pour l'instant
+1108	AppManager reste actif
+1109	AppManager démarre avec Windows et reste dans la zone de notification, à côté du volume et du réseau. Après chaque désinstallation, il cherche les résidus et vous prévient s'il en trouve. Uniquement sur ce PC.
+1110	AppManager démarre avec Windows et reste dans la zone de notification. Après chaque désinstallation, il cherche les résidus et vous prévient s'il en trouve.
+1111	AppManager : surveillance activée
+1112	Ouvrir AppManager
+1113	Ouvrir l'historique
+1114	En attente de la fin de l'installation ou de la désinstallation…
+1115	Activez-la pour savoir ce qui reste sur le PC après chaque désinstallation, même quand la fenêtre d'AppManager est fermée.
+1116	Démarre AppManager dans la zone de notification pour surveiller les installations et désinstallations.
+1117	Démarrage avec Windows non activé
+1118	Avis ignoré.
+1119	Recherche des résidus de {0}…
+1120	Fermer AppManager
+1121	Ce qui est resté après la désinstallation. Choisissez quoi supprimer.
+1122	Composant de Windows ou runtime : résidus non recherchés, ses fichiers servent à d'autres programmes.
+1123	Compare tout de suite les programmes installés avec la dernière vérification
+1124	Vérifier maintenant
+1125	Couvre les programmes installés et les jeux Steam et Epic. Les applis du Microsoft Store ne sont pas incluses.
+1126	Vérification lancée : les changements trouvés apparaîtront ici.
+1127	Vérification des changements…
+1128	Historique des désinstallations
+1129	À examiner
+1130	De la version {0} à la {1}
+1131	Désactiver
+1132	Désactiver la surveillance
+1133	Désinstallé
+1134	Les résidus de {0} ne sont plus là : ils ont déjà été supprimés.
+1135	Les résidus ont été supprimés.
+1136	Ignorer
+1137	Ignoré
+1138	Démarrage…
+1139	En cours
+1140	La surveillance continue dans la zone de notification, à côté de l'horloge. Pour fermer AppManager, utilisez le menu de son icône.
+1141	Les entrées de l'historique sont supprimées. Les résidus sur le PC restent où ils sont : vous les retrouvez dans les pages Résidus.
+1142	Lecture des jeux et programmes installés…
+1143	Afficher ce qui reste et choisir quoi supprimer
+1144	Masque l'avis : l'entrée reste dans l'historique, où vous pouvez la revoir quand vous voulez
+1145	Il ne reste rien
+1146	Programmes et jeux installés ou désinstallés sur ce PC, avec ce qui est resté.
+1147	Propre
+1148	Ici apparaissent les programmes et jeux installés ou désinstallés, avec les résidus trouvés après chaque désinstallation. Les désinstallations faites avec AppManager y figurent aussi.
+1149	Résidus de {0}
+1150	Résidus après {0}
+1151	Résidus non lus
+1152	Restants : {0}{1}, y compris dans le registre.
+1153	Restants : {0}{1}.
+1154	Entièrement supprimé : aucun résidu.
+1155	SURVEILLANCE EN ARRIÈRE-PLAN
+1156	Il reste des résidus de {0}
+1157	Surveiller les installations et désinstallations
+1158	Surveillance
+1159	Surveillance activée
+1160	Surveillance désactivée
+1161	Vider l'historique
+1162	Vider l'historique ?
+1163	Voir et supprimer
+1164	Voir l'historique
+1165	Version {0}
+1166	Windows n'a pas accepté la demande : {0}
+1167	tâche planifiée
+1168	clé Run
+1169	avec AppManager
+1170	désinstallation|désinstallations
+1171	hier à {0}
+1172	aujourd'hui à {0}
+1173	schtasks a répondu avec le code {0}
+1174	schtasks n'a pas répondu
+1175	dernière vérification à {0}
+1176	{0} à {1}
+1177	{0} Epic Games
+1178	{0} Steam
+1179	{0} et {1} autres
+1180	{0} et {1}
+1181	{0} : {1} au total.
+1182	Dossier Démarrage (votre utilisateur seulement)
+1183	Dossier Démarrage (tous les utilisateurs)
+1184	Registre Windows (votre utilisateur seulement)
+1185	Registre Windows (tous les utilisateurs)
+5134	AppManager {0} démarré
+5135	AppManager {0} démarré en administrateur
+5136	Recherche en ligne des parties de {0} : {1}
+5137	Enregistrement du cache des parties : {0}
+5138	Outils Steam : {0}
+5139	Jeux ajoutés à Steam
+5140	Recherche sur les disques
+5141	Recherche sur les disques arrêtée après {0} dossiers : {1} non explorés
+5142	Traces de Windows
+5149	Vérification des résidus de {0}

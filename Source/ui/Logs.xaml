@@ -1,0 +1,267 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AppManager;assembly=AppManager">
+
+    <!-- Righe del registro attività: compatte, la voce selezionata mostra il testo completo -->
+    <Style x:Key="LogList" TargetType="ListBox">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="VirtualizingPanel.IsVirtualizing" Value="True"/>
+        <Setter Property="VirtualizingPanel.VirtualizationMode" Value="Recycling"/>
+        <Setter Property="VirtualizingPanel.ScrollUnit" Value="Pixel"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                    <Setter Property="Margin" Value="0,0,6,2"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border x:Name="Bd" Background="Transparent" CornerRadius="8" Padding="10,6" BorderThickness="1" BorderBrush="Transparent">
+                                    <ContentPresenter/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="Bd" Property="Background" Value="{StaticResource Surface}"/>
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Bd" Property="Background" Value="{StaticResource Surface2}"/>
+                                        <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource Line}"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ================================================================ LOG -->
+    <DataTemplate DataType="{x:Type local:LogsPageViewModel}">
+        <Grid Margin="30,26,30,22">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- intestazione -->
+            <Grid>
+                <StackPanel Margin="0,0,210,0">
+                    <TextBlock Text="Log" Style="{StaticResource H1}"/>
+                    <TextBlock Style="{StaticResource Dim}" Margin="0,4,0,0"
+                               Text="Log e file di diagnostica lasciati sul PC da Windows, dai launcher e dai giochi, e il registro attività di AppManager."/>
+                </StackPanel>
+                <Button Style="{StaticResource Btn}" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding ScanCommand}">
+                    <Button.Visibility>
+                        <MultiBinding Converter="{StaticResource AllVis}">
+                            <Binding Path="IsPcTab"/>
+                            <Binding Path="HasResults"/>
+                        </MultiBinding>
+                    </Button.Visibility>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE72C;" Style="{StaticResource Glyph}" FontSize="12"/>
+                        <TextBlock Text="Analizza di nuovo" Margin="8,0,0,0"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+
+            <!-- schede -->
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,18,0,14">
+                <RadioButton Style="{StaticResource Chip}" GroupName="logtab"
+                             IsChecked="{Binding Tab, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=pc}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE7F4;" Style="{StaticResource Glyph}" FontSize="12" Margin="0,0,8,0"/>
+                        <TextBlock Text="Log e diagnostica del PC"/>
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton Style="{StaticResource Chip}" GroupName="logtab"
+                             IsChecked="{Binding Tab, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=app}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE9F9;" Style="{StaticResource Glyph}" FontSize="12" Margin="0,0,8,0"/>
+                        <TextBlock Text="Registro di AppManager"/>
+                    </StackPanel>
+                </RadioButton>
+            </StackPanel>
+
+            <!-- ============================== LOG DEL PC ============================== -->
+            <Grid Grid.Row="2" Visibility="{Binding IsPcTab, Converter={StaticResource Vis}}">
+                <!-- introduzione -->
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="580" Visibility="{Binding ShowIntro, Converter={StaticResource Vis}}">
+                    <Border Width="76" Height="76" CornerRadius="38" Background="{StaticResource AccentSoft}" HorizontalAlignment="Center">
+                        <TextBlock Text="&#xE7F4;" Style="{StaticResource Glyph}" FontSize="30" Foreground="{StaticResource Accent}"/>
+                    </Border>
+                    <TextBlock Text="Quanti log lasciano Windows, i launcher e i giochi?" Style="{StaticResource H2}" HorizontalAlignment="Center" Margin="0,20,0,8"/>
+                    <TextBlock Style="{StaticResource Dim}" TextAlignment="Center"
+                               Text="Cerca segnalazioni di errore di Windows, dump di arresti anomali, log dei launcher e dei giochi e log nella cartella temporanea. I registri eventi di Windows e i file in uso non vengono toccati. Niente viene eliminato senza conferma."/>
+                    <CheckBox Content="Solo file più vecchi di 7 giorni (consigliato)" IsChecked="{Binding OnlyOld}" HorizontalAlignment="Center" Margin="0,18,0,0"
+                              ToolTip="I log recenti possono servire se un gioco o un programma ha appena dato problemi"/>
+                    <Button Style="{StaticResource PrimaryBtn}" Command="{Binding ScanCommand}" HorizontalAlignment="Center" Margin="0,18,0,0" Padding="22,11">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE721;" Style="{StaticResource Glyph}" FontSize="13" Foreground="White"/>
+                            <TextBlock Text="Avvia l'analisi" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+                <!-- analisi in corso -->
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding IsScanning, Converter={StaticResource Vis}}">
+                    <local:Spinner/>
+                    <TextBlock Text="{Binding ProgressText}" Style="{StaticResource Dim}" Margin="0,16,0,0" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- niente da pulire -->
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="520" Visibility="{Binding IsClean, Converter={StaticResource Vis}}">
+                    <Border Width="76" Height="76" CornerRadius="38" Background="{StaticResource SuccessSoft}" HorizontalAlignment="Center">
+                        <TextBlock Text="&#xE73E;" Style="{StaticResource Glyph}" FontSize="30" Foreground="{StaticResource Success}"/>
+                    </Border>
+                    <TextBlock Text="Nessun log da eliminare" Style="{StaticResource H2}" HorizontalAlignment="Center" Margin="0,18,0,6"/>
+                    <TextBlock Style="{StaticResource Dim}" TextAlignment="Center" Text="Non ci sono log o file di diagnostica da togliere con le opzioni scelte."/>
+                    <CheckBox Content="Solo file più vecchi di 7 giorni" IsChecked="{Binding OnlyOld}" HorizontalAlignment="Center" Margin="0,16,0,0"/>
+                </StackPanel>
+
+                <!-- risultati -->
+                <Grid Visibility="{Binding HasResults, Converter={StaticResource Vis}}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <DockPanel Margin="0,0,0,12">
+                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                            <Button Style="{StaticResource GhostBtn}" Content="Seleziona tutto" Command="{Binding SelectAllCommand}"/>
+                            <Button Style="{StaticResource GhostBtn}" Content="Nessuno" Command="{Binding SelectNoneCommand}"/>
+                            <Button Style="{StaticResource GhostBtn}" Content="Espandi / comprimi" Command="{Binding ExpandAllCommand}"/>
+                        </StackPanel>
+                        <TextBlock Text="{Binding Summary}" FontWeight="SemiBold" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,12,0"/>
+                    </DockPanel>
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="0,0,8,0">
+                        <ItemsControl ItemsSource="{Binding Groups}" ItemTemplate="{StaticResource GroupCard}"/>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+
+            <!-- barra delle azioni dei log del PC -->
+            <Border Grid.Row="3" Style="{StaticResource Card}" Margin="0,14,0,0" Padding="18,12">
+                <Border.Visibility>
+                    <MultiBinding Converter="{StaticResource AllVis}">
+                        <Binding Path="IsPcTab"/>
+                        <Binding Path="HasResults"/>
+                    </MultiBinding>
+                </Border.Visibility>
+                <DockPanel>
+                    <Button DockPanel.Dock="Right" Style="{StaticResource DangerBtn}" Command="{Binding CleanCommand}" Padding="18,10">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE74D;" Style="{StaticResource Glyph}" FontSize="13" Foreground="White"/>
+                            <TextBlock Text="Elimina selezionati" Margin="8,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+                    <StackPanel Margin="0,0,16,0" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding SelectionText}" Foreground="{StaticResource TextDim}" TextWrapping="Wrap"/>
+                        <WrapPanel Margin="0,6,0,0">
+                            <CheckBox Content="Solo più vecchi di 7 giorni" IsChecked="{Binding OnlyOld}" Margin="0,0,20,2"/>
+                            <CheckBox Content="Usa il Cestino" IsChecked="{Binding UseRecycleBin}" Margin="0,0,0,2"
+                                      ToolTip="I file eliminati vanno nel Cestino. Se è spento, vengono eliminati definitivamente. Il valore iniziale si cambia in Impostazioni › Eliminazione."/>
+                        </WrapPanel>
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
+            <!-- ============================== REGISTRO DI APPMANAGER ============================== -->
+            <Grid Grid.Row="2" Grid.RowSpan="2" Visibility="{Binding IsAppTab, Converter={StaticResource Vis}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <DockPanel Margin="0,0,0,10">
+                    <TextBox DockPanel.Dock="Right" Style="{StaticResource SearchBox}" Width="240" Tag="Cerca nel registro…"
+                             Text="{Binding LogSearch, UpdateSourceTrigger=PropertyChanged, Delay=250}"/>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,12,0">
+                        <RadioButton Style="{StaticResource Chip}" GroupName="loglevel" Content="Tutto"
+                                     IsChecked="{Binding LevelFilter, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=all}"/>
+                        <RadioButton Style="{StaticResource Chip}" GroupName="loglevel" Content="Avvisi ed errori"
+                                     IsChecked="{Binding LevelFilter, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=problems}"/>
+                        <RadioButton Style="{StaticResource Chip}" GroupName="loglevel" Content="Solo errori"
+                                     IsChecked="{Binding LevelFilter, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=errors}"/>
+                        <TextBlock Text="{Binding LogInfo}" Style="{StaticResource Caption}" VerticalAlignment="Center" Margin="8,0,12,0"/>
+                    </StackPanel>
+                </DockPanel>
+
+                <Border Grid.Row="1" Style="{StaticResource Card}" Padding="6">
+                    <Grid>
+                        <ListBox Style="{StaticResource LogList}" ItemsSource="{Binding Entries}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="112"/>
+                                            <ColumnDefinition Width="80"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="{Binding TimeText}" Style="{StaticResource Caption}" VerticalAlignment="Top" Margin="0,2,0,0"/>
+                                        <Border Grid.Column="1" Style="{StaticResource Badge}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                                Background="{Binding LevelColor, Converter={StaticResource Brush}, ConverterParameter=0.14}">
+                                            <TextBlock Text="{Binding LevelLabel}" FontSize="11" Foreground="{Binding LevelColor, Converter={StaticResource Brush}}"/>
+                                        </Border>
+                                        <TextBlock x:Name="Short" Grid.Column="2" Text="{Binding Summary}" TextTrimming="CharacterEllipsis" FontSize="12.5"
+                                                   Foreground="{StaticResource TextDim}" ToolTip="{Binding Message}"/>
+                                        <TextBox x:Name="Full" Grid.Column="2" Text="{Binding Message, Mode=OneWay}" IsReadOnly="True" TextWrapping="Wrap"
+                                                 Background="Transparent" BorderThickness="0" Foreground="{StaticResource Text}" FontSize="12.5"
+                                                 SelectionBrush="{StaticResource Accent}" Visibility="Collapsed" Padding="0" Margin="-2,0,0,0"/>
+                                    </Grid>
+                                    <DataTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=ListBoxItem}}" Value="True">
+                                            <Setter TargetName="Short" Property="Visibility" Value="Collapsed"/>
+                                            <Setter TargetName="Full" Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </DataTemplate.Triggers>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding IsLoadingLog, Converter={StaticResource Vis}}">
+                            <local:Spinner/>
+                        </StackPanel>
+                        <TextBlock Text="Nessuna voce corrisponde al filtro." Style="{StaticResource Dim}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Visibility="{Binding HasNoEntries, Converter={StaticResource Vis}}"/>
+                    </Grid>
+                </Border>
+
+                <DockPanel Grid.Row="2" Margin="0,12,0,0">
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                        <Button Style="{StaticResource Btn}" Command="{Binding OpenLogFolderCommand}" Padding="0" Width="36" Height="34"
+                                Content="&#xE838;" FontFamily="{StaticResource IconFont}" ToolTip="Mostra il file log.txt in Esplora risorse"/>
+                        <Button Style="{StaticResource Btn}" Command="{Binding ExportLogCommand}" Padding="12,7" Margin="8,0,0,0" ToolTip="Salva una copia del registro (per esempio per chiedere aiuto)">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="&#xEDE1;" Style="{StaticResource Glyph}" FontSize="12"/>
+                                <TextBlock Text="Esporta…" Margin="8,0,0,0"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{StaticResource Btn}" Command="{Binding ClearLogCommand}" Padding="12,7" Margin="8,0,0,0" Foreground="{StaticResource Danger}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="&#xE74D;" Style="{StaticResource Glyph}" FontSize="12"/>
+                                <TextBlock Text="Svuota" Margin="8,0,0,0"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,12,0">
+                        <TextBlock Text="Conserva" Style="{StaticResource Caption}" VerticalAlignment="Center" Margin="0,0,10,0"
+                                   ToolTip="Le voci più vecchie vengono tolte all'avvio di AppManager"/>
+                        <RadioButton Style="{StaticResource Chip}" GroupName="logkeep" Content="7 giorni"
+                                     IsChecked="{Binding RetentionKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=7}"/>
+                        <RadioButton Style="{StaticResource Chip}" GroupName="logkeep" Content="30 giorni"
+                                     IsChecked="{Binding RetentionKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=30}"/>
+                        <RadioButton Style="{StaticResource Chip}" GroupName="logkeep" Content="90 giorni"
+                                     IsChecked="{Binding RetentionKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=90}"/>
+                        <RadioButton Style="{StaticResource Chip}" GroupName="logkeep" Content="Sempre"
+                                     IsChecked="{Binding RetentionKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=0}"
+                                     ToolTip="Nessun limite di tempo. Oltre 2 MB vengono tolte le voci più vecchie"/>
+                    </StackPanel>
+                </DockPanel>
+            </Grid>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

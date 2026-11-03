@@ -1,0 +1,109 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AppManager;assembly=AppManager"
+        Title="AppManager" Width="1260" Height="820" MinWidth="1000" MinHeight="640"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource Bg}" Foreground="{StaticResource Text}"
+        FontFamily="{StaticResource UiFont}" FontSize="13.5"
+        UseLayoutRounding="True" SnapsToDevicePixels="True">
+    <Grid Background="{StaticResource Bg}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="236"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ================================================= Barra laterale -->
+        <Border Background="{StaticResource Sidebar}" BorderBrush="{StaticResource Line}" BorderThickness="0,0,1,0"
+                IsEnabled="{Binding IsInteractive}">
+            <DockPanel Margin="14,16,14,12">
+                <DockPanel DockPanel.Dock="Top" Margin="6,0,0,14">
+                    <Button DockPanel.Dock="Right" Style="{StaticResource IconBtn}" Width="30" Height="30" Content="{Binding ThemeGlyph}" VerticalAlignment="Center"
+                            Command="{Binding ToggleThemeCommand}" ToolTip="{Binding ThemeTip}"/>
+                    <Border DockPanel.Dock="Left" Width="36" Height="36" CornerRadius="10">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="#6F9BFF" Offset="0"/>
+                                <GradientStop Color="#7B5CFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <TextBlock Text="&#xE74C;" Style="{StaticResource Glyph}" Foreground="White" FontSize="18"/>
+                    </Border>
+                    <StackPanel Margin="12,0,8,0" VerticalAlignment="Center">
+                        <TextBlock Text="AppManager" FontWeight="SemiBold" FontSize="15.5"/>
+                        <TextBlock Text="Giochi e programmi" Style="{StaticResource Caption}"/>
+                    </StackPanel>
+                </DockPanel>
+
+                <!-- stato dei permessi: compatto, così tutte le voci stanno anche con la finestra alla minima altezza -->
+                <Border DockPanel.Dock="Bottom" CornerRadius="10" Padding="12,8" Background="{StaticResource Surface}" Margin="0,8,0,0">
+                    <StackPanel VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" Visibility="{Binding IsAdmin, Converter={StaticResource Vis}}"
+                                    ToolTip="In esecuzione come amministratore: tutte le funzioni sono disponibili.">
+                            <Ellipse Width="8" Height="8" Fill="{StaticResource Success}" VerticalAlignment="Center"/>
+                            <TextBlock Text="Accesso completo" Margin="8,0,0,0" FontSize="12.5"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Visibility="{Binding IsAdmin, Converter={StaticResource NotVis}}" Background="Transparent"
+                                    ToolTip="Senza amministratore, alcuni residui di sistema (servizi, voci di sistema, firewall) non si possono eliminare.">
+                            <Ellipse Width="8" Height="8" Fill="{StaticResource Warning}" VerticalAlignment="Center"/>
+                            <TextBlock Text="Modalità limitata" Margin="8,0,0,0" FontSize="12.5"/>
+                        </StackPanel>
+                        <Button Style="{StaticResource LinkBtn}" Content="Riavvia come amministratore" FontSize="12" Margin="16,2,0,0"
+                                Command="{Binding RestartAsAdminCommand}" Visibility="{Binding IsAdmin, Converter={StaticResource NotVis}}"/>
+                    </StackPanel>
+                </Border>
+
+                <StackPanel DockPanel.Dock="Bottom">
+                    <Border Height="1" Background="{StaticResource Line}" Margin="6,0,6,6"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE7E8;" Content="Avvio automatico"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=startup}"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE890;" Content="Sorveglianza"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=monitor}"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE774;" Content="Rete"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=network}"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE81C;" Content="Backup"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=backups}"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE9F9;" Content="Log"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=logs}"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE713;" Content="Impostazioni"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=settings}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE80F;" Content="Panoramica"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=overview}"/>
+                    <TextBlock Text="PROGRAMMI" Style="{StaticResource NavSection}" Margin="12,12,0,4"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE74C;" Content="Libreria"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=programs}"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE74D;" Content="Residui"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=program-orphans}"/>
+
+                    <TextBlock Text="GIOCHI" Style="{StaticResource NavSection}" Margin="12,10,0,4"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE7FC;" Content="Libreria"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=games}"/>
+                    <RadioButton GroupName="nav" Style="{StaticResource NavItem}" Tag="&#xE74D;" Content="Residui"
+                                 IsChecked="{Binding CurrentKey, Mode=TwoWay, Converter={StaticResource Eq}, ConverterParameter=game-orphans}"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- ================================================= Pagina corrente -->
+        <ContentControl x:Name="PageHost" Grid.Column="1" Content="{Binding CurrentPage}" Focusable="False" IsEnabled="{Binding IsInteractive}"/>
+
+        <!-- ================================================= Notifica temporanea (sopra anche ai dialoghi) -->
+        <Border Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="24,0,24,28" Padding="16,10" Panel.ZIndex="10"
+                CornerRadius="10" Background="{StaticResource Surface3}" BorderBrush="{StaticResource Line}" BorderThickness="1"
+                Visibility="{Binding Toast, Converter={StaticResource Vis}}" IsHitTestVisible="False">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="&#xE946;" Style="{StaticResource Glyph}" Foreground="{StaticResource Accent}" Margin="0,0,10,0"/>
+                <TextBlock Text="{Binding Toast}"/>
+            </StackPanel>
+        </Border>
+
+        <!-- ================================================= Finestre di dialogo -->
+        <Grid Grid.ColumnSpan="2" Background="{StaticResource Backdrop}" Visibility="{Binding HasDialog, Converter={StaticResource Vis}}"
+              KeyboardNavigation.TabNavigation="Cycle" KeyboardNavigation.DirectionalNavigation="Contained">
+            <ContentControl x:Name="DialogHost" Content="{Binding Dialog}" Margin="32" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Focusable="True" FocusVisualStyle="{x:Null}" IsTabStop="False"/>
+        </Grid>
+    </Grid>
+</Window>

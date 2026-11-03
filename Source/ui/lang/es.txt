@@ -1,0 +1,1177 @@
+1	  (automática)
+2	 (los archivos están en la Papelera)
+3	 (el juego parece eliminado)
+4	 (el programa parece eliminado)
+5	 (en la Papelera, en la carpeta {0})
+6	 (en la Papelera, en las carpetas {0}{1})
+7	 (sin entrada en Aplicaciones instaladas)
+8	 (se muestran las 5000 más recientes)
+9	 (sigue en la copia de seguridad)
+10	 Los archivos y carpetas se eliminarán definitivamente.
+11	 Los archivos y carpetas van a la Papelera; las cachés se eliminan al instante.
+12	 No se ha cambiado nada.
+13	 Primero se crea una copia de seguridad.
+14	 · {0} en disco
+15	. Atención: modificada recientemente, puede haber una instalación en curso
+16	. Atención: modificada recientemente, comprueba que {0} no siga instalado en otro lugar
+17	. Comprueba que no contenga tus documentos
+18	100 MB
+19	2 GB
+20	30 días
+21	500 MB
+22	7 días
+23	90 días
+24	: cierra los juegos y aplicaciones abiertos e inténtalo de nuevo
+25	: se eliminarán en el próximo reinicio del PC
+26	ANÁLISIS
+27	APARIENCIA E IDIOMA
+28	ACCIONES RÁPIDAS
+29	Acceso completo
+30	Acceso denegado (requiere administrador o archivo en uso)
+31	Acceso denegado (requiere administrador)
+32	Captura de Xbox Game Bar de este juego
+33	Actualizar (F5)
+34	Actualizar ahora
+35	Actualizar ahora (F5)
+36	Actualiza la lista cada 2 segundos mientras la página está abierta.
+37	Actualización automática
+38	Actualizado a las {0}
+39	Añadir
+40	Añadir carpeta
+41	Añade la carpeta de juegos en Ajustes, o usa el botón Añadir.
+42	Añade la carpeta de programas en Ajustes, o usa el botón Añadir.
+43	Añade la carpeta de partidas guardadas del juego. Suele estar en Documentos\My Games, Juegos guardados o AppData.
+44	Añadir un juego eligiendo su carpeta
+45	Añadir un programa eligiendo su carpeta
+46	Añadir una carpeta de partidas que AppManager no ha encontrado
+47	Añadida manualmente
+48	Añadidos manualmente
+49	Añadido manualmente
+50	Algunas aplicaciones del sistema no se pueden desinstalar; la eliminación también puede estar bloqueada por una directiva o una actualización. Prueba desde Configuración > Aplicaciones > Aplicaciones instaladas.
+51	Algunas copias de seguridad no se han eliminado
+52	Algunos elementos requieren permisos de administrador: reinicia AppManager como administrador para eliminarlos.
+53	Algunas partidas se sincronizan con Steam Cloud. Cambia de perfil con Steam cerrado o desactiva Steam Cloud para este juego: Steam podría volver a descargar las partidas del otro perfil.
+54	Otros PC conocidos
+55	Otros
+56	Análisis no disponible
+57	El análisis ha fallado
+58	El análisis ha fallado: {0}
+59	Analizar de nuevo
+60	Aún no hay copias de seguridad
+61	Cancelar
+62	Aplicación de Windows
+63	Aplicación instalada fuera de la Store (paquete MSIX)
+64	Aplicaciones instaladas desde la Store o como paquete MSIX.
+65	Aplicaciones instaladas de Windows
+66	Aplicaciones instaladas de Windows{0}
+67	AppManager no ha podido iniciarse:\n\n{0}
+68	AppManager ya está abierto.
+69	Aplicación
+70	Aplicaciones de Steam
+71	Abre SteamDB en el navegador para saber el nombre del juego
+72	Abrir
+73	Abrir Servicios
+74	Abrir Firewall de Windows
+75	Abrir carpeta
+76	Abrir el depósito de perfiles
+77	Abrir el programa en su biblioteca
+78	Abrir el registro de actividad
+79	Abrir en el Explorador de archivos
+80	Abrir la carpeta de copias de esta aplicación en el Explorador de archivos
+81	Abrir el Programador de tareas
+82	Abrir la carpeta de copias de seguridad
+83	Abrir la carpeta del juego
+84	Abrir la carpeta del programa
+85	Abrir la carpeta en el Explorador de archivos
+86	Abrir la sección Copias para esta aplicación
+87	Abrir las variables de entorno
+88	Abrir en el Editor del Registro
+89	Abrir en la biblioteca
+90	Asistente para la compatibilidad de programas
+91	Asociaciones de archivos y menús no válidos
+92	Espera a que termine la operación…
+93	Esperando la lista de juegos y programas instalados…
+94	Atención: lo que elimines no se podrá recuperar.
+95	En espera
+96	Activar
+97	Activar o desactivar el inicio con Windows, como en el Administrador de tareas
+98	Tarea programada - {0}.xml
+99	Tarea programada que inicia {0}
+100	Tarea programada que inicia {0}, que ya no existe
+101	Tarea programada {0}
+102	Tareas programadas
+103	Tareas programadas no válidas
+104	Automático
+105	Automático
+106	Automática, antes de una restauración
+107	Iniciar
+108	Iniciar el juego
+109	Iniciar el programa
+110	Iniciar el análisis
+111	Inicio automático
+112	Se inicia con Windows ({0})
+113	Inicio automático de {0}, que ya no existe
+114	Inicio automático, servicios y tareas
+115	Iniciando {0}…
+116	No se ha podido iniciar
+117	Avisos y errores
+118	Aviso
+119	COPIAS DE SEGURIDAD
+120	COPIAS DE LAS PARTIDAS
+121	Copias
+122	Copias que conservar por aplicación
+123	Copia de las partidas
+124	Copiando las partidas actuales…
+125	Copia de las partidas creada: también está en la sección Copias.
+126	Copias de «{0}» movidas a la Papelera.
+127	Copia y restauración de partidas, perfiles para varios jugadores, partida nueva
+128	La copia ha fallado
+129	La copia ha fallado ({0}): limpieza cancelada, ningún archivo eliminado.
+130	Copia antes de eliminar
+131	Copia movida a la Papelera.
+132	Copia, perfiles y partida nueva para las partidas del juego
+133	Copia, perfiles para varios jugadores y partida nueva.
+134	Copia, perfiles para varios jugadores o ajustes distintos, partida nueva sin perder la anterior.
+135	Bloquear
+136	Bloquear Internet
+137	Bloquear el acceso a Internet
+138	Bloquea toda conexión a Internet, entrante y saliente, con el Firewall de Windows. Requiere permisos de administrador.
+139	Bloquear toda conexión a esta dirección
+140	¿Bloquear las conexiones a {0}?
+141	Conexiones a {0} bloqueadas
+142	Bloqueado
+143	Bloqueado · sin conexiones
+144	Bloqueos creados por AppManager en el Firewall de Windows. Quita una regla para permitir de nuevo las conexiones.
+145	Bloqueo de Internet para {0}
+146	CARPETA
+147	CARPETAS GESTIONADAS
+148	LO QUE MÁS ESPACIO OCUPA
+149	QUÉ HA CAMBIADO
+150	Caché de shaders creada por Steam para este {0}
+151	Caché de shaders de los controladores gráficos
+152	Caché de shaders de una aplicación no instalada
+153	Caché, registros y bloqueos
+154	Cambiar
+155	El cambio de perfil ha fallado: {0}{1}
+156	Cambiando de perfil…
+157	Carpeta
+158	Carpeta añadida: pulsa «Actualizar» en la página de juegos.
+159	Carpeta añadida: pulsa «Actualizar» en la página de programas.
+160	Carpeta con tus juegos (una subcarpeta por juego)
+161	Carpeta con tus programas portables (una subcarpeta por programa)
+162	Carpeta de copias
+163	Carpeta de juegos portables ({0})
+164	Carpeta de perfiles sin usar
+165	Carpeta de programas portables ({0})
+166	Carpeta de partidas de {0}
+167	Carpeta del juego
+168	Carpeta del programa
+169	Carpeta del {0} añadida a la variable de entorno PATH
+170	Carpeta del {0} indicada por sus accesos directos, que sigue en el disco
+171	Carpeta del {0} que sigue en el disco. Atención: también contiene documentos, fotos o un proyecto, revísala antes de eliminarla
+172	Carpeta de instalación que sigue en el disco
+173	Carpeta de capturas/vídeos con el nombre del juego
+174	Carpeta donde guardar las copias
+175	Carpeta de la variable PATH que ya no existe
+176	Carpeta no disponible
+177	Carpeta no utilizable
+178	Carpeta no válida
+179	Carpeta sin programas (solo datos, registros o ajustes)
+180	Carpeta usada solo por este {0} (detectada por Prefetch de Windows)
+181	Carpeta vacía
+182	Carpeta «{0}\{1}» en {2}: tiene el nombre de un programa que ya no existe
+183	Carpeta «{0}» en {1}: coincide con el {2}
+184	Carpeta «{0}» en {1}: tiene el nombre de un programa que ya no existe{2}
+185	Carpetas de juegos portables
+186	Carpetas de programas portables
+187	Carpetas inexistentes en la variable PATH
+188	Carpetas, ajustes y entradas del sistema dejados por programas que ya no están.
+189	Busca carpetas restantes, entradas de inicio, tareas, servicios, tipos de archivo, accesos directos y entradas de «Aplicaciones instaladas» de programas eliminados. No se elimina nada sin confirmación.
+190	Busca datos de Steam, carpetas de juegos Unity y Unreal, partidas, accesos directos no válidos y cachés de shaders de juegos eliminados. No se elimina nada sin confirmación.
+191	Buscar juegos de nuevo
+192	Buscar de nuevo los juegos instalados
+193	Buscar programas de nuevo
+194	Buscar de nuevo los programas instalados
+195	Buscar residuos
+196	Buscar en el registro…
+197	Buscar en línea las imágenes que faltan
+198	Busca informes de errores de Windows, volcados de bloqueo, registros de launchers y juegos, y registros en la carpeta temporal. No toca los registros de eventos de Windows ni los archivos en uso. No se elimina nada sin confirmación.
+199	Buscar un juego…
+200	Buscar un programa…
+201	Buscar una aplicación…
+202	Buscar…
+203	Buscando juegos: {0}…
+204	Buscando juegos instalados…
+205	Buscando programas instalados…
+206	Buscando restos…
+207	Buscando partidas de {0}…
+208	Buscando programas: {0}…
+209	Buscando residuos: {0}…
+210	Seguro
+211	¿Qué juego es?
+212	Claro
+213	Clave API de SteamGridDB (opcional)
+214	Clave gratuita: añade portadas en alta resolución, imágenes y logotipos para casi todos los juegos. Se guarda en la carpeta Dati.
+215	Clave no válida
+216	Clave no válida: {0}
+217	Clave quitada: SteamGridDB ya no se usará.
+218	Clave guardada ••••••••{0}
+219	Clave guardada, pero SteamGridDB no responde ahora: se usará en cuanto sea posible.
+220	Clave válida: las imágenes que faltan también se buscarán en SteamGridDB.
+221	Clave «{0}\{1}» con el nombre del {2}
+222	Clave «{0}\{1}» con el nombre de un programa que ya no existe
+223	Clave «{0}» con el nombre del {1}
+224	Clave «{0}» con el nombre de un programa que ya no existe
+225	Cerrar
+226	Cerrar (Esc)
+227	Cierra el juego y el launcher si están abiertos e inténtalo de nuevo.
+228	Cerrar sin eliminar
+229	Accesos directos
+230	Accesos directos a juegos eliminados
+231	Accesos directos a un juego en el escritorio y el menú Inicio, incluidos los de Steam y Epic.
+232	Accesos directos a un programa en el escritorio y el menú Inicio, incluidos los portables.
+233	Accesos directos no válidos
+234	Acceso directo de Epic Games a un juego no instalado
+235	Acceso directo de Steam a una aplicación no instalada
+236	Acceso directo a {0}, que ya no existe
+237	Acceso directo al {0}
+238	Acceso directo en la carpeta Inicio (se inicia con Windows)
+239	Como Windows
+240	Como administrador, el análisis usa también Prefetch de Windows y puedes eliminar servicios y entradas del sistema.
+241	Como administrador, el análisis usa también Prefetch de Windows y encuentra más datos de juegos eliminados.
+242	Cómo obtener la clave: entra en steamgriddb.com con Steam, luego Preferences › API › Generate key
+243	Completado con algunos errores
+244	Componente
+245	Componente COM del {0} ({1})
+246	Componente COM de {0}, que ya no existe
+247	Con el botón «Añadir» de la biblioteca de juegos.
+248	Con el botón «Añadir» de la biblioteca de programas.
+249	Con su propio desinstalador
+250	Confirmar
+251	Confirma la desinstalación en la ventana de Steam…
+252	Conectando…
+253	Conexiones de los programas en ejecución, en tiempo real. Puedes bloquear un destino o todo el acceso a Internet de un programa.
+254	Conservar
+255	Contenido de Workshop (mods) de una aplicación no instalada
+256	Contenido de Steam Workshop (mods descargados)
+257	Contenido
+258	Contiene las partidas de los perfiles sin usar. Se queda en este PC y nunca se propone como residuo.
+259	Continuar y buscar residuos
+260	Comprueba que no estén abiertas en otro programa.
+261	Revisar el inicio automático
+262	Portadas e imágenes de Steam, SteamGridDB y Wikipedia. Solo se envía el nombre del juego o su ID de Steam.
+263	Copia de memoria de un programa que se cerró por un error
+264	Copia incompleta: {0}
+265	Copia virtualizada por Windows (VirtualStore) de la carpeta del {0}
+266	Crear copia ahora
+267	Creando la copia de las partidas…
+268	Creando la copia…
+269	DISCOS
+270	DESINSTALACIÓN
+271	A eliminar: {0} ({1}).
+272	A eliminar: {0}.
+273	Por comprobar
+274	Fecha
+275	Datos
+276	Datos del juego Unity (partidas, ajustes, registros)
+277	Datos del juego Unreal Engine (partidas, configuración, registros)
+278	Datos de la aplicación (ajustes, caché y archivos locales)
+279	Datos de la aplicación Xbox (partidas locales y ajustes)
+280	Datos de un juego Unity (partidas, ajustes, registros) que no parece instalado
+281	Datos de un juego Unreal Engine ({0}) que no parece instalado
+282	Datos de {0} en este PC
+283	Datos de diagnóstico de Unity
+284	Datos de diagnóstico de Unity para este juego
+285	Depósito de perfiles de partidas
+286	Detalles
+287	Tamaño
+288	Tamaño (MB)
+289	Olvidar
+290	¿Olvidar {0}?
+291	Desactivar no elimina nada: solo cambia el estado, como en el Administrador de tareas. Puedes reactivar la entrada cuando quieras.
+292	Desinstalar
+293	Desinstalar y limpiar
+294	Desinstalación
+295	Desinstalación completada
+296	Desinstalación completada.
+297	Desinstalación con Windows Installer
+298	Desinstalación con winget (Administrador de paquetes de Windows)
+299	Desinstalación casi completada: cierra la ventana del desinstalador.
+300	Desinstalación a través de Steam
+301	Desinstalación a través de Windows
+302	Desinstalación a través de Windows (aplicación de Microsoft Store)
+303	Desinstalando a través de Windows…
+304	Documentos y datos guardados
+305	Documentos públicos
+306	Descargas de Workshop incompletas
+307	Descarga de Steam incompleta
+308	Descarga o actualización interrumpida
+309	Controlador de vídeo
+310	Volcado completo de memoria tras una pantalla azul (puede ocupar varios GB)
+311	Volcado de bloqueo
+312	Volcados de bloqueo…
+313	Volcado de bloqueo de Steam
+314	EDITOR
+315	ELIMINACIÓN
+316	Editor
+317	Elementos no seleccionados que siguen en el PC: {0}.
+318	Lista de Workshop de una aplicación no instalada
+319	Lista del contenido de Workshop
+320	Lista exportada: {0}
+321	Eliminar
+322	Eliminar también los elementos no seleccionados
+323	Eliminar los residuos seleccionados
+324	Eliminar la selección
+325	Eliminar la copia (va a la Papelera)
+326	Eliminar el perfil (va a la Papelera)
+327	Elimina la carpeta y los residuos. Primero verás la lista.
+328	Eliminar perfil
+329	Eliminar la selección
+330	Elimina ahora las imágenes sin usar y los archivos temporales restantes
+331	Eliminar todas
+332	Eliminar todas las copias de esta aplicación (van a la Papelera)
+333	¿Eliminar los registros seleccionados?
+334	¿Eliminar los residuos seleccionados?
+335	¿Eliminar el perfil «{0}»?
+336	¿Eliminar esta copia de «{0}»?
+337	¿Eliminar todas las copias de «{0}»?
+338	Eliminado definitivamente porque la Papelera no lo acepta{0}: {1}
+339	Eliminando los archivos del juego…
+340	Eliminando el perfil…
+341	Epic Games Launcher no tiene comando de desinstalación: los archivos se eliminan directamente y el juego se quita de la biblioteca del launcher.
+342	Epic Games Launcher está abierto: se cerrará para actualizar su biblioteca.
+343	Era un enlace{0}: solo se ha quitado el enlace, los datos a los que apuntaba no se han tocado ({1}).
+344	Error
+345	Error al eliminar: {0}
+346	Ejecutable del programa portable
+347	Ya existe en la carpeta de la Papelera: {0}
+348	Ya existe un perfil llamado «{0}».
+349	Ya existe un perfil llamado «{0}»: elige otro nombre.
+350	Ya existe: {0}
+351	Expandir / contraer
+352	Exportar el registro de actividad
+353	Exportar la lista
+354	Exportar la lista de juegos y programas
+355	La exportación ha fallado
+356	Exportar…
+357	Extensión del {0}: {1}
+358	Extensión de un programa que ya no existe: {0}
+359	Opcional
+360	Hecho
+361	Archivo CSV
+362	Archivos de bloqueo (dump) del {0}
+363	Archivos de bloqueo (dump) de {0}
+364	Archivos de texto (*.txt)|*.txt
+365	Los archivos y entradas del sistema vuelven a su ubicación original.
+366	Archivos que ya están en el PC: {0}.
+367	Archivo en uso o no accesible
+368	Falta el archivo
+369	Archivos de registro
+370	Archivos temporales del juego Unity
+371	Archivos temporales de Steam
+372	Archivos temporales y bloqueos del juego Unity
+373	JUEGOS
+374	JUEGOS Y PROGRAMAS OCULTOS
+375	Gestionar partidas
+376	Juegos
+377	Juegos con instalador (por ejemplo repacks), listados en «Aplicaciones instaladas» de Windows.
+378	Juegos y programas
+379	Juego
+380	Juego añadido: {0}
+381	Juego con AppID {0}
+382	Juego eliminado
+383	Juego portable: se elimina la carpeta
+387	Has seleccionado elementos «Por comprobar»: comprueba que pertenezcan de verdad a esta aplicación.
+388	Las copias no pueden estar en una carpeta de Windows ni en la raíz de un disco. Elige otra carpeta.
+389	Los bloqueos usan el Firewall de Windows y siguen hasta que los quitas en Ajustes › Reglas de red. AppManager no modifica el tráfico: lo muestra y, si quieres, lo bloquea.
+390	Los archivos del juego se eliminan definitivamente y el juego se quita de la biblioteca de Epic Games.
+391	Los archivos eliminados van a la Papelera de Windows, a una carpeta «AppManager - nombre del programa» con las rutas completas. Las entradas del sistema se convierten en archivos en «Archivos de registro». Si está desactivado, los archivos se eliminan definitivamente. Caché y registros nunca pasan por la Papelera.
+392	Los archivos eliminados van a la Papelera. Si está desactivado, se eliminan definitivamente. El valor inicial se cambia en Ajustes › Eliminación.
+393	Los archivos van a la Papelera.
+394	Los archivos se eliminan al instante. En la copia solo quedan partidas, ajustes y entradas del sistema, no las carpetas de los programas.
+395	Los juegos se buscan con estos métodos, en este orden. Un juego puede encontrarse con varios métodos: en la biblioteca aparece una sola vez.
+396	Los registros recientes pueden servir si un juego o programa acaba de dar problemas
+397	Los programas se buscan con estos métodos, en este orden (sin los juegos). Un programa puede encontrarse con varios métodos: en la biblioteca aparece una sola vez.
+398	Las partidas actuales pasan al perfil «{0}» y las carpetas del juego quedan vacías: {1} empieza de cero con el nuevo perfil «{2}».\n\nPuedes volver al perfil anterior cuando quieras.
+399	Las partidas actuales siguen en el perfil en uso. El juego empieza de cero con un perfil nuevo y puedes volver al anterior cuando quieras.
+400	Las partidas {0}actuales se apartan en el perfil «{1}» y luego las de «{2}» vuelven a las carpetas del juego.
+401	Sus partidas apartadas van a la Papelera. El perfil en uso no se toca.
+402	Tus juegos
+403	Tus programas
+404	IMÁGENES DE LOS JUEGOS
+405	INFORMACIÓN
+406	INSTALADO EL
+407	Icono del acceso directo creado por Steam
+408	La Papelera ha rechazado la carpeta «{0}» ({1}). Los archivos están en {2}: recupéralos desde ahí o elimina la carpeta.
+409	Tu PC de un vistazo: qué ocupa espacio y qué ha cambiado.
+410	La copia no contiene el manifiesto.
+411	La copia está dañada (lista de contenido ilegible): no se ha restaurado nada.
+412	El archivo de esta entrada ya no existe. Puedes eliminarla desde la página Residuos.
+413	El archivo no está en la carpeta de copias.
+414	El juego
+415	El juego está abierto ({0}): ciérralo e inténtalo de nuevo.
+416	El juego está abierto ({0}): ciérralo antes de cambiar de perfil o restaurar una copia.
+417	El paquete se quita como en Configuración > Aplicaciones.
+418	La ruta no es válida.
+419	El perfil en uso no se puede eliminar: cambia antes a otro perfil.
+420	El programa
+421	El desinstalador ha terminado, pero {0}
+422	Imágenes descargadas
+423	Imágenes descargadas eliminadas: se buscarán de nuevo.
+424	No se puede abrir {0}
+425	No se puede iniciar la desinstalación: {0}
+426	No se puede eliminar la copia
+427	No se pueden leer las conexiones de red: {0}
+428	No se puede mover a la Papelera: {0}
+429	No se puede vaciar el registro
+430	Ajustes
+431	Ajustes y datos
+432	Ajustes, datos y rastros encontrados en el sistema.
+433	Ajustes, registro e imágenes están en {0}
+434	Escuchando
+435	Cerrando
+436	Entrante
+437	En ejecución como administrador: todas las funciones están disponibles.
+438	Saliente
+439	En uso
+440	En uso: sus archivos están en las carpetas del juego
+441	En uso: {0} · {1}
+442	Incluir también los ajustes del juego (gráficos, controles…): cada perfil tendrá los suyos
+443	Pega primero la clave en el cuadro.
+444	Pega aquí la clave API
+445	Info
+446	Información de Steam sobre este {0}
+447	¿Empezar una partida nueva?
+448	Instalados
+449	Instalados desde el último inicio ({0})
+450	Instalado
+451	Instalado el
+452	Internet bloqueado para {0}
+453	Internet desbloqueado para {0}
+454	El análisis también actualiza los residuos de los juegos.
+455	El análisis también actualiza los residuos de los programas.
+456	La aplicación ya no está en el PC. «Restaurar» devuelve sus archivos y ajustes a su sitio.
+457	No se puede escribir en la carpeta junto al programa: por ahora los datos se guardan en el PC.
+458	La carpeta de copias ({0}) está dentro de {1}, que se va a eliminar
+459	La carpeta de copias ({0}) es una carpeta de Windows
+460	La carpeta de copias ({0}) es una carpeta de Windows: elige otra en Ajustes.
+461	La carpeta de copias no es válida
+462	La carpeta del perfil «{0}» en el depósito no está vacía ({1}): revísala antes de continuar.
+463	El nuevo idioma se aplica en el próximo inicio del programa.
+464	Launcher
+465	Las imágenes se buscarán de nuevo (útil si alguna es incorrecta)
+466	Las entradas más antiguas se quitan al iniciar AppManager
+467	Las entradas «todos los usuarios» solo se cambian como administrador.
+468	Leyendo las copias…
+469	Leyendo el inicio automático…
+470	Leyendo las conexiones…
+471	Liberar espacio ahora
+472	Liberados {0}
+473	Biblioteca
+474	Biblioteca de Steam
+475	Biblioteca de Steam (herramienta)
+476	Idioma
+477	Registros
+478	Registros de juegos Unity
+479	Registros de juegos Unity…
+480	Registros de juegos Unreal Engine
+481	Registros de juegos Unreal Engine…
+482	Registros de launchers…
+483	Registros de EA app
+484	Registros de Battle.net
+485	Registros de Epic Games
+486	Registros de GOG Galaxy
+487	Registros de Steam
+488	Registros de Ubisoft Connect
+489	Registros y diagnóstico del PC
+490	Registros y archivos de diagnóstico de Windows, launchers y juegos en el PC, y el registro de actividad de AppManager.
+491	Registro dejado en la carpeta temporal por un programa o una instalación
+492	Registros temporales
+493	Registros temporales…
+494	SUPERVISIÓN
+495	Apartado
+496	Apartar las partidas actuales y empezar de cero con un perfil nuevo
+497	Apartar las partidas actuales y usar las de este perfil
+498	Apartando las partidas actuales…
+499	Apartando: {0}
+500	Microsoft Store
+501	Minivolcado de una pantalla azul: solo sirve para diagnosticarla
+502	Modo limitado
+503	Mostrar también las herramientas de Steam
+504	Mostrar de nuevo
+505	Mostrar adónde volverán los archivos y entradas de la copia
+506	Mostrar la copia
+507	Mostrar el archivo de la copia
+508	Mostrar el archivo log.txt en el Explorador de archivos
+509	Mostrar ajustes, datos y rastros del programa sin desinstalarlo
+510	Mostrar en el Explorador de archivos
+511	Mostrar en la biblioteca
+512	Mostrar u ocultar los detalles
+513	Mostrar u ocultar las conexiones del programa
+514	Mostrar partidas, ajustes y rastros del juego sin desinstalarlo
+515	Oculta los programas a la escucha y los conectados solo a otros programas de este PC.
+516	Ocultar
+517	Ocultar de la lista
+518	Ocultar de la lista (no es un juego o no te interesa)
+519	Ocultar los componentes de Windows
+520	No hay copias de las partidas. Pulsa «Crear copia ahora» para crear una.
+521	No se han encontrado datos
+522	Ningún elemento seleccionado
+523	No se ha copiado ningún archivo a la copia (archivos en uso o ilegibles).
+524	Ningún juego coincide con la búsqueda.
+525	No se han encontrado juegos
+526	Sin límite de tiempo. Por encima de 2 MB se quitan las entradas más antiguas
+527	No hay registros que eliminar
+529	Ningún programa coincide con la búsqueda.
+530	Ningún programa se inicia con Windows
+531	Ningún programa podrá conectarse a {0}.
+532	No se han encontrado programas
+533	No se han encontrado residuos
+534	Sin resultados.
+535	Ninguna aplicación coincide con el filtro.
+536	Ninguna conexión activa
+537	Ningún destino externo
+538	Ninguna imagen descargada.
+539	Ningún rastro de juegos desinstalados.
+540	Ningún rastro de programas desinstalados.
+541	Ninguna entrada coincide con el filtro.
+542	Ninguno
+543	Nada que liberar: todo está en orden.
+544	Nombre
+545	Nombre del perfil nuevo (p. ej. el nombre del jugador)
+546	Nombre del perfil
+547	Nombre ya usado
+548	No cierres AppManager hasta que termine.
+549	No hay registros ni archivos de diagnóstico que quitar con las opciones elegidas.
+550	No hay partidas que copiar: las carpetas están vacías o no existen.
+551	No disponible ahora: AppManager no se ejecuta como administrador.
+552	No eliminado porque no se pudo guardar una copia en «{0}»: {1}
+553	No gestionar
+554	Dejar de gestionar esta carpeta (los archivos se quedan)
+555	¿Dejar de gestionar esta carpeta?
+556	No se han encontrado datos de este {0} fuera de su carpeta.
+557	No se han encontrado ejecutables que bloquear en la carpeta.
+558	No se han encontrado las partidas de este juego
+559	Ya no instalado
+560	Ya no están ({0})
+561	No encontrado (quizá ya eliminado)
+562	No se ha eliminado nada.
+563	No se ha podido eliminar:
+564	Partida nueva
+565	Partida nueva lista: perfil «{0}» en uso.
+567	PC nuevo reconocido: {0}. Sus ajustes empiezan de cero.
+569	Cada subcarpeta con un juego se añade a la biblioteca, aun sin instalación ni acceso directo.
+570	Cada subcarpeta con un programa, y cada ejecutable, se añade como programa portable.
+571	Por encima del límite se eliminan primero las imágenes de residuos y luego las de juegos de otros PC. Las de los juegos de este PC se quedan siempre. «Automático» se adapta al espacio libre.
+572	La operación ha fallado
+573	Ordenar por
+576	PC sin nombre
+577	PERFILES
+578	PROGRAMAS
+579	PROGRAMAS CONECTADOS
+580	Resumen
+581	Cambiar al tema claro
+582	Cambiar al tema oscuro
+583	Para {0}, AppManager debe ejecutarse como administrador. ¿Reiniciarlo ahora?
+584	Ruta demasiado larga
+585	Ubicación protegida, no restaurado: {0}
+586	Preferencias del juego Unity (PlayerPrefs)
+587	Preferencias de un juego Unity (PlayerPrefs) no instalado
+588	Prefetch de Windows
+589	Preparando…
+590	Antes de restaurar
+591	Antes de eliminar, partidas, ajustes y entradas del sistema se copian en un archivo zip, restaurable desde la sección Copias. No se incluyen carpetas de programas, capturas, cachés ni accesos directos.
+592	Antes de eliminar, partidas, ajustes y entradas del sistema se copian en un archivo zip, restaurable desde la sección Copias. El valor inicial se cambia en Ajustes › Eliminación.
+593	Primero se crea una copia automática de las partidas actuales y luego se sustituyen por las elegidas.
+594	Probable
+595	Perfiles de partidas apartados: {0}. Siguen en {1} y los encontrarás si reinstalas el juego.
+596	Perfil en uso: {0}
+597	Perfil no encontrado.
+598	Perfil «{0}» eliminado.
+599	Perfil «{0}» en uso.
+600	Programa
+601	Programa añadido: {0}
+602	Programa eliminado
+603	Programa portable, sin desinstalador: su ejecutable se propone para eliminar junto con los residuos.
+604	Programa portable: se elimina el ejecutable
+605	Programa portable: se elimina la carpeta
+606	Programas
+607	Programas con instalador, como en Configuración › Aplicaciones instaladas.
+608	Programas instalados
+609	Programas instalados con Steam que no son juegos (por ejemplo Wallpaper Engine o Blender).
+611	Protegido, no eliminado: {0}
+612	Prueba desde Configuración > Aplicaciones > Aplicaciones instaladas.
+613	Limpiar los registros del PC
+614	Limpiar la selección
+615	Limpieza cancelada durante la copia: ningún archivo eliminado.
+616	Limpieza completada
+617	Limpieza completada con algunos errores
+618	Limpieza de datos
+619	Limpieza de registros
+620	Limpieza de residuos de juegos
+621	Limpieza de residuos de programas
+622	Limpiando…
+623	Limpieza interrumpida
+624	Limpieza interrumpida: {0}.
+625	La limpieza ha fallado
+626	Puedes recuperar todo de la Papelera hasta que la vacíes. Sin copia.
+627	Puedes volver atrás de dos formas: desde la Papelera (archivos y carpetas) y desde la copia (partidas, ajustes y entradas del sistema).
+628	Puedes forzar la eliminación: {0} directamente, junto con los residuos.
+629	Puedes ver las conexiones, pero para bloquearlas se requieren permisos de administrador.
+630	ESTE PC Y RECURSOS
+631	Cualquier programa → {0}
+632	Cuando termine el desinstalador, la búsqueda de residuos empezará automáticamente.
+633	Cuando se crea una nueva, las más antiguas del mismo tipo van a la Papelera.
+634	Cuando un programa se conecte a Internet aparecerá aquí, con su destino.
+635	¿Cuántos registros dejan Windows, los launchers y los juegos?
+636	Esta carpeta es del sistema o contiene otros juegos y programas. Elige la carpeta de un solo {0}.
+637	Este PC: {0}
+638	REGLAS DE RED
+639	RED
+640	BÚSQUEDA DE JUEGOS
+641	BÚSQUEDA DE PROGRAMAS
+642	DETECTADO MEDIANTE
+643	Recopilando la información necesaria para encontrar residuos.
+644	Informe del kernel sobre un bloqueo del controlador de vídeo o de un dispositivo
+645	Informe de error del sistema: solo sirve a Microsoft para el diagnóstico
+646	Informe de error ya enviado o en cola: solo sirve a Microsoft para el diagnóstico
+647	Informe de bloqueo de Epic Games Launcher
+648	Informe de bloqueo de {0}
+649	Registro "Abrir con" de {0}
+650	Registro del launcher para este juego
+651	Registro del {0} para "Abrir con"
+652	Registro del {0} entre las aplicaciones predeterminadas
+653	Registro de Steam de un juego no instalado
+654	Grabación o clip de Steam
+655	Registro entre las aplicaciones predeterminadas de «{0}», que ya no existe
+656	Registro
+657	Registro - {0} - {1}.reg
+658	Registro - {0}.reg
+659	Registro de actividad vaciado.
+660	Registro de Epic Games Launcher
+661	Registro de EA app
+662	Registro de sesión de {0}: el juego lo reescribe en cada inicio
+663	Registro de AppManager
+664	Registro de Battle.net
+665	Registro de GOG Galaxy
+666	Registro de Steam: Steam crea otros por sí solo
+667	Registro de Ubisoft Connect
+668	Registro del sistema
+669	Registro de {0}: el juego crea otros en cada inicio
+670	Registro exportado.
+671	Reglas del Firewall de Windows creadas para el {0}
+672	Reglas del Firewall de Windows quitadas para {0}\r\n(detalles no disponibles: {1})\r\n
+673	Reglas del Firewall de Windows quitadas para {0}\r\n\r\n{1}\r\n
+674	Reglas de firewall para {0}
+675	Informe de error de Windows sobre el {0}
+676	Residuos
+677	Residuos de juegos
+678	Residuos de juegos ya desinstalados
+679	Residuos de programas
+680	Residuos de programas ya desinstalados
+681	Residuos de juegos desinstalados
+682	Residuos de juegos ya no instalados: {0}
+683	Residuos de programas desinstalados
+684	Residuos de programas ya no instalados: {0}
+685	Red
+686	Reiniciar ahora
+687	Reiniciar como administrador
+688	¿Reiniciar AppManager?
+689	La búsqueda de juegos o programas ha fallado: sin esa lista no se pueden reconocer los residuos. Pulsa Actualizar en la página Juegos o Programas e inténtalo de nuevo.
+690	La búsqueda ha fallado
+691	Referencia al tipo de archivo «{0}», que ya no existe ({1})
+692	Referencia al tipo de archivo «{0}», que se está eliminando ({1})
+693	Referencia al tipo de archivo «{0}»: {1}
+694	Detectado mediante
+695	Devolver a su sitio los archivos y entradas del sistema de la copia
+696	Devolviendo a su sitio: {0}
+697	Eliminación directa de archivos (Epic Games)
+698	Eliminación forzada
+699	Quitar
+700	Renombrar
+701	El cambio de nombre ha fallado
+702	Restaurar
+703	¿Restaurar las partidas del {0}?
+704	¿Restaurar la copia de «{0}»?
+705	Restaurados {0} de «{1}».
+706	Restauración completada
+707	Restauración completada con errores
+708	Restaurando las partidas…
+709	Restauración en curso
+710	La restauración ha fallado
+711	Runtimes, controladores y aplicaciones de Windows: otros programas los necesitan. Quítalos solo si sabes lo que haces
+712	PARTIDAS
+713	PARTIDAS DE LOS JUEGOS
+714	ESPACIO DE LAS COPIAS
+715	ESPACIO USADO
+716	Omitido porque la copia ha fallado: {0}
+717	Guardar en un archivo CSV los juegos y programas encontrados
+718	Guardar una copia del registro (por ejemplo para pedir ayuda)
+719	Partidas
+720	Partidas del juego Unreal Engine
+721	Partidas del juego Unreal Engine 3
+722	Partidas de {0}
+723	Partidas y ajustes locales de Steam Cloud (siguen en la nube de Steam)
+724	Partidas en {0} de un juego que no parece instalado
+725	Partidas vinculadas al AppID {0} del juego
+726	Partidas vinculadas al AppID {0} de un juego no instalado
+727	Partidas locales de Steam Cloud de un juego no instalado (siguen en la nube de Steam)
+728	Partidas restauradas.
+729	Partidas, carpetas, entradas del registro y cachés dejados por juegos que ya no están.
+730	Partidas, datos, ajustes y entradas del sistema se guardan en un archivo zip restaurable
+731	Partidas, ajustes y rastros encontrados en el sistema.
+732	Desbloquear
+733	Elige la carpeta del {0} (también portable)
+734	Elige una carpeta concreta (no un disco entero ni una carpeta de Windows).
+735	Elige una carpeta en un disco del PC.
+737	Capturas de Steam de un juego no instalado
+738	Capturas y vídeos
+739	Capturas hechas con Steam
+740	Oscuro
+741	Si has cancelado, pulsa Cancelar. Si la desinstalación sigue en curso, espera. Para buscar residuos de todos modos, pulsa Continuar.
+742	Si no ves la ventana de Steam, ábrelo y desinstala {0} desde la biblioteca: aquí se continuará solo.
+743	Informes de errores de Windows
+744	Informes de errores de Windows…
+745	Sigue las instrucciones del desinstalador…
+746	Seleccionar todo
+747	Siempre
+748	Sin permisos de administrador, algunos residuos del sistema (servicios, entradas del sistema, firewall) no se pueden eliminar.
+749	Sin permisos de administrador, pueden quedar algunos residuos del sistema.
+750	Servicios
+751	Servicios no válidos
+752	Servicio - {0}.reg
+753	Servicio de Windows que inicia {0}, que ya no existe
+754	Servicio de Windows instalado por el {0} ({1})
+755	Servicio «{0}» ({1})
+756	Servicio «{0}» restaurado: estará activo tras reiniciar el PC.
+757	Se requieren permisos de administrador
+758	Se abrirá el desinstalador de {0}: sigue sus instrucciones.
+759	Se regenera sola: los juegos pueden cargar más despacio en el primer inicio
+760	Se ha producido un error inesperado:\n\n{0}\n\nLos detalles están en el registro de actividad.
+761	Sistema (Windows)
+762	Sistema inactivo
+763	Solo conexiones al exterior
+764	Solo errores
+765	Solo archivos con más de 7 días
+766	Solo archivos con más de 7 días (recomendado)
+767	Solo con más de 7 días
+768	Estos archivos solo sirven para el diagnóstico: se eliminan definitivamente.
+769	Sustituir las partidas actuales por estas (primero se hace una copia automática)
+770	Sobrescribir los archivos existentes con los de la copia
+771	Espacio máximo para imágenes descargadas
+772	Espacio ocupado por la carpeta Dati. Se mantiene en orden automáticamente.
+773	Espacio casi agotado: no se descargan imágenes nuevas hasta que se libere.
+774	Espacio usado por AppManager
+775	Moviendo a la Papelera…
+776	Estás eliminando documentos o datos sin copia. Si quizá reinstales el programa, activa la copia.
+777	Estás eliminando partidas sin copia. Si quizá reinstales el juego, activa la copia.
+778	Estado de inicio de un programa que ya no existe
+779	Estado de inicio de «{0}», que ya no existe
+780	Estado de inicio en el Administrador de tareas
+781	Steam (todas las bibliotecas), Epic Games, GOG, Ubisoft Connect, EA app, Battle.net, Rockstar, Amazon Games, Xbox.
+782	Steam siempre pide confirmación: está en su ventana (a veces detrás de esta).
+783	Steam te pedirá confirmar y quitará {0}.
+784	SteamGridDB ha rechazado la clave: comprueba que la has copiado entera.
+785	SteamVR, Proton, servidores dedicados: aparecen entre los programas.
+786	{0} libres en la unidad.
+787	Vaciar
+788	¿Vaciar el registro de actividad?
+789	Tema
+790	Tipo
+791	Tipo de archivo «{0}»
+792	Tipo de archivo «{0}» registrado por el {1}
+793	Quitar el bloqueo
+794	Quitando las partidas actuales…
+795	Rastros de programas eliminados
+796	Rastros de versiones anteriores de aplicaciones de la Store
+797	Rastros ya no válidos
+798	Rastro de Windows ({0}) de {1}, que ya no existe
+799	Rastro de Windows: {0}
+800	También encontrados por un método anterior: en la biblioteca aparecen una sola vez
+801	También encontrado por: {0}
+802	Todas las conexiones
+803	Se eliminan todas las entradas del registro de AppManager.
+804	Todos
+805	Todas las copias
+806	Todos los datos de AppManager están en la carpeta Dati, junto al programa. Carpetas y elementos ocultos se recuerdan por PC; un PC nuevo empieza sin ellos.
+807	Todo
+808	ÚLTIMA COPIA
+809	Últimas 10
+810	Últimas 3
+811	Últimas 5
+813	Un PC no visto en 6 meses se olvida automáticamente, con las imágenes que solo usaba él.
+814	Se crea una copia cuando eliminas datos de una aplicación (con «Copia antes de eliminar» activo) o desde «Gestionar partidas». Aquí están agrupadas por aplicación.
+815	Usar la Papelera
+816	Usar Prefetch de Windows
+817	Usar este
+818	Usar este perfil
+819	¿Usar el perfil «{0}»?
+820	Usada solo por {0}, que ya no existe (detectada por Prefetch de Windows)
+821	VERSIÓN
+822	Valores iniciales de las casillas «Usar la Papelera» y «Copia antes de eliminar». Puedes cambiarlos en cada limpieza.
+823	Variable PATH {0}  →  {1}
+824	Variables de entorno
+825	Variables de entorno no accesibles
+826	Ver las copias
+827	Se eliminan sus ajustes y las imágenes que solo usaba él. Si vuelves a él, será como un PC nuevo.
+828	Comprobando la clave…
+829	Comprobar y guardar
+830	Versión
+831	Entrada de desinstalación que apunta a la carpeta del {0}
+832	Entrada de desinstalación que sigue en el registro
+833	Entrada de desinstalación que sigue en el registro (aún aparece en "Aplicaciones instaladas")
+834	Entrada en "Aplicaciones instaladas" para «{0}», pero su desinstalador ya no existe
+835	Entrada «{0}» añadida al menú contextual del Explorador de archivos
+836	Entrada de menú contextual «{0}»: inicia {1}, que ya no existe
+837	Entradas de inicio no válidas
+838	El Firewall de Windows no está disponible en este sistema.
+839	Windows no ha quitado {0}
+840	Windows anota las carpetas que usa cada programa al iniciarse: ayuda a encontrar datos de juegos y programas portables. Requiere permisos de administrador.
+841	Windows quitará el paquete del juego, como en Configuración > Aplicaciones.
+842	Windows quitará la aplicación, como en Configuración > Aplicaciones > Aplicaciones instaladas.
+845	\nCopias creadas: {0}, una por aplicación. Están en la sección Copias.
+846	\nCopia creada: puedes restaurarla desde la sección Copias.
+847	\n\nAlgunos elementos requieren permisos de administrador y se omitirán.
+848	\n{0} en el PC, como elegiste.
+849	\n…y {0} notas más en el registro de actividad.
+850	añadida manualmente
+851	añadido manualmente
+852	aplicaciones de Microsoft Store
+853	aplicación|aplicaciones
+854	aplicaciones de Steam
+855	asociaciones de archivos y menús del Explorador de archivos
+856	tareas programadas
+857	activo|activos
+858	inicio automático
+859	se inicia con Windows
+861	aviso|avisos
+862	copia|copias
+863	bloquear el acceso a Internet
+864	bloquear o desbloquear las conexiones
+865	caché de shaders
+866	cambiar el inicio automático para todos los usuarios
+867	carpeta de portables
+868	carpeta del usuario
+869	carpeta de instalación
+870	carpetas con el nombre del {0}
+871	carpetas de juegos
+872	carpetas de programas portables
+873	carpetas de datos de Unreal Engine y Unity
+874	carpetas que siguen en Program Files
+875	accesos directos de launchers
+876	accesos directos no válidos
+877	acceso directo
+878	componente
+879	componente COM
+880	componente de Windows|componentes de Windows
+881	conexión|conexiones
+882	bloqueos e informes de error
+883	por comprobar
+884	datos de programas eliminados
+885	datos del motor de juego
+886	datos de Steam
+887	del usuario
+888	destino|destinos
+890	del sistema
+891	y los ajustes 
+892	elemento no eliminado|elementos no eliminados
+893	elemento no seleccionado sigue|elementos no seleccionados siguen
+894	elemento seleccionado|elementos seleccionados
+895	elemento sigue|elementos siguen
+896	elemento|elementos
+897	error|errores
+898	extensión aprobada del Explorador de archivos
+899	archivo de registro o diagnóstico|archivos de registro y diagnóstico
+900	archivo en uso omitido|archivos en uso omitidos
+901	archivo en uso|archivos en uso
+902	archivo o carpeta de registro|archivos y carpetas de registro
+903	archivos temporales
+904	archivo vacío
+905	archivo/carpeta|archivos y carpetas
+906	archivo|archivos
+907	juegos añadidos manualmente
+908	juegos y programas eliminados (Prefetch)
+909	juego
+910	juego|juegos
+911	ya encontrados antes: {0}
+912	el archivo de registro de la copia afecta también a otras claves, no se importa
+913	el juego
+914	el juego sigue presente.
+915	el juego se eliminará
+916	el juego.
+917	el programa
+918	el desinstalador ya no existe ({0})
+919	el programa sigue presente.
+920	el programa se eliminará
+921	imagen|imágenes
+922	ajustes de Game Bar y Modo de juego
+923	ajustes de notificaciones
+924	ajustes de compatibilidad
+925	ajustes, datos, entradas del registro, inicios automáticos, servicios, tipos de archivo y accesos directos restantes
+926	instalación en curso
+927	el elemento sigue presente
+928	launcher
+929	modificados el {0}
+930	modificado el {0}
+931	en el menú Inicio
+932	sin copias
+933	nombre del juego
+934	nombre del paquete Xbox
+935	nombre del paquete de la Store
+936	nombre del producto Unity
+937	nombre del proyecto Unreal Engine
+938	nombre del programa
+939	nombre del ejecutable
+940	nombre del ejecutable Unity
+941	nombre de la carpeta de instalación
+942	nombre en caché del Explorador de archivos
+943	parte del título
+944	ruta demasiado larga para la Papelera
+945	preferencia de GPU (configuración de gráficos)
+946	producto indicado en el ejecutable
+947	perfil|perfiles
+948	programa
+949	programa conectado|programas conectados
+950	programa|programas
+951	programas añadidos manualmente
+952	programas en ejecución e inicios automáticos
+953	programas instalados
+954	este {0} no tiene desinstalador
+955	colección: {0}
+956	reg import ha fallado
+957	registro como programa predeterminado ({0})
+958	registro del programa para "Abrir con"
+959	registro entre las aplicaciones predeterminadas
+960	registro del sistema
+961	reglas del Firewall de Windows
+962	requiere administrador
+963	repetido {0} veces más
+964	repetido una vez más
+965	partidas por AppID
+966	partidas, ajustes, capturas, entradas del registro y accesos directos restantes
+967	capturas y vídeos
+968	superposición en iconos del Explorador de archivos
+969	traslado a la Papelera cancelado
+970	estadísticas de uso de la barra de tareas
+971	estadísticas de programas iniciados (UserAssist)
+972	estado de inicio (Administrador de tareas)
+973	en el escritorio
+974	tipo de archivo (ProgID)
+975	título del juego
+976	quitar una regla de bloqueo
+977	rastros de Windows
+978	rastros en el registro
+979	un juego eliminado
+980	un programa eliminado
+981	usado por última vez el {0}
+982	variable PATH
+983	entrada "Abrir con" para archivos {0}
+984	entrada del sistema|entradas del sistema
+985	entrada del menú contextual
+986	entrada del menú del Explorador de archivos
+987	entrada|entradas
+988	entradas de desinstalación no válidas
+989	vacía
+990	vacío
+991	vacío (partida nueva)
+992	{0} (puedes desactivar la Papelera en las opciones de limpieza para eliminarlo definitivamente)
+993	{0} (solo icono)
+994	{0} ({1}) se moverán a la Papelera. Ya no podrás restaurarlas desde AppManager.
+995	{0} Espera a que termine y luego reinicia como administrador.
+996	{0} Si cierras ahora, la operación se interrumpe a medias.\n\n¿Cerrar de todos modos?
+997	{0} Puedes eliminar lo que selecciones.
+998	{0} Puedes quitar el bloqueo en Ajustes › Reglas de red.
+999	{0} del {1} ({2}).\nEl archivo de la copia se moverá a la Papelera.
+1000	{0} de un programa que ya no existe ({1})
+1001	{0} de un programa ya no instalado{1}
+1002	{0} en total: {1} de imágenes, {2} de registro de actividad y ajustes.
+1003	{0} libres de {1}
+1004	{0} en el depósito ({1}{2}).
+1005	{0} no aparecerá en la lista, pero no se desinstala. Puedes mostrarlo de nuevo desde Ajustes.
+1006	{0} ya no se iniciará con Windows
+1007	{0} se iniciará con Windows
+1008	{0} parece en ejecución ({1}): ciérralo antes de continuar.
+1009	{0} · última el {1}
+1010	{0} sigue en ejecución ({1}): ciérralo e inténtalo de nuevo.
+1011	{0} es portable, sin desinstalador: la carpeta se propone para eliminar junto con los residuos.
+1012	{0} se ha quitado por completo: no hay residuos que eliminar.
+1013	{0}: elige otra carpeta de copias en Ajustes. Ningún archivo eliminado.
+1014	{0}\n\nAl terminar, AppManager busca {1} y muestra la lista antes de eliminar nada.
+1015	{0}\n\nAppManager ya no la incluirá en las copias y perfiles de {1}. Los archivos se quedan donde están.
+1016	«Automático» usa el idioma de Windows o, si no está disponible, el inglés. Requiere reiniciar.
+1017	«Como Windows» sigue el tema de aplicaciones de Windows.
+1018	«{0}» ya no podrá conectarse a {1}.
+1019	«{0}» es un componente usado por otros programas o por Windows ({1}): quítalo solo si sabes que ya no hace falta.
+1020	Hay una restauración en curso.
+1021	Hay una operación con las partidas en curso ({0}).
+1022	Hay una desinstalación en curso: al terminar, AppManager buscará residuos.
+1023	Hay una limpieza en curso.
+1024	Es la carpeta del juego (o la contiene): elige solo la subcarpeta con las partidas.
+1027	Es un enlace a otra carpeta: elige la carpeta real.
+1028	Es una carpeta de AppManager (depósito de partidas o copias).
+1029	Es una carpeta protegida (de Windows, del usuario o de otro programa): AppManager no la mueve.
+1030	…y {0} elementos más
+1031	…y {0} errores más (consulta el registro de actividad).
+1032	 · {0} recuperables
+1033	, {0} liberados
+1034	Acceso directo {0}
+1035	Desinstalar {0}
+1036	Eliminados: {0}{1}{2}.
+1037	Mostrar {0}
+1038	¿Ocultar {0}?
+1039	Proceso {0}
+1040	Perfil {0}
+1041	Hacia {0}
+1042	{0} del {1}.
+1043	{0} de {1}
+1044	{0} en {1}
+1045	Calculando el espacio usado…
+1046	Leyendo los discos…
+1047	 Atención: {0}
+1048	Analizando: {0}…
+1049	Carpeta quitada de la variable de entorno PATH\r\n\r\nVariable: {0} ({1})\r\nClave: {2}\r\nCarpeta: {3}\r\n\r\nPara volver a ponerla: Configuración del sistema › Variables de entorno, añade la carpeta a la variable indicada.\r\n
+1050	Eliminando: {0}
+1051	Restaurando: {0}
+1052	sistema
+1053	usuario
+1054	B
+1055	GB
+1056	KB
+1057	MB
+1058	TB
+1059	Último inicio el {0}
+1060	Windows instalado hace {0} ({1})
+1061	año|años
+1062	día|días
+1063	menos de un día
+1064	mes|meses
+1065	Encendido desde hace {0}
+1066	menos de un minuto
+1067	minuto|minutos
+1068	hora|horas
+1069	imágenes: {0}
+1070	Carpeta en Documentos: parece de un juego ya no instalado. Revisa el contenido antes de eliminarla
+1071	Carpeta «{0}» en Juegos guardados: son las siglas del juego
+1072	Buscar en línea las carpetas de partidas
+1073	Consulta PCGamingWiki para encontrar partidas que no se reconocen por el nombre. Solo se envía el título del juego.
+1074	Ajustes del juego, según PCGamingWiki
+1075	Cada eliminación se anota en el registro de actividad (sección Registros). AppManager solo se conecta a Internet para buscar portadas y carpetas de partidas de los juegos (se puede desactivar arriba).
+1076	Partidas del juego, según PCGamingWiki
+1077	carpetas en Documentos
+1078	carpetas indicadas por PCGamingWiki
+1079	siglas del juego en Juegos guardados
+1080	Añadido a Steam como juego externo
+1081	Ejecutado en este PC (rastros de Windows)
+1082	Carpeta del juego que queda en el disco. Atención: contiene partidas, revísala antes de eliminarla
+1083	Carpeta en el disco ({0})
+1084	Carpeta «{0}»: parece de un título de la colección. Revísala antes de eliminarla
+1085	Datos de Steam del AppID {0} del juego
+1086	Partidas de un emulador usado por una copia no oficial, de un juego no instalado
+1087	Partidas en la carpeta del juego
+1088	carpetas de los títulos de una colección
+1089	copias portables en los discos
+1090	Documentos
+1091	Juegos guardados
+1092	Sin perfil: las partidas actuales pasarán a ser el perfil «{0}» en el primer cambio.
+1093	Principal
+1095	Limpieza
+1096	activado
+1097	Papelera
+1098	accesos directos
+1099	definitivo
+1100	desactivado
+1101	nada
+1102	no encontradas
+1103	partidas
+1104	servicios
+1105	encontradas
+1106	Actualizado
+1107	Aún no hay entradas
+1108	AppManager sigue activo
+1109	AppManager se inicia con Windows y permanece en el área de notificación, junto al volumen y la red. Tras cada desinstalación busca restos y te avisa si encuentra alguno. Solo en este PC.
+1110	AppManager se inicia con Windows y permanece en el área de notificación. Tras cada desinstalación busca restos y te avisa si encuentra alguno.
+1111	AppManager: vigilancia activada
+1112	Abrir AppManager
+1113	Abrir el historial
+1114	Esperando a que termine la instalación o desinstalación…
+1115	Actívala para saber qué queda en el PC tras cada desinstalación, incluso con la ventana de AppManager cerrada.
+1116	Inicia AppManager en el área de notificación para vigilar instalaciones y desinstalaciones.
+1117	Inicio con Windows no activado
+1118	Aviso ignorado.
+1119	Buscando restos de {0}…
+1120	Cerrar AppManager
+1121	Lo que quedó tras la desinstalación. Elige qué eliminar.
+1122	Componente de Windows o runtime: no se buscan restos, sus archivos los usan otros programas.
+1123	Compara ahora los programas instalados con la última comprobación
+1124	Comprobar ahora
+1125	Cubre los programas instalados y los juegos de Steam y Epic. Las apps de Microsoft Store no se incluyen.
+1126	Comprobación iniciada: los cambios encontrados aparecerán aquí.
+1127	Comprobando cambios…
+1128	Historial de desinstalaciones
+1129	Por revisar
+1130	De la versión {0} a la {1}
+1131	Desactivar
+1132	Desactivar la vigilancia
+1133	Desinstalado
+1134	Los restos de {0} ya no están: ya se eliminaron.
+1135	Los restos se han eliminado.
+1136	Ignorar
+1137	Ignorado
+1138	Iniciando…
+1139	En curso
+1140	La vigilancia sigue en el área de notificación, junto al reloj. Para cerrar AppManager usa el menú de su icono.
+1141	Se quitan las entradas del historial. Los restos del PC siguen donde están: los encontrarás en las páginas Restos.
+1142	Leyendo juegos y programas instalados…
+1143	Muestra lo que quedó y elige qué eliminar
+1144	Oculta el aviso: la entrada queda en el historial, donde puedes revisarla cuando quieras
+1145	No queda nada
+1146	Programas y juegos instalados o desinstalados en este PC, con lo que quedó.
+1147	Limpio
+1148	Aquí aparecen los programas y juegos instalados o desinstalados, con los restos encontrados tras cada desinstalación. También las desinstalaciones hechas con AppManager.
+1149	Restos de {0}
+1150	Restos tras {0}
+1151	Restos no leídos
+1152	Quedan: {0}{1}, también en el registro.
+1153	Quedan: {0}{1}.
+1154	Eliminado por completo: sin restos.
+1155	VIGILANCIA EN SEGUNDO PLANO
+1156	Quedan restos de {0}
+1157	Vigilar instalaciones y desinstalaciones
+1158	Vigilancia
+1159	Vigilancia activada
+1160	Vigilancia desactivada
+1161	Vaciar historial
+1162	¿Vaciar el historial?
+1163	Ver y eliminar
+1164	Ver el historial
+1165	Versión {0}
+1166	Windows no aceptó la solicitud: {0}
+1167	tarea programada
+1168	clave Run
+1169	con AppManager
+1170	desinstalación|desinstalaciones
+1171	ayer a las {0}
+1172	hoy a las {0}
+1173	schtasks respondió con el código {0}
+1174	schtasks no respondió
+1175	última comprobación a las {0}
+1176	{0} a las {1}
+1177	{0} de Epic Games
+1178	{0} de Steam
+1179	{0} y {1} más
+1180	{0} y {1}
+1181	{0}: {1} en total.
+1182	Carpeta Inicio (solo tu usuario)
+1183	Carpeta Inicio (todos los usuarios)
+1184	Registro de Windows (solo tu usuario)
+1185	Registro de Windows (todos los usuarios)
+5134	AppManager {0} iniciado
+5135	AppManager {0} iniciado como administrador
+5136	Búsqueda en línea de partidas de {0}: {1}
+5137	Guardado de la caché de partidas: {0}
+5138	Herramientas de Steam: {0}
+5139	Juegos añadidos a Steam
+5140	Búsqueda en los discos
+5141	Búsqueda en los discos detenida tras {0} carpetas: {1} sin explorar
+5142	Rastros de Windows
+5149	Comprobación de restos de {0}

@@ -1,0 +1,11 @@
+# l'eseguibile si pubblica come allegato della release, non nel codice
+Release/
+
+# programmi compilati e cartelle generate da build.ps1
+Source/bin/
+Source/Portable/
+Source/tools/*.exe
+*.pdb
+
+# dati personali di AppManager (impostazioni, chiave SteamGridDB, registro attività, immagini)
+Dati/
