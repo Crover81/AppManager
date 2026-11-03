@@ -3,7 +3,9 @@
 **Manage your games and programs on Windows, and remove them completely.**
 AppManager uninstalls a game or program and then finds everything it and Windows left behind: saves, settings, caches, screenshots, registry entries, startup entries, scheduled tasks, services, file types, context-menu entries, firewall rules and shortcuts. Nothing is deleted until you have seen the list and confirmed it.
 
-[Italiano](README.it.md) · **[Download](../../releases/latest)** · Windows 10 / 11 · portable, no installation · 7 languages · dark and light theme
+**English** · [Italiano](README.it.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Русский](README.ru.md) · [Українська](README.uk.md)
+
+**[Download](../../releases/latest)** · Windows 10 / 11 · portable, no installation · 7 languages · dark and light theme
 
 ![Game library](docs/images/games-dark.png)
 

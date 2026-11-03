@@ -3,7 +3,9 @@
 **Gestisci giochi e programmi su Windows e rimuovili completamente.**
 AppManager disinstalla un gioco o un programma e poi trova tutto ciò che lui e Windows hanno lasciato in giro: salvataggi, impostazioni, cache, screenshot, voci di registro, avvii automatici, attività pianificate, servizi, tipi di file, voci del menu contestuale, regole del firewall e collegamenti. Nulla viene eliminato prima che tu abbia visto l'elenco e confermato.
 
-[English](README.md) · **[Scarica](../../releases/latest)** · Windows 10 / 11 · portable, senza installazione · 7 lingue · tema scuro e chiaro
+[English](README.md) · **Italiano** · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Русский](README.ru.md) · [Українська](README.uk.md)
+
+**[Scarica](../../releases/latest)** · Windows 10 / 11 · portable, senza installazione · 7 lingue · tema scuro e chiaro
 
 ![Libreria dei giochi](docs/images/games-dark.png)
 
