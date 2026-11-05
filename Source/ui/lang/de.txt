@@ -195,7 +195,6 @@
 195	Reste suchen
 196	Im Protokoll suchen…
 197	Fehlende Bilder online suchen
-198	Sucht Windows-Fehlerberichte, Absturzabbilder, Protokolle von Launchern und Spielen sowie Protokolle im Temp-Ordner. Windows-Ereignisprotokolle und verwendete Dateien bleiben unberührt. Ohne Bestätigung wird nichts gelöscht.
 199	Spiel suchen…
 200	Programm suchen…
 201	Anwendung suchen…
@@ -484,7 +483,6 @@
 487	Protokolle von Steam
 488	Protokolle von Ubisoft Connect
 489	Protokolle und Diagnose des PCs
-490	Protokolle und Diagnosedateien von Windows, Launchern und Spielen auf dem PC sowie das Aktivitätsprotokoll von AppManager.
 491	Protokoll, das ein Programm oder eine Installation im Temp-Ordner hinterlassen hat
 492	Temporäre Protokolle
 493	Temporäre Protokolle…
@@ -881,7 +879,6 @@
 896	Element|Elemente
 897	Fehler|Fehler
 898	genehmigte Explorer-Erweiterung
-899	Protokoll- oder Diagnosedatei|Protokoll- und Diagnosedateien
 900	verwendete Datei übersprungen|verwendete Dateien übersprungen
 901	Datei in Verwendung|Dateien in Verwendung
 902	Protokolldatei oder -ordner|Protokolldateien und -ordner
@@ -1123,7 +1120,6 @@
 1141	Die Einträge des Verlaufs werden entfernt. Die Reste auf dem PC bleiben, wo sie sind: Du findest sie auf den Seiten Reste.
 1142	Lese installierte Spiele und Programme…
 1143	Zeigt, was übrig ist, und du wählst, was gelöscht wird
-1144	Blendet den Hinweis aus: Der Eintrag bleibt im Verlauf, dort kannst du ihn jederzeit ansehen
 1145	Nichts ist übrig
 1146	Auf diesem PC installierte oder deinstallierte Programme und Spiele, mit dem, was übrig blieb.
 1147	Sauber
@@ -1165,6 +1161,56 @@
 1183	Autostart-Ordner (alle Benutzer)
 1184	Windows-Registrierung (nur dein Benutzer)
 1185	Windows-Registrierung (alle Benutzer)
+1186	Warte, bis {0} vollständig entfernt ist…
+1187	Hinweis ab
+1188	Hinweisen, wenn Protokolle und Caches viel Platz belegen
+1189	Shader-Caches…
+1190	Temporärer Ordner, seit Tagen nicht benutzt
+1192	Vom Hinweis ausnehmen
+1193	Vom Hinweis ausgenommen: {0}.
+1194	Vom Hinweis ausgenommen · einbeziehen
+1195	Temporäre Dateien
+1196	Temporäre Dateien…
+1197	Temporäre Datei, seit Tagen nicht benutzt
+1198	Legt fest, ob der Überwachungshinweis zu Protokollen und Caches diese Gruppe mitzählt. Auf dieser Seite bleibt sie immer sichtbar.
+1199	Nicht mehr wegen Protokollen und Caches hinweisen
+1200	Nicht jetzt
+1202	Du kannst {0} freigeben
+1203	Ausnahmen aufheben
+1204	Ansehen und freigeben
+1205	{0}: werden nicht mehr gebraucht und können gelöscht werden.
+1206	Bereits heruntergeladenes Update: Wird es noch gebraucht, lädt Windows es erneut
+1207	Browser-Caches
+1208	Browser-Caches…
+1209	Cache der Übermittlungsoptimierung
+1210	Windows-Update-Cache…
+1211	Sucht Windows-Protokolle und temporäre Dateien, bereits genutzte Windows-Update-Downloads, Fehlerberichte und Dumps, Treiberprotokolle und -pakete, Protokolle von Launchern und Spielen, Browser- und Shader-Caches. Windows-Ereignisprotokolle und Dateien in Verwendung werden nie angerührt. Nichts wird ohne Bestätigung gelöscht.
+1212	Kopie eines Updates zum Teilen mit anderen PCs: Windows lädt sie bei Bedarf erneut
+1213	Windows-Update-Downloads
+1214	Treiber bereits installiert: Diese Dateien wurden nur zum Installieren gebraucht
+1215	Protokolle der Grafiktreiber
+1216	Windows-Protokolle
+1217	Windows-Protokolle…
+1218	Treiberprotokolle und -pakete…
+1219	Installationspakete der Treiber
+1220	Protokoll des Grafiktreibers oder seiner Systemsteuerung
+1221	Protokoll von Windows-Updates, Wartung oder Installation: nur für die Diagnose nützlich
+1222	Baut sich selbst neu auf: Seiten laden beim ersten Mal eventuell langsamer. Passwörter, Verlauf und Websitedaten bleiben unberührt
+1223	Protokolle, temporäre Dateien und Caches, die Windows, Treiber, Browser, Launcher und Spiele auf dem PC lassen, und das Aktivitätsprotokoll von AppManager.
+1224	Browser
+1226	Windows-Updates
+1227	Was geprüft wird
+1228	Von Windows und deinem Benutzer
+1229	Bereits installierte Downloads
+1230	Protokolle von Unity- und Unreal-Engine-Spielen
+1231	Protokolle von Steam, Epic, EA, Ubisoft, GOG und Battle.net
+1232	Protokolle, bereits installierte Pakete, Shader-Caches
+1233	Protokolle, Fehlerberichte und Dumps
+1234	Alle 6 Stunden misst es Protokolle, Dumps, temporäre Dateien und Caches der unten gewählten Kategorien. Es löscht nie etwas von selbst: Du bekommst einen Hinweis und entscheidest. „Nicht jetzt“ verschiebt den Hinweis um 7 Tage. Die Seite Protokolle zeigt alles, dort kannst du einzelne Gruppen ausnehmen.
+1235	Nur der Cache: Passwörter und Verlauf bleiben
+1236	Windows
+1237	Auf der Seite Protokolle ausgenommen: {0}
+1238	Auf der Seite Protokolle ausgenommen: {0}
 5134	AppManager {0} gestartet
 5135	AppManager {0} als Administrator gestartet
 5136	Online-Suche der Spielstände von {0}: {1}

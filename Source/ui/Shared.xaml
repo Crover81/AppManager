@@ -61,6 +61,9 @@
                         <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
                             <TextBlock Text="{Binding Source}" Style="{StaticResource Caption}" Visibility="{Binding Source, Converter={StaticResource Vis}}" Margin="0,0,8,0"/>
                             <TextBlock Text="{Binding CountText}" Style="{StaticResource Caption}"/>
+                            <Button Style="{StaticResource LinkBtn}" Content="{Binding AlertText}" Command="{Binding AlertCommand}" FontSize="12" Margin="10,0,0,0"
+                                    VerticalAlignment="Center" Visibility="{Binding HasAlertToggle, Converter={StaticResource Vis}}"
+                                    ToolTip="L'avviso della sorveglianza su log e cache conta o no questo gruppo. Nella pagina resta sempre visibile."/>
                         </StackPanel>
                     </StackPanel>
                     <Button Grid.Column="3" Style="{StaticResource LinkBtn}" Content="{Binding LinkText}" FontSize="12" Margin="0,0,14,0"

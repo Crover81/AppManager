@@ -274,8 +274,15 @@ namespace AppManager
         {
             PrimaryCommand = new RelayCommand(() => { Close(); if (OnPrimary != null) OnPrimary(); });
             IgnoreCommand = new RelayCommand(() => { Close(); if (OnIgnore != null) OnIgnore(); });
+            OffCommand = new RelayCommand(() => { Close(); if (OnOff != null) OnOff(); });
             CloseCommand = new RelayCommand(Close);
+            IgnoreText = L.T("Ignora");
         }
+
+        public string IgnoreText { get; set; }
+        public string OffText { get; set; }
+        public bool HasOff { get { return OffText != null; } }
+        public ICommand OffCommand { get; private set; }
 
         public string Title { get; set; }
         public string Message { get; set; }
@@ -285,7 +292,7 @@ namespace AppManager
         public ICommand IgnoreCommand { get; private set; }
         public ICommand CloseCommand { get; private set; }
 
-        internal Action OnPrimary, OnIgnore, Dismiss;
+        internal Action OnPrimary, OnIgnore, OnOff, OnTimeout, Dismiss;
 
         private void Close()
         {

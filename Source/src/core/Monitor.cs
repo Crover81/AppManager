@@ -639,11 +639,21 @@ namespace AppManager
                 notifier.Arm();
                 // controllo ricostruito anche senza la memoria del suo stato: precalcolo delle impronte dei programmi, per i residui
                 WarmProfiles(stop);
+                var started = DateTime.Now;
+                var lastSweep = DateTime.Now;
                 while (true)
                 {
                     SetStatus(L.T("In ascolto"));
-                    int i = WaitHandle.WaitAny(new WaitHandle[] { stop, pokeEvent, notifier.Event }, TimeSpan.FromMinutes(20));
+                    int i = WaitHandle.WaitAny(new WaitHandle[] { stop, pokeEvent, notifier.Event }, TimeSpan.FromMinutes(5));
                     if (i == 0) return;
+                    if (i == WaitHandle.WaitTimeout)
+                    {
+                        try { CleanableCheck.RunIfDue(started, CancellationToken.None); }
+                        catch (Exception ex) { Log.Error("Controllo di log e cache", ex); }
+                        // controllo di sicurezza ogni 20 minuti, per ciò che sfugge agli avvisi (es. una libreria di Steam su un disco riattaccato)
+                        if (DateTime.Now - lastSweep < TimeSpan.FromMinutes(20)) continue;
+                    }
+                    lastSweep = DateTime.Now;
                     if (i == 2) notifier.Arm();
                     if (!Settle(stop, notifier)) return;
                     var prev = WatchSnapshot.Load() ?? WatchSnapshot.Take(known);
@@ -661,7 +671,7 @@ namespace AppManager
 
         /// <summary>
         /// Un programma di disinstallazione fa molte modifiche e può impiegare minuti: si aspetta che finisca
-        /// (20 secondi senza modifiche e nessun programma di disinstallazione aperto, al massimo 15 minuti).
+        /// (3 secondi senza modifiche e nessun programma di disinstallazione aperto, al massimo 15 minuti).
         /// </summary>
         private static bool Settle(ManualResetEvent stop, RegistryNotifier notifier)
         {
@@ -669,7 +679,7 @@ namespace AppManager
             var clock = Stopwatch.StartNew();
             while (clock.Elapsed < TimeSpan.FromMinutes(15))
             {
-                int i = WaitHandle.WaitAny(new WaitHandle[] { stop, pokeEvent, notifier.Event }, TimeSpan.FromSeconds(20));
+                int i = WaitHandle.WaitAny(new WaitHandle[] { stop, pokeEvent, notifier.Event }, TimeSpan.FromSeconds(3));
                 if (i == 0) return false;
                 if (i == 2) { notifier.Arm(); continue; }
                 if (i == 1) continue;
@@ -699,14 +709,30 @@ namespace AppManager
             if (diff.Removed.Count > 0)
             {
                 // una voce può sparire per un attimo durante un aggiornamento: si controlla di nuovo poco dopo
-                if (stop.WaitOne(TimeSpan.FromSeconds(45))) return;
+                if (stop.WaitOne(TimeSpan.FromSeconds(3))) return;
                 now = WatchSnapshot.Take(known);
                 diff = WatchDiff.Compare(previous, now);
             }
             lastCheck = DateTime.Now;
             if (diff.IsEmpty) { WatchSnapshot.Save(now); return; }
             var before = known;
-            if (diff.Added.Count + diff.Removed.Count + diff.Updated.Count > 0) RefreshKnown(stop);
+            // prima i residui di ciò che è stato tolto: l'avviso non aspetta la rilettura di tutti i giochi e programmi
+            // (per riconoscere ciò che è di altri basta l'elenco che c'era già)
+            foreach (var r in diff.Removed)
+            {
+                if (stop.WaitOne(0)) return;
+                try { HandleRemoval(r, before, stop); }
+                catch (Exception ex) { Log.Error(L.F("Controllo dei residui di {0}", r.Name), ex); }
+            }
+            RefreshKnown(stop);
+            // l'impronta di ciò che è appena stato installato o aggiornato va presa ora, finché i suoi file ci sono
+            foreach (var a in diff.Added.Concat(diff.Updated.Select(u => u.Item2)))
+            {
+                var k = Match(known, a);
+                if (k == null) continue;
+                try { ProfileBuilder.Forget(k); ProfileBuilder.Get(k); }
+                catch { }
+            }
             foreach (var a in diff.Added)
             {
                 var e = HistoryEvent.For(Enrich(a), HistoryEvent.Installed);
@@ -720,12 +746,6 @@ namespace AppManager
                 e.OldVersion = u.Item1.Version;
                 MonitorHistory.Add(e);
                 Raise(e, false);
-            }
-            foreach (var r in diff.Removed)
-            {
-                if (stop.WaitOne(0)) return;
-                try { HandleRemoval(r, before); }
-                catch (Exception ex) { Log.Error(L.F("Controllo dei residui di {0}", r.Name), ex); }
             }
             WatchSnapshot.Save(now);
         }
@@ -753,7 +773,28 @@ namespace AppManager
             return null;
         }
 
-        private static void HandleRemoval(WatchedApp w, List<AppEntry> before)
+        /// <summary>
+        /// Alcuni programmi di disinstallazione tolgono la voce prima di aver finito di cancellare i file: si aspetta che la cartella
+        /// sparisca o smetta di cambiare (al massimo 2 minuti), così l'avviso arriva a disinstallazione davvero finita.
+        /// </summary>
+        private static void WaitUntilGone(string dir, ManualResetEvent stop)
+        {
+            if (string.IsNullOrEmpty(dir) || dir.Length <= 3) return;
+            var clock = Stopwatch.StartNew();
+            var stable = Stopwatch.StartNew();
+            string last = null;
+            while (clock.Elapsed < TimeSpan.FromMinutes(2) && Directory.Exists(dir))
+            {
+                string now;
+                try { now = Directory.GetFileSystemEntries(dir).Length + "|" + Directory.GetLastWriteTimeUtc(dir).Ticks; }
+                catch { return; }
+                if (now != last) { last = now; stable.Restart(); }
+                else if (stable.Elapsed > TimeSpan.FromSeconds(10)) return; // non cambia più: resta sul disco, sarà un residuo
+                if (stop.WaitOne(TimeSpan.FromSeconds(2))) return;
+            }
+        }
+
+        private static void HandleRemoval(WatchedApp w, List<AppEntry> before, ManualResetEvent stop)
         {
             if (WasExpected(w)) return; // la cronologia l'ha già scritta la finestra di disinstallazione di AppManager
             var entry = Match(before, w) ?? new AppEntry
@@ -778,6 +819,8 @@ namespace AppManager
             ev.Status = HistoryEvent.Checking;
             MonitorHistory.Add(ev);
             Raise(ev, false);
+            SetStatus(L.F("Attendo che {0} sia rimosso del tutto…", w.Name));
+            WaitUntilGone(entry.InstallDir ?? w.InstallDir, stop);
             SetStatus(L.F("Cerco i residui di {0}…", w.Name));
             var profile = ProfileBuilder.Get(entry);
             var others = known.Where(x => x.Id != entry.Id && Match(new[] { x }, w) == null).Select(ProfileBuilder.Get).ToList();

@@ -195,7 +195,6 @@
 195	Cerca i residui
 196	Cerca nel registro…
 197	Cerca online le immagini mancanti
-198	Cerca segnalazioni di errore di Windows, dump di arresti anomali, log dei launcher e dei giochi e log nella cartella temporanea. I registri eventi di Windows e i file in uso non vengono toccati. Niente viene eliminato senza conferma.
 199	Cerca un gioco…
 200	Cerca un programma…
 201	Cerca un'applicazione…
@@ -484,7 +483,6 @@
 487	Log di Steam
 488	Log di Ubisoft Connect
 489	Log e diagnostica del PC
-490	Log e file di diagnostica lasciati sul PC da Windows, dai launcher e dai giochi, e il registro attività di AppManager.
 491	Log lasciato nella cartella dei file temporanei da un programma o da un'installazione
 492	Log temporanei
 493	Log temporanei…
@@ -881,7 +879,6 @@
 896	elemento|elementi
 897	errore|errori
 898	estensione approvata di Esplora risorse
-899	file di log o diagnostica|file di log e diagnostica
 900	file in uso saltato|file in uso saltati
 901	file in uso|file in uso
 902	file o cartella di log|file e cartelle di log
@@ -1123,7 +1120,6 @@
 1141	Le voci della cronologia vengono tolte. I residui sul PC restano dove sono: li ritrovi nelle pagine Residui.
 1142	Leggo giochi e programmi installati…
 1143	Mostra cosa è rimasto e scegli cosa eliminare
-1144	Nasconde l'avviso: la voce resta nella cronologia, dove puoi rivederla quando vuoi
 1145	Non è rimasto nulla
 1146	Programmi e giochi installati o disinstallati su questo PC, con ciò che è rimasto.
 1147	Pulito
@@ -1165,6 +1161,56 @@
 1183	Cartella Esecuzione automatica (tutti gli utenti)
 1184	Registro di Windows (solo il tuo utente)
 1185	Registro di Windows (tutti gli utenti)
+1186	Attendo che {0} sia rimosso del tutto…
+1187	Avvisa oltre
+1188	Avvisa quando log e cache occupano molto spazio
+1189	Cache degli shader…
+1190	Cartella temporanea che non viene usata da giorni
+1192	Escludi dall'avviso
+1193	Esclusi dall'avviso: {0}.
+1194	Escluso dall'avviso · includi
+1195	File temporanei
+1196	File temporanei…
+1197	File temporaneo che non viene usato da giorni
+1198	L'avviso della sorveglianza su log e cache conta o no questo gruppo. Nella pagina resta sempre visibile.
+1199	Non avvisarmi più per log e cache
+1200	Non ora
+1202	Puoi liberare {0}
+1203	Togli le esclusioni
+1204	Vedi e libera
+1205	{0}: non servono più e si possono eliminare.
+1206	Aggiornamento già scaricato: se serve ancora, Windows lo scarica di nuovo
+1207	Cache dei browser
+1208	Cache dei browser…
+1209	Cache di Ottimizzazione recapito
+1210	Cache di Windows Update…
+1211	Cerca log e file temporanei di Windows, download già usati di Windows Update, segnalazioni di errore e dump, log e pacchetti dei driver, log dei launcher e dei giochi, cache dei browser e degli shader. I registri eventi di Windows e i file in uso non vengono toccati. Niente viene eliminato senza conferma.
+1212	Copia di un aggiornamento da condividere con altri PC: Windows la riscarica se serve
+1213	Download di Windows Update
+1214	Driver già installato: questi file servivano solo per installarlo
+1215	Log dei driver video
+1216	Log di Windows
+1217	Log di Windows…
+1218	Log e pacchetti dei driver…
+1219	Pacchetti di installazione dei driver
+1220	Registro del driver video o del suo pannello di controllo
+1221	Registro di aggiornamenti, manutenzione o installazione di Windows: serve solo per la diagnosi
+1222	Si ricrea da sola: le pagine potrebbero caricarsi più lentamente la prima volta. Password, cronologia e dati dei siti non vengono toccati
+1223	Log, file temporanei e cache lasciati sul PC da Windows, driver, browser, launcher e giochi, e il registro attività di AppManager.
+1224	Browser
+1226	Aggiornamenti di Windows
+1227	Cosa controllare
+1228	Di Windows e del tuo utente
+1229	Download già installati
+1230	Log dei giochi Unity e Unreal Engine
+1231	Log di Steam, Epic, EA, Ubisoft, GOG e Battle.net
+1232	Log, pacchetti già installati, cache degli shader
+1233	Log, segnalazioni di errore e dump
+1234	Ogni 6 ore misura log, dump, file temporanei e cache delle categorie scelte qui sotto. Non elimina nulla da solo: ti avvisa e decidi tu. «Non ora» rimanda l'avviso di 7 giorni. Nella pagina Log vedi tutto e puoi escludere i singoli gruppi.
+1235	Solo la cache: password e cronologia restano
+1236	Windows
+1237	Esclusi dalla pagina Log: {0}
+1238	Escluso dalla pagina Log: {0}
 5000	Analisi cartella {0}
 5001	Annullamento dello spostamento 
 5002	Attività in background
@@ -1331,3 +1377,7 @@
 5166	Sorveglianza: rilevamento delle applicazioni
 5167	Sorveglianza: {0} residui di {1}
 5168	Icona di {0}: {1}
+5169	Avviso di log e cache
+5170	Cache non controllata {0}: {1}
+5171	Controllo di log e cache
+5172	Controllo di log e cache: {0} da poter liberare

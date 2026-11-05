@@ -166,8 +166,58 @@ namespace AppManager
                 if (PathUtil.Same(Path.GetDirectoryName(path), Path.Combine(win, "Minidump")) || PathUtil.Same(path, Path.Combine(win, "MEMORY.DMP"))
                     || PathUtil.IsUnder(path, Path.Combine(win, "LiveKernelReports"))) return true;
             }
+            if (IsSystemCacheOrLog(path)) return true;
             string packages = Path.Combine(KnownDirs.LocalAppData, "Packages");
             return PathUtil.IsUnder(path, packages) && string.Equals(Path.GetDirectoryName(path), packages, StringComparison.OrdinalIgnoreCase);
+        }
+
+        /// <summary>Cartelle di Windows il cui contenuto diretto è fatto solo di file temporanei o scaricati di nuovo da Windows se servono.</summary>
+        internal static string[] SystemCacheRoots()
+        {
+            string win = KnownDirs.Windows;
+            return new[]
+            {
+                Path.Combine(win, "Temp"),
+                Path.Combine(win, @"SoftwareDistribution\Download"),
+                Path.Combine(win, @"ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Cache"),
+            };
+        }
+
+        /// <summary>Cartelle dei log di manutenzione, aggiornamento e installazione di Windows.</summary>
+        internal static string[] SystemLogDirs()
+        {
+            string logs = Path.Combine(KnownDirs.Windows, "Logs");
+            return new[]
+            {
+                Path.Combine(logs, "CBS"), Path.Combine(logs, "DISM"), Path.Combine(logs, "WindowsUpdate"), Path.Combine(logs, "waasmedic"),
+                Path.Combine(logs, "NetSetup"), Path.Combine(logs, "MoSetup"), Path.Combine(KnownDirs.Windows, "Panther"),
+            };
+        }
+
+        internal static readonly string[] SystemLogExtensions = { ".log", ".etl", ".cab" };
+        internal static readonly string[] BrowserCacheNames = { "Cache", "Code Cache", "GPUCache" };
+
+        /// <summary>
+        /// Le sole eccezioni per la pulizia di log e cache dentro le aree di sistema: il contenuto diretto delle cartelle temporanee di
+        /// Windows, i file di log (mai le cartelle) di Windows, le cache di Edge. Mai le cartelle stesse né ciò che sta accanto.
+        /// </summary>
+        private static bool IsSystemCacheOrLog(string path)
+        {
+            string parent = Path.GetDirectoryName(path);
+            if (parent == null) return false;
+            foreach (var root in SystemCacheRoots())
+                if (PathUtil.Same(parent, root)) return true;
+            if (SystemLogExtensions.Contains(Path.GetExtension(path).ToLowerInvariant()) && File.Exists(PathUtil.Long(path)))
+                foreach (var dir in SystemLogDirs())
+                    if (PathUtil.Same(parent, dir)) return true;
+            // Edge sta in AppData\Local\Microsoft: solo User Data\<profilo>\Cache, Code Cache e GPUCache (e ciò che contengono)
+            string edge = Path.Combine(KnownDirs.LocalAppData, @"Microsoft\Edge\User Data");
+            if (PathUtil.IsUnder(path, edge))
+            {
+                var parts = path.Substring(edge.Length + 1).Split('\\');
+                if (parts.Length >= 2 && BrowserCacheNames.Contains(parts[1], StringComparer.OrdinalIgnoreCase)) return true;
+            }
+            return false;
         }
 
         public static bool IsDeletableDirectory(string path)

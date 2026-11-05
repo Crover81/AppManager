@@ -17,6 +17,7 @@ AppManager uninstalls a game or program and then finds everything it and Windows
 - **Uninstall and clean**: runs the right uninstaller, waits for it, then shows every leftover grouped by category, each with the reason it was found and how sure AppManager is ("Certain", "Likely", "To verify").
 - **Leftovers of apps that are already gone**, including games deleted by hand.
 - **Background monitoring** (optional): watches installs and uninstalls from the notification area and tells you when an uninstall left something behind.
+- **Logs and caches**: Windows logs and temporary files, Windows Update downloads, driver logs and packages, browser, launcher, game and shader caches, with an optional notice when they take up too much space.
 - **Save manager**: save backups, several save profiles per game, "new game" without losing the old one.
 - **Safety first**: Recycle Bin and zip backups before deleting, protected system areas, nothing ever deleted without your confirmation.
 - **Always portable**: everything lives in a `Dati` folder next to the program; each PC gets its own profile.
@@ -63,7 +64,7 @@ A single analysis finds the remains of games and programs that are no longer ins
 ![Leftovers](docs/images/leftovers.png)
 
 ### Background monitoring
-Off by default. When turned on, AppManager starts with Windows and stays in the notification area. It follows Windows' uninstall entries and the Steam and Epic libraries. When a program or game disappears, it waits for the uninstaller to finish and then looks for leftovers.
+Off by default. When turned on, AppManager starts with Windows and stays in the notification area. It follows Windows' uninstall entries and the Steam and Epic libraries. When a program or game disappears, it waits for the uninstaller to finish and for its folder to be gone, then looks for leftovers: the notice usually arrives a few seconds later.
 
 ![Monitoring history](docs/images/monitoring.png)
 
@@ -79,6 +80,15 @@ For each game, **Manage saves** finds its save folders by itself: Steam, `My Gam
 
 ![Saves](docs/images/saves.png)
 
+### Logs and caches
+The **Logs** page finds what can be cleared without losing anything: Windows logs (updates, maintenance, setup), Windows and user temporary files, Windows Update and Delivery Optimization downloads, error reports and crash dumps, graphics driver logs and their already-extracted installation packages, launcher and game logs, browser caches (Edge, Chrome, Brave, Vivaldi, Opera, Firefox) and shader caches. Passwords, history and site data are never touched, nor are components that drivers need (such as NVIDIA's DLSS files). Windows event logs and files in use are skipped.
+
+![Logs and caches](docs/images/logs.png)
+
+With background monitoring on, AppManager tells you when they take up more than the limit chosen in Settings (1 GB by default). It checks at most every 6 hours. **Not now** postpones the notice by 7 days. In Settings you choose what to check, with one switch per category (Windows, temporary files, Windows updates, graphics drivers, browsers, launchers, games), and each group on the Logs page can be excluded on its own.
+
+![Logs and caches notice](docs/images/cleanup-notification.png)
+
 ### Startup and network
 **Startup** lists the programs that start with Windows and turns them on or off like Task Manager. Turning one off deletes nothing.
 
@@ -89,7 +99,7 @@ For each game, **Manage saves** finds its save folders by itself: Steam, `My Gam
 ![Network](docs/images/network.png)
 
 ### Settings
-Theme (light, dark or as Windows), language, space limit for downloaded images, Recycle Bin and backup defaults, background monitoring, portable folders, detection methods and network rules.
+Theme (light, dark or as Windows), language, space limit for downloaded images, Recycle Bin and backup defaults, background monitoring and the logs and caches notice, portable folders, detection methods and network rules.
 
 ![Settings](docs/images/settings.png)
 

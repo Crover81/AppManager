@@ -17,6 +17,7 @@ AppManager deinstalliert ein Spiel oder Programm und findet danach alles, was es
 - **Deinstallieren und bereinigen**: startet das richtige Deinstallationsprogramm, wartet, bis es fertig ist, und zeigt dann jeden Rest nach Kategorien, mit dem Grund, warum er gefunden wurde, und wie sicher AppManager ist („Sicher“, „Wahrscheinlich“, „Zu prüfen“).
 - **Reste von Apps, die schon weg sind**, auch von Spielen, die von Hand gelöscht wurden.
 - **Überwachung im Hintergrund** (optional): verfolgt Installationen und Deinstallationen aus dem Infobereich und meldet sich, wenn eine Deinstallation etwas zurückgelassen hat.
+- **Protokolle und Caches**: Windows-Protokolle und temporäre Dateien, Windows-Update-Downloads, Treiberprotokolle und -pakete, Caches von Browsern, Launchern, Spielen und Shadern, mit einem optionalen Hinweis, wenn sie zu viel Platz belegen.
 - **Spielstandverwaltung**: Backups, mehrere Spielstand-Profile pro Spiel, „neues Spiel“, ohne das alte zu verlieren.
 - **Sicherheit zuerst**: Papierkorb und Zip-Backup vor dem Löschen, geschützte Systembereiche, nichts wird ohne deine Bestätigung gelöscht.
 - **Immer portabel**: alles liegt in einem Ordner `Dati` neben dem Programm; jeder PC hat sein eigenes Profil.
@@ -65,7 +66,7 @@ Eine einzige Analyse findet die Reste von Spielen und Programmen, die nicht mehr
 ![Reste](docs/images/leftovers.png)
 
 ### Überwachung im Hintergrund
-Standardmäßig aus. Eingeschaltet startet AppManager mit Windows und bleibt im Infobereich. Er verfolgt die Deinstallationseinträge von Windows sowie die Bibliotheken von Steam und Epic. Verschwindet ein Programm oder Spiel, wartet er, bis das Deinstallationsprogramm fertig ist, und sucht dann nach Resten.
+Standardmäßig aus. Eingeschaltet startet AppManager mit Windows und bleibt im Infobereich. Er verfolgt die Deinstallationseinträge von Windows sowie die Bibliotheken von Steam und Epic. Verschwindet ein Programm oder Spiel, wartet er, bis das Deinstallationsprogramm fertig und sein Ordner weg ist, und sucht dann nach Resten: Der Hinweis kommt meist wenige Sekunden später.
 
 ![Verlauf der Überwachung](docs/images/monitoring.png)
 
@@ -81,6 +82,15 @@ Für jedes Spiel findet **Spielstände verwalten** die Spielstandordner selbst: 
 
 ![Spielstände](docs/images/saves.png)
 
+### Protokolle und Caches
+Die Seite **Protokolle** findet, was sich leeren lässt, ohne etwas zu verlieren: Windows-Protokolle (Updates, Wartung, Installation), temporäre Dateien von Windows und vom Benutzer, Downloads von Windows Update und der Übermittlungsoptimierung, Fehlerberichte und Absturz-Dumps, Protokolle der Grafiktreiber und ihre bereits entpackten Installationspakete, Protokolle von Launchern und Spielen, Browser-Caches (Edge, Chrome, Brave, Vivaldi, Opera, Firefox) und Shader-Caches. Passwörter, Verlauf und Websitedaten werden nie angerührt, ebenso wenig Komponenten, die Treiber brauchen (etwa die DLSS-Dateien von NVIDIA). Windows-Ereignisprotokolle und Dateien in Verwendung werden übersprungen.
+
+![Protokolle und Caches](docs/images/logs.png)
+
+Ist die Überwachung eingeschaltet, meldet sich AppManager, wenn sie mehr als das in den Einstellungen gewählte Limit belegen (standardmäßig 1 GB). Er prüft höchstens alle 6 Stunden. **Nicht jetzt** verschiebt den Hinweis um 7 Tage. In den Einstellungen wählst du mit je einem Schalter pro Kategorie, was geprüft wird (Windows, temporäre Dateien, Windows-Updates, Grafiktreiber, Browser, Launcher, Spiele), und jede Gruppe der Seite Protokolle lässt sich einzeln ausnehmen.
+
+![Hinweis zu Protokollen und Caches](docs/images/cleanup-notification.png)
+
 ### Autostart und Netzwerk
 **Autostart** listet die Programme auf, die mit Windows starten, und schaltet sie wie der Task-Manager ein oder aus. Ausschalten löscht nichts.
 
@@ -91,7 +101,7 @@ Für jedes Spiel findet **Spielstände verwalten** die Spielstandordner selbst: 
 ![Netzwerk](docs/images/network.png)
 
 ### Einstellungen
-Design (hell, dunkel oder wie Windows), Sprache, Speicherlimit für heruntergeladene Bilder, Voreinstellungen für Papierkorb und Backup, Überwachung im Hintergrund, portable Ordner, Suchmethoden und Netzwerkregeln.
+Design (hell, dunkel oder wie Windows), Sprache, Speicherlimit für heruntergeladene Bilder, Voreinstellungen für Papierkorb und Backup, Überwachung im Hintergrund und Hinweis zu Protokollen und Caches, portable Ordner, Suchmethoden und Netzwerkregeln.
 
 ![Einstellungen](docs/images/settings.png)
 

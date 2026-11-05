@@ -54,7 +54,7 @@
                 <StackPanel Margin="0,0,210,0">
                     <TextBlock Text="Log" Style="{StaticResource H1}"/>
                     <TextBlock Style="{StaticResource Dim}" Margin="0,4,0,0"
-                               Text="Log e file di diagnostica lasciati sul PC da Windows, dai launcher e dai giochi, e il registro attività di AppManager."/>
+                               Text="Log, file temporanei e cache lasciati sul PC da Windows, driver, browser, launcher e giochi, e il registro attività di AppManager."/>
                 </StackPanel>
                 <Button Style="{StaticResource Btn}" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding ScanCommand}">
                     <Button.Visibility>
@@ -97,7 +97,7 @@
                     </Border>
                     <TextBlock Text="Quanti log lasciano Windows, i launcher e i giochi?" Style="{StaticResource H2}" HorizontalAlignment="Center" Margin="0,20,0,8"/>
                     <TextBlock Style="{StaticResource Dim}" TextAlignment="Center"
-                               Text="Cerca segnalazioni di errore di Windows, dump di arresti anomali, log dei launcher e dei giochi e log nella cartella temporanea. I registri eventi di Windows e i file in uso non vengono toccati. Niente viene eliminato senza conferma."/>
+                               Text="Cerca log e file temporanei di Windows, download già usati di Windows Update, segnalazioni di errore e dump, log e pacchetti dei driver, log dei launcher e dei giochi, cache dei browser e degli shader. I registri eventi di Windows e i file in uso non vengono toccati. Niente viene eliminato senza conferma."/>
                     <CheckBox Content="Solo file più vecchi di 7 giorni (consigliato)" IsChecked="{Binding OnlyOld}" HorizontalAlignment="Center" Margin="0,18,0,0"
                               ToolTip="I log recenti possono servire se un gioco o un programma ha appena dato problemi"/>
                     <Button Style="{StaticResource PrimaryBtn}" Command="{Binding ScanCommand}" HorizontalAlignment="Center" Margin="0,18,0,0" Padding="22,11">
@@ -136,7 +136,7 @@
                             <Button Style="{StaticResource GhostBtn}" Content="Nessuno" Command="{Binding SelectNoneCommand}"/>
                             <Button Style="{StaticResource GhostBtn}" Content="Espandi / comprimi" Command="{Binding ExpandAllCommand}"/>
                         </StackPanel>
-                        <TextBlock Text="{Binding Summary}" FontWeight="SemiBold" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" Margin="0,0,12,0"/>
+                        <TextBlock Text="{Binding Summary}" FontWeight="SemiBold" VerticalAlignment="Center" TextWrapping="Wrap" TextTrimming="None" Margin="0,0,12,0"/>
                     </DockPanel>
                     <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="0,0,8,0">
                         <ItemsControl ItemsSource="{Binding Groups}" ItemTemplate="{StaticResource GroupCard}"/>

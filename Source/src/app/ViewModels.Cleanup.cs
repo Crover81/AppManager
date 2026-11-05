@@ -53,6 +53,8 @@ namespace AppManager
             else { var t = ScanAsync(); }
         }
 
+        private string cleanTitle;
+
         internal CleanupDialogViewModel(List<LeftoverItem> items, bool backup, bool recycle, int leftUnselected, AppKind kind, string title = null)
         {
             mode = Mode.Orphans;
@@ -60,6 +62,8 @@ namespace AppManager
             orphanLeft = leftUnselected;
             Init();
             Title = title ?? (kind == AppKind.Game ? L.T("Pulizia dei residui dei giochi") : L.T("Pulizia dei residui dei programmi"));
+            // nel registro attività e nel backup: «Pulizia dei log 23 nov 2026», non «Residui dei programmi…»
+            if (title != null) cleanTitle = title + " " + DateTime.Now.ToString("d MMM yyyy", Fmt.It);
             Subtitle = Fmt.Count(items.Count, "elemento selezionato", "elementi selezionati");
             backupEnabled = backup;
             useRecycleBin = recycle;
@@ -404,7 +408,7 @@ namespace AppManager
                 UseRecycleBin = useRecycleBin,
                 Backup = backupEnabled,
                 BackupFolder = AppSettings.Current.BackupFolder,
-                Title = entry != null ? entry.Name : (kind == AppKind.Game ? "Residui dei giochi " : "Residui dei programmi ") + DateTime.Now.ToString("d MMM yyyy", Fmt.It),
+                Title = entry != null ? entry.Name : cleanTitle ?? (kind == AppKind.Game ? "Residui dei giochi " : "Residui dei programmi ") + DateTime.Now.ToString("d MMM yyyy", Fmt.It),
                 // con un'app precisa il backup porta il suo nome e la sua immagine; per i residui ogni gruppo ha il suo backup
                 AppName = entry != null ? entry.Name : null,
                 AppId = entry != null ? entry.Id : null,

@@ -66,8 +66,11 @@ namespace AppManager
                 Console.WriteLine("Disinstallazione simulata: tolgo la voce dal registro…");
                 Directory.Delete(installDir, true);
                 Registry.CurrentUser.DeleteSubKeyTree(UninstallKey);
+                var clock = System.Diagnostics.Stopwatch.StartNew();
                 bool ok = done.WaitOne(TimeSpan.FromMinutes(4));
+                Console.WriteLine("  residui pronti {0:0} secondi dopo la disinstallazione", clock.Elapsed.TotalSeconds);
                 Check(ok && found != null && found.Type == HistoryEvent.Uninstalled, "disinstallazione rilevata entro 4 minuti");
+                Check(ok && clock.Elapsed < TimeSpan.FromSeconds(15), "avviso pronto in meno di 15 secondi");
                 if (found != null)
                 {
                     var items = (found.Items ?? new List<StoredItem>()).Select(x => x.ToItem()).Where(x => x != null).ToList();

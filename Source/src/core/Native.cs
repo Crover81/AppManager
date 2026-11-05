@@ -515,6 +515,23 @@ namespace AppManager
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern int GetFinalPathNameByHandle(IntPtr handle, StringBuilder path, int size, int flags);
 
+        internal enum DeleteCheck { Allowed, InUse, Denied, Unknown }
+
+        /// <summary>
+        /// Se adesso si potrebbe eliminare il file, senza eliminarlo: lo apre col solo permesso di eliminazione (come fa
+        /// DeleteFile). Negato = protetto da Windows (permessi); in uso = aperto da un programma che non ne permette l'eliminazione.
+        /// </summary>
+        public static DeleteCheck CanDelete(string file)
+        {
+            IntPtr h = CreateFile(ExtendedPath(file), 0x00010000 /* DELETE */, 7 /* FILE_SHARE_READ | WRITE | DELETE */, IntPtr.Zero, 3 /* OPEN_EXISTING */,
+                0x00200000 /* FILE_FLAG_OPEN_REPARSE_POINT */, IntPtr.Zero);
+            if (h != new IntPtr(-1)) { CloseHandle(h); return DeleteCheck.Allowed; }
+            int err = Marshal.GetLastWin32Error();
+            if (err == 5) return DeleteCheck.Denied;                 // ERROR_ACCESS_DENIED
+            if (err == 32 || err == 33) return DeleteCheck.InUse;    // ERROR_SHARING_VIOLATION, ERROR_LOCK_VIOLATION
+            return DeleteCheck.Unknown;
+        }
+
         /// <summary>
         /// Posizione reale di un file o cartella, dopo aver seguito tutti i collegamenti del percorso
         /// (null se non esiste o non si può aprire). Le condivisioni di rete tornano come "\\server\condivisione\...".
