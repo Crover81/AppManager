@@ -195,7 +195,6 @@
 195	Search for leftovers
 196	Search the log…
 197	Search online for missing images
-198	Looks for Windows error reports, crash dumps, launcher and game logs, and logs in the temp folder. Windows event logs and files in use are not touched. Nothing is deleted without confirmation.
 199	Search for a game…
 200	Search for a program…
 201	Search for an application…
@@ -306,7 +305,7 @@
 306	Incomplete Workshop downloads
 307	Incomplete Steam download
 308	Interrupted download or update
-309	Video driver
+309	Graphics driver
 310	Full memory dump after a blue screen (can take several GB)
 311	Crash dump
 312	Crash dumps…
@@ -484,7 +483,6 @@
 487	Steam logs
 488	Ubisoft Connect logs
 489	PC logs and diagnostics
-490	Logs and diagnostic files left on the PC by Windows, launchers and games, and the AppManager activity log.
 491	Log left in the temp folder by a program or an installation
 492	Temporary logs
 493	Temporary logs…
@@ -881,7 +879,6 @@
 896	item|items
 897	error|errors
 898	approved File Explorer extension
-899	log or diagnostic file|log and diagnostic files
 900	file in use skipped|files in use skipped
 901	file in use|files in use
 902	log file or folder|log files and folders
@@ -1123,7 +1120,6 @@
 1141	The history entries are removed. Leftovers on the PC stay where they are: you will find them on the Leftovers pages.
 1142	Reading installed games and programs…
 1143	Show what was left and choose what to delete
-1144	Hides the notice: the entry stays in the history, where you can review it any time
 1145	Nothing is left
 1146	Programs and games installed or uninstalled on this PC, with what was left behind.
 1147	Clean
@@ -1165,6 +1161,56 @@
 1183	Startup folder (all users)
 1184	Windows registry (your user only)
 1185	Windows registry (all users)
+1186	Waiting for {0} to be removed completely…
+1187	Notify above
+1188	Notify when logs and caches take up a lot of space
+1189	Shader caches…
+1190	Temporary folder not used for days
+1192	Exclude from the notice
+1193	Excluded from the notice: {0}.
+1194	Excluded from the notice · include
+1195	Temporary files
+1196	Temporary files…
+1197	Temporary file not used for days
+1198	Whether the monitoring notice about logs and caches counts this group. It always stays visible on this page.
+1199	Don't notify me about logs and caches again
+1200	Not now
+1202	You can free {0}
+1203	Remove the exclusions
+1204	View and free up
+1205	{0}: no longer needed, they can be deleted.
+1206	Update already downloaded: if still needed, Windows downloads it again
+1207	Browser caches
+1208	Browser caches…
+1209	Delivery Optimization cache
+1210	Windows Update cache…
+1211	Looks for Windows logs and temporary files, used Windows Update downloads, error reports and dumps, driver logs and packages, launcher and game logs, browser and shader caches. Windows event logs and files in use are never touched. Nothing is deleted without confirmation.
+1212	Copy of an update to share with other PCs: Windows downloads it again if needed
+1213	Windows Update downloads
+1214	Driver already installed: these files were only needed to install it
+1215	Graphics driver logs
+1216	Windows logs
+1217	Windows logs…
+1218	Driver logs and packages…
+1219	Driver installation packages
+1220	Log of the graphics driver or its control panel
+1221	Windows update, maintenance or setup log: only useful for diagnosis
+1222	Rebuilds itself: pages may load more slowly the first time. Passwords, history and site data are not touched
+1223	Logs, temporary files and caches left on the PC by Windows, drivers, browsers, launchers and games, and the AppManager activity log.
+1224	Browser
+1226	Windows updates
+1227	What to check
+1228	Of Windows and your user
+1229	Downloads already installed
+1230	Logs of Unity and Unreal Engine games
+1231	Logs of Steam, Epic, EA, Ubisoft, GOG and Battle.net
+1232	Logs, packages already installed, shader caches
+1233	Logs, error reports and dumps
+1234	Every 6 hours it measures logs, dumps, temporary files and caches of the categories chosen below. It never deletes anything by itself: it notifies you and you decide. «Not now» postpones the notice by 7 days. The Logs page shows everything and lets you exclude single groups.
+1235	Cache only: passwords and history stay
+1236	Windows
+1237	Excluded on the Logs page: {0}
+1238	Excluded on the Logs page: {0}
 5000	Analyzing folder {0}
 5001	Undoing the move 
 5002	Background task
@@ -1331,3 +1377,7 @@
 5166	Monitoring: app detection
 5167	Monitoring: {0} leftovers of {1}
 5168	Icon of {0}: {1}
+5169	Logs and caches notice
+5170	Cache not checked {0}: {1}
+5171	Logs and caches check
+5172	Logs and caches check: {0} can be freed

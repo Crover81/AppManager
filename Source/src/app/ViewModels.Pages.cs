@@ -491,7 +491,74 @@ namespace AppManager
         private ICommand openMonitor;
         public ICommand OpenMonitorCommand { get { return openMonitor ?? (openMonitor = new RelayCommand(() => MainViewModel.Current.Navigate("monitor"))); } }
 
-        internal void RaiseBackground() { Raise("BackgroundMonitor"); }
+        internal void RaiseBackground() { Raise("BackgroundMonitor", "CleanableAlert"); }
+
+        public bool CleanableAlert { get { return S.CleanableAlert; } set { S.CleanableAlert = value; S.Save(); Raise("CleanableAlert"); } }
+
+        public string CleanableThresholdKey
+        {
+            get { return S.CleanableThresholdMb.ToString(); }
+            set { int mb; if (int.TryParse(value, out mb) && mb > 0) { S.CleanableThresholdMb = mb; S.Save(); Raise("CleanableThresholdKey"); } }
+        }
+
+        public string Threshold500 { get { return Fmt.Size(500L * 1024 * 1024); } }
+        public string Threshold1024 { get { return Fmt.Size(1024L * 1024 * 1024); } }
+        public string Threshold2048 { get { return Fmt.Size(2048L * 1024 * 1024); } }
+        public string Threshold5120 { get { return Fmt.Size(5120L * 1024 * 1024); } }
+
+        public bool HasCleanableExclusions { get { return S.CleanableExcluded != null && S.CleanableExcluded.Count > 0; } }
+
+        // i gruppi di una categoria si vedono sotto il suo interruttore: qui solo quelli senza categoria
+        private List<string> UncategorizedExclusions
+        {
+            get { return (S.CleanableExcluded ?? new List<string>()).Where(k => CleanableCheck.CategoryOf(k) == null).ToList(); }
+        }
+        public bool HasUncategorizedExclusions { get { return UncategorizedExclusions.Count > 0; } }
+        public string CleanableExclusionsText
+        {
+            get { var list = UncategorizedExclusions; return list.Count > 0 ? L.F("Esclusi dall'avviso: {0}.", string.Join(", ", list.Select(LogJanitor.GroupName))) : null; }
+        }
+
+        private ICommand clearExclusions;
+        public ICommand ClearCleanableExclusionsCommand
+        {
+            get
+            {
+                return clearExclusions ?? (clearExclusions = new RelayCommand(() =>
+                {
+                    CleanableCheck.ClearExclusions();
+                    RaiseCleanable();
+                    var m = MainViewModel.Current;
+                    if (m != null && m.Logs != null) m.Logs.RefreshAlerts();
+                }));
+            }
+        }
+
+        internal void RaiseCleanable()
+        {
+            Raise("HasCleanableExclusions", "HasUncategorizedExclusions", "CleanableExclusionsText", "CleanableAlert");
+            if (cleanableCategories != null) foreach (var c in cleanableCategories) c.Refresh();
+        }
+
+        private List<CleanableCategoryViewModel> cleanableCategories;
+        /// <summary>Gli interruttori delle categorie: cosa conta l'avviso di log e cache.</summary>
+        public List<CleanableCategoryViewModel> CleanableCategories
+        {
+            get
+            {
+                if (cleanableCategories == null)
+                {
+                    CleanableCheck.Normalize();
+                    cleanableCategories = CleanableCheck.Categories().Select(c => new CleanableCategoryViewModel(c, () =>
+                    {
+                        RaiseCleanable();
+                        var m = MainViewModel.Current;
+                        if (m != null && m.Logs != null) m.Logs.RefreshAlerts();
+                    })).ToList();
+                }
+                return cleanableCategories;
+            }
+        }
 
         public bool ShowSteamTools
         {
@@ -818,5 +885,52 @@ namespace AppManager
         public string Target { get; private set; }
         public string Detail { get; private set; }
         public ICommand RemoveCommand { get; private set; }
+    }
+
+    /// <summary>Un interruttore delle Impostazioni: la categoria (Windows, browser…) conta per l'avviso di log e cache.</summary>
+    public sealed class CleanableCategoryViewModel : ObservableObject
+    {
+        private readonly CleanableCategory category;
+        private readonly string key;
+        private readonly Action changed;
+
+        internal CleanableCategoryViewModel(CleanableCategory c, Action changed)
+        {
+            category = c;
+            key = c.Key;
+            Name = c.Name;
+            Detail = c.Detail;
+            this.changed = changed;
+        }
+
+        public string Name { get; private set; }
+        public string Detail { get; private set; }
+
+        /// <summary>Gruppi esclusi uno per uno dalla pagina Log: l'interruttore resta acceso per gli altri.</summary>
+        public string ExcludedText
+        {
+            get
+            {
+                var list = CleanableCheck.ExcludedIn(category);
+                if (list.Count == 0) return null;
+                string names = string.Join(", ", list.Select(LogJanitor.GroupName));
+                return list.Count == 1 ? L.F("Escluso dalla pagina Log: {0}", names) : L.F("Esclusi dalla pagina Log: {0}", names);
+            }
+        }
+        public bool HasExcluded { get { return CleanableCheck.ExcludedIn(category).Count > 0; } }
+
+        public bool IsOn
+        {
+            get { return CleanableCheck.IsCategoryOn(key); }
+            set
+            {
+                if (value == IsOn) return;
+                CleanableCheck.SetCategoryOn(key, value);
+                Raise("IsOn");
+                if (changed != null) changed();
+            }
+        }
+
+        internal void Refresh() { Raise("IsOn", "ExcludedText", "HasExcluded"); }
     }
 }

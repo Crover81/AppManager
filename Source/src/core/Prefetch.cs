@@ -49,13 +49,47 @@ namespace AppManager
             lock (Sync) { records = null; owners = null; }
         }
 
+        private static string stamp;
+        private static DateTime stampCheckedUtc;
+
+        /// <summary>Numero e data più recente dei file .pf: cambiano appena Windows registra un avvio.</summary>
+        private static string CurrentStamp()
+        {
+            try
+            {
+                var files = new DirectoryInfo(Folder).GetFiles("*.pf");
+                return files.Length + "|" + (files.Length == 0 ? 0 : files.Max(f => f.LastWriteTimeUtc.Ticks));
+            }
+            catch { return null; }
+        }
+
+        /// <summary>
+        /// AppManager può restare aperto per ore nell'area di notifica: se nel frattempo è stato avviato un programma, l'indice va riletto,
+        /// altrimenti una cartella che quel programma usa sembrerebbe di un programma eliminato.
+        /// </summary>
+        private static void EnsureFresh()
+        {
+            if (records == null || (DateTime.UtcNow - stampCheckedUtc).TotalSeconds < 20) return;
+            stampCheckedUtc = DateTime.UtcNow;
+            string now = CurrentStamp();
+            if (now != null && now != stamp) { records = null; owners = null; }
+        }
+
+        private static void LoadFresh()
+        {
+            Load();
+            stamp = CurrentStamp();
+            stampCheckedUtc = DateTime.UtcNow;
+        }
+
         public static List<PrefetchRecord> Records
         {
             get
             {
                 lock (Sync)
                 {
-                    if (records == null) Load();
+                    EnsureFresh();
+                    if (records == null) LoadFresh();
                     return records;
                 }
             }
@@ -68,7 +102,8 @@ namespace AppManager
             {
                 lock (Sync)
                 {
-                    if (records == null) Load();
+                    EnsureFresh();
+                    if (records == null) LoadFresh();
                     return owners;
                 }
             }
@@ -288,7 +323,7 @@ namespace AppManager
         /// <summary>
         /// Cartelle dati usate esclusivamente dagli eseguibili indicati (e da nessun altro programma).
         /// </summary>
-        public static List<string> ExclusiveAnchors(ICollection<PrefetchRecord> group)
+        public static List<string> ExclusiveAnchors(ICollection<PrefetchRecord> group, Func<string, bool> ownName = null)
         {
             var result = new List<string>();
             if (group.Count == 0) return result;
@@ -300,20 +335,31 @@ namespace AppManager
                 HashSet<string> set;
                 return map.TryGetValue(a, out set) && set.All(mine.Contains) && Directory.Exists(a);
             }).OrderBy(a => a.Length).ToList();
-            foreach (var a in exclusive)
+            return SelectAnchors(exclusive, candidates, ownName).Select(RealCase).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+        }
+
+        /// <summary>
+        /// Quali cartelle proporre. Una cartella con il nome del programma (AppData\Roaming\eden per eden.exe) si propone intera.
+        /// Un'altra cartella madre (per esempio dell'editore) di cui il programma usava delle sottocartelle non si propone mai intera,
+        /// solo quelle sottocartelle: così la scelta è la stessa a ogni analisi e una pulizia non lascia dietro di sé un nuovo residuo.
+        /// </summary>
+        internal static List<string> SelectAnchors(List<string> exclusive, ICollection<string> candidates, Func<string, bool> ownName)
+        {
+            var result = new List<string>();
+            foreach (var a in exclusive.OrderBy(x => x.Length))
             {
                 if (result.Any(r => PathUtil.IsUnder(a, r, true))) continue; // già coperta dalla cartella madre
-                // una cartella "madre" (es. dell'editore) con altre sottocartelle: si propongono solo le sottocartelle del gioco
-                var children = exclusive.Where(c => PathUtil.IsUnder(c, a) && c.Substring(a.Length + 1).IndexOf('\\') < 0).ToList();
-                int subdirs = PathUtil.Dirs(a).Length;
-                if (children.Count > 0 && subdirs > children.Count)
+                string parent = a;
+                Func<string, bool> directChild = c => PathUtil.IsUnder(c, parent) && c.Substring(parent.Length + 1).IndexOf('\\') < 0;
+                bool own = ownName != null && ownName(Path.GetFileName(a));
+                if (!own && candidates.Any(directChild))
                 {
-                    foreach (var c in children) result.Add(c);
+                    result.AddRange(exclusive.Where(directChild));
                     continue;
                 }
                 result.Add(a);
             }
-            return result.Select(RealCase).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+            return result;
         }
     }
 }

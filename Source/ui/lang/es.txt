@@ -195,7 +195,6 @@
 195	Buscar residuos
 196	Buscar en el registro…
 197	Buscar en línea las imágenes que faltan
-198	Busca informes de errores de Windows, volcados de bloqueo, registros de launchers y juegos, y registros en la carpeta temporal. No toca los registros de eventos de Windows ni los archivos en uso. No se elimina nada sin confirmación.
 199	Buscar un juego…
 200	Buscar un programa…
 201	Buscar una aplicación…
@@ -458,7 +457,7 @@
 461	La carpeta de copias no es válida
 462	La carpeta del perfil «{0}» en el depósito no está vacía ({1}): revísala antes de continuar.
 463	El nuevo idioma se aplica en el próximo inicio del programa.
-464	Launcher
+464	Lanzador
 465	Las imágenes se buscarán de nuevo (útil si alguna es incorrecta)
 466	Las entradas más antiguas se quitan al iniciar AppManager
 467	Las entradas «todos los usuarios» solo se cambian como administrador.
@@ -484,7 +483,6 @@
 487	Registros de Steam
 488	Registros de Ubisoft Connect
 489	Registros y diagnóstico del PC
-490	Registros y archivos de diagnóstico de Windows, launchers y juegos en el PC, y el registro de actividad de AppManager.
 491	Registro dejado en la carpeta temporal por un programa o una instalación
 492	Registros temporales
 493	Registros temporales…
@@ -881,7 +879,6 @@
 896	elemento|elementos
 897	error|errores
 898	extensión aprobada del Explorador de archivos
-899	archivo de registro o diagnóstico|archivos de registro y diagnóstico
 900	archivo en uso omitido|archivos en uso omitidos
 901	archivo en uso|archivos en uso
 902	archivo o carpeta de registro|archivos y carpetas de registro
@@ -1123,7 +1120,6 @@
 1141	Se quitan las entradas del historial. Los restos del PC siguen donde están: los encontrarás en las páginas Restos.
 1142	Leyendo juegos y programas instalados…
 1143	Muestra lo que quedó y elige qué eliminar
-1144	Oculta el aviso: la entrada queda en el historial, donde puedes revisarla cuando quieras
 1145	No queda nada
 1146	Programas y juegos instalados o desinstalados en este PC, con lo que quedó.
 1147	Limpio
@@ -1165,6 +1161,56 @@
 1183	Carpeta Inicio (todos los usuarios)
 1184	Registro de Windows (solo tu usuario)
 1185	Registro de Windows (todos los usuarios)
+1186	Esperando a que {0} se elimine por completo…
+1187	Avisar a partir de
+1188	Avisar cuando los registros y cachés ocupen mucho espacio
+1189	Cachés de sombreadores…
+1190	Carpeta temporal que no se usa desde hace días
+1192	Excluir del aviso
+1193	Excluidos del aviso: {0}.
+1194	Excluido del aviso · incluir
+1195	Archivos temporales
+1196	Archivos temporales…
+1197	Archivo temporal que no se usa desde hace días
+1198	Si el aviso de vigilancia sobre registros y cachés cuenta este grupo. En esta página siempre sigue visible.
+1199	No avisarme más de registros y cachés
+1200	Ahora no
+1202	Puedes liberar {0}
+1203	Quitar las exclusiones
+1204	Ver y liberar
+1205	{0}: ya no sirven y se pueden eliminar.
+1206	Actualización ya descargada: si aún hace falta, Windows la vuelve a descargar
+1207	Cachés de los navegadores
+1208	Cachés de los navegadores…
+1209	Caché de Optimización de distribución
+1210	Caché de Windows Update…
+1211	Busca registros y archivos temporales de Windows, descargas ya usadas de Windows Update, informes de errores y volcados, registros y paquetes de controladores, registros de lanzadores y juegos, cachés de navegadores y sombreadores. Los registros de eventos de Windows y los archivos en uso nunca se tocan. No se elimina nada sin confirmación.
+1212	Copia de una actualización para compartir con otros PC: Windows la vuelve a descargar si hace falta
+1213	Descargas de Windows Update
+1214	Controlador ya instalado: estos archivos solo servían para instalarlo
+1215	Registros de los controladores de vídeo
+1216	Registros de Windows
+1217	Registros de Windows…
+1218	Registros y paquetes de controladores…
+1219	Paquetes de instalación de controladores
+1220	Registro del controlador de vídeo o de su panel de control
+1221	Registro de actualizaciones, mantenimiento o instalación de Windows: solo sirve para diagnóstico
+1222	Se vuelve a crear sola: las páginas pueden cargar más despacio la primera vez. Contraseñas, historial y datos de los sitios no se tocan
+1223	Registros, archivos temporales y cachés que Windows, controladores, navegadores, lanzadores y juegos dejan en el PC, y el registro de actividad de AppManager.
+1224	Navegador
+1226	Actualizaciones de Windows
+1227	Qué comprobar
+1228	De Windows y de tu usuario
+1229	Descargas ya instaladas
+1230	Registros de juegos Unity y Unreal Engine
+1231	Registros de Steam, Epic, EA, Ubisoft, GOG y Battle.net
+1232	Registros, paquetes ya instalados, cachés de sombreadores
+1233	Registros, informes de errores y volcados
+1234	Cada 6 horas mide los registros, volcados, archivos temporales y cachés de las categorías elegidas abajo. Nunca elimina nada por sí solo: te avisa y decides tú. «Ahora no» aplaza el aviso 7 días. La página Registros lo muestra todo y permite excluir grupos concretos.
+1235	Solo la caché: contraseñas e historial se quedan
+1236	Windows
+1237	Excluidos en la página Registros: {0}
+1238	Excluido en la página Registros: {0}
 5134	AppManager {0} iniciado
 5135	AppManager {0} iniciado como administrador
 5136	Búsqueda en línea de partidas de {0}: {1}

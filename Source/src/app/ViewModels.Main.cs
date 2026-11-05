@@ -125,10 +125,30 @@ namespace AppManager
         /// Una sola analisi dei residui per entrambe le sezioni: ogni gruppo va nella pagina dei giochi
         /// o in quella dei programmi, così nessun elemento compare due volte.
         /// </summary>
+        private bool librariesStale;
+
+        /// <summary>
+        /// La sorveglianza ha visto installare o togliere qualcosa: la libreria si rilegge, perché i residui si riconoscono per esclusione
+        /// e con un elenco vecchio i dati di un programma appena installato sembrerebbero residui. Con un dialogo aperto si rimanda.
+        /// </summary>
+        internal void SystemChanged()
+        {
+            librariesStale = true;
+            if (HasDialog || Games.IsLoading || Programs.IsLoading) return;
+            librariesStale = false;
+            Games.RefreshCommand.Execute(null);
+        }
+
         internal async Task ScanOrphansAsync()
         {
             if (orphanScanRunning) return;
             orphanScanRunning = true;
+            if (librariesStale && !Games.IsLoading)
+            {
+                librariesStale = false;
+                Games.RefreshCommand.Execute(null);
+                await Task.Delay(300);
+            }
             GameOrphans.BeginScan();
             ProgramOrphans.BeginScan();
             Action<string> report = s => { GameOrphans.ProgressText = s; ProgramOrphans.ProgressText = s; };
@@ -538,6 +558,31 @@ namespace AppManager
         public ObservableCollection<ItemViewModel> Items { get; private set; }
         public ICommand ToggleCommand { get; private set; }
         public ICommand OpenLinkCommand { get; private set; }
+
+        // pagina Log: questo gruppo conta o no per l'avviso di log e cache della sorveglianza
+        private string alertText;
+        public string AlertText { get { return alertText; } private set { if (Set(ref alertText, value)) Raise("HasAlertToggle"); } }
+        public bool HasAlertToggle { get { return alertText != null; } }
+        public ICommand AlertCommand { get; private set; }
+
+        internal void EnableAlertToggle(Action changed)
+        {
+            AlertCommand = new RelayCommand(() =>
+            {
+                CleanableCheck.SetCounts(GroupKey, !CleanableCheck.Counts(GroupKey));
+                RefreshAlert();
+                if (changed != null) changed();
+            });
+            RefreshAlert();
+            Raise("AlertCommand");
+        }
+
+        /// <summary>Riallinea la scritta (anche quando cambia la categoria nelle Impostazioni).</summary>
+        internal void RefreshAlert()
+        {
+            if (AlertCommand == null) return;
+            AlertText = CleanableCheck.Counts(GroupKey) ? L.T("Escludi dall'avviso") : L.T("Escluso dall'avviso · includi");
+        }
 
         public bool IsExpanded { get { return isExpanded; } set { Set(ref isExpanded, value); } }
 

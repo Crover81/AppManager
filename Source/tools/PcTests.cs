@@ -199,6 +199,107 @@ namespace AppManager
             }
         }
 
+        /// <summary>Pulizie coerenti (una volta sola) e avviso di log e cache senza assillare.</summary>
+        static void CleanableCases()
+        {
+            Console.WriteLine("Residui scelti sempre allo stesso modo");
+            string root = Path.Combine(Path.GetTempPath(), "AppManagerAncore_" + Guid.NewGuid().ToString("N"));
+            try
+            {
+                string eden = Path.Combine(root, "eden"), pub = Path.Combine(root, "Editore");
+                foreach (var d in new[] { "log", "nand", "keys", "altra" }) Directory.CreateDirectory(Path.Combine(eden, d));
+                foreach (var d in new[] { "GiocoA", "GiocoB" }) Directory.CreateDirectory(Path.Combine(pub, d));
+                var seen = new List<string> { eden, Path.Combine(eden, "log"), Path.Combine(eden, "nand"), Path.Combine(eden, "keys"), pub, Path.Combine(pub, "GiocoA") };
+                Func<string, bool> own = n => n.Equals("eden", StringComparison.OrdinalIgnoreCase);
+                var pass1 = PrefetchIndex.SelectAnchors(seen.Where(Directory.Exists).ToList(), seen, own);
+                Check(pass1.Contains(eden) && !pass1.Any(p => PathUtil.IsUnder(p, eden)), "cartella con il nome del programma: proposta intera già al primo giro");
+                Check(pass1.Contains(Path.Combine(pub, "GiocoA")) && !pass1.Contains(pub), "cartella dell'editore: solo la sottocartella del programma");
+                Directory.Delete(Path.Combine(pub, "GiocoA"), true);
+                var pass2 = PrefetchIndex.SelectAnchors(seen.Where(Directory.Exists).ToList(), seen, own);
+                Check(!pass2.Contains(pub), "dopo la pulizia la cartella dell'editore non diventa un nuovo residuo (" + string.Join(", ", pass2.Select(Path.GetFileName)) + ")");
+            }
+            finally { try { Directory.Delete(root, true); } catch { } }
+
+            Console.WriteLine("Avviso di log e cache");
+            var start = new DateTime(2026, 11, 5, 8, 0, 0);
+            Check(!CleanableCheck.IsDue(start.AddMinutes(5), start, DateTime.MinValue, null, true), "non subito dopo l'avvio");
+            Check(CleanableCheck.IsDue(start.AddMinutes(11), start, DateTime.MinValue, null, true), "dopo 10 minuti sì");
+            Check(!CleanableCheck.IsDue(start.AddHours(3), start, start.AddHours(1), null, true), "non più di un controllo ogni 6 ore");
+            Check(!CleanableCheck.IsDue(start.AddDays(2), start, DateTime.MinValue, start.AddDays(7), true), "«Non ora»: niente avvisi fino alla data scelta");
+            Check(CleanableCheck.IsDue(start.AddDays(8), start, DateTime.MinValue, start.AddDays(7), true), "dopo la data scelta di nuovo sì");
+            Check(!CleanableCheck.IsDue(start.AddDays(1), start, DateTime.MinValue, null, false), "spento: mai");
+            CleanableCheck.SetExcluded("log:shader", true);
+            Check(CleanableCheck.IsExcluded("log:shader") && !CleanableCheck.IsExcluded("log:dump"), "gruppo escluso");
+            var measured = CleanableCheck.Measure(System.Threading.CancellationToken.None);
+            Check(!measured.Groups.Any(g => g.Key == "log:shader"), "un gruppo escluso non conta nella misura (sola lettura, " + Fmt.Size(measured.Total) + ")");
+            CleanableCheck.SetExcluded("log:shader", false);
+            Check(!CleanableCheck.IsExcluded("log:shader"), "gruppo incluso di nuovo");
+
+            Console.WriteLine("Categorie dell'avviso di log e cache");
+            var cats = CleanableCheck.Categories();
+            var allGroups = cats.SelectMany(c => c.Groups).ToList();
+            Check(allGroups.Count == allGroups.Distinct(StringComparer.OrdinalIgnoreCase).Count(), "ogni gruppo sta in una categoria sola");
+            foreach (var k in new[] { "log:wer", "log:dump", "log:steam", "log:epic", "log:ea", "log:ubi", "log:gog", "log:bnet", "log:unity", "log:unreal",
+                                      "log:temp", "log:tempfiles", "log:shader", "log:windows", "log:wucache", "log:docache", "log:driver", "log:driverpkg", "log:browser" })
+                Check(CleanableCheck.CategoryOf(k) != null, "il gruppo " + k + " ha una categoria");
+            Check(CleanableCheck.Counts("log:altro") && CleanableCheck.CategoryOf("log:altro") == null, "un gruppo senza categoria conta sempre");
+            CleanableCheck.SetCounts("log:epic", false);
+            Check(CleanableCheck.IsCategoryOn("launcher") && !CleanableCheck.Counts("log:epic") && CleanableCheck.Counts("log:steam"), "escluso un gruppo solo: la categoria resta accesa per gli altri");
+            Check(CleanableCheck.ExcludedIn(CleanableCheck.CategoryOf("log:epic")).SequenceEqual(new[] { "log:epic" }), "il gruppo escluso si vede sotto l'interruttore");
+            CleanableCheck.SetCategoryOn("launcher", false);
+            Check(!CleanableCheck.Counts("log:steam") && !CleanableCheck.Counts("log:epic") && CleanableCheck.Counts("log:browser"), "categoria spenta: i suoi gruppi non contano, gli altri sì");
+            Check(!CleanableCheck.IsExcluded("log:epic"), "spegnere la categoria toglie le esclusioni dei suoi gruppi (vale l'interruttore)");
+            var measured2 = CleanableCheck.Measure(System.Threading.CancellationToken.None);
+            Check(!measured2.Groups.Any(g => CleanableCheck.CategoryOf(g.Key) != null && CleanableCheck.CategoryOf(g.Key).Key == "launcher"), "una categoria spenta non conta nella misura");
+            CleanableCheck.SetCounts("log:steam", true);
+            Check(CleanableCheck.IsCategoryOn("launcher") && CleanableCheck.Counts("log:steam") && !CleanableCheck.Counts("log:epic") && !CleanableCheck.Counts("log:bnet"),
+                  "includere un gruppo dalla pagina Log riaccende la categoria solo per quel gruppo");
+            CleanableCheck.SetCounts("log:steam", false);
+            Check(!CleanableCheck.Counts("log:steam") && !CleanableCheck.IsCategoryOn("launcher") && !CleanableCheck.IsExcluded("log:steam") && !CleanableCheck.IsExcluded("log:epic"),
+                  "escluso anche l'ultimo gruppo: la categoria si spegne e l'interruttore lo mostra");
+            CleanableCheck.SetCategoryOn("launcher", true);
+            Check(CleanableCheck.Categories().First(c => c.Key == "launcher").Groups.All(CleanableCheck.Counts), "riacceso l'interruttore: torna tutta la categoria");
+
+            CleanableCheck.SetCounts("log:browser", false);
+            Check(!CleanableCheck.IsCategoryOn("browser") && !CleanableCheck.IsExcluded("log:browser"), "cache dei browser esclusa dalla pagina Log: l'interruttore Browser si spegne");
+            CleanableCheck.SetCounts("log:browser", true);
+            Check(CleanableCheck.IsCategoryOn("browser") && CleanableCheck.Counts("log:browser"), "inclusa di nuovo: l'interruttore si riaccende");
+
+            AppSettings.Current.CleanableExcluded = new List<string> { "log:driver", "log:driverpkg", "log:shader", "log:wer" };
+            CleanableCheck.Normalize();
+            Check(!CleanableCheck.IsCategoryOn("driver") && CleanableCheck.IsCategoryOn("windows") && CleanableCheck.IsExcluded("log:wer") && !CleanableCheck.IsExcluded("log:shader"),
+                  "impostazioni salvate prima: tutti i gruppi esclusi diventano interruttore spento, gli altri restano");
+            CleanableCheck.SetCategoryOn("driver", true);
+            CleanableCheck.ClearExclusions();
+            Check(allGroups.All(CleanableCheck.Counts), "tutto acceso e senza esclusioni: contano tutti");
+            CleanableCheck.Snooze(7);
+            Check(CleanableCheck.SnoozedUntil.HasValue && CleanableCheck.SnoozedUntil.Value > DateTime.Now.AddDays(6.9), "«Non ora» salvato per 7 giorni");
+            AppSettings.Current.CleanableSnoozeUntil = null;
+            int locked;
+            var items = LogJanitor.Find(7, null, System.Threading.CancellationToken.None, out locked);
+            Check(items.All(i => Safety.IsDeletablePath(i.Path)), "ogni elemento di log e cache passa i controlli di sicurezza (" + items.Count + ")");
+            string win = KnownDirs.Windows;
+            string edgeData = Path.Combine(KnownDirs.LocalAppData, @"Microsoft\Edge\User Data");
+            Check(!Safety.IsDeletablePath(Path.Combine(win, "Temp")) && Safety.IsDeletablePath(Path.Combine(win, @"Temp\qualcosa.tmp")),
+                  "Windows\\Temp: il contenuto sì, la cartella no");
+            Check(!Safety.IsDeletablePath(Path.Combine(win, @"Temp\sub\file.tmp")), "Windows\\Temp: solo il contenuto diretto");
+            Check(!Safety.IsDeletablePath(Path.Combine(win, @"SoftwareDistribution\Download")) && Safety.IsDeletablePath(Path.Combine(win, @"SoftwareDistribution\Download\abc"))
+                  && !Safety.IsDeletablePath(Path.Combine(win, @"SoftwareDistribution\DataStore")), "Windows Update: solo i download, mai DataStore né la cartella");
+            Check(!Safety.IsDeletablePath(Path.Combine(win, @"Logs\CBS")) && !Safety.IsDeletablePath(Path.Combine(win, @"Logs\CBS\nonesiste.log")), "log di Windows: mai la cartella, solo file esistenti");
+            Check(!Safety.IsDeletablePath(Path.Combine(win, @"Panther\unattend.xml")), "Panther: mai i file di configurazione");
+            Check(!Safety.IsDeletablePath(Path.Combine(win, @"System32\drivers\etc\hosts")) && !Safety.IsDeletablePath(Path.Combine(win, @"Logs")), "il resto di Windows resta protetto");
+            Check(Safety.IsDeletablePath(Path.Combine(edgeData, @"Default\Cache")) && Safety.IsDeletablePath(Path.Combine(edgeData, @"Profile 1\Code Cache\js")),
+                  "Edge: le cache dei profili sì");
+            Check(!Safety.IsDeletablePath(Path.Combine(edgeData, @"Default\Login Data")) && !Safety.IsDeletablePath(Path.Combine(edgeData, "Default"))
+                  && !Safety.IsDeletablePath(Path.Combine(edgeData, @"Default\History")), "Edge: mai password, cronologia o il profilo");
+            Check(items.Where(i => i.GroupKey == "log:browser").All(i => Safety.BrowserCacheNames.Contains(Path.GetFileName(i.Path), StringComparer.OrdinalIgnoreCase) || Path.GetFileName(i.Path) == "cache2"),
+                  "cache dei browser: solo le cartelle di cache");
+            Check(!items.Any(i => i.Path.IndexOf(@"\NGX", StringComparison.OrdinalIgnoreCase) >= 0 || i.Path.IndexOf(@"\Streamline", StringComparison.OrdinalIgnoreCase) >= 0),
+                  "NVIDIA: mai NGX né Streamline (componenti di DLSS)");
+            Check(items.Where(i => i.GroupKey == "log:shader").All(i => i.Confidence == Confidence.Low), "cache degli shader «Da verificare»: non preselezionate");
+            Check(items.Where(i => i.GroupKey == "log:tempfiles").All(i => !i.LastWrite.HasValue || i.LastWrite.Value < DateTime.Now.AddDays(-2)), "file temporanei: solo quelli non usati da giorni");
+        }
+
         private static void Check(bool ok, string what)
         {
             Console.WriteLine("  {0}  {1}", ok ? "OK  " : "ERRORE", what);
@@ -283,6 +384,8 @@ namespace AppManager
 
             DetectionCases();
             MonitorCases();
+
+            CleanableCases();
 
             Console.WriteLine("Riconoscimento del PC");
             var s = Open("pcA");

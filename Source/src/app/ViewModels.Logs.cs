@@ -114,6 +114,13 @@ namespace AppManager
             if (tab == "app") { var t = LoadLogAsync(); }
         }
 
+        /// <summary>Dall'avviso di log e cache: si apre direttamente l'analisi.</summary>
+        internal void StartPcScan()
+        {
+            Tab = "pc";
+            if (!isScanning) { var t = ScanAsync(); }
+        }
+
         // ------------------------------------------------------------------ Log e diagnostica del PC
 
         public ObservableCollection<ItemGroupViewModel> Groups { get; private set; }
@@ -177,18 +184,26 @@ namespace AppManager
             {
                 var first = grp.First();
                 var vm = new ItemGroupViewModel(first.GroupName, GlyphFor(grp.Key),
-                    grp.OrderByDescending(i => i.Size).Select(i => new ItemViewModel(i, true)));
+                    grp.OrderByDescending(i => i.Size).Select(i => new ItemViewModel(i, i.Confidence >= Confidence.Medium)));
                 vm.Source = first.GroupSource;
                 vm.GroupKey = grp.Key;
+                if (AppSettings.Current.BackgroundMonitor && AppSettings.Current.CleanableAlert)
+                    vm.EnableAlertToggle(() => { RefreshAlerts(); var m = MainViewModel.Current; if (m != null) m.Settings.RaiseCleanable(); });
                 vm.IsExpanded = grp.Count() <= 6;
                 vm.Changed = UpdateSelection;
                 Groups.Add(vm);
             }
             long total = items.Sum(i => Math.Max(0, i.Size));
-            Summary = items.Count == 0 ? "" : Fmt.Count(items.Count, "file di log o diagnostica", "file di log e diagnostica") + " · " + Fmt.Size(total) + (locked > 0 ? " · " + Fmt.Count(locked, "file in uso saltato", "file in uso saltati") : "");
+            Summary = items.Count == 0 ? "" : Fmt.Count(items.Count, "elemento", "elementi") + " · " + Fmt.Size(total) + (locked > 0 ? " · " + Fmt.Count(locked, "file in uso saltato", "file in uso saltati") : "");
             HasScanned = true;
             IsScanning = false;
             UpdateSelection();
+        }
+
+        /// <summary>Una categoria accesa o spenta può cambiare più gruppi insieme.</summary>
+        internal void RefreshAlerts()
+        {
+            foreach (var g in Groups) g.RefreshAlert();
         }
 
         private static string GlyphFor(string key)
@@ -199,6 +214,13 @@ namespace AppManager
                 case "log:dump": return "";
                 case "log:unity": case "log:unreal": return "";
                 case "log:temp": return "";
+                case "log:tempfiles": return "\uE8B7";
+                case "log:shader": return "\uE7F4";
+                case "log:windows": return "\uE770";
+                case "log:wucache": case "log:docache": return "\uE895";
+                case "log:driver": return "\uE7F4";
+                case "log:driverpkg": return "\uE7B8";
+                case "log:browser": return "\uE774";
                 default: return "";
             }
         }

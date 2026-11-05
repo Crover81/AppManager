@@ -316,6 +316,11 @@ namespace AppManager
         public bool SearchSavesOnline { get; set; }            // cerca su PCGamingWiki dove un gioco tiene i salvataggi
         public bool BackgroundMonitor { get; set; }            // sorveglianza in background (vale per un PC: sta nel suo profilo)
         public bool TrayHintShown { get; set; }                // spiegato una volta che chiudendo la finestra AppManager resta nell'area di notifica
+        public bool CleanableAlert { get; set; }               // con la sorveglianza: avvisa quando log e cache superano la soglia
+        public int CleanableThresholdMb { get; set; }          // soglia dell'avviso di log e cache
+        public List<string> CleanableExcluded { get; set; }    // gruppi della pagina Log che l'avviso non conta
+        public List<string> CleanableOff { get; set; }         // categorie (windows, browser, launcher…) spente per l'avviso
+        public string CleanableSnoozeUntil { get; set; }       // «Non ora»: fino a quando non avvisare
         public string SteamGridDbKey { get; set; }
         public List<string> LibraryFolders { get; set; }       // cartelle dei giochi portable
         public List<string> ProgramFolders { get; set; }       // cartelle dei programmi portable
@@ -340,6 +345,10 @@ namespace AppManager
             UsePrefetch = true;
             DownloadCovers = true;
             SearchSavesOnline = true;
+            CleanableAlert = true;
+            CleanableThresholdMb = CleanableCheck.DefaultThresholdMb;
+            CleanableExcluded = new List<string>();
+            CleanableOff = new List<string>();
             BackupFolder = AppPaths.DefaultBackupDir;
             LibraryFolders = new List<string>();
             ProgramFolders = new List<string>();

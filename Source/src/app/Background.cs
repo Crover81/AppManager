@@ -34,6 +34,7 @@ namespace AppManager
             if (initialized) return;
             initialized = true;
             InstallWatcher.Recorded += (e, notify) => OnUi(() => OnRecorded(e, notify));
+            CleanableCheck.Found += s => OnUi(() => OnCleanable(s));
             InstallWatcher.StatusChanged += () => OnUi(RaiseState);
             MonitorHistory.Changed += () => OnUi(() => { var vm = MainViewModel.Current; if (vm != null) vm.Monitor.Reload(); });
             if (!AppSettings.Current.BackgroundMonitor) return;
@@ -107,10 +108,52 @@ namespace AppManager
 
         private static void OnRecorded(HistoryEvent e, bool notify)
         {
+            // qualcosa è stato installato o tolto: la libreria (e quindi i residui) va riletta
+            if (e.Status != HistoryEvent.Checking)
+            {
+                var vm = MainViewModel.Current;
+                if (vm != null) vm.SystemChanged();
+            }
             if (!notify) return;
             pending.RemoveAll(p => p.Id == e.Id);
             pending.Add(e);
             ShowPending();
+        }
+
+        private static CleanableSummary pendingCleanable;
+
+        /// <summary>Log e cache oltre la soglia. Un avviso di residui ha la precedenza: questo aspetta.</summary>
+        private static void OnCleanable(CleanableSummary s)
+        {
+            pendingCleanable = s;
+            ShowPending();
+        }
+
+        internal static NotifyViewModel BuildCleanableNotice(CleanableSummary s)
+        {
+            var vm = new NotifyViewModel
+            {
+                Title = L.F("Puoi liberare {0}", Fmt.Size(s.Total)),
+                Message = L.F("{0}: non servono più e si possono eliminare.", JoinNames(s.Groups.Select(g => g.Name).ToList())),
+                PrimaryText = L.T("Vedi e libera"),
+                IgnoreText = L.T("Non ora"),
+                OffText = L.T("Non avvisarmi più per log e cache"),
+            };
+            vm.OnPrimary = () =>
+            {
+                App.ShowMainWindow("logs", null);
+                var main = MainViewModel.Current;
+                if (main != null && !main.HasDialog) main.Logs.StartPcScan();
+            };
+            vm.OnIgnore = () => CleanableCheck.Snooze(CleanableCheck.SnoozeDays);
+            vm.OnTimeout = () => CleanableCheck.Snooze(CleanableCheck.UnansweredDays);
+            vm.OnOff = () =>
+            {
+                AppSettings.Current.CleanableAlert = false;
+                AppSettings.Current.Save();
+                RaiseState();
+            };
+            return vm;
         }
 
         /// <summary>Con un gioco a schermo intero, una presentazione o lo schermo bloccato l'avviso aspetta.</summary>
@@ -118,7 +161,7 @@ namespace AppManager
         {
             // una voce rivista o ignorata nel frattempo non va più segnalata
             pending.RemoveAll(p => { var now = MonitorHistory.Get(p.Id); return now == null || now.Status != HistoryEvent.Leftovers; });
-            if (pending.Count == 0) return;
+            if (pending.Count == 0 && pendingCleanable == null) return;
             if (!Native.CanShowNotification)
             {
                 if (retry == null)
@@ -127,6 +170,16 @@ namespace AppManager
                     retry.Tick += (s, a) => { retry.Stop(); retry = null; ShowPending(); };
                     retry.Start();
                 }
+                return;
+            }
+            if (pending.Count == 0)
+            {
+                // log e cache: solo se non c'è già un avviso aperto (non si sovrappone a quello dei residui)
+                if (popup != null && popup.IsOpen) return;
+                var s = pendingCleanable;
+                pendingCleanable = null;
+                Show(BuildCleanableNotice(s));
+                shown = new List<HistoryEvent>();
                 return;
             }
             // un avviso ancora aperto non viene sostituito: raccoglie anche le nuove disinstallazioni
@@ -193,7 +246,7 @@ namespace AppManager
 
         internal static void Show(NotifyViewModel vm)
         {
-            if (popup == null) popup = new NotifyPopup { Closed = () => shown = new List<HistoryEvent>() };
+            if (popup == null) popup = new NotifyPopup { Closed = () => { shown = new List<HistoryEvent>(); if (pendingCleanable != null) OnUi(ShowPending); } };
             popup.Show(vm);
         }
 
@@ -249,7 +302,6 @@ namespace AppManager
             };
             add(L.T("Apri AppManager"), () => App.ShowMainWindow(null, null));
             add(L.T("Cronologia delle disinstallazioni"), () => App.ShowMainWindow("monitor", null));
-            add(L.T("Controlla adesso"), InstallWatcher.CheckNow);
             var sep = new Separator();
             var style = Application.Current.TryFindResource("MenuSeparator") as Style;
             if (style != null) sep.Style = style;
@@ -281,6 +333,7 @@ namespace AppManager
     internal sealed class NotifyPopup
     {
         private DispatcherTimer timer;
+        private NotifyViewModel current;
         public Window Window { get; private set; }
         public bool IsOpen { get { return Window != null; } }
         internal Action Closed;
@@ -294,6 +347,7 @@ namespace AppManager
                 Window.Opacity = 1;
                 Window.DataContext = vm;
                 vm.Dismiss = Dismiss;
+                current = vm;
                 timer.Stop();
                 timer.Interval = TimeSpan.FromSeconds(20);
                 if (!Window.IsMouseOver) timer.Start();
@@ -304,6 +358,7 @@ namespace AppManager
             if (Application.Current.MainWindow == w) Application.Current.MainWindow = null;
             w.DataContext = vm;
             vm.Dismiss = Dismiss;
+            current = vm;
             w.SourceInitialized += (s, e) => Native.MakeNotificationWindow(new WindowInteropHelper(w).Handle);
             w.Opacity = 0;
             w.Loaded += (s, e) =>
@@ -316,7 +371,13 @@ namespace AppManager
             // un testo più lungo cambia l'altezza: l'avviso resta attaccato alla barra
             w.SizeChanged += (s, e) => { if (w.IsLoaded) Place(w); };
             timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(20) };
-            timer.Tick += (s, e) => Dismiss();
+            timer.Tick += (s, e) =>
+            {
+                // sparito senza risposta: per alcuni avvisi vale come «più tardi»
+                var vm2 = current;
+                if (vm2 != null && vm2.OnTimeout != null) vm2.OnTimeout();
+                Dismiss();
+            };
             w.MouseEnter += (s, e) => timer.Stop();
             w.MouseLeave += (s, e) => { timer.Interval = TimeSpan.FromSeconds(6); timer.Start(); };
             Window = w;

@@ -14,8 +14,8 @@ using System.Windows.Threading;
 [assembly: AssemblyTitle("AppManager")]
 [assembly: AssemblyProduct("AppManager")]
 [assembly: AssemblyDescription("Gestione e disinstallazione completa di giochi e programmi")]
-[assembly: AssemblyVersion("2.3.0.0")]
-[assembly: AssemblyFileVersion("2.3.0.0")]
+[assembly: AssemblyVersion("2.3.1.0")]
+[assembly: AssemblyFileVersion("2.3.1.0")]
 // dichiara .NET Framework 4.8: attiva i comportamenti moderni (TLS scelto da Windows, DPI per monitor in WPF)
 [assembly: System.Runtime.Versioning.TargetFramework(".NETFramework,Version=v4.8", FrameworkDisplayName = ".NET Framework 4.8")]
 
@@ -82,6 +82,11 @@ namespace AppManager
             if (Arg("--screenshot") == null)
                 foreach (var legacy in AppPaths.LegacyDataDirs()) PcResources.AdoptLegacyData(legacy);
             if (Arg("--theme") != null) AppSettings.Current.Theme = Arg("--theme");
+            // solo nelle immagini di prova (le impostazioni non vengono salvate): le parti che compaiono con la sorveglianza attiva
+            if (Arg("--screenshot") != null && arguments.Contains("--monitoron")) AppSettings.Current.BackgroundMonitor = true;
+            // gruppi di log e cache esclusi dall'avviso, per vedere come lo mostrano gli interruttori
+            if (Arg("--screenshot") != null && Arg("--cleanexcluded") != null)
+                AppSettings.Current.CleanableExcluded = Arg("--cleanexcluded").Split(',').Where(k => k.Length > 0).ToList();
             // numeri, date e testi dei controlli nella lingua dell'interfaccia
             FrameworkElement.LanguageProperty.OverrideMetadata(typeof(FrameworkElement),
                 new FrameworkPropertyMetadata(XmlLanguage.GetLanguage(L.Culture.IetfLanguageTag)));
@@ -513,6 +518,14 @@ namespace AppManager
                         BackgroundService.RecordedForTest(second);
                         popup = BackgroundService.ShowForTest(null);
                     }
+                    else if (notify == "cleanable")
+                    {
+                        var s = new CleanableSummary();
+                        s.Groups.Add(new CleanableGroup { Key = "log:shader", Name = L.T("Cache degli shader dei driver grafici"), Size = 1700L * 1024 * 1024 });
+                        s.Groups.Add(new CleanableGroup { Key = "log:tempfiles", Name = L.T("File temporanei"), Size = 640L * 1024 * 1024 });
+                        s.Groups.Add(new CleanableGroup { Key = "log:dump", Name = L.T("Dump di arresto anomalo"), Size = 210L * 1024 * 1024 });
+                        popup = BackgroundService.ShowForTest(BackgroundService.BuildCleanableNotice(s));
+                    }
                     else popup = BackgroundService.ShowForTest(notify == "info"
                         ? new NotifyViewModel { Title = L.T("AppManager resta attivo"), Message = L.T("La sorveglianza continua nell'area di notifica, accanto all'orologio. Per chiudere AppManager usa il menu della sua icona.") }
                         : BackgroundService.BuildNotice(notify == "many" ? demo.Where(x => x.ItemCount > 0).ToList() : demo.Take(1).ToList()));
@@ -585,7 +598,10 @@ namespace AppManager
             LayoutCheck(window, vm, "dialogo-conferma", report);
             vm.Dialog = null;
             var demo = MonitorPageViewModel.DemoEvents();
-            foreach (var notice in new[] { BackgroundService.BuildNotice(demo.Take(1).ToList()), BackgroundService.BuildNotice(demo.Where(x => x.ItemCount > 0).ToList()) })
+            var cleanable = new CleanableSummary();
+            cleanable.Groups.Add(new CleanableGroup { Key = "log:shader", Name = L.T("Cache degli shader dei driver grafici"), Size = 1700L * 1024 * 1024 });
+            cleanable.Groups.Add(new CleanableGroup { Key = "log:tempfiles", Name = L.T("File temporanei"), Size = 640L * 1024 * 1024 });
+            foreach (var notice in new[] { BackgroundService.BuildNotice(demo.Take(1).ToList()), BackgroundService.BuildNotice(demo.Where(x => x.ItemCount > 0).ToList()), BackgroundService.BuildCleanableNotice(cleanable) })
             {
                 var popup = BackgroundService.ShowForTest(notice);
                 await Task.Delay(800);

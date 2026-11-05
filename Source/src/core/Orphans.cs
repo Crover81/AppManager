@@ -743,7 +743,8 @@ namespace AppManager
                 foreach (var r in list) AddExeNames(g, r.ExePath);
                 g.HasEvidence = true; // Windows ricorda l'eseguibile, che però non esiste più
                 string noun = g.Kind == AppKind.Game ? L.T("un gioco eliminato") : L.T("un programma eliminato");
-                foreach (var dir in PrefetchIndex.ExclusiveAnchors(list))
+                var owner = g;
+                foreach (var dir in PrefetchIndex.ExclusiveAnchors(list, n => OwnsFolderName(owner, n)))
                 {
                     if (IsClaimedPath(dir) || IsClaimedName(Path.GetFileName(dir))) continue;
                     bool local = PathUtil.IsUnder(dir, KnownDirs.LocalAppData) || PathUtil.IsUnder(dir, KnownDirs.RoamingAppData) || PathUtil.IsUnder(dir, KnownDirs.ProgramData);
@@ -758,6 +759,15 @@ namespace AppManager
                     if (g.ExeNames.Any(e => Path.GetFileName(f).StartsWith(e + ".", StringComparison.OrdinalIgnoreCase)))
                         Add(g, ItemKind.File, ItemCategory.Cache, f, L.F("File di crash (dump) di {0}", (g.Kind == AppKind.Game ? L.T("un gioco eliminato") : L.T("un programma eliminato"))), Confidence.High);
             }
+        }
+
+        /// <summary>La cartella porta il nome del programma eliminato (eden per eden.exe, Godot per Godot_v4.7.2-stable_win64.exe).</summary>
+        private static bool OwnsFolderName(Group g, string folder)
+        {
+            string k = NameUtil.Norm(folder);
+            if (k.Length < 4 || NameUtil.IsGeneric(k, AppKind.Program)) return false;
+            if (NameUtil.Norm(g.Name) == k) return true;
+            return g.ExeNames.Any(e => { string n = NameUtil.Norm(Path.GetFileNameWithoutExtension(e)); return n == k || n.StartsWith(k); });
         }
 
         // ------------------------------------------------------------------ Tracce nel registro di eseguibili che non esistono più
@@ -1174,15 +1184,7 @@ namespace AppManager
             var g = new Group { Key = "x:shader", Name = L.T("Cache degli shader dei driver grafici"), Source = "Driver video", CheckRecency = false, Kind = AppKind.Game };
             groups[g.Key] = g;
             string why = L.T("Si rigenera da sola: i giochi potrebbero caricare più lentamente al primo avvio");
-            foreach (var dir in new[]
-            {
-                Path.Combine(KnownDirs.LocalAppData, @"NVIDIA\DXCache"), Path.Combine(KnownDirs.LocalAppData, @"NVIDIA\GLCache"),
-                Path.Combine(KnownDirs.LocalLow, @"NVIDIA\PerDriverVersion\DXCache"), Path.Combine(KnownDirs.LocalLow, @"NVIDIA\PerDriverVersion\GLCache"),
-                Path.Combine(KnownDirs.LocalLow, @"NVIDIA\DXCache"), Path.Combine(KnownDirs.LocalAppData, @"AMD\DxCache"),
-                Path.Combine(KnownDirs.LocalAppData, @"AMD\DxcCache"), Path.Combine(KnownDirs.LocalAppData, @"AMD\VkCache"),
-                Path.Combine(KnownDirs.LocalAppData, @"AMD\GLCache"), Path.Combine(KnownDirs.LocalAppData, "D3DSCache"),
-                Path.Combine(KnownDirs.LocalLow, @"Intel\ShaderCache"), Path.Combine(KnownDirs.LocalAppData, @"Intel\ShaderCache"),
-            })
+            foreach (var dir in LogJanitor.ShaderCacheDirs())
                 Add(g, ItemKind.Directory, ItemCategory.Cache, dir, why, Confidence.Low);
         }
 

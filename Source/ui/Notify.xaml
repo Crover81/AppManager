@@ -33,9 +33,10 @@
                     <TextBlock Text="{Binding Message}" Style="{StaticResource Dim}" FontSize="13" Margin="0,4,0,0"/>
                     <WrapPanel Margin="0,12,0,0" Visibility="{Binding HasActions, Converter={StaticResource Vis}}">
                         <Button Style="{StaticResource PrimaryBtn}" Content="{Binding PrimaryText}" Command="{Binding PrimaryCommand}" Padding="14,7" Margin="0,0,8,0"/>
-                        <Button Style="{StaticResource GhostBtn}" Content="Ignora" Command="{Binding IgnoreCommand}" Padding="12,7"
-                                ToolTip="Nasconde l'avviso: la voce resta nella cronologia, dove puoi rivederla quando vuoi"/>
+                        <Button Style="{StaticResource GhostBtn}" Content="{Binding IgnoreText}" Command="{Binding IgnoreCommand}" Padding="12,7"/>
                     </WrapPanel>
+                    <Button Style="{StaticResource LinkBtn}" Content="{Binding OffText}" Command="{Binding OffCommand}" FontSize="12" HorizontalAlignment="Left"
+                            Margin="0,8,0,0" Visibility="{Binding HasOff, Converter={StaticResource Vis}}"/>
                 </StackPanel>
                 <Button Grid.Column="2" Style="{StaticResource IconBtn}" Content="&#xE711;" Width="26" Height="26" FontSize="10" VerticalAlignment="Top"
                         Margin="6,-4,0,0" Command="{Binding CloseCommand}" ToolTip="Chiudi"/>

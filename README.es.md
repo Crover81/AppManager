@@ -17,6 +17,7 @@ AppManager desinstala un juego o un programa y después encuentra todo lo que é
 - **Desinstalar y limpiar**: abre el desinstalador correcto, espera a que termine y muestra cada resto agrupado por categoría, con el motivo por el que se encontró y lo seguro que está AppManager («Seguro», «Probable», «Por comprobar»).
 - **Restos de apps que ya no están**, incluidos los juegos borrados a mano.
 - **Vigilancia en segundo plano** (opcional): sigue instalaciones y desinstalaciones desde el área de notificación y te avisa cuando una desinstalación ha dejado algo.
+- **Registros y cachés**: registros y archivos temporales de Windows, descargas de Windows Update, registros y paquetes de controladores, cachés de navegadores, lanzadores, juegos y sombreadores, con un aviso opcional cuando ocupan demasiado espacio.
 - **Gestor de partidas**: copias de seguridad, varios perfiles de partidas por juego, «partida nueva» sin perder la anterior.
 - **Primero la seguridad**: Papelera y copia zip antes de eliminar, zonas del sistema protegidas, nunca se elimina nada sin tu confirmación.
 - **Siempre portable**: todo está en una carpeta `Dati` junto al programa; cada PC tiene su propio perfil.
@@ -65,7 +66,7 @@ Un único análisis encuentra los restos de juegos y programas que ya no están 
 ![Restos](docs/images/leftovers.png)
 
 ### Vigilancia en segundo plano
-Desactivada de serie. Si la activas, AppManager se inicia con Windows y permanece en el área de notificación. Sigue las entradas de desinstalación de Windows y las bibliotecas de Steam y Epic. Cuando desaparece un programa o un juego, espera a que termine el desinstalador y luego busca los restos.
+Desactivada de serie. Si la activas, AppManager se inicia con Windows y permanece en el área de notificación. Sigue las entradas de desinstalación de Windows y las bibliotecas de Steam y Epic. Cuando desaparece un programa o un juego, espera a que termine el desinstalador y a que su carpeta desaparezca, y luego busca los restos: el aviso suele llegar pocos segundos después.
 
 ![Historial de la vigilancia](docs/images/monitoring.png)
 
@@ -81,6 +82,15 @@ Para cada juego, **Gestionar partidas** encuentra solo sus carpetas de partidas:
 
 ![Partidas](docs/images/saves.png)
 
+### Registros y cachés
+La página **Registros** encuentra lo que se puede vaciar sin perder nada: registros de Windows (actualizaciones, mantenimiento, instalación), archivos temporales de Windows y del usuario, descargas de Windows Update y de Optimización de distribución, informes de errores y volcados, registros de los controladores de vídeo y sus paquetes de instalación ya extraídos, registros de lanzadores y juegos, cachés de navegadores (Edge, Chrome, Brave, Vivaldi, Opera, Firefox) y de sombreadores. Las contraseñas, el historial y los datos de los sitios nunca se tocan, ni los componentes que necesitan los controladores (como los archivos DLSS de NVIDIA). Los registros de eventos de Windows y los archivos en uso se omiten.
+
+![Registros y cachés](docs/images/logs.png)
+
+Con la vigilancia activada, AppManager te avisa cuando superan el límite elegido en los Ajustes (1 GB de serie). Comprueba como mucho cada 6 horas. **Ahora no** aplaza el aviso 7 días. En los Ajustes eliges qué comprobar, con un interruptor por categoría (Windows, archivos temporales, actualizaciones de Windows, controladores de vídeo, navegadores, lanzadores, juegos), y cada grupo de la página Registros se puede excluir por separado.
+
+![Aviso de registros y cachés](docs/images/cleanup-notification.png)
+
 ### Inicio automático y red
 **Inicio automático** muestra los programas que se inician con Windows y los activa o desactiva como el Administrador de tareas. Desactivar no elimina nada.
 
@@ -91,7 +101,7 @@ Para cada juego, **Gestionar partidas** encuentra solo sus carpetas de partidas:
 ![Red](docs/images/network.png)
 
 ### Ajustes
-Tema (claro, oscuro o como Windows), idioma, límite de espacio para las imágenes descargadas, opciones predeterminadas de Papelera y copia de seguridad, vigilancia en segundo plano, carpetas portables, métodos de búsqueda y reglas de red.
+Tema (claro, oscuro o como Windows), idioma, límite de espacio para las imágenes descargadas, opciones predeterminadas de Papelera y copia de seguridad, vigilancia en segundo plano y aviso de registros y cachés, carpetas portables, métodos de búsqueda y reglas de red.
 
 ![Ajustes](docs/images/settings.png)
 

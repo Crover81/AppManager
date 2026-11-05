@@ -17,6 +17,7 @@ AppManager désinstalle un jeu ou un programme, puis retrouve tout ce que lui et
 - **Désinstaller et nettoyer** : lance le bon programme de désinstallation, attend la fin, puis affiche chaque résidu classé par catégorie, avec la raison pour laquelle il a été trouvé et le degré de certitude (« Certain », « Probable », « À vérifier »).
 - **Résidus d'applications déjà disparues**, y compris les jeux supprimés à la main.
 - **Surveillance en arrière-plan** (facultative) : suit les installations et désinstallations depuis la zone de notification et vous prévient quand une désinstallation a laissé quelque chose.
+- **Journaux et caches** : journaux et fichiers temporaires de Windows, téléchargements de Windows Update, journaux et paquets des pilotes, caches des navigateurs, lanceurs, jeux et shaders, avec un avis facultatif quand ils occupent trop d'espace.
 - **Gestionnaire de parties** : sauvegardes, plusieurs profils de parties par jeu, « nouvelle partie » sans perdre l'ancienne.
 - **La sécurité d'abord** : Corbeille et sauvegarde zip avant de supprimer, zones système protégées, rien n'est jamais supprimé sans votre confirmation.
 - **Toujours portable** : tout se trouve dans un dossier `Dati` à côté du programme ; chaque PC a son propre profil.
@@ -65,7 +66,7 @@ Une seule analyse retrouve les restes des jeux et programmes qui ne sont plus in
 ![Résidus](docs/images/leftovers.png)
 
 ### Surveillance en arrière-plan
-Désactivée par défaut. Une fois activée, AppManager démarre avec Windows et reste dans la zone de notification. Il suit les entrées de désinstallation de Windows et les bibliothèques Steam et Epic. Quand un programme ou un jeu disparaît, il attend la fin du programme de désinstallation puis cherche les résidus.
+Désactivée par défaut. Une fois activée, AppManager démarre avec Windows et reste dans la zone de notification. Il suit les entrées de désinstallation de Windows et les bibliothèques Steam et Epic. Quand un programme ou un jeu disparaît, il attend la fin du programme de désinstallation et la disparition de son dossier, puis cherche les résidus : l'avis arrive en général quelques secondes après.
 
 ![Historique de la surveillance](docs/images/monitoring.png)
 
@@ -81,6 +82,15 @@ Pour chaque jeu, **Gérer les parties** trouve tout seul ses dossiers de sauvega
 
 ![Parties](docs/images/saves.png)
 
+### Journaux et caches
+La page **Journaux** trouve ce qui peut être vidé sans rien perdre : journaux de Windows (mises à jour, maintenance, installation), fichiers temporaires de Windows et de l'utilisateur, téléchargements de Windows Update et de l'Optimisation de la distribution, rapports d'erreurs et dumps, journaux des pilotes graphiques et leurs paquets d'installation déjà extraits, journaux des lanceurs et des jeux, caches des navigateurs (Edge, Chrome, Brave, Vivaldi, Opera, Firefox) et des shaders. Les mots de passe, l'historique et les données des sites ne sont jamais touchés, ni les composants dont les pilotes ont besoin (comme les fichiers DLSS de NVIDIA). Les journaux d'événements de Windows et les fichiers utilisés sont ignorés.
+
+![Journaux et caches](docs/images/logs.png)
+
+Avec la surveillance activée, AppManager vous prévient quand ils dépassent la limite choisie dans les Paramètres (1 Go par défaut). Il vérifie au plus toutes les 6 heures. **Pas maintenant** reporte l'avis de 7 jours. Dans les Paramètres, vous choisissez quoi vérifier, avec un interrupteur par catégorie (Windows, fichiers temporaires, mises à jour de Windows, pilotes graphiques, navigateurs, lanceurs, jeux), et chaque groupe de la page Journaux peut être exclu à part.
+
+![Avis pour les journaux et caches](docs/images/cleanup-notification.png)
+
 ### Démarrage et réseau
 **Démarrage** liste les programmes qui démarrent avec Windows et les active ou désactive comme le Gestionnaire des tâches. Désactiver ne supprime rien.
 
@@ -91,7 +101,7 @@ Pour chaque jeu, **Gérer les parties** trouve tout seul ses dossiers de sauvega
 ![Réseau](docs/images/network.png)
 
 ### Paramètres
-Thème (clair, sombre ou comme Windows), langue, limite d'espace pour les images téléchargées, choix par défaut pour la Corbeille et la sauvegarde, surveillance en arrière-plan, dossiers portables, méthodes de recherche et règles réseau.
+Thème (clair, sombre ou comme Windows), langue, limite d'espace pour les images téléchargées, choix par défaut pour la Corbeille et la sauvegarde, surveillance en arrière-plan et avis pour les journaux et caches, dossiers portables, méthodes de recherche et règles réseau.
 
 ![Paramètres](docs/images/settings.png)
 

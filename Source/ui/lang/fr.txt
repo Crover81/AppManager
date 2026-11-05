@@ -195,7 +195,6 @@
 195	Rechercher les résidus
 196	Rechercher dans le journal…
 197	Rechercher en ligne les images manquantes
-198	Recherche les rapports d'erreur Windows, vidages sur incident, journaux des launchers et des jeux, et journaux du dossier temporaire. Les journaux d'événements Windows et les fichiers utilisés ne sont pas touchés. Rien n'est supprimé sans confirmation.
 199	Rechercher un jeu…
 200	Rechercher un programme…
 201	Rechercher une application…
@@ -306,7 +305,7 @@
 306	Téléchargements Workshop incomplets
 307	Téléchargement Steam incomplet
 308	Téléchargement ou mise à jour interrompu
-309	Pilote vidéo
+309	Pilote graphique
 310	Vidage mémoire complet après un écran bleu (peut prendre plusieurs Go)
 311	Vidage sur incident
 312	Vidages sur incident…
@@ -458,7 +457,7 @@
 461	Le dossier des sauvegardes n'est pas valide
 462	Le dossier du profil «{0}» dans le dépôt n'est pas vide ({1}) : vérifiez-le avant de continuer.
 463	La nouvelle langue s'applique au prochain démarrage du programme.
-464	Launcher
+464	Lanceur
 465	Les images seront recherchées à nouveau (utile si l'une est incorrecte)
 466	Les entrées les plus anciennes sont retirées au démarrage d'AppManager
 467	Les entrées «tous les utilisateurs» ne se changent qu'en administrateur.
@@ -484,7 +483,6 @@
 487	Journaux de Steam
 488	Journaux d'Ubisoft Connect
 489	Journaux et diagnostic du PC
-490	Journaux et fichiers de diagnostic laissés sur le PC par Windows, les launchers et les jeux, et le journal d'activité d'AppManager.
 491	Journal laissé dans le dossier temporaire par un programme ou une installation
 492	Journaux temporaires
 493	Journaux temporaires…
@@ -881,7 +879,6 @@
 896	élément|éléments
 897	erreur|erreurs
 898	extension approuvée de l'Explorateur de fichiers
-899	fichier de journal ou de diagnostic|fichiers de journal et de diagnostic
 900	fichier utilisé ignoré|fichiers utilisés ignorés
 901	fichier utilisé|fichiers utilisés
 902	fichier ou dossier de journal|fichiers et dossiers de journal
@@ -1123,7 +1120,6 @@
 1141	Les entrées de l'historique sont supprimées. Les résidus sur le PC restent où ils sont : vous les retrouvez dans les pages Résidus.
 1142	Lecture des jeux et programmes installés…
 1143	Afficher ce qui reste et choisir quoi supprimer
-1144	Masque l'avis : l'entrée reste dans l'historique, où vous pouvez la revoir quand vous voulez
 1145	Il ne reste rien
 1146	Programmes et jeux installés ou désinstallés sur ce PC, avec ce qui est resté.
 1147	Propre
@@ -1165,6 +1161,56 @@
 1183	Dossier Démarrage (tous les utilisateurs)
 1184	Registre Windows (votre utilisateur seulement)
 1185	Registre Windows (tous les utilisateurs)
+1186	J'attends que {0} soit entièrement supprimé…
+1187	Prévenir au-delà de
+1188	Prévenir quand les journaux et caches occupent beaucoup d'espace
+1189	Caches de shaders…
+1190	Dossier temporaire inutilisé depuis plusieurs jours
+1192	Exclure de l'avis
+1193	Exclus de l'avis : {0}.
+1194	Exclu de l'avis · inclure
+1195	Fichiers temporaires
+1196	Fichiers temporaires…
+1197	Fichier temporaire inutilisé depuis plusieurs jours
+1198	Indique si l'avis de surveillance sur les journaux et caches compte ce groupe. Il reste toujours visible dans cette page.
+1199	Ne plus me prévenir pour les journaux et caches
+1200	Pas maintenant
+1202	Vous pouvez libérer {0}
+1203	Retirer les exclusions
+1204	Voir et libérer
+1205	{0} : ils ne servent plus et peuvent être supprimés.
+1206	Mise à jour déjà téléchargée : si elle sert encore, Windows la télécharge à nouveau
+1207	Caches des navigateurs
+1208	Caches des navigateurs…
+1209	Cache de l'Optimisation de la distribution
+1210	Cache de Windows Update…
+1211	Cherche les journaux et fichiers temporaires de Windows, les téléchargements déjà utilisés de Windows Update, les rapports d'erreurs et dumps, les journaux et paquets des pilotes, les journaux des lanceurs et des jeux, les caches des navigateurs et des shaders. Les journaux d'événements de Windows et les fichiers utilisés ne sont jamais touchés. Rien n'est supprimé sans confirmation.
+1212	Copie d'une mise à jour à partager avec d'autres PC : Windows la retélécharge si besoin
+1213	Téléchargements de Windows Update
+1214	Pilote déjà installé : ces fichiers ne servaient qu'à l'installer
+1215	Journaux des pilotes graphiques
+1216	Journaux de Windows
+1217	Journaux de Windows…
+1218	Journaux et paquets des pilotes…
+1219	Paquets d'installation des pilotes
+1220	Journal du pilote graphique ou de son panneau de configuration
+1221	Journal de mise à jour, de maintenance ou d'installation de Windows : utile seulement pour le diagnostic
+1222	Se recrée toute seule : les pages peuvent se charger plus lentement la première fois. Mots de passe, historique et données des sites ne sont pas touchés
+1223	Journaux, fichiers temporaires et caches laissés sur le PC par Windows, les pilotes, les navigateurs, les lanceurs et les jeux, et le journal d'activité d'AppManager.
+1224	Navigateur
+1226	Mises à jour de Windows
+1227	Que vérifier
+1228	De Windows et de votre utilisateur
+1229	Téléchargements déjà installés
+1230	Journaux des jeux Unity et Unreal Engine
+1231	Journaux de Steam, Epic, EA, Ubisoft, GOG et Battle.net
+1232	Journaux, paquets déjà installés, caches des shaders
+1233	Journaux, rapports d'erreurs et dumps
+1234	Toutes les 6 heures, il mesure les journaux, dumps, fichiers temporaires et caches des catégories choisies ci-dessous. Il ne supprime rien tout seul : il vous prévient et vous décidez. « Pas maintenant » reporte l'avis de 7 jours. La page Journaux montre tout et permet d'exclure chaque groupe.
+1235	Cache uniquement : mots de passe et historique restent
+1236	Windows
+1237	Exclus depuis la page Journaux : {0}
+1238	Exclu depuis la page Journaux : {0}
 5134	AppManager {0} démarré
 5135	AppManager {0} démarré en administrateur
 5136	Recherche en ligne des parties de {0} : {1}

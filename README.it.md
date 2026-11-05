@@ -17,6 +17,7 @@ AppManager disinstalla un gioco o un programma e poi trova tutto ciò che lui e 
 - **Disinstalla e pulisci**: avvia il programma di disinstallazione giusto, aspetta che finisca e mostra ogni residuo diviso per categoria, con il motivo per cui è stato trovato e quanto AppManager ne è sicuro («Certo», «Probabile», «Da verificare»).
 - **Residui di applicazioni già sparite**, compresi i giochi cancellati a mano.
 - **Sorveglianza in background** (facoltativa): segue installazioni e disinstallazioni dall'area di notifica e ti avvisa quando una disinstallazione ha lasciato qualcosa.
+- **Log e cache**: log e file temporanei di Windows, download di Windows Update, log e pacchetti dei driver, cache di browser, launcher, giochi e shader, con un avviso facoltativo quando occupano troppo spazio.
 - **Gestore dei salvataggi**: backup, più profili di salvataggio per gioco, «nuova partita» senza perdere quella vecchia.
 - **Prima di tutto la sicurezza**: Cestino e backup zip prima di eliminare, aree di sistema protette, nulla eliminato senza la tua conferma.
 - **Sempre portable**: tutto sta nella cartella `Dati` accanto al programma; ogni PC ha il suo profilo.
@@ -65,7 +66,7 @@ Un'unica analisi trova i resti di giochi e programmi non più installati, o canc
 ![Residui](docs/images/leftovers.png)
 
 ### Sorveglianza in background
-Spenta di serie. Se la attivi, AppManager parte con Windows e resta nell'area di notifica. Segue le voci di disinstallazione di Windows e le librerie di Steam ed Epic. Quando un programma o un gioco sparisce, aspetta che il programma di disinstallazione finisca e poi cerca i residui.
+Spenta di serie. Se la attivi, AppManager parte con Windows e resta nell'area di notifica. Segue le voci di disinstallazione di Windows e le librerie di Steam ed Epic. Quando un programma o un gioco sparisce, aspetta che il programma di disinstallazione finisca e che la sua cartella sia sparita, poi cerca i residui: di solito l'avviso arriva pochi secondi dopo.
 
 ![Cronologia della sorveglianza](docs/images/monitoring.png)
 
@@ -81,6 +82,15 @@ Per ogni gioco, **Gestisci i salvataggi** trova da solo le cartelle dei salvatag
 
 ![Salvataggi](docs/images/saves.png)
 
+### Log e cache
+La pagina **Log** trova ciò che si può svuotare senza perdere nulla: log di Windows (aggiornamenti, manutenzione, installazione), file temporanei di Windows e dell'utente, download di Windows Update e di Ottimizzazione recapito, segnalazioni di errore e dump, log dei driver video e i loro pacchetti d'installazione già estratti, log dei launcher e dei giochi, cache dei browser (Edge, Chrome, Brave, Vivaldi, Opera, Firefox) e degli shader. Password, cronologia e dati dei siti non vengono mai toccati, e nemmeno i componenti che servono ai driver (come i file DLSS di NVIDIA). I registri eventi di Windows e i file in uso vengono saltati.
+
+![Log e cache](docs/images/logs.png)
+
+Con la sorveglianza attiva, AppManager ti avvisa quando occupano più della soglia scelta nelle Impostazioni (di serie 1 GB). Controlla al massimo ogni 6 ore. **Non ora** rimanda l'avviso di 7 giorni. Nelle Impostazioni scegli cosa controllare, con un interruttore per categoria (Windows, file temporanei, aggiornamenti di Windows, driver video, browser, launcher, giochi), e ogni gruppo della pagina Log si può escludere da solo.
+
+![Avviso per log e cache](docs/images/cleanup-notification.png)
+
 ### Avvio automatico e rete
 **Avvio automatico** elenca i programmi che partono con Windows e li attiva o disattiva come Gestione attività. Disattivare non elimina nulla.
 
@@ -91,7 +101,7 @@ Per ogni gioco, **Gestisci i salvataggi** trova da solo le cartelle dei salvatag
 ![Rete](docs/images/network.png)
 
 ### Impostazioni
-Tema (chiaro, scuro o come Windows), lingua, limite di spazio per le immagini scaricate, scelte predefinite per Cestino e backup, sorveglianza in background, cartelle portable, metodi di ricerca e regole di rete.
+Tema (chiaro, scuro o come Windows), lingua, limite di spazio per le immagini scaricate, scelte predefinite per Cestino e backup, sorveglianza in background e avviso per log e cache, cartelle portable, metodi di ricerca e regole di rete.
 
 ![Impostazioni](docs/images/settings.png)
 
